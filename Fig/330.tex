@@ -1,0 +1,18 @@
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+
+\begin{document}
+\begin{pspicture}(-0.5,-0.4)(3,3) % \psgrid
+  \psset{algebraic,yunit=0.35,xunit=0.45}
+  \psaxes[Dx=2,Dy=3,linecolor=gray]{->}(0,0)(-1.5,-1.2)(6.2,8)[$x$,-90][$y$,0]
+  \pscustom[fillstyle=solid,fillcolor=gray!30,opacity=0.7,linestyle=none]{
+    \psparametricplot{0}{2}{8*t-4*t^2|3*t}
+    \psline(0,6)(0,0)
+  }
+  \psparametricplot{0}{2}{8*t-4*t^2|3*t}
+  \rput(4.5,6){$\frac{(y-3)^2}{9}=1-\frac{x}{4}$}
+\end{pspicture}
+\end{document}

@@ -1,0 +1,18 @@
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+
+\begin{document}
+\begin{pspicture}(-0.5,-0.4)(3.5,3) %\psgrid
+  \psset{algebraic,unit=0.5}
+  \psaxes[Dx=2,Dy=2,linecolor=gray]{->}(0,0)(-0.5,-1.2)(5,6.2)[$x$,-90][$z$,0]
+  \pscustom[fillstyle=solid,fillcolor=gray!30,opacity=0.7,linestyle=none]{
+    \psparametricplot{0}{4}{4*t-t^2|t}
+    \psline(0,4)(0,0)
+  }
+  \psparametricplot{0}{4}{4*t-t^2|t}
+  \rput(2.5,4.5){$\frac{(z-2)^2}{4}=1-\frac{x}{4}$}
+\end{pspicture}
+\end{document}

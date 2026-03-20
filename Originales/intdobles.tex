@@ -1063,7 +1063,7 @@ representa la parte de la esfera que se halla acotada por el cilindro, la otra p
 \begin{itemize}
 \item Para la expresión $x^{2}+z^{2}=2x$ (que representa el otro cilindro), el tratamiento es similar al caso anterior, obteniendo la función
 \[
-{\\bf r}_1(u,t) = \left\langle 1 + u\cos(t),\, \pm \sqrt{3 - 2u\cos(t) - u^{2}},\, u\sin(t) \right\rangle
+{\bf r}_1(u,t) = \left\langle 1 + u\cos(t),\, \pm \sqrt{3 - 2u\cos(t) - u^{2}},\, u\sin(t) \right\rangle
 \]
 con $t \in [0, 2\pi]$, $u \in [0, 1]$, la cual parametriza la porción de la esfera dentro del cilindro con ecuación $x^{2}+z^{2}=2x$.
 \end{itemize}
@@ -1473,14 +1473,13 @@ por lo tanto, la curva de intersección entre el plano y el cilindro cardiogéni
 \[\la 2\left(1+\cos(t)\right)\cos(t),2\left(1+\cos(t)\right)\sin(t),2-(1+\cos (t))\cos(t) \ra,\]
 con lo que forma una combinación convexa entre dos puntos cuyos primer y segundo componente son iguales, uno sobre el plano $z=0$ y el otro sobre el plano
 $z=2-x/2$. Se parametriza la superficie lateral, esto es
-\begin{gather*}
-{\bf r}(u,t)=\left( 1-u\right) \la 2\left( 1+\cos (t) \right) \cos \left(
-t\right) ,2\left( 1+\cos (t) \right) \sin (t) ,0\ra \\
-+u\la 2\left( 1+\cos (t) \right) \cos(t) ,2\left( 1+\cos (t) \right) \sin (t)
-,2-\left( 1+\cos (t) \right) \cos (t) \\
-= \la 2( \cos (t)+1) \cos (t),2\sin (t)+\sin (2t),u(2-\left( 1+\cos (t) \right) \cos (t)) \ra\\
-t\in [0,2\pi], u\in [0,1].
-\end{gather*}
+\begin{align*}
+{\bf r}(u,t)&=(1-u) \la 2\left( 1+\cos (t) \right) \cos (t) ,2\left( 1+\cos (t) \right) \sin (t) ,0\ra \\
+&\quad +u\big \langle 2\left( 1+\cos (t) \right) \cos(t) , 2\left( 1+\cos (t) \right) \sin (t),\\
+&\quad 2-\left( 1+\cos (t) \right) \cos (t) \big \rangle = \big \langle 2( \cos (t)+1) \cos (t),\\
+&\quad 2\sin (t)+\sin (2t), u(2-\left( 1+\cos (t) \right) \cos (t)) \big \rangle \\
+&\quad t\in [0,2\pi], u\in [0,1].
+\end{align*}
 Con esta función obtenemos los siguientes vectores:
 \begin{eqnarray*}
 {\bf r}_{t} &=& \big \langle-2\sin (t) \left( 2\cos (t) +1\right) ,2(\cos(t)+\cos ^{2}(t)-\sin^{2}(t)) , \\
@@ -1551,16 +1550,8 @@ Las ecuaciones $r = 1-\cos(t)$ y $r = 2- 2\cos(t)$ representan, en el plano, dos
 \begin{figure}[H]
 \centering
 \caption{Superficie sobre el plano \( z = 2 - x/2 \) acotada por dos cilindros cardióidicos}
-\begin{minipage}[t]{0.28\linewidth}
-\centering
-\includegraphics[width=\linewidth]{Fig/136.pdf}
-\end{minipage}
-\hspace{0.5em}
-\begin{minipage}[t]{0.28\linewidth}
-\centering
-\includegraphics[width=\linewidth]{Img/36b.pdf}
-\end{minipage}
-\vspace{1ex}
+\includegraphics[height=5cm]{Fig/136.pdf} \hspace{5mm}
+\includegraphics[height=5cm]{Img/36b.pdf}
 \fuentepropia
 \end{figure}
 %
@@ -1584,18 +1575,8 @@ $
 \begin{figure}[H]
 \centering
 \caption{Cilindros cardiotónicos acotados por dos planos}
-\begin{minipage}[t]{0.28\linewidth}
-\centering
-
-\includegraphics[width=\linewidth]{Fig/137.pdf}
-\end{minipage}
-\hspace{1em}
-\begin{minipage}[t]{0.28\linewidth}
-\centering
-
-\includegraphics[width=\linewidth]{Fig/138.pdf}
-\end{minipage}
-\vspace{1ex}
+\includegraphics[height=5cm]{Fig/137.pdf} \hspace{5mm}
+\includegraphics[height=5cm]{Fig/138.pdf}
 \fuentepropia
 \end{figure}
 
@@ -1604,11 +1585,9 @@ y $\overrightarrow{q}(t)$ con $\overrightarrow{\beta}(t)$ por el otro.
 
 \begin{figure}[H]
 \centering
-\caption{
-Cilindros cardiotónicos
-}
-\includegraphics[width=0.4\textwidth]{Img/57a.pdf} \hspace{5mm}
-\includegraphics[width=0.4\textwidth]{Img/57b.pdf}
+\caption{Cilindros cardiotónicos}
+\includegraphics[height=5cm]{Img/57a.pdf} \hspace{5mm}
+\includegraphics[height=5cm]{Img/57b.pdf}
 \fuentepropia
 \end{figure}
 
@@ -1772,7 +1751,7 @@ Con ayuda de la función $\mathbf{r}$ se obtienen los siguientes vectores:
 \item $\mathbf{r}_{u} =\left\langle -\cos(t),\, 2\sin(t),\, 3 \right\rangle$
 \item $\mathbf{r}_{t} = \left\langle -\sin(t)(2 - u),\, \cos(t)(1 + 2u),\, 0 \right\rangle$
 \end{parrafoitemize}
-Los cuales describen las direcciones tangentes de la superficie parametrizada. Además, el producto cruzado
+Los cuales describen las direcciones tangentes de la superficie parametrizada. Además, el producto cruz
 $$\mathbf{r}_{t} \times \mathbf{r}_{u} = \left\langle 3\cos(t)(1 + 2u),\, 3\sin(t)(2 - u),\, 5\cos^2(t) + 2u - 4 \right\rangle$$
 nos proporciona el vector normal y define el elemento diferencial de área:
 \[
@@ -1973,7 +1952,7 @@ t\right) \right) \cos (t) \right) \sqrt{2-2\sin (t) }dt= 3 \\
 \overline{y} &=& \frac{1}{8}\int_{0}^{2\pi }\left( 1-\sin (t)\right) \sin (t) \sqrt{2-2\sin (t) }dt= -\frac{4}{5}.
 \end{eqnarray*}
 
-Usando el teorema de Pappus (\ref{teoremadepappus}), ver página (\pageref{teoremadepappus}), el área de la superficie de revolución de la curva $r=1-\sin(t)$ alrededor de la recta  $\theta = \pi /2$ es.
+Usando el teorema de Pappus \ref{teoremadepappus}, ver página \pageref{teoremadepappus}, el área de la superficie de revolución de la curva $r=1-\sin(t)$ alrededor de la recta  $\theta = \pi /2$ es.
 $2\pi \left( 3\right) \left( 8\right) = 48\pi $. \index{Teorema de Pappus!área superficial}
 
 Al ubicar la curva de giro en el espacio tridimensional y hacer coincidir el eje de giro con el eje $z$,
@@ -2069,7 +2048,7 @@ y su longitud de curva es
 \[\int_{0}^{2\pi }\sqrt{\left( 1-\cos (t) \right) ^{2}+\left( \sin (t)\right)^{2}}dt=\int_{0}^{2\pi }\sqrt{2-2\cos (t) }dt= 8.\]
 }
 
-De acuerdo con la expresión (\ref{toros1}), el área superficial está determinada por
+De acuerdo con la expresión \ref{toros1}, el área superficial está determinada por
 {\small
 \[2\pi \int_{0}^{2\pi }\left( 3+\left( 1-\cos (t) \right) \cos
 (t) \right) \sqrt{2-2\cos (t) }dt= \frac{176}{5}\pi.\]
@@ -2088,17 +2067,15 @@ El centro de masa de esta curva está dado por
 De acuerdo con el teorema de Pappus, el área de la superficie de revolución es
 $2\pi \left( \frac{11}{5}\right) \left( 8\right) = \frac{176}{5}\pi $.
 En este caso se usará la parametrización de la superficie:
-
-{\small
+\begin{small}
 \begin{multline*}
 {\bf r}\left( t,u\right) =\big\langle( 3+\left( 1-\cos (t) \right)
 \cos (t)) \cos (u) ,\left( 1-\cos (t)
 \right) \cos (t) \sin \left( u\right) ,\\
 \left( 1-\cos (t) \right) \sin (t) \big\rangle, \, t\in [0,2\pi],\, u\in [0,2\pi].
 \end{multline*}
-}
-
-La figura obtenida es el siguiente:
+\end{small}
+La figura obtenida es la siguiente:
 
 \begin{figure}[H]
 \centering
@@ -2115,27 +2092,21 @@ Las instrucciones para conseguirlo se presentan a continuación.
 \begin{tcolorbox}[title=\bf Instrucción en \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 {x,y}={3+(1-Cos[t])*Cos[t],(1-Cos[t])*Sin[t]};
 ParametricPlot[{x,y},{t,0,2*Pi}]
-ParametricPlot3D[{x*Cos[u],x*Sin[u],y},{t,0,2*Pi},
-{u,0,2*Pi}]
+ParametricPlot3D[{x*Cos[u],x*Sin[u],y},{t,0,2*Pi},{u,0,2*Pi}]
 \end{Verbatim}
 \end{tcolorbox}
 
 Derivando parcialmente la función ${\bf r}$, hallamos los siguientes vectores:
-
-\begin{flushleft}
-\resizebox{1.0\textwidth}{!}{%
-$\mathbf{r}_{t} = \left\langle (\sin(2t) - \sin t)\cos u,\; (\sin(2t) - \sin t)\sin u,\; (1 - \cos t)(2\cos t + 1) \right\rangle$,
-}
-\end{flushleft}
+\begin{equation*}
+\mathbf{r}_{t} = \left\langle (\sin(2t) - \sin t)\cos u,\; (\sin(2t) - \sin t)\sin u,\; (1 - \cos t)(2\cos t + 1) \right\rangle,
+\end{equation*}
 \[
 {\mathbf r}_{u} = \left\langle (\cos t - 1)\cos t \sin u,\; (1 - \cos t)\cos t \cos u,\; 0 \right\rangle\!.
 \]
-
 Con ellos se halla el elemento diferencial de área:
 \[
-\left\| {\\bf r}_{t} \times {\\bf r}_{u} \right\| = \frac{1}{2} \left| -8\sin\left( \frac{t}{2} \right) - 3\sin\left( \frac{3t}{2} \right) + \sin\left( \frac{5t}{2} \right) \right|.
+\left\| {\bf r}_{t} \times {\bf r}_{u} \right\| = \frac{1}{2} \left| -8\sin\left( \frac{t}{2} \right) - 3\sin\left( \frac{3t}{2} \right) + \sin\left( \frac{5t}{2} \right) \right|.
 \]
-
 La integración nos proporciona el área de la superficie en mención:
 \[
 \int_{0}^{2\pi} \int_{0}^{2\pi} \frac{1}{2} \left| -8\sin\left( \frac{t}{2} \right) - 3\sin\left( \frac{3t}{2} \right) + \sin\left( \frac{5t}{2} \right) \right| \, du \, dt = \frac{176}{5}\pi.
@@ -2147,7 +2118,7 @@ $r=1+\cos (t) $, el área está dada por
 \[\int_{0}^{2\pi }\int_{0}^{1+\cos t}rdrdt= \frac{3}{2}\pi\]
 y la longitud del arco es
 \[\int_{0}^{2\pi }\sqrt{\left( 1+\cos t\right) ^{2}+\left( -\sin t\right) ^{2}}dt= 8\]
-Si esta curva gira alrededor de la recta $\theta= \pi/2$, usando la expresión (\ref{toros1}),
+Si esta curva gira alrededor de la recta $\theta= \pi/2$, usando la expresión \ref{toros1},
 el área superficial está dada por
 \[2\pi \int_{0}^{2\pi }\left( 3+\left( 1+\cos \left( t\right) \right) \cos
 \left( t\right) \right) \sqrt{2+2\cos \left( t\right) }dt= \frac{304}{5}\pi.\]
@@ -2192,7 +2163,7 @@ ParametricPlot3D[{x*Cos[u],x*Sin[u],y},{t,0,2*Pi},
 \end{Verbatim}
 \end{tcolorbox}
 
-Con ayuda de la función ${\bf r}$, hallamos los siguientes vectores \linebreak
+Con ayuda de la función ${\bf r}$, hallamos los siguientes vectores
 \[
 \begin{split}
 \mathbf{r}_{t} &= \left\langle -\sin(t)\cos(u)(2\cos(t)+1), -\sin(t)\sin(u)(2\cos(t)+1), \right. \\
@@ -2210,15 +2181,11 @@ Los cálculos anteriores se pueden evaluar en \verb"Mathematica" mediante la eje
 \begin{tcolorbox}[title=\bf Instrucción en \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 x=3+(1+Cos[t])*Cos[t];
 y=(1+Cos[t])*Sin[t];
-ParametricPlot[{x,0,y},{t,0,2*Pi}];RevolutionAxis->
-{0,0,1}
-MeshStyle->Gray,
-Ticks->{{-3,0,3},{-3,0,3},
-{-1,0}},
-PlotStyle->Orange]
+ParametricPlot[{x,0,y},{t,0,2*Pi}];
+RevolutionAxis->{0,0,1},
+MeshStyle->Gray,Ticks->{{-3,0,3},{-3,0,3},{-1,0}},PlotStyle->Orange]
 r={x*Cos[u],x*Sin[u],y};
-A=Assuming[t>=0&&u>=0,
-Simplify[Norm[Cross[D[r,t],D[r,u]]]]]
+A=Assuming[t>=0&&u>=0,Simplify[Norm[Cross[D[r,t],D[r,u]]]]]
 Integrate[A,{t,0,2*Pi},{u,0,2*Pi}]
 \end{Verbatim}
 \end{tcolorbox}
@@ -2229,16 +2196,12 @@ Además, determine una función que represente la curva de intersección de la s
 
 \begin{enumerate}
 \item La superficie sobre el paraboloide $2z=x^2+y^2$ acotada por el cilindro cardiogénico $r=1+\cos(t)$.
-%
 
 \begin{figure}[H]
 \centering
-\caption{
-Paraboloide acotada por el cilindro cardiogénico
-}
+\caption{Paraboloide acotada por el cilindro cardiogénico}
 \includegraphics[width=0.4\textwidth]{Img/T_30a.pdf} \hspace{5mm}
-\includegraphics[width=0.4\textwidth]{Img/T_30b.pdf}
-
+\includegraphics[width=0.4\textwidth]{Img/T_30b.pdf} \\[5mm]
 \includegraphics[width=0.4\textwidth]{Img/T_30c.pdf}
 \end{figure}
 

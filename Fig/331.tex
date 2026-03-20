@@ -1,0 +1,24 @@
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+
+\begin{document}
+\begin{pspicture}(-1,-0.4)(3.5,3)% \psgrid
+  \psset{algebraic,unit=0.5}
+  \psaxes[Dx=2,Dy=2,linecolor=gray]{->}(0,0)(-0.5,-1.2)(7,6)[$y$,-90][$z$,0]
+  \pscustom[fillstyle=solid,fillcolor=gray!30,opacity=0.7,linestyle=none]{
+    \psparametricplot{0}{\psPiTwo}{3+3*sin(t)|2+2*cos(t)}
+  }
+  \psparametricplot{0}{\psPiTwo}{3+3*sin(t)|2+2*cos(t)}
+  \psline[linecolor=blue](5,3.5)(5,0.5)
+  \rput(4,4.7){$\frac{(z-2)^2}{4}+\frac{(y-3)^2}{9}=1$}
+  \rput(5,3.5){$\bullet$}
+  \rput(5,0.5){$\bullet$}
+  \rput(5,2.5){$\bullet$}
+  \rput(4.5,0.8){\small $A$}
+  \rput(4.5,3.2){\small $B$}
+  \rput(5.5,2.5){\small $P$}
+\end{pspicture}
+\end{document}
