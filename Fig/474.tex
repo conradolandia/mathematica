@@ -1,0 +1,28 @@
+\DocumentMetadata{lang=es}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\newcommand{\cn}[3]{\pscircle(#1,#2){5pt}\rput(#1,#2){$#3$}}
+
+\begin{document}
+\begin{pspicture}(-2.2,-1.25)(2.25,1.5) %  \psgrid
+  \psset{algebraic,unit=0.4}
+  \pscustom[fillstyle=solid,fillcolor=gray!50,linestyle=none]{
+    \psparametricplot{0.34}{2.80}{3*cos(t)|3*sin(t)}
+  }
+  \pscustom[fillstyle=solid,fillcolor=gray!30,opacity=0.7,linestyle=none]{
+    \psparametricplot{3.48}{5.94}{3*cos(t)|3*sin(t)}
+  }
+  \pscustom[fillstyle=vlines,hatchcolor=black!60,hatchsep=1pt,linestyle=none]{
+    \psparametricplot{-0.34}{0.34}{3*cos(t)|3*sin(t)}
+    \psparametricplot{2.80}{3.48}{3*cos(t)|3*sin(t)}
+  }
+  \psaxes[Dx=3,Dy=3,dx=3,dy=3,linecolor=black]{->}(0,0)(-4,-3.5)(4.5,4.3)[$x$,-90][$y$,0]
+  \psparametricplot[linecolor=black!60!blue]{0}{\psPiTwo}{3*cos(t)|3*sin(t)}
+  \psparametricplot[arrows=-,linecolor=black!60!blue,linewidth=0.5pt]{-3.2}{3.5}{t|-1}
+  \psparametricplot[arrows=-,linecolor=black!60!blue,linewidth=0.5pt]{-3.2}{3.5}{t|1}
+  \rput(3.2,3.3){$x^2+y^2=9$}
+\end{pspicture}
+\end{document}

@@ -1,0 +1,20 @@
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+
+\begin{document}
+\begin{pspicture}(-2.2,-1.1)(2.2,2.6) % \psgrid
+  \psset{algebraic,unit=0.26}
+  \pscustom[fillstyle=vlines,hatchcolor=gray!80,hatchsep=1.5pt,hatchwidth=0.5pt,linestyle=none]{
+    \parametricplot{-4}{2}{t|8-(7/9)*(t+1)^2}
+    \parametricplot{2}{-4}{t|-2+(t+1)^2/3}
+  }
+  \psaxes[Dx=2,Dy=2,labelFontSize=\scriptstyle]{->}(0,0)(-4.5,-1.95)(3.5,10)[$z$,90][$y$,180]
+  \parametricplot[linecolor=red,arrows=<->]{-4.7}{2.7}{t|8-(7/9)*(t+1)^2}
+  \parametricplot[linecolor=red,arrows=<->]{-4.7}{2.7}{t|-2+(t+1)^2/3}
+  \rput(4.9,3.5){\small $y=-2+\frac{(z+1)^2}{3}$}
+  \rput(2.4,-3.8){\small $y=8-\frac{7(z+1)^2}{9}$}
+\end{pspicture}
+\end{document}

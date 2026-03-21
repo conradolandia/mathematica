@@ -1,0 +1,27 @@
+\DocumentMetadata{lang=es}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\newcommand{\cn}[3]{\pscircle(#1,#2){5pt}\rput(#1,#2){$#3$}}
+
+\begin{document}
+\begin{pspicture}(-1.6,-1.75)(2,1.2)  %\psgrid
+  \psset{algebraic,unit=0.45}
+  \pscustom[fillstyle=solid,fillcolor=gray!50,linestyle=none]{
+    \psparametricplot{\psPi}{\psPiTwo}{3*cos(t)|3*sin(t)}
+    \psline(3,0)(1,0)
+    \psparametricplot{\psPiTwo}{\psPi}{cos(t)|sin(t)}
+    \psline(-1,0)(-3,0)
+  }
+  \psaxes[Dy=3,Dx=3,linecolor=black]{->}(0,0)(-4,-4)(4.2,3)[$y$,90][$z$,0]
+  \psparametricplot[linecolor=black!60!blue]{\psPi}{\psPiTwo}{3*cos(t)|3*sin(t)}
+  \psline[linecolor=black!60!blue](-1,0)(-3,0)
+  \psparametricplot[linecolor=black!60!blue]{\psPi}{\psPiTwo}{cos(t)|sin(t)}
+  \psline[linecolor=black!60!blue](1,0)(3,0)
+  \psline[arrows=->,linewidth=0.6pt](-1,0.2)(-1.5,0.8)
+  \rput(3,-3.2){$y^2+z^2=9$}
+  \rput(-2.4,1.2){$y^2+z^2=1$}
+\end{pspicture}
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+
+\begin{document}
+\begin{pspicture}(-1.25,-1.5)(3.7,2.2) % \psgrid
+  \psset{algebraic,xunit=1.2,yunit=1.1,plotstyle=curve}
+  \psaxes[Dx=2,deltax=2,linecolor=black]{->}(0,0)(-0.75,-1.6)(3,2)[$x$,90][$z$,0]
+  \pscustom[fillstyle=vlines,hatchcolor=black!70,hatchsep=0.9pt,linestyle=none]{
+    \psparametricplot{-1.4145}{1.4142}{(t^2-2)*(t^2-1),t}
+    \psparametricplot{1.4142}{-1.4142}{2-t^2,t}
+  }
+  \pscustom[fillstyle=hlines,hatchcolor=black!60,hatchwidth=1pt,linestyle=none,opacity=0.6,hatchsep=1.2pt]{
+    \psparametricplot{-1}{1}{(t^2-2)*(t^2-1),t}
+    \psline(0,1)(0,-1)
+  }
+  \pscustom[fillstyle=hlines,hatchcolor=gray!60!cyan,hatchwidth=1pt,hatchsep=1pt,linestyle=none,opacity=0.6]{
+    \psparametricplot{-1.22}{-1}{(t^2-2)*(t^2-1),t}
+    \psline(0,-1)(0,1)
+    \psparametricplot{1}{1.22}{(t^2-2)*(t^2-1),t}
+    \psline(-0.25,1)(-0.25,-1)
+  }
+  \psparametricplot[arrows=->,linecolor=blue!60!black]{-1.5}{1.6}{(t^2-2)*(t^2-1),t}
+  \psparametricplot[arrows=->,linecolor=red]{-1.5}{1.6}{2-t^2,t}
+  \psline[linecolor=black](-0.25,-1.22)(-0.25,1.22)
+  \rput(1.8,1.8){$x=(z^2-1)(z^2-2)$}
+  \rput(-1,1.8){$x=2-z^2$}
+\end{pspicture}
+\end{document}

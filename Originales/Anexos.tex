@@ -5,8 +5,8 @@
 
 \section{Funciones hiperbólicas}
 
-Existe un tipo particular de funciones que poseen algunas similitudes con las funciones trigonométricas,
-las funciones hiperbólicas. Es posible que su nombre corresponda con esa semejanza o al siguiente hecho,
+Las funciones hiperbólicas son un tipo particular de funciones, que poseen varias similitudes con las funciones trigonométricas.
+Es posible que su nombre corresponda con esa semejanza o al siguiente hecho,
 si $y$ corresponde al \emph{seno hiperbólico} y $x$ al \emph{coseno hiperbólico},
 entonces se satisface la ecuación de la hipérbola $x^{2}-y^{2}=1$.
 
@@ -27,10 +27,9 @@ Se muestran las figuras de algunas de ellas.
 \begin{figure}[H]
   \centering
   \caption{Cono truncado oblicuo determinado por ${\bf r}(u,t)$}
-  \includegraphics[width=0.4\textwidth]{Fig/190.pdf} \hspace{5mm}
-  \includegraphics[width=0.4\textwidth]{Fig/191.pdf}
-
-  \includegraphics[width=0.4\textwidth]{Fig/192.pdf}
+  \includegraphics[height=4cm]{Fig/190.pdf} \hspace{5mm}
+  \includegraphics[height=4cm]{Fig/191.pdf} \\[5mm]
+  \includegraphics[height=4cm]{Fig/192.pdf}
   \fuentepropia
 \end{figure}
 
@@ -451,7 +450,7 @@ u,v,w\right)
 \end{array} \right\vert\]
 }
 
-Una exposición más profunda de estos temas puede consultarse en \\ \cite{poljanin_handbook_2007}
+\textls[-10]{Una exposición más profunda de estos temas puede consultarse en~\cite{poljanin_handbook_2007}}
 
 Presentamos algunos tipos de sistemas de coordenadas curvilíneas.
 \subsection{Coordenadas curvilíneas en el plano} \index{Coordenadas curvilíneas}
@@ -549,8 +548,8 @@ las siguientes igualdades.
 Algunos ejemplos de los presentados en esta sección son una extensión de
 las respectivas coordenadas en el plano.
 
-\paragraph*{Coordenadas cilíndricas elípticas}
-\index{Coordenadas!cilíndricas elípticas}
+\subsubsection{Coordenadas cilíndricas elípticas}\index{Coordenadas!cilíndricas elípticas}
+
 En este sistema de coodenadas $u$ y $v$ representan cilindros hiperbólicos confocales y cilindros elípticos confocales.
 La conversión de coordenadas cilíndricas elípticas a rectangulares es la siguiente.
 \begin{equation}
@@ -676,7 +675,6 @@ de la cual se sigue que
 
 \subsubsection{Coordenadas cilíndricas bipolares} \index{Coordenadas!cilíndricas bipolares}
 Este sistema de coordenadas se relaciona con las coordenadas cartesianas de la siguiente manera.
-
 \begin{equation}
 x = \frac{a\sinh v}{\cosh v-\cos u},\hskip0.5cm y =\frac{a\sin u}{\cosh v-\cos u}, \hskip0.5cm z = z
 \end{equation}
@@ -690,20 +688,19 @@ Algunas de estas figuras se consiguen con las siguientes instrucciones:
 x=Sinh[v]/(Cosh[v]-Cos[u]);
 y=Sin[u]/(Cosh[v]-Cos[u]);
 u=Pi/6;
-A1=ParametricPlot3D[{x,y,z},{v,-4,4},{z,-2,2},
-MeshStyle->Black,PlotStyle->Orange,Mesh->10,
-PlotPoints->50];
+A1=ParametricPlot3D[{x,y,z},{v,-4,4},{z,-2,2},MeshStyle->Black,
+PlotStyle->Orange,Mesh->10,PlotPoints->50];
 v=1/2;
-A2=ParametricPlot3D[{x,y,z},{u,0,2*Pi},{z,-2,2},
-MeshStyle->Gray,PlotPoints->50,PlotStyle->Cyan];
+A2=ParametricPlot3D[{x,y,z},{u,0,2*Pi},{z,-2,2},MeshStyle->Gray,
+PlotPoints->50,PlotStyle->Cyan];
 z=1;
-A3=ParametricPlot3D[{x,y,z},{u,0,2*Pi},{v,-2,2},
-MeshStyle->Gray,PlotPoints->50,PlotStyle->Orange];
+A3=ParametricPlot3D[{x,y,z},{u,0,2*Pi},{v,-2,2},MeshStyle->Gray,
+PlotPoints->50,PlotStyle->Orange];
 Show[A1,A2,A3,PlotRange->{{-3,4},{-3,4},{-2,2}}]
 \end{Verbatim}
 \end{tcolorbox}
 
-Cuyo producto es el siguiente \ref{fig:cilindricas_bipolares}
+Cuyo producto se puede ver en la figura~\ref{fig:cilindricas_bipolares}.
 
 \begin{figure}[H]
 \centering
@@ -716,11 +713,11 @@ Cuyo producto es el siguiente \ref{fig:cilindricas_bipolares}
 
 \begin{ejer}
 Mostrar las siguientes igualdades
-{\small
-\[\tan u=\frac{2ay}{x^{2}+y^{2}-a^{2}}, \hskip0.15cm
-\tanh v=\frac{2ax}{x^{2}+y^{2}+a^{2}},\hskip0.15cm
-v=\frac{1}{2}\ln \left( \frac{\left(x+a\right)^{2}+y^{2}}{\left( x-a\right)^{2}+y^{2}}\right)\!.\]
-}
+\begin{align*}
+\tan u &= \frac{2ay}{x^{2}+y^{2}-a^{2}}, \\
+\tanh v &= \frac{2ax}{x^{2}+y^{2}+a^{2}}, \\
+v &= \frac{1}{2}\ln \left( \frac{\left(x+a\right)^{2}+y^{2}}{\left( x-a\right)^{2}+y^{2}}\right)\!.
+\end{align*}
 \end{ejer}
 
 \subsubsection{Coordenadas toroidales} \index{Coordenadas!toroidales}
@@ -752,24 +749,24 @@ x^{2}+y^{2}+z^{2} &=& \left( \left(a+r\cos\theta \right)\cos u\right)^{2}+
 \left(\left(a+r\cos\theta\right)\sin u\right) ^{2}+r^{2}\sin^{2}\theta \\ &=& a^{2}+2ar\cos \theta +r^{2}.
 \end{eqnarray*}
 Además,
-$\sqrt{x^{2}+y^{2}}=a+r\cos \theta \rightarrow r\cos \theta =\sqrt{x^{2}+y^{2}}-a$.
+\[\sqrt{x^{2}+y^{2}}=a+r\cos \theta \rightarrow r\cos \theta =\sqrt{x^{2}+y^{2}}-a.\]
 Por lo tanto,
 \begin{equation} \label{toroidales3}
 x^{2}+y^{2}+z^{2}+(a^{2}-r^{2})= 2a\sqrt{x^{2}+y^{2}}
 \end{equation}
+
 \paragraph*{Coordenadas toroidales} \index{Coordenadas!toroidales}
+
 Este sistema de coordenadas se obtiene cuando se hace girar alrededor del eje $z$
 las coordenadas bipolares en dos dimensiones.
 
-% De acuerdo a\footnote{\verb"https://rmf.smf.mx/pdf/rmf/40/5/40_5_805.pdf"}
 Las superficies correspondientes a valores constantes de $v$ corresponden a \emph{toros con su
-corazón circular de radio $a$ en el plano ecuatorial,} cuando $u$ es constante se generan esferas ortogonales
+corazón circular de radio $a$ en el plano ecuatorial}, cuando $u$ es constante se generan esferas ortogonales
 a los toros cuyo centro está en el eje polar, y con $\phi$ constante se obtienen semiplanos.
 Las siguientes ecuaciones determinan la relación entre coordenadas cartesianas y coordenadas toroidales.
 \begin{equation}
-x = \frac{a\sinh v\cos \phi }{\cosh v-\cos u},\hskip0.5cm y =\frac{a\sinh v\sin \phi }{\cosh v-\cos u}, \hskip0.5cm z = \frac{a\sin u}{\cosh v-\cos u}
+x = \frac{a\sinh v\cos \phi }{\cosh v-\cos u},\quad y =\frac{a\sinh v\sin \phi }{\cosh v-\cos u}, \quad z = \frac{a\sin u}{\cosh v-\cos u}
 \end{equation}
-
 Con $u\in [0,2\pi )$, $v\in [0,\infty )$ y $\phi \in [0,2\pi )$.
 Si $\phi $ es constante, es claro que la expresión $\tan \phi =y/x$ representa un semiplano.
 
@@ -781,22 +778,21 @@ En coordenadas toroidales se determina un toro con valores constantes de $v$.
 
 \begin{proof}
 De la definición se obtienen algunas identidades:
-{\small
+\begin{small}
 \begin{multline}
 x^2+y^2 = \left( \frac{a\sinh v\cos \phi }{\cosh v-\cos u}\right)^2+\left( \frac{a\sinh v\sin \phi }{\cosh v-\cos u}\right) ^2\\
 =  \frac{a^2 \sinh ^2v}{\left(\cosh v-\cos u\right) ^2}. \label{toroidales1}
 \end{multline}
-}
+\end{small}
 
-Lo cual implica que {\small $\sqrt{x^2+y^2}=\dfrac{a\sinh v}{\cosh v-\cos u}$.
-}
+Lo cual implica que $\sqrt{x^2+y^2}=\dfrac{a\sinh v}{\cosh v-\cos u}$.
 
 Otra equivalencia es
 \begin{eqnarray}
-x^2+y^2+z^2+a^2 &=&  \frac{a^2 \sinh ^2v}{\left(\cosh v-\cos u\right) ^2} +\left( \frac{a\sin u}{\cosh v-\cos u}\right) ^2+a^2 \nonumber \\
-% &=& \frac{a^2\left(\sinh^2 v+\sin^2 u+(\cosh v-\cos u)^2\right)}{\left(\cosh v-\cos u\right)^2}\nonumber\\
-% &=& \frac{a^2\left(\sinh ^{2}v+\cosh ^{2}v-2\cosh v\cos u+1 \right)}{\left(\cosh v-\cos u\right)^2}\nonumber\\
-&=& \frac{2a^2 (\cosh ^{2}v-\cosh v\cos u)}{\cosh v-\cos u} \\ &=& \frac{2a^2 \cosh v}{\cosh v-\cos u} \label{toroidales2}
+x^2+y^2+z^2+a^2 &=& \frac{a^2 \sinh ^2v}{\left(\cosh v-\cos u\right) ^2}
++\left( \frac{a\sin u}{\cosh v-\cos u}\right) ^2+a^2 \nonumber \\
+&=& \frac{2a^2 (\cosh ^{2}v-\cosh v\cos u)}{\cosh v-\cos u} \\
+&=& \frac{2a^2 \cosh v}{\cosh v-\cos u} \label{toroidales2}
 \end{eqnarray}
 Con las ecuaciones \ref{toroidales1} y \ref{toroidales2} y se establece la siguiente relación
 \begin{equation}
@@ -812,25 +808,20 @@ En coordenadas toroidales con valores constantes de $u$ se determina una esfera.
 
 \begin{proof}
 Con las siguientes relaciones
-{\small
-\begin{eqnarray*}
-x^{2}+y^{2} &=&\left( \frac{a\sinh v\cos \phi }{\cosh v-\cos u}\right)
-^{2}+\left( \frac{a\sinh v\sin \phi }{\cosh v-\cos u}\right)
-^{2} \\ &=& \frac{a^{2}\sinh ^{2}v}{\left( \cos u-\cosh v\right) ^{2}} \\
-\left( z-a\cot u\right) ^{2} &=& \left( \frac{a\sin u}{\cosh v-\cos u}-\frac{a\cos u}{\sin u}\right) ^{2} % =\frac{a^{2}\left( \sin ^{2}u-\left( \cosh v-\cos u\right) \cos u\right) ^2}{\left( \left( \cosh v-\cos u\right) \sin u\right) ^{2}}\\
-= \frac{a^{2}\left( 1-\cos u\cosh v\right) ^{2}}{\left(
-\left( \cosh v-\cos u\right) \sin u\right) ^{2}}
-\end{eqnarray*}
-}
-
+\begin{align*}
+x^{2}+y^{2} &=\left( \frac{a\sinh v\cos \phi }{\cosh v-\cos u}\right)^{2}
++\left( \frac{a\sinh v\sin \phi }{\cosh v-\cos u}\right)^{2} \\
+&= \frac{a^{2}\sinh ^{2}v}{\left( \cos u-\cosh v\right) ^{2}} \\
+\left( z-a\cot u\right) ^{2} &=& \left( \frac{a\sin u}{\cosh v-\cos u}-\frac{a\cos u}{\sin u}\right) ^{2} \\
+&= \frac{a^{2}\left( 1-\cos u\cosh v\right) ^{2}}{\left(\left( \cosh v-\cos u\right) \sin u\right) ^{2}}
+\end{align*}
 Se sigue que
-\begin{eqnarray}
+\begin{gather}
 x^{2}+y^{2}+\left( z-a\cot u\right) ^{2}
-% &=& \frac{a^{2}\sinh ^{2}v}{\left( \cos u-\cosh v\right) ^{2}}+\frac{a^{2}\left( 1-\cos u\cosh v\right) ^{2}}{\left( \left( \cosh v-\cos u\right) \sin u\right) ^{2}} \nonumber \\
-&=& \frac{a^{2}\left( \cos u-\cosh v\right) ^{2}}{\left( \left( \cosh v-\cos u\right)
+= \frac{a^{2}\left( \cos u-\cosh v\right) ^{2}}{\left( \left( \cosh v-\cos u\right)
 \sin u\right) ^{2}} =\frac{a^{2}}{\sin ^{2}u} \label{toroidales4}
-\end{eqnarray}
-La ecuación \ref{toroidales4} representa un esfera para valores constantes de $u$.
+\end{gather}
+La ecuación \ref{toroidales4} representa una esfera para valores constantes de $u$.
 \end{proof}
 
 Estas superficies se obtienen al ejecutar las siguientes instrucciones
@@ -871,21 +862,15 @@ Cuyo producto es el siguiente.
 Un esferoide oblato es el sólido que se obtiene al hacer una elipse sobre su eje menor.
 Las coordenadas esferoides oblatas (achatadas) se originan cuando una elipse rota alrededor de su eje menor,
 la relación con las coordenadas cartesianas es la siguiente.
-
-\begin{equation}
-x = a \cosh\eta\cos\theta\cos\phi,\hskip0.1cm y = a \cosh\eta\cos\theta\sin\phi, \hskip0.1cm z= a\sinh\eta\sin\theta
-\end{equation}
-%
+\begin{gather}
+x = a \cosh\eta\cos\theta\cos\phi, y = a \cosh\eta\cos\theta\sin\phi, z= a\sinh\eta\sin\theta
+\end{gather}
 Con $\eta \in \mathbb{R}$, $0\leq \theta <2\pi$ y $0\leq \phi <\pi$.
 Con la definición se pueden demostrar las siguientes identidades:
-
-{\small
-\begin{eqnarray*}
-\frac{x^{2}+y^{2}}{a^{2}\cosh ^{2}\eta }+\frac{z^{2}}{a^{2}\sinh ^{2}\eta} &=&  \frac{a^{2}\cos ^{2}\theta \cosh ^{2}\eta }{a^{2}\cosh ^{2}\eta }+\frac{a^{2}\sinh ^{2}\eta \sin ^{2}\theta}{a^{2}\sinh ^{2}\eta }= 1 \\[0.1cm]
-\frac{x^{2}+y^{2}}{a^{2}\cos ^{2}\theta }-\frac{z^{2}}{a^{2}\sin ^{2}\theta} &=& \frac{a^{2}\cos ^{2}\theta \cosh ^{2}\eta }{a^{2}\cos ^{2}\theta }-\frac{a^{2}\sinh ^{2}\eta \sin ^{2}\theta }{a^{2}\sin^{2}\theta }= 1.
-\end{eqnarray*}
-}
-
+\begin{align*}
+\frac{x^{2}+y^{2}}{a^{2}\cosh ^{2}\eta }+\frac{z^{2}}{a^{2}\sinh ^{2}\eta} &=  \frac{a^{2}\cos ^{2}\theta \cosh ^{2}\eta }{a^{2}\cosh ^{2}\eta }+\frac{a^{2}\sinh ^{2}\eta \sin ^{2}\theta}{a^{2}\sinh ^{2}\eta }= 1 \\
+\frac{x^{2}+y^{2}}{a^{2}\cos ^{2}\theta }-\frac{z^{2}}{a^{2}\sin ^{2}\theta} &= \frac{a^{2}\cos ^{2}\theta \cosh ^{2}\eta }{a^{2}\cos ^{2}\theta }-\frac{a^{2}\sinh ^{2}\eta \sin ^{2}\theta }{a^{2}\sin^{2}\theta }= 1.
+\end{align*}
 Es posible ver que para valores constantes de $\eta$ la superficie generada es un elipsoide,
 mientras que para valores constantes de $\theta$ se obtienen hiperboloides de un manto con $z$
 como eje de simetría. De la identidad $\tan \phi = y/x$ se sigue que para valores constantes de $\phi$
@@ -908,11 +893,9 @@ x=Cosh[\[Eta]]*Cos[\[Theta]]*Cos[\[Phi]];
 y=Cosh[\[Eta]]*Cos[\[Theta]]*Sin[\[Phi]];
 z=Sinh[\[Eta]]*Sin[\[Theta]];
 \[Eta]=3/2;
-A1=ParametricPlot3D[{x,y,z},{\[Theta],0,2*Pi},
-{\[Phi],0,Pi}];
+A1=ParametricPlot3D[{x,y,z},{\[Theta],0,2*Pi},{\[Phi],0,Pi}];
 \[Theta]=Pi/6;
-A2=ParametricPlot3D[{x,y,z},{\[Eta],-2,2},
-{\[Phi],0,2*Pi},
+A2=ParametricPlot3D[{x,y,z},{\[Eta],-2,2},{\[Phi],0,2*Pi},
 PlotStyle->Orange];
 \[Phi]=Pi/4;
 A3=ParametricPlot3D[{x,y,z},{\[Eta],-2,2},
@@ -927,10 +910,9 @@ Al hacer girar una elipse sobre su eje mayor el sólido obtenido se denomina
 esferoide prolato.
 Las coordenadas esferoides prolatas se obtiene cuando una elipse rota alrededor de su eje mayor.
 La relación de este sistema de coordenadas con las coordenadas cartesianas es la siguiente:
-
-\begin{equation}
-x = a\sinh \eta \sin \theta \cos \phi,\hskip0.1cm y = a\sinh \eta \sin \theta \sin \phi, \hskip0.1cm z=a\cosh \eta \cos \theta
-\end{equation}
+\begin{gather}
+x = a\sinh \eta \sin \theta \cos \phi, y = a\sinh \eta \sin \theta \sin \phi, z=a\cosh \eta \cos \theta
+\end{gather}
 con $\eta \in \mathbb{R}$, $0\leq \theta <\pi$ y $0\leq \phi < 2\pi$.
 De las siguientes igualdades se evidencia que para valores constantes de $\eta$ la superficie
 generada es un elipsoide, mientras que para valores constantes de $\theta$ se obtienen hiperboloides
@@ -1048,7 +1030,6 @@ A partir de la expresión $x^2+y^2+\left( z-a\coth \eta \right) ^2$, se sigue
 \begin{multline*}
 \hskip-0.3cm \left( \frac{a\sin \theta\cos \phi }{\cosh \eta -\cos \theta }\right)^2+\left(\frac{a\sin \theta
 \sin \phi }{\cosh \eta -\cos \theta }\right) ^2+\left( \frac{a\sinh \eta}{\cosh \eta -\cos \theta }-\frac{a\cosh \eta }{\sinh \eta }\right) ^2 \\
-% =\frac{a^2}{\left( \cosh \eta -\cos \theta \right) ^2}\left( \sin^2\theta +\left( \frac{\sinh ^2\eta -\left( \cosh \eta-\cos\theta\right) \cosh \eta }{\sinh \eta }\right) ^2\right)  \\
 = \frac{a^2}{\left( \cosh \eta -\cos \theta \right) ^2} \,\frac{\left(
 \cosh \eta -\cos \theta \right) ^2}{\sinh ^2\eta } = \frac{a^2}{\sinh ^2\eta }
 \end{multline*}
@@ -1066,8 +1047,7 @@ x^2+y^2+z^2= a^2 +2a\sqrt{x^2+y^2}\cot\theta.
 \begin{proof}
 A partir de las siguientes igualdades
 \begin{eqnarray}
-\hskip-0.3cm x^2+y^2+z^2 % &=&\left(\frac{a\sin\theta\cos\phi}{\cosh\eta-\cos\theta}\right)^2+\left( \frac{a\sin \theta\sin\phi}{\cosh\eta-\cos\theta}\right)^2+\left(\frac{a\sinh\eta}{\cosh\eta-\cos\theta}\right)^2 \nonumber \\
-&=& \frac{a^2(\left(\sin\theta \cos \phi\right)^2+\left( \sin \theta \sin \phi \right) ^2+\left( \sinh \eta \right) ^2)}{\left( \cosh \eta -\cos \theta \right)^2}\nonumber \\
+\hskip-0.3cm x^2+y^2+z^2 &=& \frac{a^2(\left(\sin\theta \cos \phi\right)^2+\left( \sin \theta \sin \phi \right) ^2+\left( \sinh \eta \right) ^2)}{\left( \cosh \eta -\cos \theta \right)^2}\nonumber \\
 & =& a^2\frac{\cosh ^2\eta -\cos ^2\theta }{\left( \cosh \eta -\cos \theta \right) ^2} = a^2\frac{\left( \cosh \eta +\cos \theta\right) }{\left( \cosh \eta -\cos \theta \right) }  \label{biesfericas1}
 \end{eqnarray}
 Además
@@ -1121,6 +1101,7 @@ En este sistema de coordenadas se generan, en algunos, casos cardioides de revol
 \begin{figure}[H]
 \centering
 \caption{Superficies constantes en coordenadas esferoidales prolatas}
+\label{fig:superficies_constantes_esferoidales_prolatas}
 \includegraphics[height=6cm]{Img/T_61a.pdf}\hskip0.5cm
 \includegraphics[height=6cm]{Img/T_61b.pdf}
 \fuentepropia
@@ -1134,7 +1115,7 @@ Con $u\in [0,\infty )$, $v\in [0,\infty)$, $\theta \in [0,2\pi)$.
 Para valores de constante de $u$ y $v$ se generan
 cardioides de revolución.
 
-Estas figuras se obtienen utilizando las siguientes instrucciones:
+La figura~\ref{fig:superficies_constantes_esferoidales_prolatas} se obtiene utilizando las siguientes instrucciones:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 x=u*v*Cos[\[Theta]]/(u^2+v^2)^2;
@@ -1232,11 +1213,9 @@ x=\[Rho]*Cos[\[Theta]]*Sin[\[Phi]];
 y=\[Rho]*Sin[\[Theta]]*Sin[\[Phi]];
 z=\[Rho]*Cos[\[Phi]];
 \[Phi]=Pi/3;
-A1=ParametricPlot3D[{x,y,z},{\[Theta],0,2*Pi},
-{\[Rho],0,3}];
+A1=ParametricPlot3D[{x,y,z},{\[Theta],0,2*Pi},{\[Rho],0,3}];
 \[Theta]=Pi/6;
-A2=ParametricPlot3D[{x,y,z},{\[Phi],0,Pi},
-{\[Rho],0,3}];
+A2=ParametricPlot3D[{x,y,z},{\[Phi],0,Pi},{\[Rho],0,3}];
 \[Rho]=2;
 A3=ParametricPlot3D[{x,y,z},{\[Phi],0,Pi},
 {\[Theta],0,2*Pi},PlotStyle->Cyan];
@@ -1244,14 +1223,15 @@ Show[A3,A2,A1,PlotRange->{{-3,3},{-3,3},{-3,3}}]
 \end{Verbatim}
 \end{tcolorbox}
 
-El producto obtenido es el siguiente.
+El producto obtenido se puede ver en la figura~\ref{fig:esfericas}.
 
 \begin{figure}[H]
 \centering
 \caption{Superficies constantes en coordenadas esféricas}
-\includegraphics[height=3.6cm]{Img/T_62a.pdf}
-\includegraphics[height=3.6cm]{Img/T_62b.pdf}
-\includegraphics[height=3.6cm]{Img/T_62c.pdf}
+\label{fig:esfericas}
+\includegraphics[height=4cm]{Img/T_62a.pdf} \hspace{5mm}
+\includegraphics[height=4cm]{Img/T_62b.pdf} \\[5mm]
+\includegraphics[height=4cm]{Img/T_62c.pdf}
 \fuentepropia
 \end{figure}
 
