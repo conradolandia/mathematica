@@ -15,6 +15,15 @@
         "%DOCFILE%"
       ],
       "env": {}
+    },
+    {
+      "name": "copy pdf date",
+      "command": "sh",
+      "args": [
+        "-c",
+        "cp \"%PDF%\" \"$(dirname \"%PDF%\")/wolfram-mathematica-$(date +%Y-%m-%d).pdf\""
+      ],
+      "env": {}
     }
   ],
   "latex-workshop.latex.recipes": [
@@ -22,6 +31,13 @@
       "name": "latexmk",
       "tools": [
         "latexmk"
+      ]
+    },
+    {
+      "name": "latexmk ➞ copy pdf date",
+      "tools": [
+        "latexmk",
+        "copy pdf date"
       ]
     }
   ],
