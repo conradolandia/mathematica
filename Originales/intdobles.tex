@@ -279,6 +279,7 @@ La porción de parábola se parametriza por $\la \sqrt{t},t\ra$, mientras que la
 Una combinación convexa de estas parametriza la región de interés, esto es
 {\small
 \[{\bf r}(t,u)=(1-u)\la 2-t,t\ra +u\la \sqrt{t},t\ra = \la (u-1)(t-2)+u\sqrt{t},t\ra\]}
+
 con $u\in \lbrack 0,1]$. De esta función se obtienen los siguientes vectores:
 {\small
 \[{\bf r}_{u} =\la t+\sqrt{t}-2,0\ra,{\bf r}_{t} =\la u+\frac{u}{2\sqrt{t}}-1,1\ra.\]}
@@ -296,8 +297,7 @@ $}
 \vspace{\parskip}
 
 \begin{parrafonumerado}[resume=ordenint]
-\item Determinar el centro de masa de una lámina delgada cuya densidad de área está dada por
-$\delta (x,y)=x$ $kg/m^2$ y posee la forma de la región en el primer cuadrante interior a la circunferencia con ecuación $x^{2}+y^{2}=4$ y exterior a la circunferencia $x^{2}+y^{2}=2x$.
+\item Determinar el centro de masa de una lámina delgada cuya densidad de área está dada por $\delta (x,y)=x$ $kg/m^2$ y posee la forma de la región en el primer cuadrante interior a la circunferencia con ecuación $x^{2}+y^{2}=4$ y exterior a la circunferencia $x^{2}+y^{2}=2x$.
 \end{parrafonumerado}
 
 Para plantear las integrales dobles utilizando coordenadas rectangulares, se debe tener en cuenta que en el orden $dxdy$, el área considerada se divide en tres porciones. En una de ellas $x$ toma valores desde el eje $y$ hasta la circunferencia de radio $1$.
@@ -761,6 +761,7 @@ $\left( \frac{1}{\sqrt{2}},2\right) $ y $\left( 1,4\right)$; con esta informaci�
 &=& \bi_{1}^{2}\bi_{\sqrt{\frac{1}{y}}}^{\sqrt{y}}xydxdy+\bi_{2}^{4}\bi_{\sqrt{\frac{y}{4}}}^{\sqrt{\frac{4}{y}}}xydxdy =\frac{7}{3}.
 \end{eqnarray*}
 }
+
 Estas integrales se evalúan con las siguientes instrucciones:
 
 \begin{tcolorbox}[title=\bf Instrucción en \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
@@ -778,13 +779,13 @@ por lo tanto, el jacobiano de la transformación es
 \begin{array}{cc} \frac{\partial }{\partial u}\left( \sqrt[4]{\frac{u}{v}}\right) & \frac{\partial }{\partial v}\left( \sqrt[4]{\frac{u}{v}}\right) \\[0.1cm]
 \frac{\partial }{\partial u}\left( \sqrt{uv}\right) & \frac{\partial }{\partial v}\left( \sqrt{uv}\right)
 \end{array} \right| = \frac{1}{4\sqrt[4]{uv^{3}}}.\]}
+
 A partir de la definición, es posible establecer que $1\leq u \leq 4$ y $1\leq v \leq 4$, respectivamente.
-{\small
-\begin{multline*}
-\iint_R xy dA = \int_{1}^{4}\int_{1}^{4}\left( \sqrt[4]{\frac{u}{v}}\right) \left( \sqrt{u}\sqrt{v}\right) \frac{1}{4\sqrt[4]{uv^{3}}}\, dudv\\
-=\int_{1}^{4}\int_{1}^{4}\frac{1}{4}\frac{\sqrt{u}}{\sqrt{v}}\, dudv= \frac{7}{3}.
-\end{multline*}
-}
+\begin{align*}
+\iint_R xy dA &= \int_{1}^{4}\int_{1}^{4}\left( \sqrt[4]{\frac{u}{v}}\right) \left( \sqrt{u}\sqrt{v}\right) \frac{1}{4\sqrt[4]{uv^{3}}}\, dudv\\
+&=\int_{1}^{4}\int_{1}^{4}\frac{1}{4}\frac{\sqrt{u}}{\sqrt{v}}\, dudv\\
+&= \frac{7}{3}.
+\end{align*}
 
 \item
 Evaluar la integral {\footnotesize $\ds\int_{0}^{1}\int_{2y}^{\sqrt{1+3y^2}}xy^{2}dxdy+\int_{-1}^{0}\int_{-2y}^{\sqrt{1+3y^2}}xy^{2}dxdy$.} La región de integración está limitada por las figuras de las ecuaciones $x= \pm 2y$\, y
@@ -1697,6 +1698,7 @@ que determinan el elemento diferencial de área
 &= (1+u)\sqrt{\cos^2(t) + 10 + 2\cos(t)},
 \end{align*}
 }
+
 cuya integral proporciona el área de esta región
 \[\int_{0}^{2\pi }\int_{0}^{1}\left( 1+u\right) \sqrt{\cos ^{2}(t) +10+2\cos (t) }dudt \approx 30.4679.\]
 La figura y los cálculos se obtienen con las siguientes instrucciones:
@@ -2037,6 +2039,7 @@ El área de la figura de la ecuación $r=1-\cos(t)$ está dada por
 {\small
 \[\int_{0}^{2\pi }\int_{0}^{1-\cos \theta }rdrd\theta = \frac{3}{2}\pi\]
 }
+
 y su longitud de curva es
 {\small
 \[\int_{0}^{2\pi }\sqrt{\left( 1-\cos (t) \right) ^{2}+\left( \sin (t)\right)^{2}}dt=\int_{0}^{2\pi }\sqrt{2-2\cos (t) }dt= 8.\]

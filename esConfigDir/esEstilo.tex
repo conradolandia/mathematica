@@ -232,7 +232,7 @@
 }}
 
 %%%%%%%%%% PORTADILLA 1 %%%%%%%%%%%%%%%
-\newcommand{\portadillauno}[2]{
+\newcommand{\portadillauno}[2][]{%
 \vspace*{6.5cm}
 \begin{raggedright}
 \linespread{3}
@@ -240,23 +240,29 @@
 \fontsize{22pt}{3.0mm} \lhseries
 \leftskip=2mm
 \rightskip=40mm
-#1
+#2 
 \vspace{2mm}
 \leftskip=-5mm
 
+% Condición: solo mostrar si #1 no está vacío
+\if\relax\detokenize{#1}\relax
+  % no hacer nada
+\else
 {\color{white}\colorbox{MSCustomGray}
 {\parbox[][1.5cm][c]{15.2cm}{
 \parbox{12.5cm}{
   \leftskip=7mm
   \fontsize{17pt}{2mm}\selectfont \lhseries
   \vspace{1mm}
-  #2
+  #1
 }
 }
 }
 }
+\fi
 
-\end{raggedright}}
+\end{raggedright}
+}
 %%%%%%%%%% FIN PORTADILLA 1 %%%%%%%%%%%%%%%
 
 %%%%%%%%%% PORTADILLA 2 %%%%%%%%%%%%%%%

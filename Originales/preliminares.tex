@@ -11,7 +11,7 @@ En estos apuntes consideraremos funciones cuyo dominio es el espacio el espacio 
 o un subconjunto de este.
 
 \section{Vectores}
-En \cite{marsden_calculo_2013}, p. 5, se define ``vector como un segmento de recta dirigido que comienza en el origen,
+En \cite[p.~5]{marsden_calculo_2013}, se define ``vector como un segmento de recta dirigido que comienza en el origen,
 esto es, un segmento de recta con magnitud y dirección específicos con punto inicial en el origen''.
 
 Los puntos en $\mathbb{R}^n$ se presentan en la forma $P=(a_1,a_2,\cdots, a_n)$
@@ -239,13 +239,12 @@ Una consecuencia de la definición \ref{preliminares5} es la siguiente.
   esto significa que para todo $\varepsilon >0$ existe $\delta >0$  tal que si
   $\left\Vert\left( x_{1},x_{2},\cdots ,x_{n}\right) -\left( a_{1},a_{2},\cdots ,a_{n}\right) \right\Vert <\delta $
   entonces $\left\Vert \ve{F}\left( x_{1},x_{2},\cdots ,x_{n}\right) -\ve{L}\right\Vert <\varepsilon $. Por lo tanto:
-
-  \begin{eqnarray*}
-    \left\vert f_{i}\left( x_{1},x_{2},\cdots ,x_{n}\right) -l_{i}\right\vert &=&
+  \begin{align*}
+    \left\vert f_{i}\left( x_{1},x_{2},\cdots ,x_{n}\right) -l_{i}\right\vert &=
     \sqrt{\left( f_{i}\left( x_{1},x_{2},\cdots ,x_{n}\right) -l_{i}\right) ^{2}} \\
-    &\leq& \sqrt{\sum_{i=1}^{m}\left( f_{i}\left(x_{1},x_{2},\cdots ,x_{n}\right) -l_{i}\right) ^{2}} \\
-    &=& \left\Vert \ve{F}\left( x_{1},x_{2},\cdots ,x_{n}\right) -\ve{L}\right\Vert <\varepsilon,
-  \end{eqnarray*}
+    &\leq \sqrt{\sum_{i=1}^{m}\left( f_{i}\left(x_{1},x_{2},\cdots ,x_{n}\right) -l_{i}\right) ^{2}} \\
+    &= \left\Vert \ve{F}\left( x_{1},x_{2},\cdots ,x_{n}\right) -\ve{L}\right\Vert <\varepsilon,
+  \end{align*}
   lo cual implica que $\lim_{{\bf x}\to {\bf a}} f_{i}(x_{1},x_{2},\cdots ,x_{n})=l_i, $
   para $i=1,2, \cdots, m. $
 
@@ -254,14 +253,15 @@ Una consecuencia de la definición \ref{preliminares5} es la siguiente.
   $|f_i( x_{1},x_{2},\cdots ,x_{n}) -l_i| <\varepsilon/m $, siempre que
   $\left\Vert\left( x_{1},x_{2},\cdots ,x_{n}\right) -\left( a_{1},a_{2},\cdots ,a_{n}\right) \right\Vert <\delta $.
   Por lo tanto:
-  {\small
-    \begin{eqnarray*}
-      \left\Vert \ve{F}\left( x_{1},x_{2},\cdots ,x_{n}\right) - \ve{L}\right\Vert &=&
+  \begin{gather*}
+    \begin{aligned}
+      \left\Vert \ve{F}\left( x_{1},x_{2},\cdots ,x_{n}\right) - \ve{L}\right\Vert &=
       \sqrt{\sum_{i=1}^{m}\left( f_{i}\left(x_{1},x_{2},\cdots ,x_{n}\right) -l_{i}\right) ^{2}} \\
-      &\leq & \sum_{i=1}^{m}\sqrt{\left( f_{i}\left( x_{1},x_{2},\cdots ,x_{n}\right)-l_{i}\right) ^{2}}\\
-      &\leq& \sum_{i=1}^{m}\left\vert f_{i}\left( x_{1},x_{2},\cdots ,x_{n}\right)-l_{i} \right\vert\\ & <& \sum_{i=1}^{m}\frac{\varepsilon }{m}=\varepsilon,
-    \end{eqnarray*}
-  }
+      &\leq  \sum_{i=1}^{m}\sqrt{\left( f_{i}\left( x_{1},x_{2},\cdots ,x_{n}\right)-l_{i}\right) ^{2}}\\
+      &\leq \sum_{i=1}^{m}\left\vert f_{i}\left( x_{1},x_{2},\cdots ,x_{n}\right)-l_{i} \right\vert\\ 
+      & < \sum_{i=1}^{m}\frac{\varepsilon }{m}=\varepsilon,
+    \end{aligned}
+  \end{gather*}
   es decir $\left\Vert \ve{F}\left( x_{1},x_{2},\cdots ,x_{n}\right) -\ve{L}\right\Vert <\varepsilon $,
   lo cual implica que $\lim_{{\bf x}\to {\bf a}}\ve{F}({\bf x})$ existe y es igual a $\ve{L}$.
 \end{parrafoitemize}
@@ -525,7 +525,7 @@ La matriz jacobiana de ${\bf F}$, $D{\bf F}(a)$ es
     \mathbf{r}^{\prime}(t) &=& \lim_{h\rightarrow 0}\frac{1}{h}\left( \mathbf{r}\left( t+h\right) -\mathbf{r}(t) \right) \\
     &=& \lim_{h\rightarrow 0}\frac{1}{h}\left\langle r_{1}\left(t+h\right) -r_{1}(t) ,\cdots ,r_{m}\left( t+h\right) -r_{m}(t) \right\rangle \\
     &=&\left\langle \lim_{h\rightarrow 0}\frac{r_{1}\left( t+h\right) -r_{1}(t) }{h},\cdots ,\lim_{h\rightarrow 0}\frac{r_{m}\left( t+h\right) -r_{m}(t) }{h}\right\rangle \\
-    &=& \left\langle r_{1}^{\prime}(t),r_{2}^{\prime}(t) ,\cdots ,r_{m}^{\prime}\left(t\right) \right\rangle\!.
+    &=& \left\langle r_{1}^{\prime}(t),r_{2}^{\prime}(t) ,\cdots ,r_{m}^{\prime}\left(t\right) \right\rangle.
   \end{eqnarray*}
 
   Si $\mathbf{u}(t) =\left\langle u_{1}(t),u_{2}(t) ,\cdots ,u_{n}(t) \right\rangle $ y
@@ -542,7 +542,7 @@ La matriz jacobiana de ${\bf F}$, $D{\bf F}(a)$ es
   Lo cual se resume en la siguiente fórmula:
   \begin{equation}
     \left( \mathbf{u}(t) \cdot \mathbf{v}(t) \right)^{\prime }=\mathbf{u}^{\prime }(t) \cdot \mathbf{v}\left(
-    t\right) +\mathbf{u}(t) \cdot \mathbf{v}^{\prime }\left(t\right)\!.
+    t\right) +\mathbf{u}(t) \cdot \mathbf{v}^{\prime }\left(t\right).
   \end{equation}
   Otras fórmulas útiles, son las siguientes
   \begin{align*}
@@ -757,7 +757,7 @@ Es por lo anterior que el volumen de $E$ se define como
 Si la función $f(x,y)$ determina la densidad en el punto $(x,y)$ entonces la integral de la fórmula \ref{integralesdobles1}
 representa la masa ($M$) de la región $R$. Los momentos con respecto al eje $x$ y al eje $y$ están dados  por
 {\small $\mu_{x}=\ds \iint_R y f(x,y)dA$} y {\small $\mu_{y}=\ds \iint_R x f(x,y)dA$,} los cuales determinan las coordenadas del
-centro de masa de la región $R$, esto es $$(\overline{x},\overline{y})= \left(\frac{\mu_y}{M},\frac{\mu_x}{M}\right)\!.$$
+centro de masa de la región $R$, esto es $$(\overline{x},\overline{y})= \left(\frac{\mu_y}{M},\frac{\mu_x}{M}\right).$$
 \index{Centro de masa}
 
 Si la región de integración en la fórmula \ref{integralesdobles1} es un rectángulo está se evalúa
@@ -914,10 +914,10 @@ Al hacer una partición de $E$ en $nml$ cajas rectangulares es posible establece
 Además
 $x_i= -\frac{\pi}{2}+\frac{\pi i}{2n}$, $y_j=\frac{\pi j}{4m}$ y $z_k=\frac{k}{l}$.
 Por lo tanto:
-$$f(x_i,y_j,z_k)=\sin\left(\frac{\pi i}{n}\right)\sin\left(\frac{\pi j}{4m}\right)+\frac{k^2}{l^2}\cos^2\left(\frac{\pi j}{2m}\right)\!.$$
+$$f(x_i,y_j,z_k)=\sin\left(\frac{\pi i}{n}\right)\sin\left(\frac{\pi j}{4m}\right)+\frac{k^2}{l^2}\cos^2\left(\frac{\pi j}{2m}\right).$$
 Con lo anterior, se establece que $S_{nml}=\sum\limits_{i=1}^n\sum\limits_{j=1}^m\sum\limits_{k=1}^l f(x_i,y_j,z_k)\Delta x \Delta y\Delta z$, es
 \begin{gather*}
-\frac{\pi ^2}{48 m}\left(\frac{(l+1) (2 l+1) (m-1)}{l^2}+\frac{12 \sin \left(\frac{\pi}{8}\right) \sin \left(\frac{\pi  (m+1)}{8 m}\right) \csc \left(\frac{\pi }{8 m}\right)\cot \left(\frac{\pi }{2 n}\right)}{n}\right)\!.
+\frac{\pi ^2}{48 m}\left(\frac{(l+1) (2 l+1) (m-1)}{l^2}+\frac{12 \sin \left(\frac{\pi}{8}\right) \sin \left(\frac{\pi  (m+1)}{8 m}\right) \csc \left(\frac{\pi }{8 m}\right)\cot \left(\frac{\pi }{2 n}\right)}{n}\right).
 \end{gather*}
 De modo que $\lim_{n,m,l \to \infty}S_{nml}$ es
 \begin{multline*}
@@ -1251,7 +1251,7 @@ Existe una manera de recordar brevemente dichos cálculos, en términos del oper
 Para el campo vectorial ${\bf F}(x,y,z) =\left\langle xye^{z},z\cos (xy) ,\sin (xy) \right\rangle$,
 es claro que
 $${\rm div}{\bf F}=\frac{\partial }{\partial x} \left( xye^{z}\right) +\frac{\partial }{\partial y} \left( z\cos (xy) \right) +\frac{\partial }{\partial z}(\sin(xy))= ye^{z}-xz\sin xy,$$ y también
-$${\rm rot}{\bf F} = \left\langle (x-1) \cos(xy),y(xe^{z}-\cos(xy)) ,-xe^{z}-yz\sin xy \right\rangle\!.$$
+$${\rm rot}{\bf F} = \left\langle (x-1) \cos(xy),y(xe^{z}-\cos(xy)) ,-xe^{z}-yz\sin xy \right\rangle.$$
 \end{ejemplo}
 La integración de estos tipos especiales de funciones se considerarán en el capítulo \secref{chap:stokes},
 así como algunas de sus aplicaciones.

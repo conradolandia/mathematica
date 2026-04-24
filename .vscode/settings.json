@@ -45,19 +45,6 @@
   "latex-workshop.message.warning.show": false,
   "latex-workshop.message.badbox.show": "none",
   "latex-workshop.message.error.show": true,
-  "latex-workshop.linting.chktex.enabled": false,
-  "latex-workshop.linting.lacheck.enabled": false,
-  "latex-workshop.view.pdf.viewer": "external",
-  "latex-workshop.view.pdf.external.viewer.command": "okular",
-  "latex-workshop.view.pdf.external.viewer.args": [
-    "--unique",
-    "%PDF%"
-  ],
-  "latex-workshop.view.pdf.external.synctex.command": "okular",
-  "latex-workshop.view.pdf.external.synctex.args": [
-    "--unique",
-    "%PDF%#src:%LINE%%TEX%"
-  ],
   "files.exclude": {
     "**/*.aux": true,
     "**/*.fdb_latexmk": true,

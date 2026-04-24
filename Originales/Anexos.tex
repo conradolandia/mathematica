@@ -377,15 +377,12 @@ En el siguiente enlace,
 \end{figure}
 
 La superficie de revolución obtenida se parametriza por:
-{\small
-\begin{equation*}
-\begin{split}
+\begin{gather*}
+\begin{aligned}
   {\bf r}(u,v)&=\big \langle (3+(2-\sin (u))\cos (u))\cos (v),(3+(2-\sin (u))\cos(u))\sin (v), \\
   &\qquad 3\sin (u)(2+\cos (2u))\big \rangle,
-\end{split}
-\end{equation*}
-}
-
+\end{aligned}
+\end{gather*}
 con $u\in \lbrack 0,2\pi ]$, $v\in \lbrack 0,2\pi]$, pues
 el área y el volumen requeridos pueden hallarse con los métodos expuestos antes.
 \end{ejer}
@@ -440,16 +437,16 @@ en coordenadas curvilíneas ortogonales la divergencia está dada por:
 %El rotacional del campo vectorial ${\bf F}$ en coordenadas cartesianas, se puede calcular por la expresión \index{Coordenadas curvilíneas!rotacional}
 %${\rm rot} {\bf F}=\left\vert \begin{array}{ccc} \vi & \vj & \vk \\[0.1cm] \frac{\partial }{\partial x} & \frac{\partial }{\partial y} & \frac{\partial  }{\partial z} \\[0.1cm]   P(x,y,z)  & Q(x,y,z)  & R(x,y,z) \end{array}\right\vert $
 El rotacional en coordenadas curvilíneas  de ${\bf F}$ está determinado por:
-{\small
-\[{\rm rot}{\bf F}=\frac{1}{h_{u}h_{v}h_{w}}\left\vert
+\begin{gather*}
+{\rm rot}{\bf F}=\frac{1}{h_{u}h_{v}h_{w}}\left\vert
 \begin{array}{ccc}
 h_{u}\ei{u} & h_{v}\ei{v} & h_{w}\ei{w} \\[0.15cm]
 \frac{\partial }{\partial u} & \frac{\partial }{\partial v} & \frac{\partial
 }{\partial w} \\[0.15cm]
 h_{u}P\left( u,v,w\right)  & h_{v}Q\left( u,v,w\right)  & h_{w}R\left(
 u,v,w\right)
-\end{array} \right\vert\]
-}
+\end{array} \right\vert
+\end{gather*}
 
 \textls[-10]{Una exposición más profunda de estos temas puede consultarse en~\cite{poljanin_handbook_2007}.}
 
@@ -501,15 +498,12 @@ En coordenadas bipolares con valores constantes de $u$ y $v$ representan círcul
 Para tal fin mostraremos las siguientes igualdades:
 $x^2+\left( y-a\cot u\right) ^2=a^2\csc ^2u;\hskip0.2cm  \left( x-a\coth v\right) ^2+y^2=a^2{\rm csch}^2v$.
 Para la primera de estas expresiones es:
-{\small
-\begin{multline}
+\begin{align}
 \label{bipolares1}
-x^2+\left( y-a\cot u\right) ^2 =  \left( \frac{a\sinh v}{\cosh v-\cos u}\right) ^2+\left( \frac{a\sin u}{\cosh v-\cos u}-\frac{a\cos u}{\sin u}\right) ^2  \\
-=  \frac{a^2\left( \sinh ^2v\sin ^2u+\left( \cos u\cosh v-1\right) ^2\right)}{\left( \cosh v-\cos u\right) ^2\sin ^2u}   \\
-=  \frac{a^2\left( \cosh v-\cos u\right) ^2 }{\left( \cosh v-\cos u\right) ^2\sin ^2u} = %\frac{a^2}{\sin ^2u} \\ =
-a^2{\rm csch}^2u
-\end{multline}
-}
+x^2+\left( y-a\cot u\right) ^2 &=  \left( \frac{a\sinh v}{\cosh v-\cos u}\right) ^2+\left( \frac{a\sin u}{\cosh v-\cos u}-\frac{a\cos u}{\sin u}\right) ^2  \notag\\
+&=  \frac{a^2\left( \sinh ^2v\sin ^2u+\left( \cos u\cosh v-1\right) ^2\right)}{\left( \cosh v-\cos u\right) ^2\sin ^2u}   \notag\\
+&=  \frac{a^2\left( \cosh v-\cos u\right) ^2 }{\left( \cosh v-\cos u\right) ^2\sin ^2u} = a^2{\rm csch}^2u
+\end{align}
 % = \frac{a^2\left(\left( \sinh v\sin u\right) ^2+\left( \sin ^2u-\left( \cosh v-\cos u\right) \cos u\right) ^2\right) }{\left( \cosh v-\cos u\right) ^2\sin ^2u}
 La otra igualdad se trabaja de manera similar:
 \begin{multline} \label{bipolares2}
@@ -602,12 +596,12 @@ $y^2=v^2\left( v^2+2x\right)$ caracteriza una parábola abre hacia la parte posi
 
 Es por esto que en el espacio  las superficies constantes son cilindros parabólicos.
 Las consideraciones anteriores también se pueden evidenciar con las siguientes igualdades:
-{\small
-\[u^2\left( u^2-2x\right) =u^2\left( u^2-2\left( \frac{1}{2}\left(
-u^2-v^2\right) \right) \right) = u^2v^2=y^2\]
-\[v^2\left( v^2+2x\right) =v^2\left( v^2+2\left( \frac{1}{2}\left(
-u^2-v^2\right) \right) \right) = u^2v^2=y^2.\]
-}
+\begin{gather*}
+u^2\left( u^2-2x\right) =u^2\left( u^2-2\left( \frac{1}{2}\left(
+u^2-v^2\right) \right) \right) = u^2v^2=y^2\\
+v^2\left( v^2+2x\right) =v^2\left( v^2+2\left( \frac{1}{2}\left(
+u^2-v^2\right) \right) \right) = u^2v^2=y^2.
+\end{gather*}
 
 \begin{figure}[H]
 \captionof{figure}{\footnotesize Superficies constantes en coordenadas cilíndricas parabólicas.}
@@ -919,14 +913,14 @@ De las siguientes igualdades se evidencia que para valores constantes de $\eta$ 
 generada es un elipsoide, mientras que para valores constantes de $\theta$ se obtienen hiperboloides
 de dos mantos con $z$ como eje de simetría.
 De la identidad $\tan \phi = y/x$ se sigue que para valores constantes de $\phi$ las superficies obtenidas son semiplanos.
-{\small
-\begin{eqnarray*}
-\frac{x^{2}+y^{2}}{a^{2}\sinh ^{2}\eta}+\frac{z^{2}}{a^{2}\cosh^{2}\eta} &=&
+\begin{gather*}
+\begin{aligned}
+\frac{x^{2}+y^{2}}{a^{2}\sinh ^{2}\eta}+\frac{z^{2}}{a^{2}\cosh^{2}\eta} &=
 \frac{a^{2}\sin ^{2}\theta \sinh ^{2}\eta }{a^{2}\sinh ^{2}\eta}+\frac{a^{2}\cosh^{2}\eta\cos^{2}\theta}{a^{2}\cosh^{2}\eta}= 1 \\[0.2cm]
 \frac{z^{2}}{a^{2}\cos ^{2}\theta }-\frac{x^{2}+y^{2}}{a^{2}\sin ^{2}\theta}
-&=& \frac{a^{2}\cosh ^{2}\eta \cos ^{2}\theta }{a^{2}\cos^{2}\theta }-\frac{a^{2}\sin ^{2}\theta \sinh ^{2}\eta }{a^{2}\sin^{2}\theta }= 1.
-\end{eqnarray*}
-}
+&= \frac{a^{2}\cosh ^{2}\eta \cos ^{2}\theta }{a^{2}\cos^{2}\theta }-\frac{a^{2}\sin ^{2}\theta \sinh ^{2}\eta }{a^{2}\sin^{2}\theta }= 1.
+\end{aligned}
+\end{gather*}
 
 \begin{figure}[H]
 \centering
@@ -958,23 +952,21 @@ Show[A1,A3]
 \subsubsection{Coordenadas cónicas} \index{Coordenadas!cónicas}
 
 Las siguientes ecuaciones definen este sistema de coordenadas:
-{\small
 \begin{equation*}
 x = \frac{uvw}{ab},\hskip0.1cm y = \frac{u}{a}\sqrt{\frac{\left( v^2-a^2\right) \left(
 w^2-a^2\right) }{a^2-b^2}}, \hskip0.1cm z=\frac{u}{b}\sqrt{\frac{\left( v^2-b^2\right)
 \left(w^2-b^2\right) }{b^2-a^2}}.
 \end{equation*}
-}
 
 Se debe considerar la siguiente condición $b^2>v^2>a^2>w^2$.
 En este sistema de coordenadas, valores constante de $u$ generan esferas;
 esto es consecuencia de la siguiente igualdad:
-{\small
-\[ x^2+y^2+z^2 = \frac{u^2v^2w^2}{a^2b^2}+\frac{u^2}{a^2}\frac{%
+\begin{gather*}
+ x^2+y^2+z^2 = \frac{u^2v^2w^2}{a^2b^2}+\frac{u^2}{a^2}\frac{%
 \left( a^2-v^2\right) \left( a^2-w^2\right) }{a^2-b^2}%
 - \frac{u^2}{b^2}\frac{\left( b^2-v^2\right) \left(
-b^2-w^2\right) }{\left( a^2-b^2\right) }= u^2.\]
-}
+b^2-w^2\right) }{\left( a^2-b^2\right) }= u^2.
+\end{gather*}
 
 Presentamos ahora otras dos implicaciones.
 
@@ -1047,23 +1039,23 @@ x^2+y^2+z^2= a^2 +2a\sqrt{x^2+y^2}\cot\theta
 
 \begin{proof}
 A partir de las siguientes igualdades
-\begin{eqnarray}
-\hskip-0.3cm x^2+y^2+z^2 &=& \frac{a^2(\left(\sin\theta \cos \phi\right)^2+\left( \sin \theta \sin \phi \right) ^2+\left( \sinh \eta \right) ^2)}{\left( \cosh \eta -\cos \theta \right)^2}\nonumber \\
-& =& a^2\frac{\cosh ^2\eta -\cos ^2\theta }{\left( \cosh \eta -\cos \theta \right) ^2} = a^2\frac{\left( \cosh \eta +\cos \theta\right) }{\left( \cosh \eta -\cos \theta \right) }  \label{biesfericas1}
-\end{eqnarray}
+\begin{align}
+\hskip-0.3cm x^2+y^2+z^2 &= \frac{a^2(\left(\sin\theta \cos \phi\right)^2+\left( \sin \theta \sin \phi \right) ^2+\left( \sinh \eta \right) ^2)}{\left( \cosh \eta -\cos \theta \right)^2}\nonumber \\
+& = a^2\frac{\cosh ^2\eta -\cos ^2\theta }{\left( \cosh \eta -\cos \theta \right) ^2} = a^2\frac{\left( \cosh \eta +\cos \theta\right) }{\left( \cosh \eta -\cos \theta \right) }  \label{biesfericas1}
+\end{align}
 Además,
-\begin{eqnarray}
-\sqrt{x^2+y^2} &=& \sqrt{\left( \frac{a\sin \theta \cos \phi }{\cosh \eta-\cos \theta }\right) ^2+\left( \frac{a\sin \theta \sin \phi }{\cosh \eta -\cos \theta }\right) ^2} \nonumber  \\
-&=& \sqrt{\frac{a^2\sin ^2\theta }{\left( \cosh \eta -\cos \theta \right) ^2}} =\frac{a\sin \theta }{\cosh \eta -\cos \theta } \label{biesfericas2}
-\end{eqnarray}
+\begin{align}
+\sqrt{x^2+y^2} &= \sqrt{\left( \frac{a\sin \theta \cos \phi }{\cosh \eta-\cos \theta }\right) ^2+\left( \frac{a\sin \theta \sin \phi }{\cosh \eta -\cos \theta }\right) ^2} \nonumber  \\
+&= \sqrt{\frac{a^2\sin ^2\theta }{\left( \cosh \eta -\cos \theta \right) ^2}} =\frac{a\sin \theta }{\cosh \eta -\cos \theta } \label{biesfericas2}
+\end{align}
 Con las expresiones \ref{biesfericas1} y \ref{biesfericas2}
 se establece que  % $x^2+y^2+z^2-2a\sqrt{x^2+y^2}\cot\theta= a^2$. por lo tanto
-{\small
-\begin{eqnarray*}
-x^2+y^2+z^2-2a\sqrt{x^2+y^2}\cot \theta &=& a^2\frac{\left(\cosh \eta +\cos \theta \right) }{\left(\cosh \eta -\cos \theta \right) } -\frac{2a^2\sin \theta\cot \theta}{\cosh \eta -\cos \theta } \\
-& =& a^2
-\end{eqnarray*}
-}
+\begin{gather*}
+\begin{aligned}
+x^2+y^2+z^2-2a\sqrt{x^2+y^2}\cot \theta &= a^2\frac{\left(\cosh \eta +\cos \theta \right) }{\left(\cosh \eta -\cos \theta \right) } -\frac{2a^2\sin \theta\cot \theta}{\cosh \eta -\cos \theta } \\
+&= a^2
+\end{aligned}
+\end{gather*}
 \end{proof}
 A partir de relación \ref{biesfericas3} se observa que para $\theta <\pi/2$,
 la superficie generada tiene forma de \emph{manzana} y

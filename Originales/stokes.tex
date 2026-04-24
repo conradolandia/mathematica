@@ -626,12 +626,11 @@ Integrate[Dot[G,Cross[D[r,u],D[r,v]]],{v,0,2*Pi},{u,0,1}]
 
 La curva de intersección del paraboloide y el cilindro se determina reduciendo las ecuaciones originales a
 $x = 2z - 2$. Con las expresiones $y = 2 + 2\cos(t)$, $z = 2 + 2\sin(t)$, se sigue que la función vectorial que describe dicha curva es:
-
 {\small
-\[{\bf r}(t) = \left\langle 2 + 4\sin(t),\, 2 + 2\cos(t),\, 2 + 2\sin(t) \right\rangle\!,\; t \in [0, 2\pi].\]}
+\[{\bf r}(t) = \left\langle 2 + 4\sin(t),\, 2 + 2\cos(t),\, 2 + 2\sin(t) \right\rangle\!,\; t \in [0, 2\pi].\]
+}
 
 Entonces,
-
 {\small
 \[
 {\bf F}({\bf r}(t)) =
@@ -642,6 +641,7 @@ Entonces,
 \right\rangle
 \]
 }
+
 y también
 {\small
 \[
@@ -650,6 +650,7 @@ y también
 + 16\sin(t)(1 + \sin(t))^3.
 \]
 }
+
 Por lo tanto,
 \begin{equation} \label{stokes2}
 \int_0 ^{2\pi}{\bf F}({\bf r}(t)) \cdot{\bf r}'(t) dt = 60 \pi
@@ -753,41 +754,37 @@ $z=\rho \sin \theta \sin \phi $ para construir una parame- \\ trización de $S$.
 de modo que esta superficie $S$ se parametriza como
 $x=2\cos ^{2}\phi $, $y=2\cos \theta \cos \phi \sin \phi $, $z=2\cos \phi
 \sin \theta \sin \phi $. O de manera más simple:
-
-{\small
-\begin{align*}
+\begin{gather*}
+\begin{aligned}
 \mathbf{u}(\theta, \phi) &= \left \langle 2 \cos^2 \phi, 2 \cos \theta \cos \phi \sin \phi, 2 \cos \phi \sin \theta \sin \phi \right \rangle \\
 &= \left \langle 1 + \cos (2\phi), \cos \theta \sin (2\phi), \sin \theta \sin (2\phi) \right \rangle
-\end{align*}
-}
+\end{aligned}
+\end{gather*}
+
 con $\theta \in \lbrack 0,2\pi ]$, $\phi \in \lbrack \pi /6,\pi /2]$.
 De esta función se obtiene:
-
-{\small
-\begin{align*}
+\begin{gather*}
+\begin{aligned}
 \mathbf{u}_{\theta} &= \left \langle 0, -\sin 2\phi \sin \theta, \sin 2\phi \cos \theta \right \rangle \\
 \mathbf{u}_{\phi} &= \left \langle -2 \sin 2\phi, 2 \cos 2\phi \cos \theta, 2 \cos 2\phi \sin \theta \right \rangle \\
 \mathbf{u}_{\theta} \times \mathbf{u}_{\phi} &= \left \langle -2 \cos 2\phi \sin 2\phi, -2 \sin^2 (2\phi) \cos \theta, -2 \sin^2 (2\phi) \sin \theta \right \rangle \\
 &= \left \langle -\sin (4\phi), -2 \sin^2 (2\phi) \cos \theta, -2 \sin^2 (2\phi) \sin \theta \right \rangle.
-\end{align*}
-}
+\end{aligned}
+\end{gather*}
 
 Además,
-
 ${\rm rot}\,{\bf F}=\nabla \times \left\langle -y,y-z,-x\right\rangle =
 \left\langle 1,1,1\right\rangle $
 y
-\begin{eqnarray*}
-{\bf F}({\bf u}(\theta,\phi))\cdot ({\bf u}_{\theta }\times {\bf u}_{\phi }) &=& -\sin 4\phi -2\left( \cos \theta +\sin \theta \right) \sin^{2}\left( 2\phi \right)\!.
-\end{eqnarray*}
+\begin{gather*}
+{\bf F}({\bf u}(\theta,\phi))\cdot ({\bf u}_{\theta }\times {\bf u}_{\phi }) 
+= -\sin 4\phi -2\left( \cos \theta +\sin \theta \right) \sin^{2}\left( 2\phi \right)\!.
+\end{gather*}
 Con lo anterior, podemos evaluar la integral
-
-{\small
-\begin{multline*}
+\begin{gather*}
 \iint_S {\rm rot}\, {\bf F} \cdot d{\bf S} = -\int_{\pi /6}^{\pi /2}\int_{0}^{2\pi }\left( \sin 4\phi +2\left( \cos
 \theta +\sin \theta \right) \sin ^{2}\left( 2\phi \right) \right) d\theta d\phi = \frac{3\pi}{4}.
-\end{multline*}
-}
+\end{gather*}
 
 En \Verb"Mathematica" este proceso se hace con las siguientes instrucciones:
 
@@ -905,12 +902,9 @@ $\ve{\alpha}(t) =\left\langle 4\cos t,2\sin t,0\right\rangle$, $t\in \lbrack 0,2
 El mismo cálculo se puede evaluar usando una integral de línea, en este caso
 ${\bf F}(\ve{\alpha}(t))\cdot \ve{\alpha}^{\prime}(t)=\la e^{4\cos t},\cos(0),0\ra\cdot\la -4\sin t,2\cos t,0\ra$,
 por lo tanto,
-
 {\small
 \[\int_{C}{\bf F}\cdot d\ve{\alpha} = \int_{0}^{2\pi}{\bf F}(\ve{\alpha}(t))\cdot
 \ve{\alpha}^{\prime }\left( t\right) dt = \int_{0}^{2\pi}\left( 2\cos t-4e^{4\cos t}\sin t\right) dt= 0.\]}
-
-%
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 {x,y,z}={4*Cos[t],2*Sin[t],0};
@@ -1111,6 +1105,7 @@ Por lo tanto,
 {\small
 \[{\bf F}\left({\bf r}\left(t\right) \right) \cdot {\bf r}^{\prime}(t) = -8\cos ^{2}\left( \frac{t}{2}\right) (1+\cos(t)-\cos(2t)-3\sin(t)-5\sin(2t)-\sin(3t));\]
 }
+
 entonces,
 \begin{equation}\label{stokes8}
 \int_{0}^{2\pi}{\bf F}\left({\bf r}\left(t\right) \right) \cdot {\bf r}^{\prime}(t)dt
@@ -1244,6 +1239,7 @@ La superficie en mención se parametriza mediante la función
 {\bf r}_{u} \times {\bf r}_{v} &= \left \langle \cos v, \sin v, \frac{2}{u} \right \rangle \times \left \langle -u\sin v, u\cos v, 0 \right \rangle = \left \langle -2\cos v, -2\sin v, u \right \rangle.
 \end{align*}
 }
+
 Además, del campo vectorial considerado se obtiene:
 %${\bf F}\left( x,y,z\right) =\left\langle yz,-xz,-xy\right\rangle $
 \begin{eqnarray*}
@@ -1858,16 +1854,14 @@ Utilizaremos la función
 ${\bf r}\left( u,v\right) =\langle 2u\cos v,2u\sin v,\sqrt{9-4u^{2}}\rangle $,
 como parametrización de la esfera, con lo cual ${\bf F}({\bf r}(u,v))=\langle 2u\sin v,-2u\cos v, \linebreak \sqrt{9-4u^{2}}\rangle $.
 Derivando parcialmente se obtienen los siguientes vectores:
-
-\begin{eqnarray*}
-{\bf r}_{u} &=& \left\langle 2\cos v,2\sin v,\frac{-4u}{\sqrt{9-4u^{2}}}\right\rangle \\
-{\bf r}_{v}&=&\left\langle -2u\sin v,2u\cos v,0\right\rangle \\
-{\bf r}_{u}\times {\bf r}_{v}&=&\left\langle \frac{8u^{2}\cos v}{\sqrt{9-4u^{2}}},\frac{8u^{2}\sin v}{\sqrt{9-4u^{2}}},4u\right\rangle\!.
-\end{eqnarray*}
+\begin{align*}
+{\bf r}_{u} &= \left\langle 2\cos v,2\sin v,\frac{-4u}{\sqrt{9-4u^{2}}}\right\rangle \\
+{\bf r}_{v}&=\left\langle -2u\sin v,2u\cos v,0\right\rangle \\
+{\bf r}_{u}\times {\bf r}_{v}&=\left\langle \frac{8u^{2}\cos v}{\sqrt{9-4u^{2}}},\frac{8u^{2}\sin v}{\sqrt{9-4u^{2}}},4u\right\rangle\!.
+\end{align*}
 
 Con lo cual, {\small ${\bf F}\left({\bf r}\left(u,v\right)\right) \cdot \left({\bf r}_{u}\times {\bf r}_{v}\right)= 4u\sqrt{9-4u^{2}}$.}
 Al ser dos regiones iguales (sobre la esfera) multiplicamos por 2 y haremos un solo cálculo, es decir, el flujo sobre la porción de la esfera que limita el sólido está dado por:
-
 \begin{equation}\label{flujo3}
 2\int_{0}^{1}\int_{0}^{2\pi }4u\sqrt{9-4u^{2}}dvdu= \frac{4}{3}\pi \left( 27-5\sqrt{5}\right)
 \end{equation}
@@ -2709,6 +2703,7 @@ entonces,
 {\small
 \[{\bf F}({\bf r}(u,v)) \cdot \left({\bf r}_{u}\times {\bf r}_{v}\right)=\frac{5u^3}{24}\cos(v)(6\sqrt{5}\cos(v)-(62+u^2(1+9\cos(2v)))\sin(v)).\]
 }
+
 Por lo tanto, sobre la porción del paraboloide hiperbólico el flujo de ${\bf F}$ es:
 \begin{equation} \label{flujo14}
 \int_0^1\int_0^{2\pi}{\bf F}({\bf r}(u,v)) \cdot \left({\bf r}_{u}\times{\bf r}_{v}\right)dvdu=-\frac{5 \sqrt{5}}{16}\pi
