@@ -1,0 +1,26 @@
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+
+\begin{document}
+\begin{pspicture}(-1.75,-2)(3,2) %\psgrid
+  \psset{algebraic,unit=0.45}
+  \pscustom[fillstyle=hlines,hatchcolor=gray!60,hatchsep=1.2pt,hatchwidth=0.5pt,opacity=0.7,linestyle=none]{
+    \psparametricplot{0}{\psPiTwo}{3*cos(t)|3*sin(t)}
+  }
+  \pscustom[fillstyle=solid,fillcolor=gray!60,opacity=0.7,linestyle=none]{
+    \psparametricplot{0}{\psPiTwo}{3*cos(t)|3*sin(t)}
+    \psline(3,0)(4,0)
+    \psparametricplot{\psPiTwo}{0}{4*cos(t)|4*sin(t)}
+  }
+  \psaxes[Dy=3,Dx=3,linecolor=black,labelFontSize=\scriptstyle]{->}(0,0)(-5,-5)(5.5,5.6)[$x$,90][$z$,0]
+  \psparametricplot[linecolor=black!60!blue]{0}{\psPiTwo}{3*cos(t)|3*sin(t)}
+  \psparametricplot[linecolor=black!60!blue]{0}{\psPiTwo}{4*cos(t)|4*sin(t)}
+  \psline[linecolor=black!60!blue,linewidth=0.6pt,arrows=<->](-3,-3.5)(-3,3.75)
+  \psline[linecolor=black!60!blue,linewidth=0.6pt,arrows=<->](3,-3.5)(3,3.75)
+  \rput(0.3,0.8){\small $x^2+z^2=9$}
+  \rput(4,4.5){\small $x^2+z^2=\frac{25}{2}$}
+\end{pspicture}
+\end{document}

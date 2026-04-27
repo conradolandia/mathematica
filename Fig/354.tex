@@ -1,0 +1,27 @@
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+
+\begin{document}
+\begin{pspicture}(-2.8,-2)(3,2) % \psgrid
+  \psset{algebraic,unit=0.425}
+  \psaxes[Dy=4,Dx=3,linecolor=black,labelFontSize=\scriptstyle]{->}(0,0)(-5,-5)(8,5.6)[$x$,90][$y$,0]
+  \pscustom[fillstyle=hlines,hatchcolor=gray!60,hatchsep=1.2pt,hatchwidth=0.5pt,opacity=0.7,linestyle=none]{
+    \psparametricplot{-0.59}{0.59}{3*COSH(t)|3*SINH(t)}
+    \psparametricplot{0.49}{2.65}{4*cos(t)|4*sin(t)}
+    \psparametricplot{0.59}{-0.59}{-3*COSH(t)|3*SINH(t)}
+    \psparametricplot{3.63}{5.79}{4*cos(t)|4*sin(t)}
+  }
+  \psparametricplot[linecolor=black!60!blue]{0}{\psPiTwo}{4*cos(t)|4*sin(t)}
+  \psparametricplot[linecolor=black!60!blue,arrows=->]{-1.1}{1.2}{3*COSH(t)|3*SINH(t)}
+  \psparametricplot[linecolor=black!60!blue,arrows=->]{-1.1}{1.2}{-3*COSH(t)|3*SINH(t)}
+  \psline[linecolor=black!60!blue,linewidth=0.6pt,arrows=->](-5,-1.87)(5.5,-1.87)
+  \psline[linecolor=black!60!blue,linewidth=0.6pt,arrows=->](3.53,3.5)(3.53,-4)
+  \rput(8.5,-2.1){\small $y=-\sqrt{\frac{7}{2}}$}
+  \rput(3.75,-5){\small $x=\frac{5}{\sqrt{2}}$}
+  \rput(7,5){\small $x^2-y^2=9$}
+  % \rput(-0.4,2){\small $x^2+y^2=16$}
+\end{pspicture}
+\end{document}

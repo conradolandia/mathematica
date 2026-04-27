@@ -26,7 +26,7 @@ $\{t_0, t_1, t_2, \dots, t_{n-1}, t_n\}$, con $a = t_0 < t_1 < t_2 < \cdots < t_
 Entonces, el vector $\overrightarrow{A_{i-1}A_i}$ está dado por:
 \[
   \overrightarrow{A_{i-1}A_i} = \mathbf{r}(t_i) - \mathbf{r}(t_{i-1}) =
-  \left\langle f(t_i) - f(t_{i-1}),\; g(t_i) - g(t_{i-1}) \right\rangle\!.
+  \left\langle f(t_i) - f(t_{i-1}),\; g(t_i) - g(t_{i-1}) \right\rangle.
 \]
 
 Por el teorema del valor medio, existen $t_i^{\ast} \in [t_{i-1}, t_i]$ y
@@ -114,7 +114,7 @@ para un campo escalar $\phi$ con dominio $D \subseteq \mathbb{R}^3$ y $C$ una cu
 $D$ que se parametriza mediante una función vectorial continua ${\bf r} : [a, b]\to D$. Para calcular la circulación del campo vectorial ${\bf F}=\nabla \phi$ a lo largo de $C$, se sigue que
 \begin{eqnarray*}
 \int_{C}F\cdot d{\bf r}&=&\int_{C}\nabla\phi\cdot dr=\int_{a}^{b}\nabla \phi\left({\bf r}(t)\right)\cdot {\bf r}^{\prime}(t) dt\\
-&=& \int_{a}^{b} \frac{d}{dt} \left(\phi \left({\bf r}(t)\right) \right) dt= \phi \left({\bf r}(b)\right) -\phi\left({\bf r}\left( a\right) \right)\!.
+&=& \int_{a}^{b} \frac{d}{dt} \left(\phi \left({\bf r}(t)\right) \right) dt= \phi \left({\bf r}(b)\right) -\phi\left({\bf r}\left( a\right) \right).
 \end{eqnarray*}
 Por lo tanto, si ${\bf F}$ es un campo gradiente, entonces la circulación de ${\bf F}$ a lo largo de toda curva dentro del dominio de ${\bf F}$ solo depende de los puntos extremos de dicha curva.
 
@@ -140,7 +140,7 @@ considerando las siguien\-tes parametrizaciones.
 \end{itemize}
 
 Nótese que ${\bf F}$ es conservativo con función potencial $\phi(x,y,z)=xy^2-x^2z$, con lo cual
-$$\int_{C}{\bf F}\cdot d{\bf r}= \phi(1,1,1)-\phi(-1,1,3)=4.$$
+\[\int_{C}{\bf F}\cdot d{\bf r}= \phi(1,1,1)-\phi(-1,1,3)=4.\]
 Compárese con los resultados del ejemplo \ref{integraldelinea}.
 \end{ejemplo}
 
@@ -165,9 +165,9 @@ D[u[x,y,z],z]==R},u[x,y,z],x,y,z]
 
 \begin{ejemplo}
 Evaluar la integral de línea de
-$${\bf F}\left( x,y,z\right) =\left\langle 4 x^3 y,x^4+3 y^2 z,y^3 \right\rangle$$
+\[{\bf F}\left( x,y,z\right) =\left\langle 4 x^3 y,x^4+3 y^2 z,y^3 \right\rangle\]
 sobre la curva $\alpha$ parametrizada por
-$${\bf r}(t)=\langle 2 t-1,t+2,9 t^2 \rangle \text{ con } t \in [-1,2].$$
+\[{\bf r}(t)=\langle 2 t-1,t+2,9 t^2 \rangle \text{ con } t \in [-1,2].\]
 
 El campo es conservativo, la función potencial es $\phi(x,y,z)=x^4 y+y^3z+C$, con lo cual
 \[\int_\alpha{\bf F} \cdot d{\bf r}=\phi({\bf r}(2))-\phi({\bf r}(-1))=\phi(3,4,36)-\phi(-3,1,9)=2538.\]
@@ -282,7 +282,7 @@ Es por esto que la razón de circulación alrededor del rectángulo $R$ es
 
 Al dividir  el área de $R$ se obtiene una estimación de la razón de circulación por unidad de área o densidad rotacional para el rectángulo
 
-\[\frac{\left( \frac{\partial Q}{\partial x}(x^{\ast },y) \Delta x\right) \Delta y-\left( \frac{\partial P}{\partial y}\left( x,y^{\ast}\right) \Delta y\right) \Delta x}{\Delta x\Delta y}=\frac{\partial Q}{\partial x}(x^{\ast },y) -\frac{\partial P}{\partial y}\left(x,y^{\ast }\right)\!.\]
+\[\frac{\left( \frac{\partial Q}{\partial x}(x^{\ast },y) \Delta x\right) \Delta y-\left( \frac{\partial P}{\partial y}\left( x,y^{\ast}\right) \Delta y\right) \Delta x}{\Delta x\Delta y}=\frac{\partial Q}{\partial x}(x^{\ast },y) -\frac{\partial P}{\partial y}\left(x,y^{\ast }\right).\]
 
 Lo anterior motiva la siguiente definición.
 
@@ -405,7 +405,7 @@ por lo tanto,
 
 \begin{ejemplo}
 \textls[-10]{Considere el campo vectorial
-\[{\bf F}(x,y)=\left\langle x^{2}-\frac{x}{1+y^{2}},e^{x}+\arctan y\right\rangle\!,\]
+\[{\bf F}(x,y)=\left\langle x^{2}-\frac{x}{1+y^{2}},e^{x}+\arctan y\right\rangle,\]
 calcule el flujo hacia afuera de ${\bf F}$ a través de la cardioide $r=a(1+\cos \theta )$, $a>0$.}
 En este caso,
 \[\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}=\frac{\partial }{\partial x}\left( x^{2}-\frac{x}{1+y^{2}}\right) +\frac{\partial }{\partial y}\left( e^{x}+\arctan y\right) = 2x;\]
@@ -426,7 +426,7 @@ Integrate[A*r,{\[Theta],0,2*Pi},{r,0,a*(1+Cos[\[Theta]])}]
 \section{Superficies orientadas}
 
 Según \textcite{marsden_calculo_2013}, una superficie parametrizada es una función ${\bf r}:D\subset \mathbb{R}^{2}\rightarrow \mathbb{R}^{3}$, en donde $D$ es algún dominio en $\mathbb{R}^{2};$ la superficie $\sigma $ correspondiente a la función ${\bf r}$ es su imagen $\sigma ={\bf r}\left( D\right) $, que se escribe como
-\[{\bf r}\left( u,v\right) =\left\langle x\left( u,v\right) ,y\left( u,v\right),z\left( u,v\right) \right\rangle\!.\]
+\[{\bf r}\left( u,v\right) =\left\langle x\left( u,v\right) ,y\left( u,v\right),z\left( u,v\right) \right\rangle.\]
 Si las funciones $x(u,v) $, $y(u,v) $ y $z(u,v)$ son diferenciables, se dice que ${\bf r}$ es diferenciable. Si ${\bf r}$ es diferenciable en $\left( u_{0},v_{0}\right) $, al fijar $u$, se obtiene que la función ${\bf r}\left( u_{0},v\right) $ posee como imagen una curva en $\mathbb{R}^{3}$.
 Los vectores ${\bf r}_{u}$ y ${\bf r}_{v}$ son tangentes a esta curva en $\left(u_{0},v_{0}\right) ;$
 de modo que ${\bf r}_{u}\times {\bf r}_{v}$ es normal a la superficie en $\left( u_{0},v_{0}\right) $.
@@ -627,7 +627,7 @@ Integrate[Dot[G,Cross[D[r,u],D[r,v]]],{v,0,2*Pi},{u,0,1}]
 La curva de intersección del paraboloide y el cilindro se determina reduciendo las ecuaciones originales a
 $x = 2z - 2$. Con las expresiones $y = 2 + 2\cos(t)$, $z = 2 + 2\sin(t)$, se sigue que la función vectorial que describe dicha curva es:
 {\small
-\[{\bf r}(t) = \left\langle 2 + 4\sin(t),\, 2 + 2\cos(t),\, 2 + 2\sin(t) \right\rangle\!,\; t \in [0, 2\pi].\]
+\[{\bf r}(t) = \left\langle 2 + 4\sin(t),\, 2 + 2\cos(t),\, 2 + 2\sin(t) \right\rangle,\; t \in [0, 2\pi].\]
 }
 
 Entonces,
@@ -778,7 +778,7 @@ ${\rm rot}\,{\bf F}=\nabla \times \left\langle -y,y-z,-x\right\rangle =
 y
 \begin{gather*}
 {\bf F}({\bf u}(\theta,\phi))\cdot ({\bf u}_{\theta }\times {\bf u}_{\phi }) 
-= -\sin 4\phi -2\left( \cos \theta +\sin \theta \right) \sin^{2}\left( 2\phi \right)\!.
+= -\sin 4\phi -2\left( \cos \theta +\sin \theta \right) \sin^{2}\left( 2\phi \right).
 \end{gather*}
 Con lo anterior, podemos evaluar la integral
 \begin{gather*}
@@ -872,7 +872,7 @@ Entonces,
 \begin{eqnarray*}
 {\bf r}_{u}\left( u,v\right) &=& \left\langle -4\sin u\sin v,2\cos u\sin v,0\right\rangle \\
 {\bf r}_{v}\left( u,v\right) &=&\left\langle 4\cos u\cos v,2\cos v\sin u,-4\sin v\right\rangle \\
-{\bf r}_{u}\times {\bf r}_{v}&=&\left\langle -8\cos u\sin ^{2}v,-16\sin u\sin ^{2}v,-8\cos v\sin v\right\rangle\!.
+{\bf r}_{u}\times {\bf r}_{v}&=&\left\langle -8\cos u\sin ^{2}v,-16\sin u\sin ^{2}v,-8\cos v\sin v\right\rangle.
 \end{eqnarray*}
 
 Con los elementos anteriores es sencillo ver que ${\rm rot}\,{\bf F}= \left\langle y\sin yz,0,0\right\rangle$, además
@@ -959,23 +959,23 @@ Por lo anterior, la superficie se describe por medio de la función
 \[{\bf r}(t,u) =\la (2u-1) \sqrt{2t^{2}-t^{4}+3},t,4u(1-u)\left(3-t^{4}+2t^{2}\right)\ra,\]
 con $t\in \lbrack -\sqrt{3},\sqrt{3}]$, $u\in \lbrack 0,1]$.
 Con lo cual,
-\[{\bf F}\left({\bf r}\left(t,u\right) \right) =\left\langle 2\left( 2u-1\right) \sqrt{2t^{2}-t^{4}+3},2t,4u\left( 1-u\right) \left( 3-t^{4}+2t^{2}\right)\right\rangle\!.\]
+\[{\bf F}\left({\bf r}\left(t,u\right) \right) =\left\langle 2\left( 2u-1\right) \sqrt{2t^{2}-t^{4}+3},2t,4u\left( 1-u\right) \left( 3-t^{4}+2t^{2}\right)\right\rangle.\]
 De la función $\bf  {r}$ obtenemos los siguientes vectores:
 \begin{eqnarray*}
 {\bf r}_{t}&=& \left\langle -\frac{1}{2}\left( 4t^{3}-4t\right) \frac{2u-1}{\sqrt{3-t^{4}+2t^{2}}},1,4u\left( 4t^{3}-4t\right) \left( u-1\right) \right\rangle \\
 {\bf r}_{u}&=& \left\langle 2\sqrt{2t^{2}-t^{4}+3},0,4\left( t^{2}-3\right)
-\left( t^{2}+1\right) \left( 2u-1\right)  \right\rangle\!.
+\left( t^{2}+1\right) \left( 2u-1\right)  \right\rangle.
 \end{eqnarray*}
 Para tener la orientación de la superficie hacia afuera se hace el producto
 \begin{gather*}
 {\bf r}_{u} \times {\bf r}_{t} = \left\langle 4(1 - 2u)(t^{2} + 1)(t^{2} - 3),\;
 \frac{-8t(t^6 - 3t^4 - t^2 + 3)}{\sqrt{3 - t^{4} + 2t^{2}}},\;
-2\sqrt{3 - t^{4} + 2t^{2}} \right\rangle\!.
+2\sqrt{3 - t^{4} + 2t^{2}} \right\rangle.
 \end{gather*}
 
 \textls[-15]{El término ${\bf F}\left({\bf r}(u,v)\right) \cdot \left({\bf r}_{u} \times {\bf r}_{v}\right)$ se puede simplificar de la siguiente manera:}
 \[
-8\sqrt{2t^{2} - t^{4} + 3} \left(3 + t^2(t^2u + t^2 - 6u) + 3u^2(2t^{2} - t^{4} + 3) - 9u\right)\!,
+8\sqrt{2t^{2} - t^{4} + 3} \left(3 + t^2(t^2u + t^2 - 6u) + 3u^2(2t^{2} - t^{4} + 3) - 9u\right),
 \]
 de modo que el flujo de ${\bf F}$ sobre $S$ está dado por:
 \[
@@ -1039,14 +1039,14 @@ Las ecuaciones $x=z^{2}$ y $x=4y-y^{2}$ representan dos cilindros parabólicos, 
 
 Del campo vectorial se  sigue que $\rot{\bf F}= \left\langle -y-1,-z,-2y-1\right\rangle $.
 Además, la superficie en mención se parametriza por medio de la función
-\[{\bf r}\left( u,v\right) =\left\langle 4u^{2}\sin ^{2}v,2+2u\cos v,2u\sin v\right\rangle\!,\, u\in \lbrack 0,1],\,v\in \lbrack 0,2\pi ].\] Por lo tanto,
+\[{\bf r}\left( u,v\right) =\left\langle 4u^{2}\sin ^{2}v,2+2u\cos v,2u\sin v\right\rangle,\, u\in \lbrack 0,1],\,v\in \lbrack 0,2\pi ].\] Por lo tanto,
 $\rot{\bf F}\left({\bf r}\left(u,v\right)\right) = \left\langle -2u\cos v-3,-2u\sin v,-4u\cos v-5\right\rangle $.
 De la función ${\bf r}$ se obtienen los siguientes vectores:
 
 \begin{align*}
 {\bf r}_{u} &= \left\langle 8u\sin ^{2}v,2\cos v,2\sin v\right\rangle \\
 {\bf r}_{v} &=\left\langle 8u^{2}\cos v\sin v,-2u\sin v,2u\cos v\right\rangle \\
-{\bf r}_{u}\times {\bf r}_{v} &=\left\langle 4u,0,-16u^{2}\sin v\right\rangle\!.
+{\bf r}_{u}\times {\bf r}_{v} &=\left\langle 4u,0,-16u^{2}\sin v\right\rangle.
 \end{align*}
 Además, $\rot{\bf F}\left({\bf r}(u,v)\right)\cdot\left({\bf r}_{u}\times{\bf r}_{v}\right)=-4 u(4u^2\cos(2v)-4u^2+4 u \cos (v)+5)$, entonces,
 \begin{equation}\label{stokes6}
@@ -1067,7 +1067,7 @@ Integrate[Dot[G,Cross[D[r,u],D[r,v]]],
 Sobre esta región se satisface que
 $y= (2+2u\cos v)$ y $z=2u\sin v$ por lo tanto $x=4-2u^{2}\left( 1+\cos 2v\right);$
 por lo tanto, la superficie se parametriza utilizando la función
-\[{\bf r}\left( u,v\right) =\left\langle 4-2u^{2}\left( 1+\cos 2v\right) ,2+2u\cos v,2u\sin v\right\rangle\!,\]
+\[{\bf r}\left( u,v\right) =\left\langle 4-2u^{2}\left( 1+\cos 2v\right) ,2+2u\cos v,2u\sin v\right\rangle,\]
 con $u\in[0,1],\, v\in [0,2\pi]$.
 Por lo tanto, $\rot{\bf F}\left({\bf r}\left( u,v\right)\right) =\big \langle -2u\cos v-3,-2u\sin v,-4u\cos v-5\big \rangle$.
 De la función ${\bf r}$ se sigue que
@@ -1076,7 +1076,7 @@ De la función ${\bf r}$ se sigue que
 {\bf r}_{v}&=& \left\langle 4u^{2}\sin 2v,-2u\sin v,2u\cos v\right\rangle \\
 {\bf r}_{u}\times {\bf r}_{v}&=& \left\langle 4u,16u^{2}\cos v,0\right\rangle;
 \end{eqnarray*}
-además, \[\rot{\bf F}\left({\bf r}(u,v) \right)\cdot\left({\bf r}_{u}\times {\bf r}_{v}\right)= -4u\left( 4u^{2}\sin 2v+2u\cos v+3\right)\!,\]
+además, \[\rot{\bf F}\left({\bf r}(u,v) \right)\cdot\left({\bf r}_{u}\times {\bf r}_{v}\right)= -4u\left( 4u^{2}\sin 2v+2u\cos v+3\right),\]
 entonces,
 \begin{equation}\label{stokes7}
 \int_{0}^{2\pi }\int_{0}^{1}-4u\left( 4u^{2}\sin 2v+2u\cos v+3\right)dudv= -12\pi
@@ -1231,7 +1231,7 @@ VectorStyle->Black,VectorScale->{0.16,Scaled[0.22],Automatic}]
 \end{tcolorbox}
 
 La superficie en mención se parametriza mediante la función
-\[{\bf r}\left( u,v\right) =\left\langle u\cos v,u\sin v,\ln u^{2}\right\rangle\!,\,\, v\in [0,2\pi], \,\, u\in \left[1/3,3\right ].\] Con esta función se hallan los siguientes vectores:
+\[{\bf r}\left( u,v\right) =\left\langle u\cos v,u\sin v,\ln u^{2}\right\rangle,\,\, v\in [0,2\pi], \,\, u\in \left[1/3,3\right ].\] Con esta función se hallan los siguientes vectores:
 {\small
 \begin{align*}
 {\bf r}_{u} &= \frac{\partial}{\partial u}\left \langle u\cos v, u\sin v, \ln u^2 \right \rangle = \left \langle \cos v, \sin v, \frac{2}{u} \right \rangle \\
@@ -1332,13 +1332,13 @@ Ticks->{{-2,0,2},{-2,0,2},{-1,0,1}}]
 La ecuación del elipsoide se reescribe en la forma $\frac{x^{2}}{4}+y^{2}+z^{2}=1$,
 y se puede parametrizar multiplicando por $2$ la componente $x$ de la expresión correspondiente a las ecuaciones en coordenadas esféricas, que describen la esfera unitaria. Es por lo anterior que utilizaremos la función
 \[{\bf r}\left( u,v\right) =\left\langle 2\cos u\sin v,\sin u\sin v,\cos
-v\right\rangle\!,\,u\in \lbrack 0,2\pi ],\, v\in \lbrack 0,\pi ].\]
+v\right\rangle,\,u\in \lbrack 0,2\pi ],\, v\in \lbrack 0,\pi ].\]
 Al derivar parcialmente, obtenemos los siguientes vectores:
 
 \begin{eqnarray*}
 {\bf r}_{u} &=& \left\langle -2\sin u\sin v,\cos u\sin v,0\right\rangle  \\
 {\bf r}_{v} &=& \left\langle 2\cos u\cos v,\cos v\sin u,-\sin v\right\rangle \\
-{\bf r}_{u}\times {\bf r}_{v}&=&  \left\langle \cos u\sin ^{2}v,2\sin u\sin^{2}v,2\sin v\cos v\right\rangle\!.
+{\bf r}_{u}\times {\bf r}_{v}&=&  \left\langle \cos u\sin ^{2}v,2\sin u\sin^{2}v,2\sin v\cos v\right\rangle.
 \end{eqnarray*}
 
 Y con ellos obtenemos las siguientes expresiones:
@@ -1349,7 +1349,7 @@ Y con ellos obtenemos las siguientes expresiones:
 2\cos u \sin v \cos v,\;
 \sin u \sin v,\;
 2\cos u \sin v
-\right\rangle\!, \\
+\right\rangle, \\
 {\bf F}({\bf r}(u,v)) \cdot ({\bf r}_{u} \times {\bf r}_{v}) &=
 2\left(
 \sin^{2} u \sin v + (\cos u \cos v)(2 + \cos u \sin v)
@@ -1419,13 +1419,13 @@ Es sencillo ver que
 ${\bf F}\left({\bf r}\left(u,v\right)\right)=\left\langle 0,u\left(u\sin v+1\right)\cos v,0\right\rangle;$
 con la función ${\bf r}$ se obtienen los vectores:
 \[{\bf r}_{u} = \left\langle \cos v, \sin v, 0 \right\rangle\] y
-\[{\bf r}_{v} = \left\langle -u\sin v, u\cos v, 0 \right\rangle\!.\]
+\[{\bf r}_{v} = \left\langle -u\sin v, u\cos v, 0 \right\rangle.\]
 Para conseguir que la orientación sea hacia afuera se evalúa:
 \[
 {\bf r}_{v} \times {\bf r}_{u} =
 \left\langle -u\sin v, u\cos v, 0 \right\rangle \times
 \left\langle \cos v, \sin v, 0 \right\rangle =
-\left\langle 0, 0, -u \right\rangle\!.
+\left\langle 0, 0, -u \right\rangle.
 \]
 
 Es claro que
@@ -1438,12 +1438,12 @@ por lo tanto, el flujo sobre la superficie en mención es:
 \end{equation}
 
 La superficie sobre el paraboloide se puede parametrizar en la forma
-${\bf r}\left(u,v\right) =\left\langle u\cos v,u\sin v,4-u^{2}\right\rangle\!,\, u\in \lbrack 0,2],\, v\in \lbrack 0,2\pi ]$.
+${\bf r}\left(u,v\right) =\left\langle u\cos v,u\sin v,4-u^{2}\right\rangle,\, u\in \lbrack 0,2],\, v\in \lbrack 0,2\pi ]$.
 Con esta función hallamos los siguientes vectores:
 \begin{eqnarray*}
 {\bf r}_{u}&=& \left\langle \cos v,\sin v,-2u\right\rangle \\
 {\bf r}_{v} &=& \left\langle -u\sin v,u\cos v,0\right\rangle \\
-{\bf r}_{u}\times {\bf r}_{v} &=& \left\langle 2u^{2}\cos v,2u^{2}\sin v,u\right\rangle\!.
+{\bf r}_{u}\times {\bf r}_{v} &=& \left\langle 2u^{2}\cos v,2u^{2}\sin v,u\right\rangle.
 \end{eqnarray*}
 Sustituyéndose adecuadamente, el término ${\bf F}\left({\bf r}\left(u,v\right)\right) \cdot \left({\bf r}_{u}\times {\bf r}_{v}\right)$ se simplifica como
 $\big(4u-u^{3}+u^{2}((4-u^{2}) \sin v+(8u-2u^{3})\cos^{2}v +u(u\sin v+1) \sin (2v))\big)$.
@@ -1545,7 +1545,7 @@ con esta función hallamos los siguientes vectores:
 \begin{eqnarray*}
 {\bf r}_{u} &=&\left\langle \frac{2}{3}\sqrt{3}\cos v,\frac{4}{9}\sqrt{3}\sin v,\sqrt{3}\sin v\right\rangle \\
 {\bf r}_{v}&=&\left\langle -\frac{2}{3}\sqrt{3}u\sin v,\frac{4}{9}\sqrt{3}u\cos v,\sqrt{3}u\cos v\right\rangle \\
-{\bf r}_{u}\times {\bf r}_{v}&=& \left\langle 0,-2u,\frac{8}{9}u\right\rangle\!.
+{\bf r}_{u}\times {\bf r}_{v}&=& \left\langle 0,-2u,\frac{8}{9}u\right\rangle.
 \end{eqnarray*}
 
 También pueden comprobarse las siguientes igualdades,
@@ -1580,7 +1580,7 @@ $y = \frac{1}{9}\left( 3-9x^{2}-4z^{2}+4z\right)= \frac{4}{9}\sqrt{3}u\sin v+\fr
 de modo que una parametrización de la región sobre el paraboloide acotada por la intersección con el plano, es la siguiente:
 
 {\footnotesize
-\[{\bf r}\left( u,v\right) =\left\langle \frac{2}{\sqrt{3}}u\cos v,\frac{4}{9}\sqrt{3}u\sin v+\frac{1}{3}-\frac{4}{3}u^{2},\sqrt{3}u\sin v\right\rangle\!,u\in \lbrack 0,1],\, v\in \lbrack 0,2\pi ].\]
+\[{\bf r}\left( u,v\right) =\left\langle \frac{2}{\sqrt{3}}u\cos v,\frac{4}{9}\sqrt{3}u\sin v+\frac{1}{3}-\frac{4}{3}u^{2},\sqrt{3}u\sin v\right\rangle,u\in \lbrack 0,1],\, v\in \lbrack 0,2\pi ].\]
 }
 
 Esta función nos permite hallar los siguientes vectores:
@@ -1588,7 +1588,7 @@ Esta función nos permite hallar los siguientes vectores:
 {\bf r}_{u} &=& \left\langle \frac{2}{3}\sqrt{3}\cos v,\frac{4}{9}\sqrt{3}\sin v-\frac{8}{3}u,\sqrt{3}\sin v\right\rangle \\
 {\bf r}_{v} &=& \left\langle -\frac{2}{3}\sqrt{3}u\sin v,\frac{4}{9}\sqrt{3}u\cos v,\sqrt{3}u\cos v\right\rangle \\
 {\bf r}_{v}\times {\bf r}_{u} %&=&\left\langle \frac{2}{3}\sqrt{3}\cos v,\frac{4}{9}\sqrt{3} \sin v-\frac{8}{3}u,\sqrt{3}\sin v\right\rangle \times \left\langle -\frac{2}{3}\sqrt{3}u\sin v,\frac{4}{9}\sqrt{3}u\cos v,\sqrt{3}u\cos v\right\rangle \\
-&=&  \left\langle \frac{8}{3}\sqrt{3}u^{2}\cos v,2u,\frac{8}{9}u+\frac{16}{9}\sqrt{3}u^{2}\sin v\right\rangle\!.
+&=&  \left\langle \frac{8}{3}\sqrt{3}u^{2}\cos v,2u,\frac{8}{9}u+\frac{16}{9}\sqrt{3}u^{2}\sin v\right\rangle.
 \end{eqnarray*}
 Además,
 \begin{multline*}
@@ -1601,7 +1601,7 @@ Además,
 \begin{multline*}
 {\bf F}\left({\bf r}(u,v) \right) \cdot \left( {\bf r}_{v}\times {\bf r}_{u}\right) =
 \frac{16}{3}\sqrt{3}u^{4}\sin v\cos ^{2}v+ \\
-\left( \frac{16}{27}\sqrt{3}u^{2}\cos v - \frac{4}{9}\sqrt{3}u\sin v \left( \frac{8}{9}u-\frac{16}{9}\sqrt{3}u^{2}\sin v\right) \right) \left( \sqrt{3}u\sin v+3-3u^{2}\right)\!.
+\left( \frac{16}{27}\sqrt{3}u^{2}\cos v - \frac{4}{9}\sqrt{3}u\sin v \left( \frac{8}{9}u-\frac{16}{9}\sqrt{3}u^{2}\sin v\right) \right) \left( \sqrt{3}u\sin v+3-3u^{2}\right).
 \end{multline*}
 }
 
@@ -1665,7 +1665,7 @@ Con esta función hallamos los siguientes vectores:
 \end{eqnarray*}
 Con estos elementos se puede establecer la siguiente relación:
 \[
-\mathbf{F}\left( \mathbf{r}\left( u,v\right) \right) = \left\langle 4\sin^{2}u\sin^{2}v,\ -4\cos u\sin u\sin^{2}v,\ 2\cos v \right\rangle\!.
+\mathbf{F}\left( \mathbf{r}\left( u,v\right) \right) = \left\langle 4\sin^{2}u\sin^{2}v,\ -4\cos u\sin u\sin^{2}v,\ 2\cos v \right\rangle.
 \]
 
 Entonces,
@@ -1746,7 +1746,7 @@ En este caso, una función que parametriza esta región es:
 \sqrt{3}u\cos v,\;
 2u\sin v,\;
 3 - \frac{1}{2}u^{2}\left(5 + \cos 2v\right)
-\right\rangle\!,
+\right\rangle,
 u \in [0,1],\; v \in [0, 2\pi].
 \]
 
@@ -1778,7 +1778,7 @@ Integrate[Dot[Cross[D[r,u],D[r,v]],{y^2,x^2,z}],
 
 Esta superficie se puede parametrizar mediante la siguiente función:
 \begin{gather*}
-{\bm \beta} (u,v)=\left\langle \sqrt{3}u\cos v,2u\sin v,\frac{1}{2}u^{2}\left(7-\cos 2v\right)-3\right\rangle\!,
+{\bm \beta} (u,v)=\left\langle \sqrt{3}u\cos v,2u\sin v,\frac{1}{2}u^{2}\left(7-\cos 2v\right)-3\right\rangle,
 u\in \lbrack 0,1],\, v\in \lbrack 0,2\pi].
 \end{gather*}
 
@@ -1790,7 +1790,7 @@ Derivando parcialmente se hallan los siguientes vectores:
 \begin{eqnarray*}
 {\bm \beta}_{u}&=&\left\langle \sqrt{3}\cos v,2\sin v,u\left( 7-\cos 2v\right)\right\rangle \\
 {\bm \beta}_{v}&=&\left\langle -\sqrt{3}u\sin v,2u\cos v,u^{2}\sin 2v\right\rangle \\
-{\bm \beta}_{v}\times {\bm \beta}_{u}&=&\left\langle 12u^{2}\cos v,8\sqrt{3}u^{2}\sin v,-2\sqrt{3}u\right\rangle\!.
+{\bm \beta}_{v}\times {\bm \beta}_{u}&=&\left\langle 12u^{2}\cos v,8\sqrt{3}u^{2}\sin v,-2\sqrt{3}u\right\rangle.
 \end{eqnarray*}
 }
 
@@ -1857,7 +1857,7 @@ Derivando parcialmente se obtienen los siguientes vectores:
 \begin{align*}
 {\bf r}_{u} &= \left\langle 2\cos v,2\sin v,\frac{-4u}{\sqrt{9-4u^{2}}}\right\rangle \\
 {\bf r}_{v}&=\left\langle -2u\sin v,2u\cos v,0\right\rangle \\
-{\bf r}_{u}\times {\bf r}_{v}&=\left\langle \frac{8u^{2}\cos v}{\sqrt{9-4u^{2}}},\frac{8u^{2}\sin v}{\sqrt{9-4u^{2}}},4u\right\rangle\!.
+{\bf r}_{u}\times {\bf r}_{v}&=\left\langle \frac{8u^{2}\cos v}{\sqrt{9-4u^{2}}},\frac{8u^{2}\sin v}{\sqrt{9-4u^{2}}},4u\right\rangle.
 \end{align*}
 
 Con lo cual, {\small ${\bf F}\left({\bf r}\left(u,v\right)\right) \cdot \left({\bf r}_{u}\times {\bf r}_{v}\right)= 4u\sqrt{9-4u^{2}}$.}
@@ -1937,7 +1937,7 @@ parametriza la región de interés sobre el elipsoide. Con esta función se obti
 \begin{eqnarray*}
 {\bf r}_u &=& \left \langle 2\cos v,2 \sin v , -\frac{2u(3+2\cos v)}{\sqrt{9-6u^2-2u^2 \cos(2v)}} \right\rangle \\
 {\bf r}_v &=& \left \langle -2u\sin v,2u \cos v , \frac{2u^2 \sin v}{\sqrt{9-6u^2-2u^2 \cos(2v)}} \right\rangle \\
-{\bf r}_u \times {\bf r}_v &=& \left \langle \frac{16u^2 \cos v}{\sqrt{9-6u^2-2u^2 \cos(2v)}}, \frac{8u^2 \sin v}{\sqrt{9-6u^2-2u^2 \cos(2v)}}, 4u \right\rangle\!.
+{\bf r}_u \times {\bf r}_v &=& \left \langle \frac{16u^2 \cos v}{\sqrt{9-6u^2-2u^2 \cos(2v)}}, \frac{8u^2 \sin v}{\sqrt{9-6u^2-2u^2 \cos(2v)}}, 4u \right\rangle.
 \end{eqnarray*}
 
 Además,
@@ -1992,7 +1992,7 @@ Estas curvas se muestran a continuación:
 
 Para abreviar la escritura, usaremos las siguientes constantes:
 \[a= \arccos \left( \frac{2}{\sqrt{5}}\right),\,\, b=\pi -\arccos \left( \frac{2}{\sqrt{5}}\right)\]
-\[c= -{\rm arccosh}\left( \frac{2\sqrt{2}}{\sqrt{7}}\right) ,\, d={\rm arccosh}\left( \frac{2\sqrt{2}}{\sqrt{7}}\right)\!.\]
+\[c= -{\rm arccosh}\left( \frac{2\sqrt{2}}{\sqrt{7}}\right) ,\, d={\rm arccosh}\left( \frac{2\sqrt{2}}{\sqrt{7}}\right).\]
 
 Al redefinir las funciones que describen las curvas en mención con el sentido deseado y unificar el intervalo de definición a $t \in [0,1]$,
 \begin{eqnarray*}
@@ -2103,10 +2103,10 @@ Al reemplazar las expresiones anteriores en la ecuación $x^2+y^2=3-z$, se obtie
 $z=\frac{15}{8}u^{2}\cos 2v-\frac{45}{8}u^{2}+3;$
 por lo tanto, una parametrización de la superficie en mención es:
 \[{\bf r}\left( u,v\right) =\left\langle \frac{\sqrt{15}}{2}u\cos v,\sqrt{\frac{15}{2}}u\sin v,
-\frac{15}{8}u^{2}\cos 2v-\frac{45}{8}u^{2}+3\right\rangle\!,\]
+\frac{15}{8}u^{2}\cos 2v-\frac{45}{8}u^{2}+3\right\rangle,\]
 en donde $u\in \lbrack 0,1]$, $v\in \lbrack 0,2\pi ]$.
 Con la función ${\bf r}$, al evaluarla en el campo vectorial se sigue que
-\[{\bf F}\left({\bf r}\left( u,v\right) \right) =\left\langle \frac{3\sqrt{15}}{2}u\cos v,\sqrt{\frac{15}{2}}u\sin v,\frac{45}{8}u^{2}\cos 2v-\frac{135}{8}u^{2}+9\right\rangle\!.\]
+\[{\bf F}\left({\bf r}\left( u,v\right) \right) =\left\langle \frac{3\sqrt{15}}{2}u\cos v,\sqrt{\frac{15}{2}}u\sin v,\frac{45}{8}u^{2}\cos 2v-\frac{135}{8}u^{2}+9\right\rangle.\]
 % ${\bf F}\left({\bf r}\left( u,v\right) \right) =\left\langle \frac{3\sqrt{15}}{2}u\cos v,\sqrt{\frac{15}{2}}u\sin v,\frac{45}{8}u^{2}\cos 2v-\frac{135}{8}u^{2}+9\right\rangle ,$
 Derivando parcialmente se obtienen los siguientes vectores;
 \begin{eqnarray*}
@@ -2116,7 +2116,7 @@ Derivando parcialmente se obtienen los siguientes vectores;
 {\bf r}_{u}\times {\bf r}_{v}&=&\left\langle \frac{15}{4}\sqrt{2}\sqrt{15}u^{2}\cos v,\frac{15}{2}\sqrt{15}u^{2}\sin v,\frac{15}{4}\sqrt{2}u\right\rangle;
 \end{eqnarray*}
 entonces,
-\[{\bf F}\left({\bf r}\left(u,v\right) \right) \cdot \left({\bf r}_{u}\times {\bf r}_{v}\right) =\frac{225\sqrt{2}}{32}u\left( u^{2}+\frac{24}{5}+5u^{2}\cos 2v\right)\!.\]
+\[{\bf F}\left({\bf r}\left(u,v\right) \right) \cdot \left({\bf r}_{u}\times {\bf r}_{v}\right) =\frac{225\sqrt{2}}{32}u\left( u^{2}+\frac{24}{5}+5u^{2}\cos 2v\right).\]
 Por lo expuesto antes, el flujo sobre esta región está dado por
 \begin{equation}\label{flujo5}
 \int_{0}^{1}\int_{0}^{2\pi }\left( \frac{225\sqrt{2}}{32}u\left( u^{2}+ \frac{24}{5}+5u^{2}\cos 2v\right) \right) dvdu= \frac{2385}{64}\sqrt{2}\pi
@@ -2135,7 +2135,7 @@ Con las mismas ecuaciones que describen el conjunto de puntos que satisfacen la 
 la coordenada $z$ sobre esta superficie satisface que
 \[z=\frac{x^2-y^2-6}{6}=\frac{15}{8}u^{2}\cos 2v-\frac{5}{8}u^{2}-2,\]
 por lo tanto, utilizaremos la siguiente parametrización, para describir la porción del paraboloide hiperbólico:
-\[{\bf r}\left( u,v\right) =\left\langle \frac{\sqrt{15}}{2}u\cos v,\sqrt{\frac{15}{2}}u\sin v,\frac{15}{8}u^{2}\cos 2v-\frac{5}{8}u^{2}-2\right\rangle\!,\]
+\[{\bf r}\left( u,v\right) =\left\langle \frac{\sqrt{15}}{2}u\cos v,\sqrt{\frac{15}{2}}u\sin v,\frac{15}{8}u^{2}\cos 2v-\frac{5}{8}u^{2}-2\right\rangle,\]
 en donde $u\in \lbrack 0,1]$, $v\in \lbrack 0,2\pi ]$.
 
 Con ella se consiguen los siguientes vectores:
@@ -2143,14 +2143,14 @@ Con ella se consiguen los siguientes vectores:
 {\bf r}_{u}&=\left\langle \frac{1}{2}\sqrt{15}\cos v,\frac{1}{2}\sqrt{2}\sqrt{15}\sin v,\frac{15}{4}u\cos 2v-\frac{5}{4}u\right\rangle \\
 {\bf r}_{v}&= \left\langle -\frac{1}{2}\sqrt{15}u\sin v,\frac{1}{2}
 \sqrt{2}\sqrt{15}u\cos v,-\frac{15}{4}u^{2}\sin 2v \right\rangle \\
-{\bf r}_{v}\times {\bf r}_{u}&=\left\langle \frac{5}{4}\sqrt{2}\sqrt{15}u^{2}\cos v,-\frac{5}{2}\sqrt{3}\sqrt{5}u^{2}\sin v,-\frac{15}{4}\sqrt{2}u\right\rangle\!.
+{\bf r}_{v}\times {\bf r}_{u}&=\left\langle \frac{5}{4}\sqrt{2}\sqrt{15}u^{2}\cos v,-\frac{5}{2}\sqrt{3}\sqrt{5}u^{2}\sin v,-\frac{15}{4}\sqrt{2}u\right\rangle.
 \end{align*}
 Es de anotar que para conservar la orientación de la superficie se calculó ${\bf r}_{v}\times {\bf r}_{u}$. Al evaluar la parametrización en el campo vectorial, se sigue que
 \[{\bf F}\left( {\bf r}\left( u,v\right) \right) =\left\langle \frac{3\sqrt{15}}{2}u\cos
-v,\sqrt{\frac{15}{2}}u\sin v,\frac{45}{8}u^{2}\cos 2v-\frac{15}{8}u^{2}-6\right\rangle\!,\]
+v,\sqrt{\frac{15}{2}}u\sin v,\frac{45}{8}u^{2}\cos 2v-\frac{15}{8}u^{2}-6\right\rangle,\]
 entonces,
 \[{\bf F}\left({\bf r}\left( u,v\right) \right) \cdot \left({\bf r}_{u}\times {\bf r}_{v}\right) =
-\frac{75\sqrt{2}}{32}u\left( 5u^{2}+\frac{48}{5}+u^{2}\cos 2v\right)\!.\]
+\frac{75\sqrt{2}}{32}u\left( 5u^{2}+\frac{48}{5}+u^{2}\cos 2v\right).\]
 Por lo señalado antes, el flujo sobre esta superficie está dado por:
 \begin{equation}
 \int_{0}^{1}\int_{0}^{2\pi }\left( \frac{75\sqrt{2}}{32}u\left( 5u^{2} + \frac{48}{5}+u^{2}\cos 2v\right) \right) dvdu= \frac{1815}{64}\sqrt{2}\pi. \label{flujo6}
@@ -2168,7 +2168,7 @@ El flujo neto sobre toda la superficie del sólido es la suma de los resultados 
 Dado que ${\rm div}{\bf F}=7$, evidentemente, el valor obtenido es $7$ veces el volumen del sólido que se obtuvo en la expresión \ref{ejercicio3} de la página \pageref{ejercicio3}
 
 \item Hallar el flujo neto del campo vectorial ${\bf F}(x,y,z) = \la y,-x,z \ra $
-sobre la superficie del sólido interior a la esfera con ecuacion $x^2+y^2+z^2=9 $ y al cilindro cardioidico
+sobre la superficie del sólido interior a la esfera con ecuacion $x^2+y^2+z^2=9 $ y al cilindro cardióidico
 $r=1+\cos \theta$.
 
 \begin{figure}[H]
@@ -2206,14 +2206,14 @@ La región sobre la esfera se parametriza completamente hallando $z$, es decir:
 z = \sqrt{9 - x^2 - y^2} = \sqrt{9 - u^2(1 + \cos \theta)^2}.
 \]
 
-Por lo tanto, la siguiente función describe la porción sobre la esfera interior al cilindro cardioidico:
+Por lo tanto, la siguiente función describe la porción sobre la esfera interior al cilindro cardióidico:
 \[
 {\bf r}(u,\theta) =
 \left\langle
 u(1 + \cos \theta) \cos \theta,\;
 u(1 + \cos \theta) \sin \theta,\;
 \sqrt{9 - u^2(1 + \cos \theta)^2}
-\right\rangle\!,
+\right\rangle,
 \]
 en donde $u \in [0,1],\; \theta \in [0,2\pi]$. Es sencillo ver que:
 \begin{gather*}
@@ -2222,13 +2222,13 @@ en donde $u \in [0,1],\; \theta \in [0,2\pi]$. Es sencillo ver que:
 u(1 + \cos \theta) \sin \theta,\;
 - u(1 + \cos \theta) \cos \theta,\;
 \sqrt{9 - u^2(1 + \cos \theta)^2}
-\right\rangle\!.
+\right\rangle.
 \end{gather*}
 
 Con la parametrización elegida hallamos los siguientes vectores:
 \begin{gather*}
 {\bf r}_{u} = \left \langle (\cos \theta +1) \cos \theta ,\left(\cos \theta +1\right) \sin \theta ,\frac{-4u\cos^2\left( \frac{\theta}{2} \right)}{\sqrt{9-u^2(1+\cos(\theta))^2}}\right\rangle \\
-{\bf r}_{\theta}=\left\langle -u( 1+2\cos \theta)\sin \theta ,u(\cos \theta +\cos (2\theta)),\frac{u^{2}(\sin 2\theta+2\sin \theta)}{\sqrt{2}\sqrt{9-u^2(1+\cos(\theta))^2}} \right\rangle\!,
+{\bf r}_{\theta}=\left\langle -u( 1+2\cos \theta)\sin \theta ,u(\cos \theta +\cos (2\theta)),\frac{u^{2}(\sin 2\theta+2\sin \theta)}{\sqrt{2}\sqrt{9-u^2(1+\cos(\theta))^2}} \right\rangle,
 \end{gather*}
 cuyo producto cruz es
 \begin{gather*}
@@ -2237,7 +2237,7 @@ cuyo producto cruz es
 Además,
 \[{\bf F}\left({\bf r}\left( u,\theta \right) \right) \cdot \left({\bf r}_{u}\times {\bf r}_{\theta}\right) =
 4u \cos^4\left(\frac{\theta}{2}\right)\sqrt{9-u^2(1+\cos(\theta))^2}.\]
-Por lo tanto, el flujo sobre la superficie de la esfera e interior al cilindro cardioidico está dado por:
+Por lo tanto, el flujo sobre la superficie de la esfera e interior al cilindro cardióidico está dado por:
 \begin{equation}\label{flujo7}
 2\int_{0}^{1}\int_{0}^{2\pi}{\bf F}\left({\bf r}\left( u,\theta \right) \right) \cdot \left({\bf r}_{u}\times {\bf r}_{\theta}\right) d\theta du\approx 25.8179
 \end{equation}
@@ -2348,7 +2348,7 @@ y también
 \begin{align*}
 {\bf r}_{u} &= \left\langle \cos v, 1, \sin v \right\rangle \\
 {\bf r}_{v} &=\left\langle -u\sin v,0,u\cos v\right\rangle \\
-{\bf r}_{u}\times {\bf r}_{v}&= \left\langle u\cos v,-u,u\sin v\right\rangle\!,
+{\bf r}_{u}\times {\bf r}_{v}&= \left\langle u\cos v,-u,u\sin v\right\rangle,
 \end{align*}
 con lo cual,
 ${\bf F}\left({\bf r}\left(u,v\right)\right)\cdot \left({\bf r}_{u}\times {\bf r}_{v}\right) = u^{2}\sin v-u+u^{2}$.
@@ -2366,7 +2366,7 @@ ${\bf F}\left( {\bf r}\left( u,v\right) \right) =\left\langle u\cos v,1,\sqrt{9-
 \begin{align*}
 {\bf r}_{u} &= \left\langle \cos v,-\frac{u}{\sqrt{9-u^{2}}},\sin v\right\rangle \\
 {\bf r}_{v} &= \left\langle -u\sin v,0,u\cos v\right\rangle \\
-{\bf r}_{v}\times {\bf r}_{u}&= \left\langle\frac{u^{2}\cos v}{\sqrt{9-u^{2}}},u,\frac{u^{2}\sin v}{\sqrt{9 -u^{2}}}\right\rangle\!.
+{\bf r}_{v}\times {\bf r}_{u}&= \left\langle\frac{u^{2}\cos v}{\sqrt{9-u^{2}}},u,\frac{u^{2}\sin v}{\sqrt{9 -u^{2}}}\right\rangle.
 \end{align*}
 De lo anterior, se obtiene
 ${\bf F}\left( {\bf r}\left( u,v\right) \right) \cdot \left( {\bf r}_{u}\times {\bf r}_{v}\right) =\frac{u^{3}}{\sqrt{9-u^{2}}}+u+u^{2}\sin v$,
@@ -2410,7 +2410,7 @@ Con la ecuación \(\rho = 1 + \cos \phi\) y las expresiones que definen las coor
 (1 + \cos \phi)\sin \phi \cos \theta,\
 (1 + \cos \phi)\sin \phi \sin \theta,\
 (1 + \cos \phi)\cos \phi
-\right\rangle\!,
+\right\rangle,
 \]
 la cual parametriza la superficie del sólido con $\phi \in[0,\pi], \theta\in[0,2\pi]$.
 De esta función se obtiene:
@@ -2422,7 +2422,7 @@ De esta función se obtiene:
 \end{eqnarray*}
 Además,
 \begin{multline*}
-{\bf F}({\bf r}(\theta,\phi))=(1+\cos\phi) \left\langle\sin\phi\cos\theta,\sin\phi\sin\theta,2\cos\phi\right\rangle\!,\\
+{\bf F}({\bf r}(\theta,\phi))=(1+\cos\phi) \left\langle\sin\phi\cos\theta,\sin\phi\sin\theta,2\cos\phi\right\rangle,\\
 {\bf r}_{\phi}\times {\bf r}_{\theta}=\Big\langle\left(\cos\phi+1\right)\left(\sin2\phi+\sin\phi\right)\cos\theta\sin \phi,\\
 \left( \cos \phi +1\right) \left( \sin 2\phi +\sin \phi \right) \sin \theta \sin \phi ,\left( \cos \phi +1\right)
 ^{2}\left( 2\cos \phi -1\right) \sin \phi \Big\rangle .
@@ -2430,7 +2430,7 @@ Además,
 Por lo tanto,
 \[
 \mathbf{F}(\mathbf{r}(\phi,\theta)) \cdot (\mathbf{r}_{u} \times \mathbf{r}_{\phi}) =
-\frac{1}{2}(\cos \phi + 1)^{3} \left( \sin 3\phi - \sin 2\phi + 3\sin \phi \right)\!.
+\frac{1}{2}(\cos \phi + 1)^{3} \left( \sin 3\phi - \sin 2\phi + 3\sin \phi \right).
 \]
 Entonces, el flujo de \(\mathbf{F}\) sobre la superficie en mención es:
 \[
@@ -2480,7 +2480,7 @@ En este caso, con la parametrización escogida se obtiene:
 \begin{eqnarray*}
 {\bf r}_u &=& \left \langle 2 \sqrt{2}\cos(v), -\frac{4u}{\sqrt{3-2u^2}},2\sqrt{2}\sin(v) \right \rangle \\
 {\bf r}_v &=&\langle -2\sqrt{2}u\sin(v),0,2\sqrt{2}u\cos(v) \rangle \\
-{\bf r}_v \times {\bf r}_u &=& \left \langle \frac{8\sqrt{2}u^2 \cos(v)}{\sqrt{3-2u^2}},8u,\frac{8\sqrt{2}u^2 \sin(v)}{\sqrt{3-2u^2}} \right\rangle\!.
+{\bf r}_v \times {\bf r}_u &=& \left \langle \frac{8\sqrt{2}u^2 \cos(v)}{\sqrt{3-2u^2}},8u,\frac{8\sqrt{2}u^2 \sin(v)}{\sqrt{3-2u^2}} \right\rangle.
 \end{eqnarray*}
 
 Por lo tanto, ${\bf F}({\bf r}(u,v)) = \langle \sqrt{8}u \cos v ,\sqrt{12-8u^2} ,\sqrt{8}u\sin v \rangle$ y
@@ -2564,7 +2564,7 @@ Por lo descrito anteriormente, resulta apropiado escoger como parametrizaciones 
 
 \begin{eqnarray*}
 {\bf r}\left( u,v\right) &=&\left\langle 3-\frac{1}{4}u^{2},\cos v,u\sin v\right\rangle\\
-{\bf r}( u,v) &=&\left\langle u,\cos v,u\sin v\right\rangle\!,
+{\bf r}( u,v) &=&\left\langle u,\cos v,u\sin v\right\rangle,
 \end{eqnarray*}
 con $u\in [0,2]$, $v\in [0,2\pi ]$.
 Calcularemos el flujo sobre cada una de las regiones componentes.
@@ -2574,7 +2574,7 @@ Es claro que \[{\bf F}({\bf r}(u,v))=\left\langle 1-\frac{1}{4}u^{2},u\sin v, -\
 \begin{eqnarray*}
 {\bf r}_{u}&=&\left\langle 1,0,\sin v\right\rangle \\
 {\bf r}_{v}&=&\left\langle 0,-\sin v,u\cos v\right\rangle \\
-{\bf r}_{u}\times {\bf r}_{v}&=& \left\langle \sin ^{2}v,-u\cos v,-\sin v\right\rangle\!.
+{\bf r}_{u}\times {\bf r}_{v}&=& \left\langle \sin ^{2}v,-u\cos v,-\sin v\right\rangle.
 \end{eqnarray*}
 Entonces, ${\bf F}({\bf r}(u,v)) \cdot ({\bf r}_{u}\times {\bf r}_{v}) = u(2-u)$.
 Con lo cual, el flujo está dado por
@@ -2590,7 +2590,7 @@ se obtienen los siguientes vectores.
 \begin{eqnarray*}
 {\bf r}_{u}&=&\left\langle -\frac{1}{2}u,0,\sin v\right\rangle \\
 {\bf r}_{v}&=&\left\langle 0,-\sin v,u\cos v\right\rangle \\
-{\bf r}_{u}\times {\bf r}_{v}&=&\left\langle \sin ^{2}v,\frac{1}{2}u^{2}\cos v,\frac{1}{2}u\sin v\right\rangle\!.
+{\bf r}_{u}\times {\bf r}_{v}&=&\left\langle \sin ^{2}v,\frac{1}{2}u^{2}\cos v,\frac{1}{2}u\sin v\right\rangle.
 \end{eqnarray*}
 Entonces, ${\bf F}({\bf r}(u,v)) \cdot ({\bf r}_{u}\times {\bf r}_{v}) = \frac{1}{4}u(u^2-4)$, por lo tanto, el flujo está dado por:
 \begin{equation}\label{flujo16}
@@ -2682,7 +2682,7 @@ En este caso, la parametrización escogida es la siguiente:
 \frac{3}{8}u^{2}\cos 2v + \frac{1}{24}u^{2} + \frac{1}{3},\;
 \frac{\sqrt{15}}{2}u\cos v,\;
 \sqrt{3}u\sin v
-\right\rangle\!,
+\right\rangle,
 \]
 en donde \( u \in [0,1],\; v \in [0,2\pi] \). También se puede ver que
 \[
@@ -2691,7 +2691,7 @@ en donde \( u \in [0,1],\; v \in [0,2\pi] \). También se puede ver que
 \frac{3}{2}\sqrt{5}\,u,\
 -\frac{5u^2\cos(v)}{2\sqrt{3}},\
 \sqrt{\frac{5}{3}}\, u^2 \sin(v)
-\right\rangle\!.
+\right\rangle.
 \]
 Con la función ${\bf r}$ obtenemos los siguientes vectores:
 \begin{eqnarray*}
@@ -2735,7 +2735,7 @@ Resuelva los siguientes problemas.
 \includegraphics[width=0.4\textwidth]{Img/T_35b.pdf}
 \end{figure}
 
-\item Considere la superficie sobre el paraboloide  $z=x^2-2x+y^2$ interior al cilindro cardioidico $r=1+\cos t$.
+\item Considere la superficie sobre el paraboloide  $z=x^2-2x+y^2$ interior al cilindro cardióidico $r=1+\cos t$.
 
 \begin{figure}[H]
 \centering
@@ -2745,7 +2745,7 @@ Resuelva los siguientes problemas.
 \end{figure}
 
 Calcule el flujo del campo vectorial ${\bf F}(x,y,z)= \la x-2,y,2z\ra $ sobre la superficie del paraboloide.
-$z=x^2-2x+y^2$, interior al cilindro cardioidico $r=1+\cos t$.
+$z=x^2-2x+y^2$, interior al cilindro cardióidico $r=1+\cos t$.
 
 %
 
@@ -2770,7 +2770,7 @@ Show[SliceVectorPlot3D[{x-2,y,2z},{z==x^2-2*x+y^2},{x,-1/4,2},{y,-3/2,3/2},
 (x^2+y^2-x)^2<=x^2+y^2],VectorScale->{0.1,Scaled[0.2],Automatic},VectorPoints->17],a]
 \end{comment}
 
-\item Calcule el flujo del campo vectorial ${\bf F}(x,y,z)= \la z-y,y,z^2 \ra $ sobre la superficie del paraboloide hiperbólico $9z=x^2-y^2$, interior al cilindro $x^2+y^2 \leq 16$ y exterior al cilindro cardioidico $r=1+\cos t$.
+\item Calcule el flujo del campo vectorial ${\bf F}(x,y,z)= \la z-y,y,z^2 \ra $ sobre la superficie del paraboloide hiperbólico $9z=x^2-y^2$, interior al cilindro $x^2+y^2 \leq 16$ y exterior al cilindro cardióidico $r=1+\cos t$.
 
 \begin{figure}[H]
 \centering

@@ -46,13 +46,11 @@ Con las siguientes instrucciones, se obtienen las figuras anteriores:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]
 \begin{Verbatim}[formatcom=\letraverbatim]
-a=ContourPlot3D[{2*z==x^2+y^2,-x+y+z==1},{x,-5,4},
-{y,-4,5},{z,0,6},ContourStyle->{Orange,Cyan},
-PlotPoints->60,Mesh->False,Ticks->{{-3,0,3},
-{-3,0,3},{1,2,4,5}}];
-b=ParametricPlot3D[{1+2*Cos[t],-1+2*Sin[t],3+2*Cos[t]
--2*Sin[t]},{t,0,2*Pi},
-PlotStyle->{Black,Thickness->0.016}];
+a=ContourPlot3D[{2*z==x^2+y^2,-x+y+z==1},{x,-5,4},{y,-4,5},{z,0,6},
+ContourStyle->{Orange,Cyan},PlotPoints->60,Mesh->False,
+Ticks->{{-3,0,3},{-3,0,3},{1,2,4,5}}];
+b=ParametricPlot3D[{1+2*Cos[t],-1+2*Sin[t],3+2*Cos[t]-2*Sin[t]},
+{t,0,2*Pi},PlotStyle->{Black,Thickness->0.016}];
 Show[a,b]
   \end{Verbatim}
 \end{tcolorbox}
@@ -72,7 +70,7 @@ t\in \lbrack 0,2\pi ]$$
 describe la curva de intersección entre el paraboloide y el plano.
 Además $\left\| \overrightarrow{r}^{\prime }(t)\right\| = 2\sqrt{2\sin (t) \cos (t) +2}$,
 la longitud de la curva está dada por
-$$\int_{0}^{2\pi }2\sqrt{2\sin (t) \cos (t) +2}dt\approx 17.475.$$
+\[\int_{0}^{2\pi }2\sqrt{2\sin (t) \cos (t) +2}dt\approx 17.475.\]
 El cálculo anterior se puede evaluar numéricamente como sigue:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]
@@ -104,14 +102,11 @@ Las instrucciones para conseguir la figura~\ref{fig:116} son las siguientes:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]
 \begin{Verbatim}[formatcom=\letraverbatim]
-a=ContourPlot3D[{x+3==(y-2)^2+(z-1)^2,(z-2)^2+(y-2)^2
-==4},{x,-3,7},{y,-2,6},{z,-2.2,4.5},Mesh->False,
-ContourStyle->{Yellow,RGBColor[0.8,0.3,0.2]},
-PlotPoints->60];
-b=ParametricPlot3D[{2+4*Sin[t],2+2*Cos[t],
-2+2*Sin[t]},
-{t,0,2*Pi},PlotStyle->{Black,Thickness->0.014},
-PlotPoints->80];
+a=ContourPlot3D[{x+3==(y-2)^2+(z-1)^2,(z-2)^2+(y-2)^2==4},{x,-3,7},
+{y,-2,6},{z,-2.2,4.5},Mesh->False,
+ContourStyle->{Yellow,RGBColor[0.8,0.3,0.2]},PlotPoints->60];
+b=ParametricPlot3D[{2+4*Sin[t],2+2*Cos[t],2+2*Sin[t]},
+{t,0,2*Pi},PlotStyle->{Black,Thickness->0.014},PlotPoints->80];
 Show[a,b]
 \end{Verbatim}
 \end{tcolorbox}
@@ -158,7 +153,7 @@ $z=x^{2}-y^{2}$ se intersecan en una curva como lo muestra la figura~\ref{fig:67
 A partir de la ecuación del cilindro se puede definir $x=2\cos \left(t\right) $ y
 $\,y=2\sin (t) $ para reemplazar en la ecuación del
 paraboloide hiperbólico
-$$z=\left( 2\cos (t) \right)^{2}-\left(2\sin(t)\right) ^{2}= 4\cos(2t) ,$$
+\[z=\left( 2\cos (t) \right)^{2}-\left(2\sin(t)\right) ^{2}= 4\cos(2t) ,\]
 es decir, la función vectorial
 $\overrightarrow{r}\left(t\right) =\left\langle 2\cos (t) ,2\sin (t) ,4\cos\left( 2t\right) \right\rangle $,
 para $t\in \left[ 0,2\pi \right] $, define
@@ -174,16 +169,14 @@ Con lo cual, la longitud de esta curva está dada por
 \begin{gather*}
 \int_{0}^{2\pi }2\sqrt{9-8\cos \left( 4t\right) }dt \approx 35.2571.
 \end{gather*}
-\textls[-15]{La figura y la evaluación numérica de esta integral se obtienen en
-\verb"Mathematica" mediante el uso se las siguientes instrucciones:}
+\textls[-20]{La figura y la evaluación numérica de esta integral se obtienen en
+\verb"Mathematica"} mediante el uso se las siguientes instrucciones:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]
 \begin{Verbatim}[formatcom=\letraverbatim]
-r={2*Cos[t],2*Sin[t],4*Cos[2*t];Show[ContourPlot3D[
-{x^2+y^2==4,z==x^2-y^2},
-{x,-4,4},{y,-4,4},{z,-5,5},
-Mesh->False,PlotPoints->50,
-ContourStyle->{Orange,RGBColor[0.1,0.6,0.2]}],
+r={2*Cos[t],2*Sin[t],4*Cos[2*t];
+Show[ContourPlot3D[{x^2+y^2==4,z==x^2-y^2},{x,-4,4},{y,-4,4},{z,-5,5},
+Mesh->False,PlotPoints->50,ContourStyle->{Orange,RGBColor[0.1,0.6,0.2]}],
 ParametricPlot3D[{2*Cos[t],2*Sin[t],4*Cos[2*t]},
 {t,0,2*Pi},PlotStyle->{Black,Thickness[0.016]}]]
 A=Assuming[t>=0,Simplify[Norm[D[r,t]]]]
@@ -208,14 +201,10 @@ Las figuras de estas superficies y su curva de intersección se consiguen con la
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]
 \begin{Verbatim}[formatcom=\letraverbatim]
-A=ContourPlot3D[{z==5-y^2,z==x^2+y^2},{x,-3,3},
-{y,-3,3},{z,0,5},
-PlotPoints->90,ContourStyle->{Cyan,Orange},
-Mesh->False]r={Sqrt[5]*Cos[t],Sqrt[5/2]*Sin[t],
-(5/2)*(1+Cos[t]^2)};
-B=ParametricPlot3D[r,{t,0,2Pi},
-PlotStyle->{Black,
-Thickness->0.012}];
+A=ContourPlot3D[{z==5-y^2,z==x^2+y^2},{x,-3,3},{y,-3,3},{z,0,5},
+PlotPoints->90,ContourStyle->{Cyan,Orange},Mesh->False]
+r={Sqrt[5]*Cos[t],Sqrt[5/2]*Sin[t],(5/2)*(1+Cos[t]^2)};
+B=ParametricPlot3D[r,{t,0,2Pi},PlotStyle->{Black,Thickness->0.012}];
 Show[A,B]
 \end{Verbatim}
 \end{tcolorbox}
@@ -235,7 +224,7 @@ $$\overrightarrow{r}(t)=\left\langle \sqrt{5}\cos t,\sqrt{\frac{5}{2}}\sin t,%
 Además,
 $\left\| \overrightarrow{r}^{\prime}(t)\right\| =\frac{\sqrt{10}}{4}\sqrt{11-2\cos(2t)-5\cos(4t)}$,
 entonces la longitud de la curva está dada por
-$$L=\int_{0}^{2\pi}\frac{\sqrt{10}}{4}\sqrt{11-2\cos(2t)-5\cos(4t)} \,dt \approx 16.192.$$
+\[L=\int_{0}^{2\pi}\frac{\sqrt{10}}{4}\sqrt{11-2\cos(2t)-5\cos(4t)} \,dt \approx 16.192.\]
 La integral anterior se evaluó numéricamente mediante las siguientes tres instrucciones:
 %\vspace*{-1.2\baselineskip}
 %
@@ -282,13 +271,13 @@ La expresión para $x$ se obtiene sustituyendo $y$ y $z$ en cualquiera de las ex
 Es decir, $x=4(2+2\cos t) -( 2+2\cos t) ^{2}= 4-4\cos^{2}(t) =4\sin ^{2}(t) $ o también
 $x=( 2\sin t) ^{2}= 4\sin ^{2}(t) $.
 Por lo tanto, la curva de intersección está dada por la siguiente función vectorial
-$${\bf r}(t)=\langle4\sin^{2}(t),2+2\cos(t),2\sin(t)\rangle, \, t \in [0,2\pi].$$
+\[{\bf r}(t)=\langle4\sin^{2}(t),2+2\cos(t),2\sin(t)\rangle, \, t \in [0,2\pi].\]
 La longitud de esta curva se calcula integrando la norma de la derivada de la función vectorial, es decir
-$${\bf r}'(t)= \langle 8\sin(t)\cos(t),-2\sin (t),2\cos(t)\rangle .$$
+\[{\bf r}'(t)= \langle 8\sin(t)\cos(t),-2\sin (t),2\cos(t)\rangle .\]
 Su norma está dada por
-$$\|{\bf r}^{\prime}(t)\| = 2\sqrt{16\cos^{2}(t)+1-16\cos^{4}(t)}= 2\sqrt{3-2\cos(4t)};$$
+\[\|{\bf r}^{\prime}(t)\| = 2\sqrt{16\cos^{2}(t)+1-16\cos^{4}(t)}= 2\sqrt{3-2\cos(4t)};\]
 este término se integra numéricamente
-$$ \int_{0}^{2\pi}2\sqrt{3-2\cos(4t)}dt \approx 21.081.$$
+\[ \int_{0}^{2\pi}2\sqrt{3-2\cos(4t)}dt \approx 21.081.\]
 La evaluación se consigue con ayuda de las siguientes instrucciones:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]
@@ -306,8 +295,8 @@ representan gráficamente un paraboloide y un paraboloide hiperbólico, respecti
 \begin{figure}[H]
 \centering
 \caption{Gráfico de $8y=9-5x^{2}-6z^{2}$ y $16y=4z^{2}-x^{2}$}
-\includegraphics[height=5.5cm]{Img/71c.pdf} \hspace{5mm}
-\includegraphics[height=5.5cm]{Img/71a.pdf}
+\includegraphics[height=4cm]{Img/71c.pdf} \hspace{5mm}
+\includegraphics[height=4cm]{Img/71a.pdf}
 \fuentepropia
 \end{figure}
 
@@ -332,7 +321,7 @@ parametrizar en la forma $x=\sqrt{2}\cos (t) $, $z=\frac{3\sqrt{2}}{4}\sin \left
 t\right) $.
 Al reemplazar estas expresiones en cualquiera de las ecuaciones
 del paraboloide o del paraboloide hiperbólico se obtiene:
-$$8y=9-5x^{2}-6z^{2}= 9-10\cos ^{2}(t) -\frac{27}{4}\sin ^{2}(t)= \frac{9}{4}-\frac{13}{4}\cos^{2}( t),$$
+\[8y=9-5x^{2}-6z^{2}= 9-10\cos ^{2}(t) -\frac{27}{4}\sin ^{2}(t)= \frac{9}{4}-\frac{13}{4}\cos^{2}( t),\]
 entonces, $y=\frac{9}{32}-\frac{13}{32}\cos ^{2}(t) $.
 Por lo tanto, la curva de intersección se parametriza como
 $$\overrightarrow{r}(t) =\left\langle \sqrt{2}\cos \left(
@@ -348,8 +337,7 @@ Las siguientes instrucciones permiten hacer este cálculo numéricamente:
 
 \begin{tcolorbox}[title=\bf Instrucción Mathematica]
 \begin{Verbatim}[formatcom=\letraverbatim]
-r={Sqrt[2]*Cos[t],9/32-13/32*Cos[t]^2,3*Sqrt[2]/
-4*Sin[t]};
+r={Sqrt[2]*Cos[t],9/32-13/32*Cos[t]^2,3*Sqrt[2]/4*Sin[t]};
 A=Assuming[t>=0,Simplify[Norm[D[[r,t]]]]
 NIntegrate[A,{t,0,2*Pi}]
 \end{Verbatim}
@@ -398,7 +386,7 @@ En el espacio estas las dos curvas de intersección se pueden parametrizar como
 \overrightarrow{\alpha }(t) &=& \left\langle 3\cos (t) ,6\sin
 (t) ,-31+27\cos ^{2}(t) +6\cos (t) \right\rangle \\
 \overrightarrow{\beta }(t) &=& \left\langle 2\cos (t) ,\sin \left(
-t\right) ,4-3\cos ^{2}(t) +4\cos (t) \right\rangle\!,
+t\right) ,4-3\cos ^{2}(t) +4\cos (t) \right\rangle,
 \end{eqnarray*}
 con $t \in [0,2\pi]$.
 La longitud de dichas curvas se puede determinar con el
@@ -410,16 +398,16 @@ siguiente procedimiento:
 &=&  3\sqrt{5+\cos (t) \left( 323\cos(t) -324\cos ^{3}(t) +72\sin ^{2}(t)\right),}
 \end{eqnarray*}
 con lo cual, la longitud de la curva mayor está dada por
-$$\int_{0}^{2\pi}3\sqrt{5+\cos (t) \left( 323\cos(t) -324\cos ^{3}(t) +72\sin ^{2}(t)\right) }  \,  dt\approx 115. 268;$$
+\[\int_{0}^{2\pi}3\sqrt{5+\cos (t) \left( 323\cos(t) -324\cos ^{3}(t) +72\sin ^{2}(t)\right) }  \,  dt\approx 115. 268;\]
 por otro lado,
 \begin{eqnarray*}
 \overrightarrow{\beta }^{\prime }(t)&=& \left\langle -2\sin \left(
 t\right) ,\cos (t) ,6\cos (t) \sin (t)-4\sin (t) \right\rangle \\
 \left\| \overrightarrow{\beta }^{\prime }(t)\right\|
-&=& \sqrt{20+\cos (t) \left( 17\cos (t)-36\cos ^{3}(t) -48\sin ^{2}(t) \right)\!.}
+&=& \sqrt{20+\cos (t) \left( 17\cos (t)-36\cos ^{3}(t) -48\sin ^{2}(t) \right).}
 \end{eqnarray*}
 Entonces, la longitud de la segunda curva está dada por
-$$\int_{0}^{2\pi}\sqrt{20+\cos (t) \left( 17\cos (t)-36\cos ^{3}(t) -48\sin ^{2}(t) \right)} \, dt\approx 21.161.$$
+\[\int_{0}^{2\pi}\sqrt{20+\cos (t) \left( 17\cos (t)-36\cos ^{3}(t) -48\sin ^{2}(t) \right)} \, dt\approx 21.161.\]
 En los dos casos, estas integrales se evaluaron en \verb"Mathematica"
 usando las siguientes instrucciones:
 
@@ -489,16 +477,14 @@ $$\overrightarrow{r}\left( t\right) =\left\langle 3\sqrt{2}\sinh \left(
 t\right) ,\sqrt{48-34\cosh ^{2}t},\sqrt{2}\cosh \left( t\right)
 \right\rangle ,$$
 con $t \in[-a,a]$, con lo cual, la longitud de la curva está dada por
-$$\bigint_{-a}^{a}\sqrt{\frac{2\left(32\cosh ^{2}t-119\cosh^{4}t+24\right)}{17\cosh ^{2}t-24}}dt\approx 30.5672.$$
+\[\bigint_{-a}^{a}\sqrt{\frac{2\left(32\cosh ^{2}t-119\cosh^{4}t+24\right)}{17\cosh ^{2}t-24}}dt\approx 30.5672.\]
 Los cálculos que permiten obtener la longitud de la curva
 se obtienen ejecutando en \verb"Mathematica" las siguientes instrucciones:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]
 \begin{Verbatim}[formatcom=\letraverbatim]
-z=Sqrt[2]*Cosh[t],Sqrt[2]*Cosh[t]}
-x=3*Sqrt[2]*Sinh[t];
-y=Sqrt[2]*Sqrt[6+Cosh[t]^2-
-18*Sinh[t]^2];
+z=Sqrt[2]*Cosh[t],Sqrt[2]*Cosh[t];x=3*Sqrt[2]*Sinh[t];
+y=Sqrt[2]*Sqrt[6+Cosh[t]^2-18*Sinh[t]^2];
 a=ArcCosh[Sqrt[27/17]];
 A=Assuming[t>=0,Simplify[Norm[D[{r,t},]]]];
 NIntegrate[2*A,{t,-a,a}]
@@ -538,19 +524,19 @@ es decir, $2+2\cos(t) +z^{2}=4$,
 de donde $z=\pm \sqrt{2-2\cos (t)}$,
 entonces la función
 
-$${\bf r}_1(t) =\left\langle 1+\cos (t) ,\sin (t),\sqrt{2-2\cos (t) }\right\rangle ,\,\, t\in \lbrack 0,2\pi ],$$
+\[{\bf r}_1(t) =\left\langle 1+\cos (t) ,\sin (t),\sqrt{2-2\cos (t) }\right\rangle ,\,\, t\in \lbrack 0,2\pi ],\]
 
 parametriza la curva de intersección. Es de anotar que son dos porciones que se obtienen por la raiz positiva y la raiz negativa.
 
 Para la expresión  $x^{2}+z^{2}=2x$ (que representa el otro cilindro), el tratamiento es similar, obtiendose la función
-$${\bf r}_2(t) =\left\langle 1+\cos (t),\sqrt{2-2\cos (t)},\sin (t)\right\rangle ,$$
+\[{\bf r}_2(t) =\left\langle 1+\cos (t),\sqrt{2-2\cos (t)},\sin (t)\right\rangle ,\]
 donde $t\in \lbrack 0,2\pi ]$.
 Por la simetría de la curva y las ecuaciones que la definen
 consideraremos solamente ${\bf r}_1(t)$, entonces la longitud ($L$) de la curva es cuatro veces la integral del
 término
-$$\left\Vert {\bf r}_1^{\prime }(t) \right\Vert =\left\Vert \left\langle -\sin t,\cos t,\frac{1}{2}\frac{\sqrt{2}\sin t}{\sqrt{1-\cos t}}\right\rangle \right\Vert=\frac{1}{2}\sqrt{2}\sqrt{\cos t+3} ,$$
+\[\left\Vert {\bf r}_1^{\prime }(t) \right\Vert =\left\Vert \left\langle -\sin t,\cos t,\frac{1}{2}\frac{\sqrt{2}\sin t}{\sqrt{1-\cos t}}\right\rangle \right\Vert=\frac{1}{2}\sqrt{2}\sqrt{\cos t+3} ,\]
 de donde
-$$L=4\int_{0}^{2\pi }\frac{1}{2}\sqrt{2}\sqrt{\cos t+3}\,dt \approx 30.562.$$
+\[L=4\int_{0}^{2\pi }\frac{1}{2}\sqrt{2}\sqrt{\cos t+3}\,dt \approx 30.562.\]
 
 Este valor se obtuvo en \verb"Mathematica" utilizando las siguientes instrucciones:
 
@@ -578,7 +564,7 @@ donde $t\in [0,2\pi]$.
 
 Sobre el paraboloide se cumple que
 $z=\frac{9}{2}-2 \sin (t)+\sin (2 t)-2 \cos (t)+\frac{3}{2} \cos (2 t)$.
-Por lo tanto, para $t\in [0,2\pi]$, la curva de intersección del paraboloide y el cilindro cardioidico se parametriza por medio de la sigui\-ente función:
+Por lo tanto, para $t\in [0,2\pi]$, la curva de intersección del paraboloide y el cilindro cardióidico se parametriza por medio de la sigui\-ente función:
 \begin{multline*}
 \overrightarrow{r}(t)=\big\langle(1-\cos t)\cos t,(1-\cos t)\sin t,\frac{9}{2}-2\sin t+\sin(2t) \\
 -2\cos t+\frac{3}{2}\cos(2t)\big\rangle.
@@ -590,7 +576,7 @@ Puede verse también que:
 \end{multline*}
 
 por lo tanto:
-$$\int_0^{2\pi}\left\Vert \overrightarrow{r}^\prime(t)\right\Vert dt \approx 10.059.$$
+\[\int_0^{2\pi}\left\Vert \overrightarrow{r}^\prime(t)\right\Vert dt \approx 10.059.\]
 
 Las figuras y los cálculos para determinar la longitud de la curva se obtienen ejecutando las siguientes instrucciones:
 
@@ -653,7 +639,7 @@ Show[b,a]
 A partir de la relación
 $\left\| \frac{d}{dt}\la 3t^{3}+t,3t^{2},3t^{3}-t\ra\right\| = \sqrt{2}\left( 9t^{2}+1\right) $, es posible establecer que
 la longitud de la arco está dada por
-$$L=\int_{-2}^{2}\sqrt{2}\left( 9t^{2}+1\right) dt= 52\sqrt{2}.$$
+\[L=\int_{-2}^{2}\sqrt{2}\left( 9t^{2}+1\right) dt= 52\sqrt{2}.\]
 
 \begin{funciones}[resume=ejercicios]
 \item \makebox[\linewidth][c]{$\overrightarrow{r}(t)=\la \sqrt{t^{3}},\frac{9}{16}t,t^{2}\ra $, $t \in [0,2]$.}
@@ -687,7 +673,7 @@ Show[b,a]
 
 Además, $\left\| \frac{d}{dt}\la \sqrt{t^{3}},\frac{9}{16}t,t^{2}\ra\right\| = \frac{9}{16}+2t$,
 entonces la longitud de la curva está dada por
-$$L=\int_0^2 \left ( \frac{9}{16}+2t \right )dt = \frac{41}{8}. $$
+\[L=\int_0^2 \left ( \frac{9}{16}+2t \right )dt = \frac{41}{8}. \]
 
 \begin{funciones}[resume=ejercicios]
 \item \makebox[\linewidth][c] {$\overrightarrow{r}(t)=\la 4t^{3}+2t^{2},\frac{4}{3\sqrt{2}}t,4t^{3}-2t^{2}\ra $, $t \in [-1,1]$.}
@@ -729,7 +715,7 @@ Es sencillo ver que
 $ \left\| \frac{d}{dt}\la 4t^{3}+2t^{2},\frac{4t}{3\sqrt{2}},4t^{3}-2t^{2}\ra \right\| = \frac{2}{3}\sqrt{2}\left(
 18t^{2}+1\right), $
 por lo tanto, la longitud de la curva está dada por
-$$L=\int_{-1}^{1}\frac{2}{3}\sqrt{2}\left( 18t^{2}+1\right) dt= \frac{28}{3}\sqrt{2}$$
+\[L=\int_{-1}^{1}\frac{2}{3}\sqrt{2}\left( 18t^{2}+1\right) dt= \frac{28}{3}\sqrt{2}\]
 
 \begin{funciones}[resume=ejercicios]
 \item \makebox[\linewidth][c]
@@ -753,30 +739,26 @@ Los gráficos de las dos superficies junto con la curva de intersección se mues
 Las instrucciones para conseguir estas figuras son las siguientes:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
-a=ParametricPlot3D[{3*t-t^3,3*t^2,3*t+t^3},
-{t,-1.15,1.15},PlotStyle->{Black,Thickness->0.017},
-PlotPoints->90];
-b=ContourPlot3D[{x^2-z^2+4*y^2/3,(x+z)^2==12*y},
-{x,-5,5},{y,-5,5},{z,-5,5},
-ContourStyle->{Directive[Orange,Opacity[0.7]],
-Directive[RGBColor[0.5,0.8,0.5],Opacity[0.6]]}],
-Mesh->False;
+a=ParametricPlot3D[{3*t-t^3,3*t^2,3*t+t^3},{t,-1.15,1.15},
+PlotStyle->{Black,Thickness->0.017},PlotPoints->90];
+b=ContourPlot3D[{x^2-z^2+4*y^2/3,(x+z)^2==12*y},{x,-5,5},
+{y,-5,5},{z,-5,5},ContourStyle->{Directive[Orange,Opacity[0.7]],
+Directive[RGBColor[0.5,0.8,0.5],Opacity[0.6]]}],Mesh->False];
 Show[b,a]
 \end{Verbatim}
 \end{tcolorbox}
 
 Para hallar $L$ se determina el elemento diferencial de longitud
-$$\left\| \frac{d}{dt}\la 3t-t^{3},3t^2,3t+3t^{3} \ra \right\| = 3 \sqrt{2}(t^2+1),$$
+\[\left\| \frac{d}{dt}\la 3t-t^{3},3t^2,3t+3t^{3} \ra \right\| = 3 \sqrt{2}(t^2+1),\]
 
-por lo tanto, $$L= \int_{-1}^1 3 \sqrt{2}(t^2+1) dt = 8\sqrt{2}.$$
+por lo tanto, \[L= \int_{-1}^1 3 \sqrt{2}(t^2+1) dt = 8\sqrt{2}.\]
 
 \begin{funciones}[resume=ejercicios]
 \item \makebox[\linewidth][c]
 {$\overrightarrow{r}(t) =\la \sec t, \ln (\sec(t)+\tan(t)),\tan(t) \ra $, $t \in [-\frac{\pi}{3},\frac{\pi}{3}]$.}
 \end{funciones}
 
-A partir de las funciones componentes y de algunas identidades trigono\-métricas conocidas
-se pueden establecer relaciones entre ellas;
+A partir de las funciones componentes y de algunas identidades trigono\-métricas conocidas se pueden establecer relaciones entre ellas;
 dos de éstas funciones son: $x^2=1+z^2$ y $y=\ln(x+z)$.
 Los gráficos de estas dos superficies junto con la curva de intersección se muestran en la figura~\ref{fig:129aa}.
 
@@ -789,7 +771,7 @@ Los gráficos de estas dos superficies junto con la curva de intersección se mu
 \fuentepropia
 \end{figure}
 
-Las instrucciones para conseguir estas figuras son las siguientes:
+Las instrucciones para conseguir esta figura son las siguientes:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 a=ParametricPlot3D[{Sec[t],Log[Sec[t]+Tan[t]],Tan[t]},
@@ -806,7 +788,7 @@ Es claro que
 \left\| \overrightarrow{r}^{\prime }(t)\right\| =\left\| \frac{d}{dt}\left\langle \sec (t) ,\ln \left( \sec (t) +\tan (t) \right) ,\tan (t) \right\rangle \right\| =\sqrt{2}\sec ^{2}t\text{,}
 \]
 entonces, la longitud de la curva está dada por
-$$L=\int_{-\pi /3}^{\pi /3}\sqrt{2}\sec ^{2}tdt= 2\sqrt{6}.$$
+\[L=\int_{-\pi /3}^{\pi /3}\sqrt{2}\sec ^{2}tdt= 2\sqrt{6}.\]
 %\end{enumerate}
 
 \begin{ejer}
@@ -816,16 +798,16 @@ superficies cuya intersección esté dada por $\overrightarrow{r}(t)$.
 También halle la longitud de la curva para el intervalo dado.
 \begin{enumerate}
 \item $ \overrightarrow{r}(t)=\la e^{-t}\sin (t),e^{-t},e^{-t}\cos (t) \ra$, $t \in [0,\pi/2]$.
-%$$\left\| \frac{d}{dt}\la e^{-t}\sin (t),e^{-t},e^{-t}\cos (t) \ra \right\| = \sqrt{3}e^{-t}$$
+%\[\left\| \frac{d}{dt}\la e^{-t}\sin (t),e^{-t},e^{-t}\cos (t) \ra \right\| = \sqrt{3}e^{-t}\]
 \item $ \overrightarrow{r}(t)=\la e^{-t}\cos \left( 2t\right),e^{-t}\sin \left( 2t\right),e^{-t} \ra $,
 $t \in [0,\pi/2]$.
-%$$\left\| \frac{d}{dt}\la e^{-t}\sin \left( 2t\right),e^{-t},e^{-t}\cos \left( 2t\right) \ra \right\| = \sqrt{6}e^{-t}$$
+%\[\left\| \frac{d}{dt}\la e^{-t}\sin \left( 2t\right),e^{-t},e^{-t}\cos \left( 2t\right) \ra \right\| = \sqrt{6}e^{-t}\]
 \item $\overrightarrow{r}(t)=\la e^{t},e^{t}\sin \left(2t\right) ,e^{t}\cos \left( 2t\right) \ra $,
 $t \in [0,\pi/2]$
-%$$\left\| \frac{d}{dt}\la e^{t},e^{t}\sin \left( 2t\right),e^{t}\cos \left( 2t\right) \ra \right\| = \sqrt{6}e^{t}$$
+%\[\left\| \frac{d}{dt}\la e^{t},e^{t}\sin \left( 2t\right),e^{t}\cos \left( 2t\right) \ra \right\| = \sqrt{6}e^{t}\]
 \item $ \overrightarrow{r}(t)=\la 3t^{4}+t^{2},\frac{4}{3}\sqrt{6}t^{3},3t^{4}-t^{2}\ra $,
 $t \in [-1,1]$.
-%$$\left\|\frac{d}{dt}\la 3t^{4}+t^{2},\frac{4}{3}\sqrt{6}t^{3},3t^{4}-t^{2}\ra \right\| =  2t\sqrt{2}\left(6t^{2}+1\right) $$
+%\[\left\|\frac{d}{dt}\la 3t^{4}+t^{2},\frac{4}{3}\sqrt{6}t^{3},3t^{4}-t^{2}\ra \right\| =  2t\sqrt{2}\left(6t^{2}+1\right) \]
 \item $ \overrightarrow{r}(t)=\la t^{2},\frac{6}{\sqrt{3}}t,\ln t^{3}\ra $,
 $t \in [1,e]$.
 %$$\left\| \frac{d}{dt}\la t^{2},\frac{6}{\sqrt{3}} t,\ln t^{3}\ra \right\|= \frac{2t^{2}+3}{t}$$
@@ -853,7 +835,7 @@ $t \in [1,e]$.
 \begin{figure}[H]
 \begin{center}
 \caption{Gráfico de $x^2+z^2=4y^2+\frac{1}{2}$ y $x^2+z^2=1-y$}
-\includegraphics[height=4.5cm]{Img/T_23a.pdf}\hskip0.5cm
+\includegraphics[height=4.5cm]{Img/T_23a.pdf}\hskip0.3cm
 \includegraphics[height=4.5cm]{Img/T_23b.pdf}
 \fuentepropia
 \end{center}
@@ -864,7 +846,7 @@ $t \in [1,e]$.
 \begin{figure}[H]
 \begin{center}
 \caption{Gráfico de $x^2+z^2-2x=y^2-2$ y $3x^2+2z^2-4z=34$}
-\includegraphics[height=4.5cm]{Img/T_24a.pdf}\hskip0.5cm
+\includegraphics[height=4.5cm]{Img/T_24a.pdf}\hskip0.3cm
 \includegraphics[height=4.5cm]{Img/T_24b.pdf}
 \fuentepropia
 \end{center}
@@ -875,20 +857,19 @@ $t \in [1,e]$.
 \begin{figure}[H]
 \begin{center}
 \caption{Gráfico de $x^2+y^2+z^2-2x=31$ y $x^2+y^2+2x=4z-1$}
-\includegraphics[height=5cm]{Img/T_25a.pdf}\hskip0.5cm
-\includegraphics[height=5cm]{Img/T_25b.pdf}
+\includegraphics[height=4.5cm]{Img/T_25a.pdf}\hskip0.3cm
+\includegraphics[height=4.5cm]{Img/T_25b.pdf}
 \fuentepropia
 \end{center}
 \end{figure}
 
-\item El cilindro cardioidico con ecuación $r=1+\cos(t)$ y el plano $x+y+3z=1$. \index{Cilindro cardiodico}
+\item \textls[-20]{El cilindro cardióidico con ecuación $r=1+\cos(t)$ y el plano $x+y+3z=1$.}\index{Cilindro cardiodico}
 
-\vspace*{-4mm}
 \begin{figure}[H]
 \begin{center}
 \caption{Gráfico de $r=1+\cos(t)$ y $x+y+3z=1$}
-\includegraphics[height=5cm]{Img/T_29a.pdf}\hskip0.25cm
-\includegraphics[height=5cm]{Img/T_29b.pdf}
+\includegraphics[height=4.5cm]{Img/T_29a.pdf}\hskip0.3cm
+\includegraphics[height=4.5cm]{Img/T_29b.pdf}
 \fuentepropia
 \end{center}
 \end{figure}
@@ -899,32 +880,32 @@ $x^2 + y^2 + z^2 - 2 x = 4$ y $x^2 + y^2 + z^2 - 2z = 4$.
 \begin{figure}[H]
 \begin{center}
 \caption{Gráfico de $x^2 + y^2 + z^2 - 2 x = 4$ y $x^2 + y^2 + z^2 - 2z = 4$}
-\includegraphics[height=5.7cm]{Img/T_72a.pdf}\hskip0.5cm
-\includegraphics[height=5.7cm]{Img/T_72b.pdf}
+\includegraphics[height=3.5cm]{Img/T_72a.pdf}\hskip0.3cm
+\includegraphics[height=3.5cm]{Img/T_72b.pdf}
 \fuentepropia
 \end{center}
 \end{figure}
+
+\enlargethispage*{\baselineskip}
 
 \item El cilindro $r=\sin(2\theta)$ y el plano $x+y+3z=1$.
 
 \begin{figure}[H]
 \begin{center}
 \caption{Gráfico de $r=\sin(2\theta)$ y $x+y+3z=1$}
-\includegraphics[height=6cm]{Img/97a.pdf}\hskip0.5cm
-\includegraphics[height=6cm]{Img/97b.pdf}
+\includegraphics[height=3.5cm]{Img/97a.pdf}\hskip0.3cm
+\includegraphics[height=3.5cm]{Img/97b.pdf}
 \fuentepropia
 \end{center}
 \end{figure}
-
-\clearpage
 
 \item El cilindro $r=\sin(2\theta)$ y el paraboloide $z=1-x^2-y^2$.
 
 \begin{figure}[H]
 \begin{center}
 \caption{Gráfico de $r=\sin(2\theta)$ y $z=1-x^2-y^2$}
-\includegraphics[height=6cm]{Img/98a.pdf}\hskip0.5cm
-\includegraphics[height=6cm]{Img/98b.pdf}
+\includegraphics[height=3.5cm]{Img/98a.pdf}\hskip0.3cm
+\includegraphics[height=3.5cm]{Img/98b.pdf}
 \fuentepropia
 \end{center}
 \end{figure}
