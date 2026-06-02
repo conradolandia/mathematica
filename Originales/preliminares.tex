@@ -11,7 +11,7 @@ En estos apuntes consideraremos funciones cuyo dominio es el espacio el espacio 
 o un subconjunto de este.
 
 \section{Vectores}
-En \cite[p.~5]{marsden_calculo_2013}, se define ``vector como un segmento de recta dirigido que comienza en el origen,
+En \cite[p.~5]{marsden_calculo_2013} se define ``vector como un segmento de recta dirigido que comienza en el origen,
 esto es, un segmento de recta con magnitud y dirección específicos con punto inicial en el origen''.
 
 Los puntos en $\mathbb{R}^n$ se presentan en la forma $P=(a_1,a_2,\cdots, a_n)$
@@ -28,7 +28,9 @@ $\ve{u} \cdot \ve{v}= \left\|\ve{u}\right\| \left\| \ve{v}\right\| \cos \theta $
 
 El \emph{producto cruz} entre dos vectores  $\ve{u}=\langle a_{1},a_{2},a_{3}\ra$ y
 $\ve{v}=\langle b_{1},b_{2},b_{3}\ra$ en $\mathbb{R}^3$ es el vector
-\[\ve{u}\times \ve{v}=\langle a_{2}b_{3}-a_{3}b_{2},a_{3}b_{1}-a_{1}b_{3},a_{1}b_{2}-a_{2}b_{1}\ra,\]
+\begin{equation*}
+  \ve{u}\times \ve{v}=\langle a_{2}b_{3}-a_{3}b_{2},a_{3}b_{1}-a_{1}b_{3},a_{1}b_{2}-a_{2}b_{1}\ra,
+\end{equation*}
 que es ortogonal tanto a $\ve{u}$ como a $\ve{v}$.
 Además $\left\Vert \ve{u}\times \ve{v}\right\Vert =\left\Vert \ve{u}\right\Vert\left\Vert \ve{v}\right\Vert\sin\theta;$ estos resultados se pueden consultar en detalle en \textcite{apostol_calculus_1999}.
 
@@ -40,7 +42,7 @@ El producto cruz es útil en el desarrollo de algunos de los siguientes resultad
 \subsection{Proyección ortogonal}
 %
 La proyección ortogonal del vector $\ve{v}$ sobre el vector
-$\ve{u}$, se denota por ${\rm Proy}_{\ve{u}}\ve{v}$
+$\ve{u}$ se denota por ${\rm Proy}_{\ve{u}}\ve{v}$
 y es un múltiplo escalar del vector $\ve{u}$. Es decir
 ${\rm Proy}_{\ve{u}}\ve{v}=k\ve{u}$.
 De la figura se observa que
@@ -49,9 +51,9 @@ $$\cos \theta =\frac{\left\| k\ve{u}\right\|}{\left\|
 
 El valor $\left| k\right| $ será positivo si
 ${\rm Proy}_{\ve{u}}\ve{v}$ posee el mismo sentido de $\ve{u}$, de lo
-contrario, será negativo. Al igualar las expresiones para $\cos \theta $ y considerando el caso $k>0$,
+contrario será negativo. Al igualar las expresiones para $\cos \theta $ y considerando el caso $k>0$,
 se concluye que $k=\frac{\ve{u}\cdot \ve{v}}{\left\| \ve{u}\right\| ^{2}}$, entonces
-la proyección del vector $\ve{v}$ sobre $\ve{u}$ está dada por
+la proyección del vector $\ve{v}$ sobre $\ve{u}$ está dada por:
 \[{\rm Proy}_{\ve{u}}\ve{v}=\frac{\ve{u}\cdot\ve{v}}{\left\| \ve{u}\right\|^{2}}\ve{u}\]
 En el gráfico la línea discontinua corresponde al vector
 $\ve{v}-{\rm Proy}_{\ve{u}}\ve{v}$. Aunque nos apoyamos en un gráfico bidimensional, este resultado se puede presentar en espacios
@@ -194,7 +196,7 @@ responder a este interrogante.
   \begin{eqnarray}\label{preliminares2}
     \left\vert y-1\right\vert &=& \sqrt{(y-1) ^{2}}\leq \sqrt{\left(x-1\right) ^{2}+(y-1)  ^{2}} \nonumber \\ &=& \left\Vert \left(x,y\right) -\left( 1,1\right) \right\Vert <\delta
   \end{eqnarray}
-  Utilizando los resultados \ref{preliminares}, \ref{preliminares1} y \ref{preliminares2}, se sigue que
+  Utilizando los resultados \ref{preliminares}, \ref{preliminares1} y \ref{preliminares2} se sigue que
   \begin{eqnarray*}
     \left\Vert \langle x^{2},x+y\rangle -\langle 1,2\rangle \right\Vert &=& \sqrt{\left( x^{2}-1\right) ^{2}+\left( x+y-2\right) ^{2}} \\
     &\leq & \sqrt{\left( x^{2}-1\right) ^{2}} +\sqrt{\left(x+y-2\right) ^{2}} \\
@@ -258,7 +260,7 @@ Una consecuencia de la definición \ref{preliminares5} es la siguiente.
       \left\Vert \ve{F}\left( x_{1},x_{2},\cdots ,x_{n}\right) - \ve{L}\right\Vert &=
       \sqrt{\sum_{i=1}^{m}\left( f_{i}\left(x_{1},x_{2},\cdots ,x_{n}\right) -l_{i}\right) ^{2}} \\
       &\leq  \sum_{i=1}^{m}\sqrt{\left( f_{i}\left( x_{1},x_{2},\cdots ,x_{n}\right)-l_{i}\right) ^{2}}\\
-      &\leq \sum_{i=1}^{m}\left\vert f_{i}\left( x_{1},x_{2},\cdots ,x_{n}\right)-l_{i} \right\vert\\ 
+      &\leq \sum_{i=1}^{m}\left\vert f_{i}\left( x_{1},x_{2},\cdots ,x_{n}\right)-l_{i} \right\vert\\
       & < \sum_{i=1}^{m}\frac{\varepsilon }{m}=\varepsilon,
     \end{aligned}
   \end{gather*}
@@ -760,7 +762,7 @@ Es por lo anterior que el volumen de $E$ se define como\index{Masa de una regió
 Si la función $f(x,y)$ determina la densidad en el punto $(x,y)$ entonces la integral de la fórmula \ref{integralesdobles1}
 representa la masa ($M$) de la región $R$. Los momentos con respecto al eje $x$ y al eje $y$ están dados  por
 $\mu_{x}= \iint_R y f(x,y)dA$ y $\mu_{y}= \iint_R x f(x,y)dA$, los cuales determinan las coordenadas del
-centro de masa de la región $R$, esto es\index{Centro de masa} 
+centro de masa de la región $R$, esto es\index{Centro de masa}
 \[(\overline{x},\overline{y})= \left(\frac{\mu_y}{M},\frac{\mu_x}{M}\right).\]
 
 Si la región de integración en la fórmula \ref{integralesdobles1} es un rectángulo está se evalúa
@@ -995,7 +997,7 @@ los vectores ${\bf r}_u$, ${\bf r}_v$ y ${\bf r}_w$.
 De manera análoga al procedimiento utilizado cuando presentamos integrales triples, se sigue que la integral de $f$
 sobre $E$ con la parametrización ${\bf r}(u,v,w)$ está dada por
 \begin{align} \label{math1}
-\ds \iiint_E f dV &= \lim_{l,m,n \to \infty} S_{nml}  \\
+\ds \iiint_E f dV &= \lim_{l,m,n \to \infty} S_{nml}  \notag\\
 &=\int_a^b\int_c^d \int_p^q f({\bf r}(u,v,w)) | {\bf r}_u \cdot ({\bf r}_v \times {\bf r}_w) | dudvdw
 \end{align}
 Al término $|{\bf r}_u \cdot ({\bf r}_v \times {\bf r}_w) |dudvdw$ lo denominaremos elemento diferencial de volumen.

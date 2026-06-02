@@ -16,11 +16,11 @@ sus derivadas, algunos límites relevantes o en algunos de sus valores como $\si
 $\tanh 0=0$; también hay diferencias, pues las funciones hiperbólicas no son periódicas.
 \begin{defi}
   Las siguientes expresiones definen las funciones hiperbólicas.
-  \begin{eqnarray}
-    \sinh x &=& \frac{e^{x}-e^{-x}}{2}=\dfrac{1}{\csch x} \label{hiper1}  \\
-    \cosh x &=& \frac{e^{x}+e^{-x}}{2}=\dfrac{1}{\sech x} \label{hiper2}  \\
-    \tanh x &=& \dfrac{\sinh x}{\cosh x}=\dfrac{1}{\coth x} \label{hiper3}
-  \end{eqnarray}
+  \begin{align}
+    \sinh x &= \frac{e^{x}-e^{-x}}{2}=\dfrac{1}{\csch x} \label{hiper1}  \\
+    \cosh x &= \frac{e^{x}+e^{-x}}{2}=\dfrac{1}{\sech x} \label{hiper2}  \\
+    \tanh x &= \dfrac{\sinh x}{\cosh x}=\dfrac{1}{\coth x} \label{hiper3}
+  \end{align}
 \end{defi}
 
 Se muestran las figuras de algunas de ellas.
@@ -28,9 +28,9 @@ Se muestran las figuras de algunas de ellas.
 \begin{figure}[H]
   \centering
   \caption{Cono truncado oblicuo determinado por ${\bf r}(u,t)$}
-  \includegraphics[height=4cm]{Fig/190.pdf} \hspace{5mm}
-  \includegraphics[height=4cm]{Fig/191.pdf} \\[5mm]
-  \includegraphics[height=4cm]{Fig/192.pdf}
+  \includegraphics[height=3.5cm]{Fig/190.pdf} \hspace{2mm}
+  \includegraphics[height=3.5cm]{Fig/191.pdf} \hspace{2mm}
+  \includegraphics[height=3.5cm]{Fig/192.pdf}
   \fuentepropia
 \end{figure}
 
@@ -38,35 +38,34 @@ Se muestran las figuras de algunas de ellas.
   \begin{enumerate}
     \item \textit{Demostrar las siguientes identidades:}
       \begin{itemize}
-        \item   $\cosh x+\sinh x=e^{x}$
-        \item  $\cosh x-\sinh x=e^{-x}$
-        \item  $\sinh (-x)=-\sinh x$
-        \item   $\cosh (-x)=\cosh x$
-        \item   $\tanh (-x)=-\tanh x$
-        \item  $\cosh ^{2}x-\sinh ^{2}x=1$
-        \item  $1-\tanh ^{2}x=\sech^{2}x$
-        \item  $1-\coth ^{2}x=-\csch^{2}x$
-
-        \item   $\dfrac{1+\tanh x}{1-\tanh x}=e^{2x}$
-        \item  $\cosh ^{2}x=\dfrac{\cosh 2x+1}{2}$
-        \item  $\sinh ^{2}x=\dfrac{\cosh 2x-1}{2}$
-        \item  $\dfrac{\coth x-1}{\coth x+1}=e^{-2x}$
-        \item   $(\cosh x+\sinh x)^{n}=\cosh nx+\sinh nx$
-        \item   $\sinh (x+h)=\sinh x\cosh h+\cosh x\sinh h$
-        \item   $\cosh (x+h)=\cosh x\cosh h+\sinh x\sinh h$
+        \item $\cosh x+\sinh x=e^{x}$
+        \item $\cosh x-\sinh x=e^{-x}$
+        \item $\sinh (-x)=-\sinh x$
+        \item $\cosh (-x)=\cosh x$
+        \item $\tanh (-x)=-\tanh x$
+        \item $\cosh ^{2}x-\sinh ^{2}x=1$
+        \item $1-\tanh ^{2}x=\sech^{2}x$
+        \item $1-\coth ^{2}x=-\csch^{2}x$
+        \item $\dfrac{1+\tanh x}{1-\tanh x}=e^{2x}$
+        \item $\cosh ^{2}x=\dfrac{\cosh 2x+1}{2}$
+        \item $\sinh ^{2}x=\dfrac{\cosh 2x-1}{2}$
+        \item $\dfrac{\coth x-1}{\coth x+1}=e^{-2x}$
+        \item $(\cosh x+\sinh x)^{n}=\cosh nx+\sinh nx$
+        \item $\sinh (x+h)=\sinh x\cosh h+\cosh x\sinh h$
+        \item $\cosh (x+h)=\cosh x\cosh h+\sinh x\sinh h$
         \item $\sinh (x-y)= \sinh x\cosh y-\cosh x\sinh y$
         \item $\cosh (x-y)= \cosh x\cosh y-\sinh x\sinh y$
-        \item   $\tanh (x+h)=\dfrac{\tanh x+\tanh y}{1+\tanh x\tanh y}$
+        \item $\tanh (x+h)=\dfrac{\tanh x+\tanh y}{1+\tanh x\tanh y}$
       \end{itemize}
     \item Pruebe que
 
       \begin{itemize}
         \item $\lim\limits_{x\rightarrow 0}\frac{\sinh x}{x}=1$,
-        \item  $\lim\limits_{x\rightarrow 0}\frac{1-\cosh x}{x}=0$,
+        \item $\lim\limits_{x\rightarrow 0}\frac{1-\cosh x}{x}=0$,
         \item $\lim\limits_{x\rightarrow \infty }\tanh x= 1$,
-        \item  $\lim\limits_{x\rightarrow -\infty }\tanh x= -1$,
+        \item $\lim\limits_{x\rightarrow -\infty }\tanh x= -1$,
         \item $\lim\limits_{x\rightarrow \infty }\coth x= 1$,
-        \item  $\lim\limits_{x\rightarrow -\infty }\coth x= -1$.
+        \item $\lim\limits_{x\rightarrow -\infty }\coth x= -1$.
       \end{itemize}
 
     \item Obtenga la figura de las funciones $y=\coth x$, $y=\sech x$, $y=\csch x$ y de las funciones
@@ -100,17 +99,17 @@ Se muestran las figuras de algunas de ellas.
         \item $y=\arctanh x$,
         \item $y=\arccoth x$,
         \item $y=\arcsech x$,
-        \item $y={\rm arccsch} x$.
+        \item $y=\arccsch x$.
       \end{enumerate}
 
     \item Muestre que las derivadas de las funciones hiperbólicas inversas son las siguientes, compruebe las siguientes igualdades:
       \begin{itemize}
-        \item $\frac{d}{dx}\left({\rm arcsinh}(x) \right) = \dfrac{1}{\sqrt{x^{2}+1}}$
-        \item $\frac{d}{dx}\left({\rm arccosh}(x)\right) =\dfrac{1}{\sqrt{x^{2}-1}}$
-        \item $\frac{d}{dx}\left({\rm arctanh}(x)\right) =\dfrac{1}{1-x^{2}}$
-        \item $\frac{d}{dx}\left({\rm arccoth}(x)\right) =\dfrac{1}{1-x^{2}}$
-        \item $\frac{d}{dx}\left({\rm arcsech}(x)\right) =\dfrac{-1}{x\sqrt{1-x^{2}}}$
-        \item $\frac{d}{dx}\left({\rm arccsch}(x)\right) =\dfrac{-1}{x\sqrt{1+x^{2}}}$
+        \item $\frac{d}{dx}\left(\arcsinh (x)\right) = \dfrac{1}{\sqrt{x^{2}+1}}$
+        \item $\frac{d}{dx}\left(\arccosh (x)\right) = \dfrac{1}{\sqrt{x^{2}-1}}$
+        \item $\frac{d}{dx}\left(\arctanh (x)\right) = \dfrac{1}{1-x^{2}}$
+        \item $\frac{d}{dx}\left(\arccoth (x)\right) = \dfrac{1}{1-x^{2}}$
+        \item $\frac{d}{dx}\left(\arcsech (x)\right) = \dfrac{-1}{x\sqrt{1-x^{2}}}$
+        \item $\frac{d}{dx}\left(\arccsch (x)\right) = \dfrac{-1}{x\sqrt{1+x^{2}}}$
       \end{itemize}
   \end{enumerate}
 \end{ejer}
@@ -163,7 +162,6 @@ En particular,
   \sum_{k=1}^{n}k^{5} &=& \frac{n^{2}(n+1)^2(2n^{2}+2n-1)}{12}   \label{sumas5}\\
   \sum_{k=1}^{n}k^{6}&=& \frac{n(2n+1) (n+1)(3n^{4}+6n^{3}-3n+1)}{42} \label{sumas6}
   \\ \sum_{k=1}^{n}k^{7}&=& \frac{n^{2}(n+1)^{2}\left( 3n^{4}+6n^{3}-n^{2}-4n+2\right)}{24} \label{sumas7}
-  % \\  \sum_{k=1}^{n}k^{8}&=&  \frac{n(2n+1)(n+1)(9n-n^{2}-15n^{3}+5n^{4}+15n^{5}+5n^{6}-3)}{90} \nonumber
 \end{eqnarray}
 
 \section[Sólidos de revolución en coordenadas paramétricas]{Sólidos de revolución en \texorpdfstring{\\ }{ } coordenadas paramétricas}
@@ -178,8 +176,8 @@ con densidad constante $\rho$ que gira alrededor un una recta.
 \begin{figure}[H]
   \centering
   \caption{La región gira sobre una recta exterior}
-  \includegraphics[width=0.4\textwidth]{Fig/193.pdf} \hspace{5mm}
-  \includegraphics[width=0.4\textwidth]{Fig/194.pdf}
+  \includegraphics[height=3.5cm]{Fig/193.pdf} \hspace{5mm}
+  \includegraphics[height=3.5cm]{Fig/194.pdf}
   \fuentepropia
 \end{figure}
 
@@ -222,6 +220,7 @@ con densidad constante $\rho$ que gira alrededor un una recta.
     Si $r=\overline{y}-c$ es la distancia que recorre el centroide del eje de giro, entonces:
     \[V=2\pi A (\overline{y}-c)=2\pi r A.\]
   \end{parrafoitemize}
+  \vspace*{-\baselineskip}
 \end{proof}
 
 \subsubsection{Longitud de una curva en coordenadas paramétricas}
@@ -253,8 +252,8 @@ entonces el volumen del sólido obtenido se puede determinar de la siguiente for
 \begin{figure}[H]
   \centering
   \caption{Sólido de revolución alrededor del eje $x$}
-  \includegraphics[width=0.4\textwidth]{Fig/195.pdf} \hspace{5mm}
-  \includegraphics[width=0.4\textwidth]{Fig/196.pdf}
+  \includegraphics[height=3.5cm]{Fig/195.pdf} \hspace{5mm}
+  \includegraphics[height=3.5cm]{Fig/196.pdf}
   \fuentepropia
 \end{figure}
 
@@ -276,8 +275,8 @@ entonces,
 \begin{figure}[H]
   \centering
   \caption{Sólido de revolución}
-  \includegraphics[width=0.4\textwidth]{Fig/197.pdf} \hspace{5mm}
-  \includegraphics[width=0.4\textwidth]{Fig/198.pdf}
+  \includegraphics[height=3.5cm]{Fig/197.pdf} \hspace{5mm}
+  \includegraphics[height=3.5cm]{Fig/198.pdf}
   \fuentepropia
 \end{figure}
 
@@ -353,34 +352,31 @@ A &=& 2\pi \int_{a}^{b}g(t)\sqrt{\left( g^{\prime }(t) \right) ^{2}+\left( f^{\p
 \begin{figure}[H]
 \centering
 \caption{Superficie de revolución}
-\includegraphics[width=0.8\textwidth]{Fig/199.pdf}
+\includegraphics[height=4cm]{Fig/199.pdf}
 \fuentepropia
 \end{figure}
 
 \begin{ejer}
 La curva ${\bf r}(t)=\big\langle 3+(2-\sin (t))\cos (t),0,3\sin (t)(2+\cos
 (2t))\big \rangle $, con $t\in \lbrack 0,2\pi ]$, gira alrededor del eje $y$, generando una superficie de revolución.
+Hallar el área de la superficie generada y el volumen del sólido acotado por esta región.
 
-Hallar el área de la superficie genrada y el volumen del slido acotado por esta región.
-
-En el siguiente enlace,
-\href{https://www.math3d.org/zbgohcryUD}{https://www.math3d.org/zbgohcryUD}, puede encontrarse esta construcción.
+En el siguiente enlace, \href{https://www.math3d.org/zbgohcryUD}{https://www.math3d.org/zbgohcryUD}, puede encontrarse esta construcción.
 
 \begin{figure}[H]
 \centering
 \caption{Superficie de revolución}
-\includegraphics[width=0.4\textwidth]{Img/T_74a.pdf} \hspace{5mm}
-\includegraphics[width=0.4\textwidth]{Img/T_74b.pdf}
-
-\includegraphics[width=0.4\textwidth]{Img/T_74c.pdf}
+\includegraphics[height=3cm]{Img/T_74a.pdf} \hspace{2mm}
+\includegraphics[height=3cm]{Img/T_74b.pdf} \hspace{2mm}
+\includegraphics[height=3cm]{Img/T_74c.pdf}
 \fuentepropia
 \end{figure}
 
 La superficie de revolución obtenida se parametriza por:
 \begin{gather*}
 \begin{aligned}
-  {\bf r}(u,v)&=\big \langle (3+(2-\sin (u))\cos (u))\cos (v),(3+(2-\sin (u))\cos(u))\sin (v), \\
-  &\qquad 3\sin (u)(2+\cos (2u))\big \rangle,
+{\bf r}(u,v)&=\big \langle (3+(2-\sin (u))\cos (u))\cos (v),(3+(2-\sin (u))\cos(u))\sin (v), \\
+&\qquad 3\sin (u)(2+\cos (2u))\big \rangle,
 \end{aligned}
 \end{gather*}
 con $u\in \lbrack 0,2\pi ]$, $v\in \lbrack 0,2\pi]$, pues
@@ -451,8 +447,13 @@ u,v,w\right)
 \textls[-10]{Una exposición más profunda de estos temas puede consultarse en~\cite{poljanin_handbook_2007}.}
 
 Presentamos algunos tipos de sistemas de coordenadas curvilíneas.
+
+\clearpage
+
 \subsection{Coordenadas curvilíneas en el plano} \index{Coordenadas curvilíneas}
+
 \subsubsection{Coordenadas polares}
+
 Este sistema de coordenadas es posiblemente muy conocido por el lector, la relación con las coordenadas
 cartesianas es:
 \[x = r \cos \theta, \hskip0.15cm y=r \sin \theta,\hskip0.15cm r\in [ 0,\infty),\,\theta \in [0 ,2\pi ).\]
@@ -467,7 +468,7 @@ y la semirrecta $\theta=0$ se denomina \emph{eje polar.}
 \begin{figure}[H]
 \centering
 \caption{Plano polar}
-\includegraphics[width=0.5\textwidth]{Fig/200.pdf}
+\includegraphics[height=4cm]{Fig/200.pdf}
 \fuentepropia
 \end{figure}
 
@@ -486,7 +487,7 @@ Esta afirmación es consecuencia de los siguientes resultados:
 \begin{figure}[H]
 \centering
 \caption{Coordenadas bipolares}
-\includegraphics[width=0.5\textwidth]{Fig/201.pdf}
+\includegraphics[height=4cm]{Fig/201.pdf}
 \fuentepropia
 \end{figure}
 
@@ -526,7 +527,7 @@ Las líneas coordenadas son elípses e hipérbolas confocales (con los mismos fo
 \begin{figure}[H]
 \centering
 \caption{Curvas confocales}
-\includegraphics[width=0.5\textwidth]{Fig/202.pdf}
+\includegraphics[height=4cm]{Fig/202.pdf}
 \fuentepropia
 \end{figure}
 
@@ -558,8 +559,8 @@ mientras que la expresión \ref{elipticas2} representa en el espacio un cilíndr
 \begin{figure}[H]
 \centering
 \caption{Superficies constantes en coordenadas cilíndricas elípticas}
-\includegraphics[width=0.4\textwidth]{Img/T_63a.pdf} \hspace{5mm}
-\includegraphics[width=0.4\textwidth]{Img/T_63b.pdf}
+\includegraphics[height=3.5cm]{Img/T_63a.pdf} \hspace{5mm}
+\includegraphics[height=3.5cm]{Img/T_63b.pdf}
 \fuentepropia
 \end{figure}
 
@@ -590,7 +591,7 @@ $y^2=v^2\left( v^2+2x\right)$ caracteriza una parábola abre hacia la parte posi
 \begin{figure}[H]
 \centering
 \caption{Coordenadas bipolares}
-\includegraphics[width=0.5\textwidth]{Fig/203.pdf}
+\includegraphics[height=4cm]{Fig/203.pdf}
 \fuentepropia
 \end{figure}
 
@@ -606,8 +607,8 @@ u^2-v^2\right) \right) \right) = u^2v^2=y^2.
 \begin{figure}[H]
 \captionof{figure}{\footnotesize Superficies constantes en coordenadas cilíndricas parabólicas.}
 \centering
-\includegraphics[width=4.5cm,height=3.5cm]{Img/T_66a.pdf}
-\includegraphics[width=4cm,height=3.5cm]{Img/T_66b.pdf}
+\includegraphics[height=3.5cm]{Img/T_66a.pdf} \hspace{5mm}
+\includegraphics[height=3.5cm]{Img/T_66b.pdf}
 \fuentepropia
 \end{figure}
 
@@ -638,8 +639,8 @@ valores constantes $u$ la superficie obtenida es un paraboloide que abre hacia l
 \begin{figure}[H]
 \centering
 \caption{Superficies constantes en coordenadas parabólicas}
-\includegraphics[width=0.4\textwidth]{Img/T_64a.pdf} \hspace{5mm}
-\includegraphics[width=0.4\textwidth]{Img/T_64b.pdf}
+\includegraphics[height=3.5cm]{Img/T_64a.pdf} \hspace{5mm}
+\includegraphics[height=3.5cm]{Img/T_64b.pdf}
 \fuentepropia
 \end{figure}
 
@@ -695,14 +696,14 @@ Show[A1,A2,A3,PlotRange->{{-3,4},{-3,4},{-2,2}}]
 \end{Verbatim}
 \end{tcolorbox}
 
-Cuyo producto se puede ver en la figura~\ref{fig:cilindricas_bipolares}.
+El resultado gráfico es el que se observa en la figura~\ref{fig:cilindricas_bipolares}.
 
 \begin{figure}[H]
 \centering
 \caption{Superficies constantes en coordenadas cilíndricas bipolares}
 \label{fig:cilindricas_bipolares}
-\includegraphics[width=0.4\textwidth]{Img/T_65a.pdf} \hspace{5mm}
-\includegraphics[width=0.4\textwidth]{Img/T_65b.pdf}
+\includegraphics[height=3.5cm]{Img/T_65a.pdf} \hspace{5mm}
+\includegraphics[height=3.5cm]{Img/T_65b.pdf}
 \fuentepropia
 \end{figure}
 
@@ -716,6 +717,7 @@ v &= \frac{1}{2}\ln \left( \frac{\left(x+a\right)^{2}+y^{2}}{\left( x-a\right)^{
 \end{ejer}
 
 \subsubsection{Coordenadas toroidales} \index{Coordenadas!toroidales}
+
 \paragraph*{Construcción de un toro}
 
 En el plano $yz$, la circunferencia de radio $r$ y centro en el punto $(a,0)$
@@ -725,9 +727,9 @@ con $\theta \in [0,2\pi]$.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\linewidth]{Fig/204.pdf}
-\includegraphics[width=0.3\linewidth]{Fig/205.pdf}
-%\caption{[falta título]}
+\caption{[FALTA TÍTULO]}
+\includegraphics[height=3cm]{Fig/204.pdf} \hspace{2mm}
+\includegraphics[height=3cm]{Fig/205.pdf}
 \fuentepropia
 \end{figure}
 
@@ -773,12 +775,10 @@ En coordenadas toroidales se determina un toro con valores constantes de $v$.
 
 \begin{proof}
 De la definición se obtienen algunas identidades:
-\begin{small}
-\begin{multline}
-x^2+y^2 = \left( \frac{a\sinh v\cos \phi }{\cosh v-\cos u}\right)^2+\left( \frac{a\sinh v\sin \phi }{\cosh v-\cos u}\right) ^2\\
-=  \frac{a^2 \sinh ^2v}{\left(\cosh v-\cos u\right) ^2}. \label{toroidales1}
-\end{multline}
-\end{small}
+\begin{align}
+x^2+y^2 &= \left( \frac{a\sinh v\cos \phi }{\cosh v-\cos u}\right)^2+\left( \frac{a\sinh v\sin \phi }{\cosh v-\cos u}\right) ^2 \notag \\
+&=  \frac{a^2 \sinh ^2v}{\left(\cosh v-\cos u\right) ^2} \label{toroidales1}
+\end{align}
 
 Lo cual implica que $\sqrt{x^2+y^2}=\dfrac{a\sinh v}{\cosh v-\cos u}$.
 
@@ -807,7 +807,7 @@ Con las siguientes relaciones
 x^{2}+y^{2} &=\left( \frac{a\sinh v\cos \phi }{\cosh v-\cos u}\right)^{2}
 +\left( \frac{a\sinh v\sin \phi }{\cosh v-\cos u}\right)^{2} \\
 &= \frac{a^{2}\sinh ^{2}v}{\left( \cos u-\cosh v\right) ^{2}} \\
-\left( z-a\cot u\right) ^{2} &=& \left( \frac{a\sin u}{\cosh v-\cos u}-\frac{a\cos u}{\sin u}\right) ^{2} \\
+\left( z-a\cot u\right) ^{2} &= \left( \frac{a\sin u}{\cosh v-\cos u}-\frac{a\cos u}{\sin u}\right) ^{2} \\
 &= \frac{a^{2}\left( 1-\cos u\cosh v\right) ^{2}}{\left(\left( \cosh v-\cos u\right) \sin u\right) ^{2}}
 \end{align*}
 Se sigue que
@@ -820,8 +820,6 @@ La ecuación \ref{toroidales4} representa una esfera para valores constantes de 
 \end{proof}
 
 Estas superficies se obtienen al ejecutar las siguientes instrucciones:
-
-%
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 x=2*Sinh[v]*Cos[\[Phi]]/(Cosh[v]-Cos[u]);
@@ -846,9 +844,8 @@ Su visualización gráfica es la siguiente.
 \centering
 \caption{Superficies constantes en coordenadas toroidales}
 \label{fig:toroidales_constantes}
-\includegraphics[width=0.30\textwidth]{Img/T_57a.pdf}
-\includegraphics[width=0.30\textwidth]{Img/T_57b.pdf}
-
+\includegraphics[height=3.5cm]{Img/T_57a.pdf} \hspace{5mm}
+\includegraphics[height=3.5cm]{Img/T_57b.pdf}
 \fuentepropia
 \end{figure}
 
@@ -874,10 +871,8 @@ las superficies obtenidas son semiplanos. Presentamos algunas de estas superfici
 \begin{figure}[H]
 \centering
 \caption{Superficies constantes en coordenadas esferoidales oblatas}
-
-\includegraphics[width=3cm,height=3.9cm]{Img/T_58a.pdf}
-
-\includegraphics[width=3cm,height=3.9cm]{Img/T_58b.pdf}
+\includegraphics[height=3.5cm]{Img/T_58a.pdf} \hspace{5mm}
+\includegraphics[height=3.5cm]{Img/T_58b.pdf}
 \fuentepropia
 \end{figure}
 
@@ -925,8 +920,8 @@ De la identidad $\tan \phi = y/x$ se sigue que para valores constantes de $\phi$
 \begin{figure}[H]
 \centering
 \caption{Superficies constantes en coordenadas esferoidales prolatas}
-\includegraphics[width=4cm,height=4cm]{Img/T_59a.pdf}
-\includegraphics[width=4cm,height=4cm]{Img/T_59b.pdf}
+\includegraphics[height=4cm]{Img/T_59a.pdf} \hspace{5mm}
+\includegraphics[height=4cm]{Img/T_59b.pdf}
 \fuentepropia
 \end{figure}
 
@@ -962,7 +957,7 @@ Se debe considerar la siguiente condición $b^2>v^2>a^2>w^2$.
 En este sistema de coordenadas, valores constante de $u$ generan esferas;
 esto es consecuencia de la siguiente igualdad:
 \begin{gather*}
- x^2+y^2+z^2 = \frac{u^2v^2w^2}{a^2b^2}+\frac{u^2}{a^2}\frac{%
+x^2+y^2+z^2 = \frac{u^2v^2w^2}{a^2b^2}+\frac{u^2}{a^2}\frac{%
 \left( a^2-v^2\right) \left( a^2-w^2\right) }{a^2-b^2}%
 - \frac{u^2}{b^2}\frac{\left( b^2-v^2\right) \left(
 b^2-w^2\right) }{\left( a^2-b^2\right) }= u^2.
@@ -1064,17 +1059,16 @@ para $\theta >\pi/2$ se genera una superficie posee forma de \emph{limón.}
 \begin{figure}[H]
 \centering
 \caption{Superficies constantes en coordenadas esferoidales prolatas}
-\includegraphics[width=4.2cm,height=3.8cm]{Img/T_60a.pdf}
-\includegraphics[width=4.2cm,height=3.8cm]{Img/T_60b.pdf}
+\includegraphics[height=4cm]{Img/T_60a.pdf} \hspace{5mm}
+\includegraphics[height=4cm]{Img/T_60b.pdf}
 \fuentepropia
 \end{figure}
 Con las siguientes instrucciones se obtienen estas figuras:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 w=Cosh[\[Eta]]-Cos[\[Theta]];
-{x,y,z}={Sin[\[Theta]]*Cos[\[Phi]]/w,
-Sin[\[Theta]]*Sin[\[Phi]]/w,Sin[\[Eta]]/w}
-\[Phi]=Pi/3;
+{x,y,z}={Sin[\[Theta]]*Cos[\[Phi]]/w,Sin[\[Theta]]*Sin[\[Phi]]/w,
+Sin[\[Eta]]/w}\[Phi]=Pi/3;
 A1=ParametricPlot3D[{x,y,z},{\[Theta],0,2*Pi},
 {\[Eta],-2,2},PlotStyle->Cyan,Mesh->60];
 \[Eta]=1/2;
@@ -1095,8 +1089,8 @@ En este sistema de coordenadas se generan, en algunos, casos cardioides de revol
 \centering
 \caption{Superficies constantes en coordenadas esferoidales prolatas}
 \label{fig:superficies_constantes_esferoidales_prolatas}
-\includegraphics[height=6cm]{Img/T_61a.pdf}\hskip0.5cm
-\includegraphics[height=6cm]{Img/T_61b.pdf}
+\includegraphics[height=3.5cm]{Img/T_61a.pdf}\hskip0.5cm
+\includegraphics[height=3.5cm]{Img/T_61b.pdf}
 \fuentepropia
 \end{figure}
 
@@ -1137,23 +1131,24 @@ En coordenadas cardioidicas, para valores constantes de $u$ y $v$
 se generan cardioides de revolución alrededor del eje $z$ y para valores constantes de
 $\theta$, las superficies generadas son semiplanos.
 \end{prop}
-%
+
+\enlargethispage*{\baselineskip}
+
 \begin{proof}
 A partir de la siguiente relación:
-\begin{eqnarray*}
-x^2+y^2+z^2 &=& \left( \frac{uv\cos \theta}{\left( u^2+v^2\right) ^2} \right) ^2+\left( \frac{uv\sin \theta}{\left( u^2+v^2\right) ^2} \right) ^2+\left( \frac{1}{2}\frac{u^2-v^2}{\left(
-u^2+v^2\right) ^2}\right) ^2 \\ &=& \frac{1}{4\left(u^2+v^2\right) ^2}.
-\end{eqnarray*}
+\begin{gather*}
+x^2+y^2+z^2 = \left( \frac{uv\cos \theta}{\left( u^2+v^2\right) ^2} \right) ^2+\left( \frac{uv\sin \theta}{\left( u^2+v^2\right) ^2} \right) ^2+\left( \frac{1}{2}\frac{u^2-v^2}{\left(u^2+v^2\right) ^2}\right) ^2 = \frac{1}{4\left(u^2+v^2\right) ^2}.
+\end{gather*}
 
 Se pueden obtener las siguientes ecuaciones:
-\begin{eqnarray*}
-\sqrt{x^2+y^2+z^2}+z &=& \frac{1}{2\left( u^2+v^2\right) }+\frac{1}{2}%
+\begin{align*}
+\sqrt{x^2+y^2+z^2}+z &= \frac{1}{2\left( u^2+v^2\right) }+\frac{1}{2}%
 \frac{u^2-v^2}{\left( u^2+v^2\right) ^2}= \frac{u^2}{%
 \left( u^2+v^2\right) ^2} \\
-\sqrt{x^2+y^2+z^2}-z &=& \frac{1}{2\left( u^2+v^2\right) }-\frac{1}{2}%
+\sqrt{x^2+y^2+z^2}-z &= \frac{1}{2\left( u^2+v^2\right) }-\frac{1}{2}%
 \frac{u^2-v^2}{\left( u^2+v^2\right) ^2}= \frac{v^2}{%
 \left( u^2+v^2\right) ^2}.
-\end{eqnarray*}
+\end{align*}
 
 Estas expresiones permiten establecer las siguientes igualdades:
 \[x^2+y^2+z^2=\frac{1}{4u^2}\left( \sqrt{x^2+y^2+z^2}+z\right)\]
@@ -1166,25 +1161,25 @@ determinan semiplanos.
 
 \subsubsection{Coordenadas elipsoidales} \index{Coordenadas!elipsoidales}
 Las coordenadas elipsoidales confocales $\left( u,v,w\right) $ o simplemente elipsoidales se relacionan con el sistema de coordenadas cartesianas como sigue:
-\begin{eqnarray*}
-x^{2} &=&\frac{u^2 v^2 w^2}{b^2 c^2} \\
-y^{2} &=&\frac{(u^2-b^2)(v^2-b^2)(b^2-w^2)}{b^2(c^2-b^2)} \\
-z^{2}&=& \frac{(u^2-c^2)(c^2-v^2)(c^2-w^2)}{c^2(c^2-b^2)}.
-\end{eqnarray*}
+\begin{align*}
+x^{2} &=\frac{u^2 v^2 w^2}{b^2 c^2} \\
+y^{2} &=\frac{(u^2-b^2)(v^2-b^2)(b^2-w^2)}{b^2(c^2-b^2)} \\
+z^{2} &=\frac{(u^2-c^2)(c^2-v^2)(c^2-w^2)}{c^2(c^2-b^2)}.
+\end{align*}
 En donde  $0<w^2<b^2<v^2<c^2<u^2$. Este sistema de coordenadas satisface las siguientes identidades:
-\begin{eqnarray}
-\frac{x^2}{u^2}+\frac{y^2}{u^2-b^2}+\frac{z^2}{u^2-c^2}&=& 1 \label{elipsoidales1}\\
-\frac{x^2}{v^2}+\frac{y^2}{v^2-b^2}+\frac{z^2}{v^2-c^2} &=&1 \label{elipsoidales2}\\
-\frac{x^2}{w^2}+\frac{y^2}{w^2-b^2}+\frac{z^2}{w^2-c^2} &=&1 \label{elipsoidales3}
-\end{eqnarray}
-De la ecuación \ref{elipsoidales1} se observa que si $u$ es constante la superficie obtenida es un elipsoide.
-Con $v$ constante, la ecuación \ref{elipsoidales2} corresponde a un hiperboloide de un manto y si
-$w$ es constante entonces la ecuación \ref{elipsoidales3} determina un hiperboloide de dos mantos.
+\begin{align}
+\frac{x^2}{u^2}+\frac{y^2}{u^2-b^2}+\frac{z^2}{u^2-c^2} &= 1 \label{elipsoidales1}\\
+\frac{x^2}{v^2}+\frac{y^2}{v^2-b^2}+\frac{z^2}{v^2-c^2} &=1 \label{elipsoidales2}\\
+\frac{x^2}{w^2}+\frac{y^2}{w^2-b^2}+\frac{z^2}{w^2-c^2} &=1 \label{elipsoidales3}
+\end{align}
+
+De la ecuación \ref{elipsoidales1} se observa que si $u$ es constante la superficie obtenida es un elipsoide. Con $v$ constante, la ecuación \ref{elipsoidales2} corresponde a un \mbox{hiperboloide} de un manto y si $w$ es constante entonces la ecuación \ref{elipsoidales3} determina un hiperboloide de dos mantos.
+
 \begin{ejer}
 Hallar algunas superficies constantes en coordenadas elipsoidales.
 \end{ejer}
 
-\subsubsection{Coordenadas esféricas y cilíndricas} \index{Coordenadas!esféricas} \index{Coordenadas!cilíndricas}
+\subsubsection{Coordenadas esféricas y cilíndricas}\index{Coordenadas!esféricas} \index{Coordenadas!cilíndricas}
 Estas coordenadas son quizás las más estudiadas en un curso de cálculo vectorial. En la página \pageref{esfericas} las consideramos, recordemos su definición:
 \[x=\rho \cos \theta \sin \phi, \, y=\rho \sin \theta \sin \phi,\,z=\rho \cos \phi,\]
 con $\rho \geq 0$, $\theta \in \lbrack 0,2\pi ]$, $\phi \in \lbrack 0,\pi ]$,
@@ -1222,9 +1217,9 @@ El producto obtenido se puede ver en la figura~\ref{fig:esfericas}.
 \centering
 \caption{Superficies constantes en coordenadas esféricas}
 \label{fig:esfericas}
-\includegraphics[height=4cm]{Img/T_62a.pdf} \hspace{5mm}
-\includegraphics[height=4cm]{Img/T_62b.pdf} \\[5mm]
-\includegraphics[height=4cm]{Img/T_62c.pdf}
+\includegraphics[height=3.5cm]{Img/T_62a.pdf} \hspace{2mm}
+\includegraphics[height=3.5cm]{Img/T_62b.pdf} \hspace{2mm}
+\includegraphics[height=3.5cm]{Img/T_62c.pdf}
 \fuentepropia
 \end{figure}
 

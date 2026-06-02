@@ -1,7 +1,4 @@
-% --- ARCHIVO PRINCIPAL CORREGIDO (main.tex) ---
-
-% 1. CARGA LA CONFIGURACIÓN DE LA PLANTILLA
-\documentclass[draft,12pt,twoside,spanish]{book}
+\documentclass[12pt,twoside,spanish]{book}
 \input{preambulo}
 
 % 2. DEFINICIONES OBLIGATORIAS PARA CORNISAS Y PORTADAS
@@ -9,7 +6,6 @@
 \def\textsubtitulo{}
 \def\loauthors{Juan Nepomuceno Zambrano Caviedes, Efrén~Ricardo~Baquero~Torres}
 \let\texttitulocorto\texttitulo
-
 
 % 3. COMIENZO DEL DOCUMENTO
 \begin{document}
@@ -41,16 +37,15 @@
 \include{Originales/volumen2}
 \include{Originales/stokes}
 
-\clearpage
+\include{Originales/Anexos}
+
+\cleardoublepage
 
 \pagestyle{plain}
 \printbibliography[title={Referencias},heading=bibintoc]
 
-\clearpage
+\cleardoublepage
 
-\pagestyle{esstyle}
-
-\include{Originales/Anexos}
 \include{Originales/sobre_autores_final}
 \include{colofon_wolfram}
 \end{document}

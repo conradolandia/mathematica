@@ -687,12 +687,12 @@ $4u^{2}-v^{2}=4\left( uv\right) ^{2}-1$, es decir, $4u^{2}\left(1-v^{2}\right) =
 por lo tanto $u=0$ o $v=\pm 1$. De lo anterior se obtienen los límites para la región en el plano $uv$.
 
 \begin{figure}[H]
-  \centering
-  \caption{${\bf T}(u,v)= (4u^2 - v^2, uv)$}
-  \label{transformacion_uv}
-  \includegraphics[height=4cm]{Fig/111.pdf}\hspace{0.5cm}
-  \includegraphics[height=4cm]{Fig/112.pdf}
-  \fuentepropia
+\centering
+\caption{${\bf T}(u,v)= (4u^2 - v^2, uv)$}
+\label{transformacion_uv}
+\includegraphics[height=4cm]{Fig/111.pdf}\hspace{0.5cm}
+\includegraphics[height=4cm]{Fig/112.pdf}
+\fuentepropia
 \end{figure}
 
 El jacobiano de la transformación es
@@ -805,11 +805,11 @@ Puede probarse que
 El siguiente proceso permite evaluar las anteriores integrales de una manera distinta.
 
 \begin{figure}[H]
-  \centering
-  \caption{${\bf T}(u,v)= (u\cosh v, \frac{u}{\sqrt{3}}\sinh v)$}
-  \includegraphics[height=3.5cm]{Fig/115.pdf} \hspace{5mm}
-  \includegraphics[height=3.5cm]{Fig/116.pdf}
-  \fuentepropia
+\centering
+\caption{${\bf T}(u,v)= (u\cosh v, \frac{u}{\sqrt{3}}\sinh v)$}
+\includegraphics[height=3.5cm]{Fig/115.pdf} \hspace{5mm}
+\includegraphics[height=3.5cm]{Fig/116.pdf}
+\fuentepropia
 \end{figure}
 
 Al hacer $x=u\cosh v$, $y=\frac{u}{\sqrt{3}}\sinh v$, se sigue que la expresión $x^{2}-3y^{2}=1$ se transforma en
@@ -860,16 +860,16 @@ $J=\det \left(
 $I=\int_{2}^{4}\int_{0}^2\frac{-v}{u}\left( \frac{1}{2}\right) dvdu= -\ln \left( 2\right) $.
 
 \begin{figure}[H]
-  \centering
-  \caption{${\bf T}(u,v)= \left(\frac{u - v}{2},\, \frac{u + v}{2}\right)$}
-  \label{transformacion_uv_117}
-  \includegraphics[height=3.5cm]{Fig/117.pdf} \hspace{5mm}
-  \includegraphics[height=3.5cm]{Fig/118.pdf}
-  \fuentepropia
-\end{figure}  
+\centering
+\caption{${\bf T}(u,v)= \left(\frac{u - v}{2},\, \frac{u + v}{2}\right)$}
+\label{transformacion_uv_117}
+\includegraphics[height=3.5cm]{Fig/117.pdf} \hspace{5mm}
+\includegraphics[height=3.5cm]{Fig/118.pdf}
+\fuentepropia
+\end{figure}
 
 \item Evaluar $\iint_R \sqrt{xy}\ln \left( \frac{y}{x}\right) dA$, en donde $R$ es la región en el plano $xy$ determinada por el cambio de variables
-$u^{2}=xy$, $v=\ln \left( y/x\right) $, con $u\in \lbrack 1,2]$, $v\in \lbrack 0,2]$.
+$u^{2}=xy$, $v=\ln \left( y/x\right) $, con $u\in \lbrack 1,2]$, $v\in [0,2]$.
 
 Con el cambio de variable se sigue que $e^{v}=y/x$: es decir, $y=xe^{v}$,
 que, al reemplazar en la primera ecuación, se obtiene que
@@ -2015,7 +2015,7 @@ Utilizando la función ${\bf r}(t,u)$  se hallan los siguientes vectores:
 \end{gather*}
 y
 \begin{gather*}
-  {\bf r}_{u} = \big\langle\sin(u)(\cos(t)\sin(t)-3-\cos(t)),\cos(u)\cos(t)(1-\sin(t)),0\big\rangle.
+{\bf r}_{u} = \big\langle\sin(u)(\cos(t)\sin(t)-3-\cos(t)),\cos(u)\cos(t)(1-\sin(t)),0\big\rangle.
 \end{gather*}
 
 \begin{multline*}
@@ -2100,7 +2100,7 @@ ParametricPlot3D[{x*Cos[u],x*Sin[u],y},{t,0,2*Pi},{u,0,2*Pi}]
 
 Derivando parcialmente la función ${\bf r}$, hallamos los siguientes vectores:
 \begin{gather*}
-  \begin{aligned}
+\begin{aligned}
 \mathbf{r}_{t} &= \left\langle (\sin(2t) - \sin t)\cos u,\; (\sin(2t) - \sin t)\sin u,\; (1 - \cos t)(2\cos t + 1) \right\rangle,\\
 {\mathbf r}_{u} &= \left\langle (\cos t - 1)\cos t \sin u,\; (1 - \cos t)\cos t \cos u,\; 0 \right\rangle.
 \end{aligned}

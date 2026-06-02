@@ -31,11 +31,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% HYPERREF (después de biblatex para que los enlaces de citas funcionen)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[hidelinks,unicode,naturalnames,bookmarksopen,bookmarksdepth=2,breaklinks=true,hyperfootnotes=false]{hyperref}
+\usepackage[draft,hidelinks,unicode,naturalnames,bookmarksopen,bookmarksdepth=2,breaklinks=true,hyperfootnotes=false]{hyperref}
 \usepackage{bookmark}
 \urlstyle{same}
 \newcommand{\secref}[1]{``\nameref{#1}''}
 \renewcommand{\textcite}{\cite}
+% Prevenir romper urls en medio de https://
+\DeclareFieldFormat{url}{\url{#1}}
+\makeatletter
+\def\do@url@hyp@break{%
+  \do\:\do\/\do\?\do\#\do\&\do\_\do\%\do\~% Lista por defecto
+}
+% Lo mismo para Biblatex
+\appto\biburlsetup{%
+  \def\UrlBreaks{\do\.\do\/\do\-\do\_\do\[\do\]\do\(\do\)\do\=} % Lista sin los dos puntos
+}
+\makeatother
 
 % ÍNDICES Y SUBARCHIVOS
 %\usepackage{makeidx}
@@ -132,9 +143,9 @@
 \DeclareMathOperator{\arcsech}{arcsech}
 \DeclareMathOperator{\arccsch}{arccsch}
 \DeclareMathOperator{\rot}{rot}
-\newcommand{\vi}{\mathbf{i}}
-\newcommand{\vj}{\mathbf{j}}
-\newcommand{\vk}{\mathbf{k}}
+\newcommand{\vi}{\boldsymbol{\hat{\imath}}}
+\newcommand{\vj}{\boldsymbol{\hat{\jmath}}}
+\newcommand{\vk}{\boldsymbol{\hat{k}}}
 \newcommand{\brake}{\\[4pt]}
 
 % Símbolo de final de ejemplo, demostración, etc.
