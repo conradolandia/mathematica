@@ -385,7 +385,7 @@ en estas notas.
   $\left\Vert \mathbf{x}-\mathbf{a}\right\Vert <\delta, $ entonces
   $\left\Vert \ve{F}(\mathbf{x}) -\ve{F}\left( \mathbf{a}\right) \right\Vert <\varepsilon $.
 
-  Diremos que $\ve{F}$ es continua en $A$, cuando $\ve{F}$ es continua en todo punto de $A$.
+  Diremos que $\ve{F}$ es continua en $A$ cuando $\ve{F}$ es continua en todo punto de $A$.
 \end{defi}
 Los siguientes teoremas son consecuencias de los teoremas de límites y de la definición anterior.
 
@@ -488,7 +488,7 @@ La matriz jacobiana de ${\bf F}$, $D{\bf F}(a)$ es
   \begin{prop}
     Sea ${\bf F} = P(x, y,z)\vi +Q(x,y,z)\vj +P(x,y,z)\vk$ un campo en un dominio abierto simplemente
     conexo, cuyas funciones componentes tienen sus primeras derivadas parciales continuas.
-    De esta forma, ${\bf F}$ es conservativo si y sólo se satisfacen la siguientes condiciones:
+    De esta forma, ${\bf F}$ es conservativo si y solo si se satisfacen las siguientes condiciones:
     $$\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x},\hspace{1.5cm}
     \frac{\partial P}{\partial z}=\frac{\partial R}{\partial x},\hspace{1.5cm}
     \frac{\partial Q}{\partial z}=\frac{\partial R}{\partial y}.$$
@@ -554,16 +554,16 @@ La matriz jacobiana de ${\bf F}$, $D{\bf F}(a)$ es
     \mathbf{u}(t) +\mathbf{u}(t) \cdot \mathbf{u}^{\prime }(t) \right)
     = \frac{\mathbf{u}^{\prime }(t)\cdot \mathbf{u}(t) }{\left\Vert \mathbf{u}(t)\right\Vert }.
   \end{align*}
-  La derivada del producto cruz entre dos funciones vectoriales se evalua como sigue.
+  La derivada del producto cruz entre dos funciones vectoriales se evalúa como sigue.
   \begin{prop}
-    Si $\mathbf{u}(t)$ y $\mathbf{v}(t)$ son funciones vectoriales definidas en $\mathbb{R}^3$ entonces
+    Si $\mathbf{u}(t)$ y $\mathbf{v}(t)$ son funciones vectoriales definidas en $\mathbb{R}^3$, entonces
     $\left(\mathbf{u}(t)\times\mathbf{v}(t)\right)^{\prime}= \mathbf{u}^{\prime}(t)\times\mathbf{v}(t)+\mathbf{u}(t)\times \mathbf{v}^{\prime}(t)$.
   \end{prop}
 
   \begin{proof}
     \textls[-15]{Si $\mathbf{u}(t)=\left\langle u_{1}(t),u_{2}(t),u_{3}(t) \right\rangle $ y
     $\mathbf{v}(t)=\left\langle v_{1}(t),v_{2}(t),v_{3}(t)\right\rangle $,}
-    obviaremos el uso de la variable $t$ para hacer menos extensa la escritura, es decir
+    obviaremos el uso de la variable $t$ para hacer menos extensa la escritura, es decir:
     \begin{eqnarray*}
       \frac{d}{dt}\left( \mathbf{u}(t)\times \mathbf{v}(t)\right) &=& \frac{d}{dt} \langle u_{2} v_{3} -u_{3} v_{2} ,u_{3} v_{1} -u_{1} v_{3} ,u_{1} v_{2} -u_{2} v_{1} \rangle \\
       &=& \big\langle u_{2}^{\prime} v_{3}+u_{2} v_{3}^{\prime} -u_{3}^{\prime} v_{2} -u_{3} v_{2}^{\prime},u_{3}^{\prime} v_{1} +u_{3}v_{1}^{\prime} \\
@@ -573,9 +573,9 @@ La matriz jacobiana de ${\bf F}$, $D{\bf F}(a)$ es
       &=& \mathbf{u}^{\prime}(t)\times \mathbf{v}(t)+\mathbf{u}(t)\times \mathbf{v}^{\prime}(t)
     \end{eqnarray*}
   \end{proof}
-  La siguiente expresión es producto de aplicar los resultados anteriores
+  La siguiente expresión es producto de aplicar los resultados anteriores:
   \begin{gather*}
-    \left( \left( \mathbf{u}(t)\times \mathbf{v}(t)\right)\cdot \mathbf{w}(t)\right)^{\prime} \\ = \left( \left( \mathbf{u}^{\prime}(t)\times \mathbf{v}(t)+\mathbf{u}(t)\times \mathbf{v}^{\prime}(t)\right) \cdot \mathbf{w}(t)\right) +\left( \left( \mathbf{u}(t)\times \mathbf{v}(t)\right)\cdot \mathbf{w}^{\prime}(t)\right)
+    \left( \left( \mathbf{u}(t)\times \mathbf{v}(t)\right)\cdot \mathbf{w}(t)\right)^{\prime} \\ = \left( \left( \mathbf{u}^{\prime}(t)\times \mathbf{v}(t)+\mathbf{u}(t)\times \mathbf{v}^{\prime}(t)\right) \cdot \mathbf{w}(t)\right) +\left( \left( \mathbf{u}(t)\times \mathbf{v}(t)\right)\cdot \mathbf{w}^{\prime}(t)\right).
   \end{gather*}
 
   \section{Regiones parametrizadas} \label{regionesparametrizadas}
@@ -656,18 +656,18 @@ $Q_i(x(t_{i-1}), x(y_{i-1}),z(t_{i-1}))$, para $i=1,2, \cdots , n$.
 Denotaremos por \[\Delta\alpha_i=\int_{t_i}^{t_{i+1}}\Vert {\bf r}^\prime(t)\Vert dt \]
 a la longitud de la curva $\alpha$ desde el punto $Q_i$ hasta $Q_{i+1}$.
 Para una función continua $f: \alpha \to \mathbb{R}$ consideremos la suma
-\[\sum_{i=1}^n f({\bf r}(t_i^*))\Delta \alpha_i=\sum_{i=1}^n f(x(t_i^*),y(t_i^*),z(t_i^*))\Delta \alpha_i\]
+\[\sum_{i=1}^n f({\bf r}(t_i^*))\Delta \alpha_i=\sum_{i=1}^n f(x(t_i^*),y(t_i^*),z(t_i^*))\Delta \alpha_{i},\]
 en donde $t_i^* \in [t_{i-1},t_i]$, con los elementos anteriores se define la integral de una campo escalar sobre una curva.
 \begin{defi}
 Consideremos $f:\mathbb{R}^3\to \mathbb{R}$ continua.
 La integral de $f$ sobre la curva suave $\alpha$ con respecto a la parametrización
-${\bf r}(t)$ está dada por
+${\bf r}(t)$ está dada por:
 \begin{equation} \label{intdelinea}
 \int_a^b f({\bf r}(t))\Vert{\bf r}^\prime(t)\Vert dt=\lim_{n\to\infty}\left(\sum_{i=1}^n f({\bf r}(t_i^*))\Delta \alpha_i\right)
 \end{equation} \index{Integrales!de línea}
 \end{defi}
 En particular, si la función $f$ de la integral \ref{intdelinea} es $1$, obtendremos la fórmula para la longitud de la
-curva (35) y si $f$ es la densidad $\delta(x,y,z)$ de un alambre o varilla delgada cuya forma está determinada por la curva $\alpha$ en el punto $(x,y,z)$, entonces la masa $M$ de la varilla está dada por
+curva (35) y si $f$ es la densidad $\delta(x,y,z)$ de un alambre o varilla delgada cuya forma está determinada por la curva $\alpha$ en el punto $(x,y,z)$, entonces la masa $M$ de la varilla está dada por:
 \begin{equation}
 M=\int_a^b \delta({\bf r}(t))\Vert{\bf r}^\prime(t)\Vert dt
 \end{equation}
@@ -677,8 +677,7 @@ Los momentos con respecto a los planos coordenados se definen como
 \mu_{yz}&=&\int_a^b x(t)\,\delta({\bf r}(t))\Vert{\bf r}^\prime(t)\Vert dt,\\
 \mu_{xz}&=&\int_a^b y(t)\,\delta({\bf r}(t))\Vert{\bf r}^\prime(t)\Vert dt.
 \end{eqnarray*}
-Las coordenadas del centro de masa de la varilla son
-\index{Centro de masa}
+Las coordenadas del centro de masa de la varilla son:\index{Centro de masa}
 \[(\overline{x},\overline{y},\overline{z})= (\frac{\mu_{yz}}{M},\frac{\mu_{xz}}{M},\frac{\mu_{xy}}{M}).\]
 
 \subsection{Integración de funciones vectoriales} \index{Función!integrable}
@@ -694,11 +693,11 @@ se presentarán de manera similar las integrales triples.
 La evaluación de las integrales dobles o triples se puede obtener
 utilizando el teorema fundamental de cálculo; ver \cite{apostol_calculus_1999}.
 
-En el plano $xy$ consideraremos un rectángulo $R=[a,b]\times \lbrack c,d]$, es decir
+En el plano $xy$ consideraremos un rectángulo $R=[a,b]\times \lbrack c,d]$, es decir:
 \[R=\{(x,y) \in \mathbb{R}^{2}\, | \,a\leq x\leq b,c\leq y\leq d\}.\]
 Si $f(x,y)$ es una función continua definida sobre el rectángulo $R$,
 subdividiremos a $R$ en $nm$ rectángulos más pequeños a partir
-de rectas paralelas a los ejes coordenados. Esto es, para el intervalo $[a,b]$, consideremos
+de rectas paralelas a los ejes coordenados. Para el intervalo $[a,b]$ consideremos
 \[a=x_{0}<x_{1}<x_{2}<\cdots <x_{i}<\cdots <x_{n-1}<x_{n}=b,\] mientras que
 para el intervalo $[c,d]$ consideremos
 \[c=y_{0}<y_{1}<y_{2}<\cdots <y_{k}<\cdots <y_{m-1}<y_{m}=d.\] A esta división de $R$, lo denominaremos una partición de $R$.
@@ -739,9 +738,10 @@ Lo anterior nos motiva a precisar este concepto.
 
 \begin{defi}
 La integral doble de una función continua $f(x,y)$ sobre el rectángulo $R$ se define como
-\begin{eqnarray} \label{integralesdobles1}
-\lim _{\left\Vert P\right\Vert \to 0} S_{nm} &=& \lim _{n,m \to \infty}\left(\sum_{i=1}^{n}\sum_{k=1}^{m}f\left( x_{i}^{\ast },y_{k}^{\ast}\right) \Delta x_{i}\Delta y_{k}\right) \nonumber \\ &=& \ds \iint\limits_{R}f(x,y) dA
-\end{eqnarray}
+\begin{align} 
+\lim _{\left\Vert P\right\Vert \to 0} S_{nm} &= \lim _{n,m \to \infty}\left(\sum_{i=1}^{n}\sum_{k=1}^{m}f\left( x_{i}^{\ast },y_{k}^{\ast}\right) \Delta x_{i}\Delta y_{k}\right) \nonumber \\ 
+&= \ds \iint\limits_{R}f(x,y) dA \label{integralesdobles1}
+\end{align}
 cuando este límite existe.
 \end{defi}
 
@@ -757,12 +757,10 @@ la suma $S_{nm}$ es una aproximación al volumen del sólido $E$.
 Es por lo anterior que el volumen de $E$ se define como\index{Masa de una región}
 \[\lim_{n,m \to \infty}\left(\sum_{i=1}^{n}\sum_{k=1}^{m}f\left( x_{i}^{\ast },y_{k}^{\ast}\right) \Delta x_{i}\Delta y_{k}\right)= \ds \iint\limits_{R}f(x,y) dA.\]
 
-%\enlargethispage*{-\baselineskip}
-
 Si la función $f(x,y)$ determina la densidad en el punto $(x,y)$ entonces la integral de la fórmula \ref{integralesdobles1}
 representa la masa ($M$) de la región $R$. Los momentos con respecto al eje $x$ y al eje $y$ están dados  por
 $\mu_{x}= \iint_R y f(x,y)dA$ y $\mu_{y}= \iint_R x f(x,y)dA$, los cuales determinan las coordenadas del
-centro de masa de la región $R$, esto es\index{Centro de masa}
+centro de masa de la región $R$, esto es:\index{Centro de masa}
 \[(\overline{x},\overline{y})= \left(\frac{\mu_y}{M},\frac{\mu_x}{M}\right).\]
 
 Si la región de integración en la fórmula \ref{integralesdobles1} es un rectángulo está se evalúa
@@ -811,7 +809,7 @@ con $x\in [0,2]$, $y \in [0,1]$.
 
 El volumen bajo la figura de $f(x,y)$ sobre el rectángulo $R$ puede verse también como la integral de $A(x)$,
 la cual representa el área de las secciones transversales del sólido;
-por lo tanto el volumen está dado por {\small $\ds \int_a ^b A(x) dx= \int_a ^b \int_c ^d f(x,y) dy dx $.} O de manera similar
+por lo tanto, el volumen está dado por {\small $\ds \int_a ^b A(x) dx= \int_a ^b \int_c ^d f(x,y) dy dx $.} O de manera similar
 {\small $\ds \int_c ^d A(y) dy= \int_c ^d \int_a ^b  f(x,y) dx dy$.}
 
 Ejemplo de lo anterior es la siguiente integral
@@ -849,7 +847,7 @@ para el intervalo $[c,d]$,
 \begin{equation*}
 y_{0}=c<y_{1}<y_{2}<\cdots <y_{j}<\cdots <y_{m-1}<y_{m}=d,
 \end{equation*}
-y para el intervalo $[r,s]$, consideremos
+y para el intervalo $[r,s]$ consideremos
 \begin{equation*}
 z_{0}=r<z_{1}<z_{2}<\cdots <z_{k}<\cdots <y_{l-1}<y_{l}=s.
 \end{equation*}
@@ -880,17 +878,17 @@ es posible obtener diversos valores de $S_{nml}$.
 De manera similar a como se definió la integral doble, si el límite de
 las sumas $S_{nml}$ existe para toda elección que se haga de
 $\left(x_{i}^{\ast },y_{j}^{\ast },z_{k}^{\ast }\right)$, entonces se dice que la
-función $f(x,y,z) $ es integrable sobre la caja rectangular $E$, y este valor se denota por
-$\ds\iiint\limits_{E}f(x,y,z) dV$, o también
-\[\ds \iiint\limits_{E}f(x,y,z) dzdydx.\]
+función $f(x,y,z) $ es integrable sobre la caja rectangular $E$, y este valor se denota por $\iiint\limits_{E}f(x,y,z) dV$, o también
+\[\iiint\limits_{E}f(x,y,z) dzdydx.\]
 Lo anterior nos motiva a precisar este concepto.
 
 \begin{defi}
 La integral triple de una función continua $f(x,y,z)$
 sobre la caja rectangular $E$ se define como
-\begin{eqnarray}
-\lim_{\left\Vert P\right\Vert \rightarrow 0}S_{nml} &=& \lim_{l,m,n \to\infty}\left(\sum_{i=1}^{n}\sum_{j=1}^{m}\sum_{k=1}^{l}f\left( x_{i}^{\ast },y_{j}^{\ast },z_{k}^{\ast}\right) \Delta x_{i}\Delta y_{j}\Delta z_{k} \right)\nonumber \\ &=&\iiint\limits_{E}f\left(x,y,z\right) dV
-\end{eqnarray}
+\begin{align}
+\lim_{\left\Vert P\right\Vert \rightarrow 0}S_{nml} &= \lim_{l,m,n \to\infty}\left(\sum_{i=1}^{n}\sum_{j=1}^{m}\sum_{k=1}^{l}f\left( x_{i}^{\ast },y_{j}^{\ast },z_{k}^{\ast}\right) \Delta x_{i}\Delta y_{j}\Delta z_{k} \right)\nonumber \\ 
+&=\iiint\limits_{E}f\left(x,y,z\right) dV
+\end{align}
 cuando este límite existe.
 \end{defi}
 Ilustremos lo anterior con dos integrales triples.
@@ -901,11 +899,12 @@ Al hacer una partición de la región de integración en $nml$ cajas rectangular
 $\Delta x= \frac{2}{n}$ $\Delta y= \frac{1}{m}$ y $\Delta z= \frac{1}{l}$. Además
 $x_i= -1+\frac{2i}{n}$, $y_j=\frac{j}{m}$ y $z_k=\frac{k}{l}$.
 Por lo tanto,
-\[f(x_i,y_j,z_k)\Delta x \Delta y\Delta z=\frac{2 j k^2 e^{\frac{2 i}{n}-1}}{l^3 m^2 n}\]
+\[f(x_i,y_j,z_k)\Delta x \Delta y\Delta z=\frac{2 j k^2 e^{\frac{2 i}{n}-1}}{l^3 m^2 n}.\]
 Con lo cual
 \[\sum_{i=1}^n\sum_{j=1}^m\sum_{k=1}^l f(x_i,y_j,z_k)\Delta x \Delta y\Delta z=\frac{\left(e^2-1\right) (l+1)(2l+1)(m+1)}{6nml^2 \left(1-e^{-2/n}\right)e},\] entonces,
-\begin{multline*} \int_{-1}^1\int_0^1\int_0^1  yz^2 e^{x} dzdydx= \lim_{n,m,l \to \infty}\sum_{i=1}^n\sum_{j=1}^m\sum_{k=1}^l f(x_i,y_j,z_k)\Delta x \Delta y\Delta z \\ =\frac{1}{6} \left(e-\frac{1}{e}\right)
-\end{multline*}
+\begin{align*} \int_{-1}^1\int_0^1\int_0^1  yz^2 e^{x} dzdydx &= \lim_{n,m,l \to \infty}\sum_{i=1}^n\sum_{j=1}^m\sum_{k=1}^l f(x_i,y_j,z_k)\Delta x \Delta y\Delta z \\ 
+  &=\frac{1}{6} \left(e-\frac{1}{e}\right)
+\end{align*}
 \end{ejemplo}
 
 \begin{ejemplo}
@@ -917,7 +916,7 @@ Al hacer una partición de $E$ en $nml$ cajas rectangulares es posible establece
 \Delta x= \frac{\frac{\pi}{2}-\left(\frac{-\pi}{2}\right)}{n}=\frac{\pi}{2n}\quad
 \Delta y= \frac{\frac{\pi}{4}-0}{m}=\frac{\pi}{4m}\quad \text{y}\quad \Delta z= \frac{1}{l}.
 \end{equation*}
-Además
+Además,
 $x_i= -\frac{\pi}{2}+\frac{\pi i}{2n}$, $y_j=\frac{\pi j}{4m}$ y $z_k=\frac{k}{l}$.
 Por lo tanto:
 \[f(x_i,y_j,z_k)=\sin\left(\frac{\pi i}{n}\right)\sin\left(\frac{\pi j}{4m}\right)+\frac{k^2}{l^2}\cos^2\left(\frac{\pi j}{2m}\right).\]
@@ -957,8 +956,8 @@ En estos apuntes se consideran otras posibilidades e intercambios en el orden de
 
 En \cite{acosta_gempeler_doce_2020} se considera una función continua $f(x,y,z)$ y una superficie $\sigma$
 parametrizada en la forma ${\bf r}(u,v)= \langle x(u,v), y(u,v), z(u,v) \ra$,
-con $u \in [a,b]$ y $v \in [c,d]$, cuyas funciones componentes poseen derivadas parciales continuas en
-$[a,b] \times [c,d]$. Al realizar una partición de $\sigma$ en la forma
+con $u \in [a,b]$ y $v \in [c,d]$, cuyas funciones componentes poseen derivadas parciales continuas en $[a,b] \times [c,d]$. Al realizar una partición de $\sigma$ en la forma
+
 \[\sigma_{ij}= \{ (x(u_i^\ast,v_j^\ast),y(u_i^\ast,v_j^\ast),z(u_i^\ast,v_j^\ast) )\,|\, u_{i-1} \leq u_i^\ast \leq u_{i}, v_{j-1} \leq v_{j}^\ast \leq v_{j}\} ;\]
 considerando el punto $P_{ij}(x(u_i^\ast,v_j^\ast),y(u_i^\ast,v_j^\ast),z(u_i^\ast,v_j^\ast) )$ en cada trozo $\sigma_{ij}$
 de la superficie, se obtiene la suma de Riemann de $f$ sobre la superficie $\sigma$ parametrizada por ${\bf r}(u,v)$ y con la partición de $\sigma$,
@@ -966,10 +965,10 @@ de la superficie, se obtiene la suma de Riemann de $f$ sobre la superficie $\sig
 El término $\Vert {\bf r}_u \times {\bf r}_v \Vert $ es el área del paralelogramo determinado por
 los vectores ${\bf r}_u$ y ${\bf r}_v$.
 Con un procedimiento como el utilizado cuando presentamos integrales dobles, se sigue que en este caso la integral de $f$
-sobre la superficie $\sigma$ con la parametrización ${\bf r}(u,v)$ está dada por
-\begin{multline}
+sobre la superficie $\sigma$ con la parametrización ${\bf r}(u,v)$ está dada por:
+\begin{equation}
 \iint_\sigma f dA = \lim_{n,m \to \infty} S_{nm}  = \int_a^b\int_c^d f({\bf r}(u,v)) \Vert {\bf r}_u \times {\bf r}_v \Vert dudv  \label{integralesdobles2}
-\end{multline}
+\end{equation}
 Si la parametrización ${\bf r}(u,v,w)= \langle x(u,v,w), y(u,v,w), z(u,v,w) \ra$,
 de un sólido $E$, con $u \in [a,b]$, $v \in [c,d]$ y $w \in [p,q]$;
 con funciones componentes que poseen derivadas parciales continuas en
@@ -995,7 +994,7 @@ ${\bf r}(u,v,w)$ y con la partición de $E$,
 El término $| {\bf r}_u \cdot ({\bf r}_v \times {\bf r}_w) |$ es el volumen del paralelepípedo determinado por
 los vectores ${\bf r}_u$, ${\bf r}_v$ y ${\bf r}_w$.
 De manera análoga al procedimiento utilizado cuando presentamos integrales triples, se sigue que la integral de $f$
-sobre $E$ con la parametrización ${\bf r}(u,v,w)$ está dada por
+sobre $E$ con la parametrización ${\bf r}(u,v,w)$ está dada por:
 \begin{align} \label{math1}
 \ds \iiint_E f dV &= \lim_{l,m,n \to \infty} S_{nml}  \notag\\
 &=\int_a^b\int_c^d \int_p^q f({\bf r}(u,v,w)) | {\bf r}_u \cdot ({\bf r}_v \times {\bf r}_w) | dudvdw
@@ -1025,7 +1024,7 @@ $\phi:D\subseteq \mathbb{R}^{2}\rightarrow \mathbb{R}^{3}$.
 La superficie $S$ correspondiente a la
 función $\phi $ es su imagen $\phi \left( D\right) =S$ se escribe
 $\phi(u,v)=\left\langle x\left( u,v\right) ,y\left( u,v\right),z\left( u,v\right) \right\rangle $.
-La integral de un campo escalar $f$ sobre una superficie $S$,  está dada por
+La integral de un campo escalar $f$ sobre una superficie $S$ está dada por:
 \begin{equation} \label{areasup}
 \iint_{S}f(x,y,z) dS=\iint_{D}f\left( \phi \left( u,v\right)
 \right) \left\| {\bf T}_{u}\times {\bf T}_{v}\right\| dudv
@@ -1033,14 +1032,14 @@ La integral de un campo escalar $f$ sobre una superficie $S$,  está dada por
 siendo
 \[{\bf T}_{u}=\frac{\partial \phi }{\partial u}=\frac{\partial x}{\partial u}\vi+\frac{\partial x}{\partial u}\vj+\frac{\partial x}{\partial u}\vk\]
 y \[{\bf T}_{v}=\frac{\partial \phi }{\partial v}=\frac{\partial x}{\partial v}\vi+\frac{\partial x}{\partial v}\vj+\frac{\partial x}{\partial v}\vk.\]
-La integración de una campo vectorial ${\bf f}$ sobre $S$, está dada por
+La integración de una campo vectorial ${\bf f}$ sobre $S$ está dada por:
 \begin{equation}
 \iint_{S} {\bf f}(x,y,z) \cdot dS=\iint_{D} {\bf f} \left( \phi \left(
 u,v\right) \right) \cdot \left( {\bf T}_{u}\times {\bf T}_{v}\right) dudv
 \end{equation}
 \textls[-15]{Una exposición más detallada de esta formulación puede encontrarse en \cite{marsden_calculo_2013}.}
 
-Si en la expresión \ref{areasup} $f(x,y,z)=1$, esta integral se reduce al área $A$ de la superficie $D$, es decir
+Si en la expresión \ref{areasup} $f(x,y,z)=1$, esta integral se reduce al área $A$ de la superficie $D$, es decir:
 \begin{equation}
 A=\iint_{D} \left\| {\bf T}_{u}\times {\bf T}_{v}\right\| dudv \label{areasup2}
 \end{equation}
@@ -1064,7 +1063,7 @@ aplicando el teorema del valor medio, se sigue que
 {\bf r}(u,v+\Delta v) -{\bf r}(u,v) &=& \frac{{\bf r}(u,v+\Delta v)-{\bf r}(u,v)}{\Delta v}\Delta v
 \approx \frac{\partial{\bf r}}{\partial u}( u,v^{\ast})\Delta v.
 \end{eqnarray*}
-El área de esta pequeña región está dada por
+El área de esta pequeña región está dada por:
 \begin{equation}
 \Delta A=\left\Vert \frac{\partial {\bf r}}{\partial u}\Delta u\times
 \frac{\partial {\bf r}}{\partial v}\Delta v\right\Vert =\left\Vert \frac{\partial {\bf r}}{\partial u}\times \frac{\partial {\bf r}}{\partial v}\right\Vert \Delta u\Delta v
@@ -1110,7 +1109,7 @@ Aplicando el teorema del valor medio, se sigue que
 u,v,w+\Delta w\right) -{\bf r}(u,v,w)}{\Delta w}\Delta w \\
 &\approx & \frac{\partial {\bf r}}{\partial w}\left( u,v,w^{\ast}\right) \Delta w.
 \end{eqnarray*}
-El volumen de esta región, $\Delta V$, está dada por
+El volumen de esta región, $\Delta V$, está dada por:
 \begin{equation}
 \left\vert \left( \frac{\partial {\bf r}}{\partial u}\Delta u\times
 \frac{\partial {\bf r}}{\partial v}\Delta v\right) \cdot \frac{\partial {\bf r}}{\partial w}\Delta w\right\vert =\left\vert \left( \frac{\partial {\bf r}}{\partial u}\times \frac{\partial {\bf r}}{\partial v}\right) \cdot \frac{\partial {\bf r}}{\partial w}\right\vert \Delta u\Delta v\Delta w
@@ -1144,7 +1143,7 @@ de manera frecuente.
 Para una circunferencia de radio $r$, la longitud $s$, de un arco de $\theta$ radianes es $r\theta$.
 El área de un sector circular de arco $\Delta \theta$ y radio $r$ está dado por
 $\frac{1}{2}r^2 \Delta \theta$ y el área $\Delta A$, de la región acotada por dos sectores
-circulares de radio $r_i$ y $r_{i+1}$ (con $r_i<r_{i+1}$) está dada por
+circulares de radio $r_i$ y $r_{i+1}$ (con $r_i<r_{i+1}$) está dada por:
 \begin{eqnarray*}
 \Delta A &=& \frac{1}{2}r_{i+1}^2 \Delta \theta-\frac{1}{2}r_{i}^2 \Delta \theta
 = \frac{r_{i+1}+r_i}{2}(r_{i+1}-r_i)\Delta \theta  = r_i^*\Delta r \Delta \theta.
@@ -1159,9 +1158,9 @@ circulares de radio $r_i$ y $r_{i+1}$ (con $r_i<r_{i+1}$) está dada por
 \fuentepropia
 \end{figure}
 
-Teniendo en cuenta las relaciones anteriores y el teorema de cambio de variables se puede establecer que en el sistema de coordenadas polares, $x=r \cos \theta$, $y=r \sin \theta$,  la transformación de una integral doble es
+Teniendo en cuenta las relaciones anteriores y el teorema de cambio de variables se puede establecer que en el sistema de coordenadas polares, $x=r \cos \theta$, $y=r \sin \theta$,  la transformación de una integral doble es:
 \begin{equation}
-\iint_R f(x,y) dydx = \iint_S f(r \cos \theta,r \sin \theta) r drd\theta.
+\iint_R f(x,y) dydx = \iint_S f(r \cos \theta,r \sin \theta) r drd\theta
 \label{integraldoblepolares}
 \end{equation}
 Utilizando el sistema de coordenadas cilíndricas $x=r\cos \theta $,
@@ -1171,7 +1170,7 @@ con la figura~\ref{vectores_F_T_n} se ilustra la obtención del elemento diferen
 
 \begin{figure}[H]
 \centering
-\caption{Vectores ${\bf F}(x,y,z)$, ${\bf T}$ y ${\bf n}$}
+\caption{Coordenadas esféricas}
 \label{vectores_F_T_n}
 \includegraphics[height=4cm]{Fig/15.pdf}
 \fuentepropia
@@ -1215,9 +1214,8 @@ En el anexo~B el lector puede consultar las generalidades de otros sistemas de c
 \index{Integrales triples!en coordenadas Esféricas}
 
 \begin{ejemplo}
-Si $E$ es el sólido acotado por los paraboloides $z=2-x^2-y^2$ y $z=x^2+y^2$.
-Evaluar la integral $\displaystyle \iiint_E y^2 dV$. La intersección de los paraboloides está dada por $x^2+y^2=1$, que corresponde a un círculo unitario
-en el plano $xy;$ con estos elementos se plantea y evalúa esta integral:
+Si $E$ es el sólido acotado por los paraboloides $z=2-x^2-y^2$ y $z=x^2+y^2$, evaluar la integral $\iiint_E y^2 dV$. La intersección de los paraboloides está dada por $x^2+y^2=1$, que corresponde a un círculo unitario en el plano $xy$; con estos elementos se plantea y evalúa esta integral:
+
 \begin{multline*}
 \int_{-1}^{1}\int_{-\sqrt{1-x^{2}}}^{\sqrt{1-x^{2}}}\int_{x^{2}+y^{2}}^{2-x^{2}-y^{2}}y^{2}dzdydx = \int_{-1}^{1}\int_{-\sqrt{1-x^{2}}}^{\sqrt{1-x^{2}}}\bigg[ y^{3}\bigg]_{z=x^{2}+y^{2}}^{z=2-x^{2}-y^{2}} dydx \\
 =\int_{-1}^{1}\int_{-\sqrt{1-x^{2}}}^{\sqrt{1-x^{2}}}\left( 2y^{2}\left(1-x^{2}-y^{2}\right) \right) dydx
@@ -1237,27 +1235,26 @@ cuyos valores son iguales, como se había establecido teóricamente.
 
 Para un campo vectorial
 ${\bf F}(x,y,z)= \langle P(x,y,z),Q(x,y,z),R(x,y,z) \ra$, definido en $\mathbb{R}^3$, cuyas funciones componentes poseen derivadas parciales continuas,
-se define el rotacional y la divergencia de ${\bf F}$ que se denotan por $\rot{F}$ y ${\rm div\,}{\bf F}$, y
+se define el rotacional y la divergencia de ${\bf F}$ que se denotan por $\rot{\bf F}$ y $\dive{\bf F}$, y
 están dados, respectivamente, por\index{Divergencia} \index{Rotacional}
 
 \[\rot{\bf F}(x,y,z)= \left\langle  \frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}, \frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}, \frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} \right\rangle \]
-y \[{\rm div\,}{\bf F}(x,y,z)= \frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.\]
+y \[\dive{\bf F}(x,y,z)= \frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.\]
 
-\textls[-10]{Nótese que $\rot{F}(x,y,z)$ es un campo vectorial y ${\rm div\,}{\bf F}(x,y,z)$ es un campo escalar. Existe una manera de recordar brevemente dichos cálculos, en términos del operador $\nabla$, que se presentó en la sección \secref{diferencibilidad}.}
-\begin{eqnarray*}
-{\rm rot}{\bf F} &=& \nabla \times{\bf F}  = \left\vert
+\textls[-10]{Nótese que $\rot{\bf F}(x,y,z)$ es un campo vectorial y $\dive{\bf F}(x,y,z)$ es un campo escalar. Existe una manera de recordar brevemente dichos cálculos, en términos del operador $\nabla$, que se presentó en la sección \secref{diferencibilidad}.}
+\begin{align*}
+{\rm rot}{\bf F} &= \nabla \times{\bf F}  = \left\vert
 \begin{array}{ccc}
 \vi & \vj &  \vk \\  \frac{\partial }{\partial x}  & \frac{\partial }{\partial y}
 & \frac{\partial }{\partial y}  \\ P & Q & R
 \end{array}\right\vert\\
-{\rm div}{\bf F} &=& \nabla \cdot{\bf F}.
-\end{eqnarray*}
+{\rm div}{\bf F} &= \nabla \cdot{\bf F}.
+\end{align*}
 
 \begin{ejemplo}
 \textls[-15]{Para el campo vectorial ${\bf F}(x,y,z) =\left\langle xye^{z},z\cos (xy) ,\sin (xy) \right\rangle$,} es claro que
 \[{\rm div}{\bf F}=\frac{\partial }{\partial x} \left( xye^{z}\right) +\frac{\partial }{\partial y} \left( z\cos (xy) \right) +\frac{\partial }{\partial z}(\sin(xy))= ye^{z}-xz\sin xy,\] y también
 \[{\rm rot}{\bf F} = \left\langle (x-1) \cos(xy),y(xe^{z}-\cos(xy)) ,-xe^{z}-yz\sin xy \right\rangle.\]
 \end{ejemplo}
-La integración de estos tipos especiales de funciones se considerarán en el capítulo \secref{chap:stokes},
+La integración de estos tipos especiales de funciones se considerarán en el capítulo \ref{chap:stokes}, \secref{chap:stokes},
 así como algunas de sus aplicaciones.
-\newpage

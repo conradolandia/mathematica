@@ -193,7 +193,7 @@ Sum[2^r/r!,{r,0,Infinity}]
 
     {\small $$\lim_{x\to0}\frac{\sin(3x)}{\sin(2x)}\hskip1.5cm
       \lim_{(x,y)\to (0,0)}\frac{x^2y}{x^2+y^2} \hskip1.5cm
-    \lim_{(x,y)\to(0,0)}\frac{\sin(x^2+y^2)}{x^2+y^2}$$}
+    \lim_{(x,y)\to(0,0)}\frac{\sin(x^2+y^2)}{x^2+y^2}.$$}
 
     Los límites anteriores se evalúan con las siguientes instrucciones:
     \begin{tcolorbox}
@@ -382,14 +382,14 @@ ParametricPlot[{{2*Cos[t],2*Sin[t]},{Cos[t],Sin[t]},
           $z=f(x,y)$, para $(x,y) \in [a,b] \times [c,d]$.
         \item \texttt{Plot3D[\allowbreak\{f[x,y],\allowbreak g[x,y],\allowbreak ...,h[x,y]\},\allowbreak \{x,a,b\},\allowbreak \{y,c,d\}]}\newline
           permite obtener el gráfico de varias funciones.
-        \item \Verb!ParametricPlot3D[{x[t],y[t],z[t]},{t,a,b}]!,
+        \item \Verb!ParametricPlot3D[{x[t],y[t],z[t]},{t,a,b}]!
           dibuja la curva parametrizada $\ve{r}(t)=\langle x(t),y(t),z(t) \rangle $,
           con $t\in[a,b]$.  \index{ParametricPlot3D}
-        \item \textls[-35]{\verb"ParametricPlot3D[\{x[u,v],y[u,v],z[u,v]\},\{u,a,b\},\{v,c,d\}]"},\\
+        \item \textls[-30]{\verb"ParametricPlot3D[\{x[u,v],y[u,v],z[u,v]\},\{u,a,b\},\{v,c,d\}]"}
           se utiliza para graficar superficies parametrizadas por medio de una función
           $\ve{r}(u,v)=\langle x(u,v),y(u,v),z(u,v) \rangle $, con
           $u\in[a,b]$, $v\in[c,d]$.
-        \item \verb"ContourPlot3D[f[x,y,z]==0,{x,a,b},{y,c,d},{z,p,q}]", se usa
+        \item \verb"ContourPlot3D[f[x,y,z]==0,{x,a,b},{y,c,d},{z,p,q}]" se usa
           para graficar conjuntos de nivel (contornos).
           Este comando presenta el gráfico de una ecuación de tres variables, con $x\in[a,b]$,
           $y\in[c,d]$ y $z\in[p,q]$.  \index{ContourPlot3D}
@@ -508,7 +508,7 @@ Graphics[Line[{{a,b},{p,q}}]]
 \end{Verbatim}
       \end{tcolorbox} \index{Line}
 
-      Con la instrucción \texttt{Graphics3D[\allowbreak Line[\allowbreak\{\{a,b,c\},\allowbreak\{p,q,r\}\}]]}, se obtiene el gráfico de un segmento tridimensional. Por ejemplo, con la instrucción \texttt{Graphics3D[\allowbreak\{\allowbreak Dashed,\allowbreak Blue,\allowbreak Line[\allowbreak\{\{1,-1,1\},\allowbreak\{2,3,-1\}\}]\}]}, se obtiene el segmento de color azul en línea discontinua que une los puntos $(1,-1,1)$ y $(2,3,-1)$.
+      Con la instrucción \texttt{Graphics3D[\allowbreak Line[\allowbreak\{\{a,b,c\},\allowbreak\{p,q,r\}\}]]}, se obtiene el gráfico de un segmento tridimensional. Por ejemplo, con la instrucción \texttt{Graphics3D[\allowbreak\{\allowbreak Dashed,\allowbreak Blue,\allowbreak Line[\allowbreak\{\{1,-1,1\},\allowbreak\{2,3,-1\}\}]\}]} se obtiene el segmento de color azul en línea discontinua que une los puntos $(1,-1,1)$ y $(2,3,-1)$.
 
       También es posible dibujar el vector que va del punto $(a,b,c)$ al punto $(p,q,r)$.
       \begin{tcolorbox}[title=Gráfico de vectores en el espacio]
@@ -1243,8 +1243,8 @@ utilizando la función \verb"StreamPlot".  \index{StreamPlot} \index{StreamStyle
 \begin{figure}[H]
 \begin{center}
 \caption{Campo vectorial $\la \frac{-x+y}{\sqrt{x^2+y^2}}, \frac{x-y}{\sqrt{x^2+y^2}} \ra$}
-\includegraphics[height=4.5cm]{Img/T_55a.pdf} \hspace{0.5cm}
-\includegraphics[height=4.5cm]{Img/T_55b.pdf}
+\includegraphics[height=5.5cm]{Img/T_55a.pdf} \hspace{0.5cm}
+\includegraphics[height=5.5cm]{Img/T_55b.pdf}
 \end{center}
 \fuentepropia
 \end{figure}
@@ -1253,13 +1253,10 @@ Las instrucciones requeridas son, respectivamente las siguientes.
 
 \begin{tcolorbox}[title=Instrucciones en Mathematica]
 \begin{Verbatim}[formatcom=\letraverbatim]
-VectorPlot[{-(x+y)/Sqrt[x^2+y^2],(x-y)/
-Sqrt[x^2+y^2]},
+VectorPlot[{-(x+y)/Sqrt[x^2+y^2],(x-y)/Sqrt[x^2+y^2]},
 {x,-1,1},{y,-1,1},VectorStyle->Black]
-StreamPlot[{-(x+y)/Sqrt[x^2+y^2],(x-y)/
-Sqrt[x^2+y^2]},
-{x,-1,1},{y,-1,1},
-StreamStyle->Black,StreamScale->0.08]
+StreamPlot[{-(x+y)/Sqrt[x^2+y^2],(x-y)/Sqrt[x^2+y^2]},
+{x,-1,1},{y,-1,1},StreamStyle->Black,StreamScale->0.08]
 \end{Verbatim}
 \end{tcolorbox}
 
@@ -1279,12 +1276,11 @@ por este motivo se agregó la condición $x^2+y^2\leq 1$.
 
 \begin{tcolorbox}[title=Instrucciones en Mathematica]
 \begin{Verbatim}[formatcom=\letraverbatim]
-SliceVectorPlot3D[{y,-x,x+z},{(x^2+y^2)^2==z+1,
-z==2*(1-x^2-y^2)},{x,-1,1},{y,-1,1},{z,-1,2.2},
+SliceVectorPlot3D[{y,-x,x+z},{(x^2+y^2)^2==z+1,z==2*(1-x^2-y^2)},
+{x,-1,1},{y,-1,1},{z,-1,2.2},
 RegionFunction->Function[{x,y,z},x^2+y^2<=1],
 VectorScale->{0.18,Scaled[0.3],Automatic},
-VectorStyle->Black,
-VectorPoints->16,PlotStyle->Orange]
+VectorStyle->Black,VectorPoints->16,PlotStyle->Orange]
 \end{Verbatim}
 \end{tcolorbox}
 
@@ -1327,8 +1323,7 @@ la expresión $g(x,y,z)=0$. En este caso la sintaxis básica es la siguiente:
 \begin{tcolorbox}[title=Instrucciones en Mathematica]
 \begin{Verbatim}[formatcom=\letraverbatim]
 datos=Table[F[x,y,z],{x,a,b},{y,c,d},{z,e,f}];
-ListSliceVectorPlot3D[datos,
-ImplicitRegion[g[x,y,z]==0,{x,y,z}],
+ListSliceVectorPlot3D[datos,ImplicitRegion[g[x,y,z]==0,{x,y,z}],
 DataRange->{{a,b},{c,d},{e,f}}]
 \end{Verbatim}
 \end{tcolorbox}
@@ -1345,13 +1340,10 @@ sobre la superficie $z= (y^2-x)e^{1-x^2-y^2}$.
 \end{figure}
 
 Las instrucciones requeridas para obtener esta figura son las siguientes:
-%ContourPlot3D[z==(y^2-x)*Exp[1-x^2-y^2],{x,-2,2},{y,-2,2},
-%{z,-2,2},MeshStyle->Gray,ContourStyle->Orange]
 
 \begin{tcolorbox}[title=Instrucciones en Mathematica]
 \begin{Verbatim}[formatcom=\letraverbatim]
-datos=Table[{x+z,y,2*x-z},{x,-2,2},{y,-2,2},
-{z,-1,1}];
+datos=Table[{x+z,y,2*x-z},{x,-2,2},{y,-2,2},{z,-1,1}];
 ListSliceVectorPlot3D[datos,
 ImplicitRegion[z==(y^2-x)*Exp[1-x^2-y^2],{x,y,z}],
 VectorPoints->12,DataRange->{{-2,2},{-2,2},{-2,2}},
