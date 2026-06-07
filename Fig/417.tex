@@ -1,0 +1,18 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1,-1.2)(3,2)% \psgrid 
+\psset{algebraic,xunit=1.2,yunit=0.9}
+\pscustom[fillstyle=vlines,hatchsep=1pt,hatchwidth=0.4pt,hatchcolor=black!60]{
+\psline(0,1)(2,-1)(0,-1)(0,1)
+}
+\psaxes[linecolor=gray]{->}(0,0)(-0.5,-1.5)(2.2,2.2)[$y$,90][$z$,0]
+\parametricplot[linecolor=black!70,arrows=<->]{-0.2}{2.2}{t|1-t}
+\rput(1.2,0.8){$z=1-y$}
+\end{pspicture}
+
+\end{document}

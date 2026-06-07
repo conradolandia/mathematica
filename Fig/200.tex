@@ -1,0 +1,31 @@
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2,-2)(2,2) %\psgrid
+\psset{unit=0.45}
+\pscircle[linewidth=1pt](0,0){4}
+\def\ra{14}
+\DIVIDE{\ra}{2}{\raa}
+\DIVIDE{360}{\ra}{\delta}
+\multido{\ri=1+0.5}{7}{
+\pscircle[linewidth=0.3pt](0,0){\ri}}
+\multido{\nx=1+1}{\ra}{
+\MULTIPLY{\nx}{\delta}{\ang}
+\DEGREESCOS{\ang}{\ax}
+\DEGREESSIN{\ang}{\ay}
+\MULTIPLY{\ax}{4}{\axx}
+\MULTIPLY{\ay}{4}{\ayy}
+\MULTIPLY{\ax}{4.5}{\axxx}
+\MULTIPLY{\ay}{4.5}{\ayyy}
+\psline[linewidth=0.2pt](0,0)(\axx,\ayy)
+\FRACTIONSIMPLIFY{\nx}{\raa}{\num}{\dem} 
+\ifthenelse{\dem=1}
+{\ifthenelse{\num=1}{\rput[c](\axxx,\ayyy){\tiny $\pi$}}{\rput[c](\axxx,\ayyy){\tiny $0$}}}
+{\rput[c](\axxx,\ayyy){\tiny $\frac{\num}{\dem}\pi$} }
+}
+\end{pspicture}
+\end{document}

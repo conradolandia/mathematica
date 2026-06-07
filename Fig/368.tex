@@ -1,0 +1,24 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2,-0.6)(2,3.7) % \psgrid
+\psset{algebraic,xunit=0.9,yunit=0.4}
+\pscustom[fillstyle=solid,fillcolor=gray!40]{
+\parametricplot{0}{\psPiTwo}{sqrt(1-cos(t)),t}
+\parametricplot{\psPiTwo}{0}{-sqrt(1-cos(t)),t}
+}
+\psaxes[arrows=->,showorigin=false,dx=1.4,xLabels={-\sqrt{2},,,\sqrt{2}},yunit=\psPi,ytrigLabels,trigLabelBase=1](0,0)(-2,-0.3)(2.35,2.6)[$x$,90][$y$,180]
+\parametricplot[arrows=->,linewidth=1.2pt]{-0.3}{7}{sqrt(1-cos(t)),t}
+\parametricplot[arrows=->,linewidth=1.2pt]{-0.3}{7}{-sqrt(1-cos(t)),t}
+\rput{0}(-1.31,2.36){$\bullet$}
+\rput{0}(1.31,2.36){$\bullet$}
+\psline[linewidth=1pt,linecolor=black](-1.31,2.4)(1.31,2.4)
+\rput{0}(-1.65,2.5){$A$}
+\rput{0}(1.65,2.5){$B$}
+\end{pspicture} 
+
+\end{document}

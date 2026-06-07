@@ -1,0 +1,18 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1.5,-0.6)(2,2.2) % \psgrid
+\psset{algebraic,yunit=1.1}
+\pscustom[fillstyle=solid,fillcolor=gray!80,opacity=0.8]{
+\psplot{-1}{1}{1-x^2}
+\psline(1,0)(-1,0) }
+\psaxes[arrows=->,showorigin=false](0,0)(-1.5,-0.8)(2,2)[$x$,90][$z$,180]
+\psplot[arrows=->,linewidth=1.2pt]{-1.2}{1.2}{1-x^2}
+\rput{0}(1,1.3){$z=1-x^2$}
+\end{pspicture}
+
+\end{document}

@@ -1,0 +1,19 @@
+\DocumentMetadata{lang=es,xmp=false}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1,-0.2)(2,2.4)% \psgrid
+\psset{algebraic,yunit=1.5,xunit=1.25}
+\psaxes{->}(0,0)(-0.4,-0.2)(1.6,1.5)[$y$,0][$z$,180]
+\pscustom[linestyle=none,fillstyle=solid,fillcolor=gray!50]{
+\psline(1,0)(0,0)(0,1)(1,0)
+}  
+\rput(1.25,1){$z=1-y$}
+\psset{linewidth=1.2pt,linecolor=gray!50}
+\psplot[plotpoints=200,arrows=->]{-0.2}{1.2}{1-x}
+\end{pspicture} 
+\end{document}

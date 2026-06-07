@@ -1,0 +1,25 @@
+\DocumentMetadata{lang=es,xmp=false}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-0.6,-0.2)(3.75,2.75) % \psgrid
+\psset{algebraic,xunit=1.7,yunit=1.8}
+\psaxes[labelFontSize=\scriptstyle]{->}(0,0)(-0.4,-0.2)(1.9,1.4)[$x$,0][$y$,180]
+\pscustom[,linestyle=none,fillstyle=solid,fillcolor=gray!50]{
+\parametricplot{0}{1}{t^2|t}
+\psline(1,1)(0,1)(0,0)
+}  
+\psline[arrows=->](0,0)(0,1)(1.4,1)
+\rput(1.8,1.2){$x=y^2$}
+\psplot[arrows=->]{0}{1.42}{sqrt(x)}
+\psline[linestyle=dashed](0.25,0.5)(0.25,1)
+\rput(0.25,0.5){\small $\bullet$}
+\rput(0.25,1){\small $\bullet$}
+\rput(0.25,1.2){$Q$}
+\rput(0.25,0.3){$P$}
+\end{pspicture}
+\end{document}

@@ -1,0 +1,28 @@
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2.8,-0.5)(3,3.4) % \psgrid
+\psset{algebraic,Alpha=60,Beta=15,plotstyle=curve,xunit=1.4,yunit=0.9}
+\pstThreeDCoor[xMin=-1.5,xMax=3,yMin=-1.5,yMax=2,zMin=-0.5,zMax=4,%
+spotZ=180,IIIDticks,IIIDlabels=true,linecolor=black]
+\parametricplotThreeD[linewidth=1pt,linecolor=black](1.7,5){cos(t)|sin(t)|(3-cos(2*t))/2}
+\pstThreeDLine[linewidth=0.6pt,linecolor=black](0.25,0.433,2.68)(0.25,0.433,0.43)
+\psset{linewidth=0.2pt,linecolor=black!40,xPlotpoints=20}
+\parametricplotThreeD(0,\psPiTwo)(0,1){u*cos(t)|u*sin(t)|(3-cos(2*t))*u^2/2}
+\parametricplotThreeD(0,1)(0,\psPiTwo){t*cos(u)|t*sin(u)|(3-cos(2*u))*t^2/2}
+\parametricplotThreeD(0,\psPiTwo)(0,1){u*cos(t)|u*sin(t)|(6-3*u^2-u^2*cos(2*t))/2}
+\parametricplotThreeD(0,1)(0,\psPiTwo){t*cos(u)|t*sin(u)|(6-3*t^2-t^2*cos(2*u))/2}
+\parametricplotThreeD[linewidth=1pt,linecolor=black](-1.5,1.7){cos(t)|sin(t)|(3-cos(2*t))/2}
+\fontsize{8}{8}\selectfont
+\pstThreeDPut(1.4,-0.6,3.2){$z=3-2x^2-y^2$}
+\pstThreeDPut(0,1.75,1){$z=x^2+2y^2$}
+\pstThreeDDot[dotsize=1.25mm,linecolor=black](0.25,0.433,2.68)
+\pstThreeDDot[dotsize=1.25mm,linecolor=black](0.25,0.433,0.43)
+\pstThreeDPut(0.25,0.65,0.25){\small $P$}
+\pstThreeDPut(0.25,0.6,2.9){\small $Q$}
+\end{pspicture}
+\end{document}

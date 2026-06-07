@@ -84,15 +84,15 @@ que parametriza a una curva suave $C$ y {\footnotesize ${\bf F}(x,y,z)= \langle 
 
   \begin{itemize}
     \item ${\bf r}(t) =\left\langle t^{2},t,2-t\right\rangle $, con $t\in[-1,1]$. En este caso,\\ ${\bf F}\left({\bf r}(t) \right) \cdot {\bf r}^{\prime }(t)= \left\langle t^{3},t\left( 2-t\right) ,-t^{4}\right\rangle \cdot \left\langle 2t,1,-1\right\rangle = 3t^{4}-t^{2}+2t$.
-      \begin{eqnarray*}
-        \int_{C}{\bf F}\cdot d{\bf r} &=&\int_{-1}^{1}{\bf F}\left({\bf r}(t) \right) \cdot {\bf r}^{\prime }(t)
-        = \int_{-1}^{1}(3t^{4}-t^{2}+2t) dt= \frac{8}{15}
-      \end{eqnarray*}
+      \begin{gather*}
+        \int_{C}{\bf F}\cdot d{\bf r} =\int_{-1}^{1}{\bf F}\left({\bf r}(t) \right) \cdot {\bf r}^{\prime }(t)
+        = \int_{-1}^{1}(3t^{4}-t^{2}+2t) dt= \frac{8}{15}.
+      \end{gather*}
 
     \item ${\bf r}\left( r\right) =\left\langle 2t-1,1,3-2t\right\rangle $, con $t\in [0,1];$ Para este caso ${\bf F}\left({\bf r}(t) \right) \cdot {\bf r}^{\prime }(t)= \left\langle 2t-1,3-2t,-\left( 2t-1\right) ^{2}\right\rangle \cdot \left\langle 2,0,-2\right\rangle = 8t^{2}-4t$
-      \begin{eqnarray*}
-        \int_{C}{\bf F}\cdot d{\bf r}&=& \int_{0}^{1}{\bf F}\left({\bf r}(t) \right) \cdot {\bf r}^{\prime }(t) dt = \int_{0}^{1} (8t^{2}-4t) dt = \frac{2}{3}.
-      \end{eqnarray*}
+      \begin{gather*}
+        \int_{C}{\bf F}\cdot d{\bf r}=\int_{0}^{1}{\bf F}\left({\bf r}(t) \right) \cdot {\bf r}^{\prime }(t) dt = \int_{0}^{1} (8t^{2}-4t) dt = \frac{2}{3}.
+      \end{gather*}
   \end{itemize}
   Nótese que, para el mismo campo vectorial, la curva une los mismos puntos y el valor de la integral es distinto.
 \end{ejemplo}
@@ -116,6 +116,8 @@ $D$ que se parametriza mediante una función vectorial continua ${\bf r} : [a, b
 &= \int_{a}^{b} \frac{d}{dt} \left(\phi \left({\bf r}(t)\right) \right) dt= \phi \left({\bf r}(b)\right) -\phi\left({\bf r}\left( a\right) \right).
 \end{align*}
 Por lo tanto, si ${\bf F}$ es un campo gradiente, entonces la circulación de ${\bf F}$ a lo largo de toda curva dentro del dominio de ${\bf F}$ solo depende de los puntos extremos de dicha curva.
+
+\clearpage
 
 \begin{ejemplo}
 \textls[-25]{Evaluar la integral de línea de ${\bf F}\left( x,y,z\right) =\left\langle y^{2}-2xz,2xy,-x^{2}\right\rangle$} sobre la curva que une los puntos $\left( -1,1,3\right) $ con $\left( 1,1,1\right)$, considerando las siguientes parametrizaciones.
@@ -196,7 +198,7 @@ se obtiene una expresión equivalente a la fórmula \ref{integraldelinea7} en t�
 \begin{figure}[H]
 \centering
 \caption{Vectores ${\bf F}(x,y,z)$, ${\bf T}$ y ${\bf n}$}
-\includegraphics[height=4cm]{Fig/171.png}
+\includegraphics[height=3cm]{Fig/171.png}
 \fuentepropia
 \end{figure}
 
@@ -235,7 +237,7 @@ ${\bf T}(x,y)= \frac{1}{\sqrt{(x^\prime(t))^2+y^\prime(t))^2}}\la x^\prime(t), y
 ${\bf n}(x,y)= \frac{1}{\sqrt{(x^\prime(t))^2+y^\prime(t))^2}}\la -y^\prime(t), x^\prime(t)\ra$.
 
 \subsection{Densidad rotacional y densidad de expansión}
-En \cite{acosta_gempeler_doce_2020} se define la densidad rotacional como la circulación por unidad de área, y la densidad de expansión es el flujo por unidad de área. Analizaremos estos conceptos en campos vectoriales bidimensionales. Posteriormente, se extienden a campos tridimensionales.
+En \cite{acosta_gempeler_doce_2020} se define la densidad rotacional como la circulación por unidad de área, y la densidad de expansión es el flujo por unidad de área. \mbox{Analizaremos} estos conceptos en campos vectoriales bidimensionales. Posteriormente, se extienden a campos tridimensionales.
 
 Consideremos ${\bf F} (x,y)=P(x,y)\vi+Q(x,y)\vj$ un campo de velocidad del flujo de un fluido en el plano tal que las primeras derivadas parciales de $P(x,y) $ y $Q(x,y) $ son continuas en cada punto del rectángulo $R$.
 
@@ -259,7 +261,7 @@ Las razones de flujo son positivas o negativas, dependiendo de las componentes d
 \text{Arriba} \quad &  {\bf F} \left( x,y+\Delta y\right) \cdot (-\vi) \Delta x=-P\left( x,y+\Delta y\right) \Delta x \\
 \text{Abajo} \quad & {\bf F} (x,y) \cdot \vi\Delta x=P(x,y) \Delta x \\
 \text{Lado derecho} \quad & {\bf F} ( x+\Delta x,y) \cdot \vj\Delta y=Q\left(x+\Delta x,y\right) \Delta y \\
-\text{Lado izquierdo} \quad & {\bf F} (x,y) \cdot \left( -\vj\right) \Delta y=-Q(x,y) \Delta y
+\text{Lado izquierdo} \quad & {\bf F} (x,y) \cdot \left( -\vj\right) \Delta y=-Q(x,y) \Delta y.
 \end{align*}
 
 \textls[-15]{Al sumar estos elementos y aplicar el teorema del valor medio, se sigue que}
@@ -269,7 +271,7 @@ Q( x+\Delta x,y) \Delta y-Q(x,y) \Delta y-P\left(x,y+\Delta y\right) \Delta x+P(
 \approx \left( \frac{\partial Q}{\partial x}(x^{\ast },y)\Delta x\right) \Delta y-\left( \frac{\partial P}{\partial y}\left(x,y^{\ast }\right) \Delta y\right) \Delta x
 \end{gather}
 Para algún $x^* \in (x,x+\Delta x)$ e $y^* \in (y,y+\Delta y)$.
-Es por esto que la razón de circulación alrededor del rectángulo $R$ es
+Es por esto que la razón de circulación alrededor del rectángulo $R$ es:
 \[\left( \frac{\partial Q}{\partial x}(x^{\ast },y) \Delta x\right) \Delta y-\left( \frac{\partial P}{\partial y}\left( x,y^{\ast }\right) \Delta y\right) \Delta x.\]
 
 Al dividir  el área de $R$ se obtiene una estimación de la razón de circulación por unidad de área o densidad rotacional para el rectángulo
@@ -279,7 +281,7 @@ Lo anterior motiva la siguiente definición.
 
 \begin{defi}
 \textls[-15]{Sea ${\bf F} (x,y)=P(x,y) \vi+Q(x,y) \vj$ un campo vectorial cuyas funciones componentes poseen primeras derivadas parciales continuas.
-{\bf La densidad rotacional} del campo vectorial ${\bf F} (x,y)$ en el punto $(x,y)$ está dada por:}
+La densidad rotacional del campo vectorial ${\bf F} (x,y)$ en el punto $(x,y)$ está dada por:}
 
 \begin{equation} \label{integraldelinea5}
 \frac{\partial Q}{\partial x}(x,y) -\frac{\partial P}{\partial y}(x,y)
@@ -303,7 +305,7 @@ De manera aproximada, la razón del flujo neto a través de la frontera del rect
 \text{Arriba}\quad & {\bf F} \left( x,y+\Delta y\right) \cdot \mathbf{j}\Delta x=Q\left(x,y+\Delta y\right) \Delta x \\
 \text{Abajo}\quad & {\bf F} (x,y) \cdot \left( -\vj\right) \Delta x=-Q\left(x,y\right) \Delta x \\
 \text{Lado derecho}\quad & {\bf F} ( x+\Delta x,y) \cdot \vi\Delta y=P\left(x+\Delta x,y\right) \Delta y \\
-\text{Lado izquierdo}\quad & {\bf F} (x,y) \cdot \left( -\vi\right) \Delta y=-P(x,y) \Delta y
+\text{Lado izquierdo}\quad & {\bf F} (x,y) \cdot \left( -\vi\right) \Delta y=-P(x,y) \Delta y.
 \end{align*}
 
 \textls[-10]{Al sumar estos elementos y aplicar el teorema del valor medio, se sigue que}
@@ -315,7 +317,7 @@ P( x+\Delta x,y) \Delta y-P(x,y) \Delta y+Q\left(x,y+\Delta y\right) \Delta x-Q(
 Para algún $x^* \in (x,x+\Delta x)$ y $y^* \in (y,y+\Delta y)$.
 Por lo tanto, el flujo a través de la frontera del rectángulo $R$ es aproximadamente
 \[\frac{\partial P}{\partial x}(x^*,y) \Delta x\Delta y+\frac{\partial Q}{\partial y}(x,y^*) \Delta y\Delta x.\]
-Al dividir  el área del rectángulo $R$, se establece una estimación del flujo total por unidad de área o densidad de flujo para el rectángulo $R$. Lo anterior motiva la siguiente definición.
+Al dividir  el área del rectángulo $R$ se establece una estimación del flujo total por unidad de área o densidad de flujo para el rectángulo $R$. Lo anterior motiva la siguiente definición.
 
 \begin{defi}
 Si ${\bf F} (x,y)=P(x,y) \vi+Q(x,y) \vj$ es un campo vectorial cuyas funciones componentes poseen primeras derivadas parciales continuas.
@@ -540,13 +542,13 @@ un campo vectorial cuyos componentes tienen primeras derivadas parciales continu
 \index{Región abierta}
 \end{teorema}
 
-La prueba se puede conseguir en \cite{apostol_calculus_1999}.
+La prueba se puede conseguir en\cite{apostol_calculus_1999}.
 \begin{teorema}[\bfseries Teorema de la divergencia] \index{Teorema!de la divergencia}
 \textls[-20]{Sea ${\bf F}(x,y,z)= P(x,y,z)\vi+ Q(x,y,z)\vj + R(x,y,z)\vk$}
 un campo vectorial cuyos componentes tienen primeras derivadas parciales, y sea $S$ una superficie cerrada, orientada, suave por partes. El flujo de ${\bf F}$ a través de $S$ en la dirección del campo unitario normal exterior ${\bf n}$ es igual a la integral de ${\rm div\,{\bf F}}$ sobre la región $D$ encerrada por la superficie: \index{Flujo}
 \[\iint_S {\bf F}\cdot {\bf n} d\sigma = \iiint_D {\rm div\,{\bf F}} dV.\]
 \end{teorema}
-La prueba se puede conseguir en \cite{marsden_calculo_2013} o \cite{apostol_calculus_1999}.
+La prueba se puede conseguir en\cite{marsden_calculo_2013} o\cite{apostol_calculus_1999}.
 
 \section{Ejercicios que usan el teorema de Stokes}
 Ilustraremos el uso de estos resultados en algunas situaciones particulares; en ellas se comprueba el cálculo señalado de más de una forma.
@@ -802,7 +804,7 @@ La frontera de la superficie $S$ es la circunferencia $C$ determinada por la ecu
 $\vec{\alpha}(t) =\left\langle \frac{3}{2},\frac{\sqrt{3}}{2}\cos t,\frac{\sqrt{3}}{2}\sin t\right\rangle $,
 $t\in \lbrack 0,2\pi ];$ entonces,
 \begin{eqnarray*}
-{\bf F}(\ve{\alpha}(t))\cdot d\ve{\alpha}
+{\bf F}(\vec{\alpha}(t))\cdot d\vec{\alpha}
 & =& \frac{3}{4}\left ( \sin ^{2}t-\cos t\sin t-\sqrt{3}\cos t \right );
 \end{eqnarray*}
 entonces
@@ -841,7 +843,7 @@ Entonces,
 \end{align*}
 
 \textls[-10]{Con los elementos anteriores es sencillo ver que ${\rm rot}\,{\bf F}= \left\langle y\sin yz,0,0\right\rangle$, además
-${\rm rot}\,{\bf F}({\bf r}(u,v)) \cdot ({\bf r}_{u}\times {\bf F}_{v})= -8\sin(2u)\sin^3(v)\sin(4\sin(u)\sin(2v))$,
+${\rm rot}\,{\bf F}({\bf r}(u,v)) \cdot ({\bf r}_{u}\times {\bf r}_{v})= -8\sin(2u)\sin^3(v)\sin(4\sin(u)\sin(2v))$,
 por lo tanto,}
 \begin{gather*}
 \iint_{S}{\rm rot}\,{\bf F}\cdot d{\bf S}=
@@ -863,12 +865,12 @@ NIntegrate[A,{u,0,2*Pi},{v,0,Pi/2}]
 \end{tcolorbox}
 
 La frontera de $S$ es la curva $C$ determinada por la función vectorial
-$\ve{\alpha}(t) =\left\langle 4\cos t,2\sin t,0\right\rangle$, $t\in \lbrack 0,2\pi ]$.
+$\vec{\alpha}(t) =\left\langle 4\cos t,2\sin t,0\right\rangle$, $t\in \lbrack 0,2\pi ]$.
 El mismo cálculo se puede evaluar usando una integral de línea, en este caso
-${\bf F}(\ve{\alpha}(t))\cdot \ve{\alpha}^{\prime}(t)=\la e^{4\cos t},\cos(0),0\ra\!\cdot\la -4\sin t,2\cos t,0\ra$,
+${\bf F}(\vec{\alpha}(t))\cdot \vec{\alpha}^{\prime}(t)=\la e^{4\cos t},\cos(0),0\ra\!\cdot\la -4\sin t,2\cos t,0\ra$,
 por lo tanto,
-\[\int_{C}{\bf F}\cdot d\ve{\alpha} = \int_{0}^{2\pi}{\bf F}(\ve{\alpha}(t))\cdot
-\ve{\alpha}^{\prime }\left( t\right) dt = \int_{0}^{2\pi}\left( 2\cos t-4e^{4\cos t}\sin t\right) dt= 0.\]
+\[\int_{C}{\bf F}\cdot d\vec{\alpha} = \int_{0}^{2\pi}{\bf F}(\vec{\alpha}(t))\cdot
+\vec{\alpha}^{\prime }\left( t\right) dt = \int_{0}^{2\pi}\left( 2\cos t-4e^{4\cos t}\sin t\right) dt= 0.\]
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 {x,y,z}={4*Cos[t],2*Sin[t],0};
@@ -956,15 +958,13 @@ NIntegrate[A,{u,0,1},{t,-Sqrt[3],Sqrt[3]}]
 
 \subsection{Una región acotada por dos cilindros parabólicos}
 
-Evalúe $\iint_S \rot{\bf F} \cdot d{\bf S}$ en donde ${\bf F}(x,y,z)=\left\langle y^{2},yz-x,xz-y\right\rangle $ y %% $
-$S$ es la superficie acotada por las figuras de las expresiones $x=z^2$ y $x=4y-y^2$.
-Esta superficie se presenta en la página \pageref{curvas3}.
+Evalúe $\iint_S \rot{\bf F} \cdot d{\bf S}$, en donde ${\bf F}(x,y,z)=\left\langle y^{2},yz-x,xz-y\right\rangle $ y $S$ es la superficie acotada por las figuras de las expresiones $x=z^2$ y $x=4y-y^2$. Esta superficie se presenta en la página \pageref{curvas3}.
 
-En la figura~\ref{curvas3} se muestra el sólido y la representación de los campos vectoriales $\la -1,0,-2z\ra$ y  $\la 1,-4+2y,0\ra$, que determinan la orientación hacia afuera de la superficie.
+En la figura~\ref{xzcon} se muestra el sólido y la representación de los campos vectoriales $\la -1,0,-2z\ra$ y  $\la 1,-4+2y,0\ra$, que determinan la orientación hacia afuera de la superficie.
 
 \begin{figure}[H]
 \centering
-\caption{$x = z^2$ con $(y-2)^2+z^2 \leq 4$}
+\caption{$x = z^2$ con $(y-2)^2+z^2 \leq 4$}\label{xzcon}
 \includegraphics[height=3.5cm]{Img/53e.pdf} \hspace{5mm}
 \includegraphics[height=3.5cm]{Img/53h.pdf} \hspace{5mm}
 \includegraphics[height=3.5cm]{Img/53g.pdf}
@@ -1019,8 +1019,7 @@ entonces,
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 G=Curl[{y^2,y*z-x,x*z-y},{x,y,z}]
 r={y,z,x}={2+2*u*Cos[v],2*u*Sin[v],z^2}
-Integrate[Dot[G,Cross[D[r,u],D[r,v]]],
-{u,0,1},{v,0,2Pi}]
+Integrate[Dot[G,Cross[D[r,u],D[r,v]]],{u,0,1},{v,0,2Pi}]
 \end{Verbatim}
 \end{tcolorbox}
 
@@ -1130,9 +1129,9 @@ Puede verse que
 16e^{1-4 u^2} u^2 \sin (t) \left(2 u^2 \cos (2t)-2 u \cos (t)-2 u^2+1\right),4 u\bigg \rangle;
 \end{gather*}
 además,
-$\rot{\bf F}\cdot ({\bf r}_u \times {\bf r}_t)= 8u$, entonces
+$\rot{\bf F}\cdot ({\bf r}_u \times {\bf r}_t)= 8u$, entonces:
 \begin{equation} \label{stokes9}
-\iint_S \rot{\bf F}\cdot {\bf n} d \sigma= \int_0^1\int_0^{2\pi} 8u dtdu =8\pi.
+\iint_S \rot{\bf F}\cdot {\bf n} d \sigma= \int_0^1\int_0^{2\pi} 8u dtdu =8\pi
 \end{equation}
 Este cálculo se hace en \verb"Mathematica" con las siguientes instrucciones:
 
@@ -1249,7 +1248,7 @@ También se puede verificar que
 ${\bf F}\left({\bf u}\left( x,y\right) \right) =\la x^{2},-y,1+xe^{1-x^{2}-y^{2}}\ra$ y
 \[{\bf F}\left({\bf u}\left( x,y\right) \right) \cdot \left({\bf u}_{x}\times {\bf u}_{y}\right)
 = x\left( 2x^{3}-x-2y^{2}+1\right)e^{-x^{2}-y^{2}+1}+1.\]
-Entonces, el flujo de ${\bf F}$ a través de $S$ está dado por
+Entonces, el flujo de ${\bf F}$ a través de $S$ está dado por:
 \[\int_{-2}^{2}\int_{-2}^{2}\left( x\left( 2x^{3}-x-2y^{2}+1\right)e^{-x^{2}-y^{2}+1}+1\right) dydx \approx 22.706.\]
 
 El cálculo anterior es posible realizarlo en \verb"Mathamatica" ejecutando las siguientes instrucciones:
@@ -1332,7 +1331,7 @@ Integrate[A,{u,0,2*Pi},{v,0,Pi}]
 Otra posibilidad de hacer este cálculo es mediante el uso del teorema de la divergencia.
 Para este propósito se necesita calcular la divergencia del campo vectorial ${\bf F}$, esto es:
 \[{\rm div}{\bf F}=\nabla \cdot \langle xz,y,x\rangle = z+1.\]
-En este caso, el flujo está dado por
+En este caso, el flujo está dado por:
 \[\bigintss_{-2}^{2}\bigintss_{-\sqrt{1-\frac{x^{2}}{4}}}^{\sqrt{1-\frac{x^{2}}{4}}}\bigintss_{-\sqrt{1-\frac{x^{2}}{4}-y^{2}}}^{\sqrt{1-\frac{x^{2}}{4}-y^{2}}}\left( z+1\right)dzdydx= \frac{8}{3}\pi.\]
 
 Este cálculo se evaluó en \verb"Mathematica" con la siguiente instrucción:
@@ -1372,8 +1371,13 @@ Para calcular el flujo sobre el disco que forma la base del sólido, se parametr
 Es sencillo ver que
 ${\bf F}\left({\bf r}\left(u,v\right)\right)=\left\langle 0,u\left(u\sin v+1\right)\cos v,0\right\rangle;$
 con la función ${\bf r}$ se obtienen los vectores:
-\[{\bf r}_{u} = \left\langle \cos v, \sin v, 0 \right\rangle\] y
-\[{\bf r}_{v} = \left\langle -u\sin v, u\cos v, 0 \right\rangle.\]
+\begin{gather*}
+  {\bf r}_{u} = \left\langle \cos v, \sin v, 0 \right\rangle
+\end{gather*} 
+y
+\begin{gather*}
+{\bf r}_{v} = \left\langle -u\sin v, u\cos v, 0 \right\rangle.
+\end{gather*} 
 Para conseguir que la orientación sea hacia afuera se evalúa:
 \[
 {\bf r}_{v} \times {\bf r}_{u} =
@@ -1495,23 +1499,21 @@ de modo que una parametrización de la región sobre la porción del plano acota
 u\in \lbrack 0,1], v\in\lbrack 0,2\pi;
 \end{gather*}
 con esta función hallamos los siguientes vectores:
-\begin{eqnarray*}
-{\bf r}_{u} &=&\left\langle \frac{2}{3}\sqrt{3}\cos v,\frac{4}{9}\sqrt{3}\sin v,\sqrt{3}\sin v\right\rangle \\
-{\bf r}_{v}&=&\left\langle -\frac{2}{3}\sqrt{3}u\sin v,\frac{4}{9}\sqrt{3}u\cos v,\sqrt{3}u\cos v\right\rangle \\
-{\bf r}_{u}\times {\bf r}_{v}&=& \left\langle 0,-2u,\frac{8}{9}u\right\rangle.
-\end{eqnarray*}
+\begin{align*}
+{\bf r}_{u} &=\left\langle \frac{2}{3}\sqrt{3}\cos v,\frac{4}{9}\sqrt{3}\sin v,\sqrt{3}\sin v\right\rangle \\
+{\bf r}_{v}&=\left\langle -\frac{2}{3}\sqrt{3}u\sin v,\frac{4}{9}\sqrt{3}u\cos v,\sqrt{3}u\cos v\right\rangle \\
+{\bf r}_{u}\times {\bf r}_{v}&= \left\langle 0,-2u,\frac{8}{9}u\right\rangle.
+\end{align*}
 
 También pueden comprobarse las siguientes igualdades,
-\begin{eqnarray*}
-{\bf F}\left( {\bf r}\left( u,v\right) \right) &=& \left\langle 2u^{2}\cos v\sin v,\frac{8}{9}u^{2}\cos v\sin v,\frac{4}{3}u^{2}\sin ^{2}v \right\rangle  \\
-{\bf F}\left( {\bf r}\left( u,v\right) \right) \cdot \left( {\bf r}_{u}\times {\bf r}_{v}\right)
-&=& %\left\langle 2u^{2}\cos v\sin v,\frac{8}{9}u^{2}\cos v\sin v,\frac{4}{3} u^{2}\sin ^{2}v \right\rangle\cdot \left\langle 0,-2u,\frac{8}{9}u\right\rangle =
-\frac{32}{27}u^{3}\sin ^{2}v-\frac{16}{9}u^{3}\sin v\cos v.
-\end{eqnarray*}
+\begin{align*}
+{\bf F}\left( {\bf r}\left( u,v\right) \right) &= \left\langle 2u^{2}\cos v\sin v,\frac{8}{9}u^{2}\cos v\sin v,\frac{4}{3}u^{2}\sin ^{2}v \right\rangle  \\
+{\bf F}\left( {\bf r}\left( u,v\right) \right) \cdot \left( {\bf r}_{u}\times {\bf r}_{v}\right) &=\frac{32}{27}u^{3}\sin ^{2}v-\frac{16}{9}u^{3}\sin v\cos v.
+\end{align*}
 
 De tal modo que el flujo sobre la porción del plano es
 \begin{gather} \label{T1}
-\displaystyle \iint_{S_1} {\bf F} \cdot d\boldsymbol{\sigma} = \int_{0}^{2\pi }\int_{0}^{1}\left(\frac{32}{27}u^{3}\sin ^{2}v-\frac{16}{9}u^{3}\sin v\cos v \right) dudv = \frac{8}{27}\pi
+\iint_{S_1} {\bf F} \cdot d\boldsymbol{\sigma} = \int_{0}^{2\pi }\int_{0}^{1} \frac{16u^3 \sin v}{9} \left(\frac{2}{3}\sin v-\cos v \right) dudv= \frac{8}{27}\pi
 \end{gather}
 
 El procedimiento mostrado antes se puede efectuar en \verb"Mathematica"
@@ -1711,7 +1713,7 @@ Con esta función se obtienen los siguientes vectores:
 ${\bf F}\left({\bm \alpha}(u,v)\right)=\left\langle 4u^2\sin^2 v,3u^2\cos^2 v,3-\frac{1}{2}u^{2}\left(5+\cos 2v\right)\right\rangle $, entonces \\
 ${\bf F}\left({\bm\alpha}(u,v)\right) \cdot \left({\bm\alpha}_{u}\times {\bm\alpha} _{v}\right)
 =48u^4\sin^2v\cos v+ \sqrt{3}u(6-u^2(\cos 2v+5)+12u^3\cos^2 v \sin v)$.
-Con lo cual, el flujo sobre la superficie está dado por
+Con lo cual, el flujo sobre la superficie está dado por:
 \begin{equation}\label{flujo1}
 \int_{0}^{1}\int_{0}^{2\pi}{\bf F}\left({\bm\alpha}(u,v)\right) \cdot \left({\bm\alpha}_{u}\times {\bm\alpha} _{v}\right)dvdu=\frac{7}{2}\sqrt{3}\pi
 \end{equation}
@@ -1746,7 +1748,7 @@ Además,
 {\bf F}\left({\bm \beta}(u,v)\right) \cdot \left({\bm \beta}_{v}\times {\bm \beta}_{u}\right) = 12u^{4}(2\sin v+\sqrt{3}\cos v)\sin(2v)+\sqrt{3}u(u^{2}(\cos(2v)-7) +6).
 \end{gather*}
 
-Con lo cual, el flujo sobre esta región está dado por
+Con lo cual, el flujo sobre esta región está dado por:
 \begin{equation}\label{flujo2}
 \int_{0}^{1}\int_{0}^{2\pi}{\bf F}\left({\bm \beta}(u,v)\right) \cdot \left({\bm \beta}_{v}\times {\bm \beta}_{u}\right)dvdu=\frac{5}{2}\sqrt{3}\pi
 \end{equation}
@@ -1891,7 +1893,7 @@ con lo cual
 {\bf F}({\bf r}(u,v) ) \cdot ({\bf r}_u \times {\bf r}_v)=
 \frac{ 8u \left (u-u \cos (2v) +3 \cos v \, \sqrt{9-2u^2(3+\cos(2v))}\right )}{\sqrt{9-6u^2-2u^2 \cos(2v)}};
 \end{gather*}
-por lo tanto, el flujo sobre la porción del elipsoide está dado por
+por lo tanto, el flujo sobre la porción del elipsoide está dado por:
 \begin{equation} \label{ejercicio6e}
 \int_0^1 \int_0^{2\pi} {\bf F}({\bf r}(u,v) ) \cdot ({\bf r}_u \times {\bf r}_v) dvdu \approx 10.844
 \end{equation}
@@ -1958,7 +1960,6 @@ PlotRange->{{-2,3},{-2,3}},PlotStyle->{Red,Black,Red}],{t,0,1}]
 \end{tcolorbox}
 
 La función obtenida al hacer esta construcción es la siguiente:
-
 \begin{multline}
 {\bf r}(t,u)=(1-u)\left(\sqrt{7/2}\cosh((d-c)t+c),\sqrt{7}\sinh((d-c)t+c)\right )+ \\
 u\left (\sqrt{5}\cos((b-a)(1-t)+a),\sqrt{5}\sin((b-a)(1-t)+a)\right) \label{ejercicio6ec}
@@ -1992,7 +1993,7 @@ Show[A2,A1,BoxRatios->{1,1,1}]
 Utilizando la expresión \ref{ejercicio6ec}, se establece que el flujo sobre la superficie del hiperboloide $H$
 está dado por la expresión
 \begin{equation} \label{ejercicio6h}
-4 \iint_H {\bf F}({\bf r}(t,u) ) \cdot ({\bf r}_u \times {\bf r}_v) dt dt \approx 41.0176
+4 \iint_H {\bf F}({\bf r}(t,u) ) \cdot ({\bf r}_u \times {\bf r}_v) dtdu \approx 41.0176
 \end{equation}
 Este valor se obtuvo con \verb"Mathematica" con estas instrucciones:
 
@@ -2050,7 +2051,7 @@ en donde $u\in \lbrack 0,1]$, $v\in \lbrack 0,2\pi ]$.
 Con la función ${\bf r}$, al evaluarla en el campo vectorial se sigue que
 \[{\bf F}\left({\bf r}\left( u,v\right) \right) =\left\langle \frac{3\sqrt{15}}{2}u\cos v,\sqrt{\frac{15}{2}}u\sin v,\frac{45}{8}u^{2}\cos 2v-\frac{135}{8}u^{2}+9\right\rangle.\]
 % ${\bf F}\left({\bf r}\left( u,v\right) \right) =\left\langle \frac{3\sqrt{15}}{2}u\cos v,\sqrt{\frac{15}{2}}u\sin v,\frac{45}{8}u^{2}\cos 2v-\frac{135}{8}u^{2}+9\right\rangle ,$
-Derivando parcialmente se obtienen los siguientes vectores;
+Derivando parcialmente se obtienen los siguientes vectores:
 \begin{eqnarray*}
 {\bf r}_{u} &=&\left\langle \frac{1}{2}\sqrt{15}\cos v,\frac{1}{2}\sqrt{2}\sqrt{15}%
 \sin v,\frac{15}{4}u\cos 2v-\frac{45}{4}u \right\rangle \\
@@ -2059,7 +2060,7 @@ Derivando parcialmente se obtienen los siguientes vectores;
 \end{eqnarray*}
 entonces,
 \[{\bf F}\left({\bf r}\left(u,v\right) \right) \cdot \left({\bf r}_{u}\times {\bf r}_{v}\right) =\frac{225\sqrt{2}}{32}u\left( u^{2}+\frac{24}{5}+5u^{2}\cos 2v\right).\]
-Por lo expuesto antes, el flujo sobre esta región está dado por
+Por lo expuesto antes, el flujo sobre esta región está dado por:
 \begin{equation}\label{flujo5}
 \int_{0}^{1}\int_{0}^{2\pi }\left( \frac{225\sqrt{2}}{32}u\left( u^{2}+ \frac{24}{5}+5u^{2}\cos 2v\right) \right) dvdu= \frac{2385}{64}\sqrt{2}\pi
 \end{equation}
@@ -2107,7 +2108,7 @@ Integrate[Dot[Cross[D[r,v],D[r,u]],{3x,y,3z}],{u,0,1},{v,0,2*Pi}]
 
 El flujo neto sobre toda la superficie del sólido es la suma de los resultados hallados en \ref{flujo5} y
 \ref{flujo6}, esto es: \[\frac{2385}{64}\sqrt{2}\pi +\frac{1815}{64}\sqrt{2}\pi = \frac{525}{8}\sqrt{2}\pi.\]
-Dado que ${\rm div}{\bf F}=7$, evidentemente, el valor obtenido es $7$ veces el volumen del sólido que se obtuvo en la expresión \ref{ejercicio3} de la página \pageref{ejercicio3}
+Dado que ${\rm div}{\bf F}=7$, evidentemente, el valor obtenido es $7$ veces el volumen del sólido que se obtuvo en la expresión \ref{ejercicio3} de la página \pageref{ejercicio3}.
 
 \item Hallar el flujo neto del campo vectorial ${\bf F}(x,y,z) = \la y,-x,z \ra $
 sobre la superficie del sólido interior a la esfera con ecuacion $x^2+y^2+z^2=9 $ y al cilindro cardióidico
@@ -2136,7 +2137,7 @@ Show[a,b]
 \end{Verbatim}
 \end{tcolorbox}
 
-A partir de la ecuación $r = 1 + \cos \theta$, se puede construir en el plano $xy$ la parametrización de la región que rellena esta cardioide. Usaremos las ecuaciones:
+A partir de la ecuación $r = 1 + \cos \theta$ se puede construir en el plano $xy$ la parametrización de la región que rellena esta cardioide. Usaremos las ecuaciones:
 \[
 x = u(1 + \cos \theta) \cos \theta, \quad
 y = u(1 + \cos \theta) \sin \theta, \quad
@@ -2227,7 +2228,7 @@ además, estos vectores permiten calcular
 {\bf r}_{u}\times {\bf r}_{\theta } = \bigg\langle 2\sqrt{2}\cos^2(\theta/2)(-1+2\cos(\theta))\sqrt{15-4\cos(\theta)-\cos(2\theta)}, \\
 \sqrt{2}(1+2\cos(\theta))\sqrt{15-4\cos(\theta)-\cos(2\theta)}\sin(\theta),0 \bigg\rangle .
 \end{multline*}
-La densidad de flujo está dada por
+La densidad de flujo está dada por:
 \[{\bf F}\left({\bf r}\left( u,\theta \right) \right) \cdot \left({\bf r}_{u}\times {\bf r}_{\theta}\right) =\frac{1}{\sqrt{2}}\sqrt{15 - 4 \cos(\theta) - \cos(2\theta)},\]
 cuya integral proporciona el flujo de ${\bf F}$ sobre la superficie del cilindro cardióidico; esto es:
 \begin{equation}\label{flujo8}
@@ -2346,29 +2347,28 @@ Show[a,b]
 \end{tcolorbox}
 
 Con la ecuación \(\rho = 1 + \cos \phi\) y las expresiones que definen las coordenadas esféricas, se propone la siguiente función:
-\[
+\begin{gather*}
 \mathbf{r}(\theta,\phi) =
 \left\langle
 (1 + \cos \phi)\sin \phi \cos \theta,\
 (1 + \cos \phi)\sin \phi \sin \theta,\
 (1 + \cos \phi)\cos \phi
 \right\rangle,
-\]
+\end{gather*}
 la cual parametriza la superficie del sólido con $\phi \in[0,\pi], \theta\in[0,2\pi]$.
 De esta función se obtiene:
-\begin{eqnarray*}
-{\bf r}_{\theta} &=& \left\langle -\left(\cos\phi +1\right)\sin\theta\sin\phi,(\cos \phi +1)\cos\theta\sin\phi,0\right\rangle \\
-{\bf r}_{\theta } &=& \big \langle -\left(\cos\phi +1\right)\sin\theta\sin\phi,(\cos \phi +1)\cos\theta\sin\phi, 0 \big\rangle \\
-{\bf r}_{\phi } &=& \big\langle \left( \cos \phi +\cos (2\phi) \right)\cos \theta , \left( \cos \phi +\cos (2\phi) \right)\sin \theta,
-\left( 2\cos \phi +1\right)\sin \phi\big \rangle. \\
-\end{eqnarray*}
+\begin{align*}
+{\bf r}_{\theta} &= \left\langle -\left(\cos\phi +1\right)\sin\theta\sin\phi,(\cos \phi +1)\cos\theta\sin\phi,0\right\rangle \\
+{\bf r}_{\phi } &= \big\langle \left( \cos \phi +\cos (2\phi) \right)\cos \theta , \left( \cos \phi +\cos (2\phi) \right)\sin \theta,
+\left( 2\cos \phi +1\right)\sin \phi\big \rangle.
+\end{align*}
 Además,
-\begin{multline*}
-{\bf F}({\bf r}(\theta,\phi))=(1+\cos\phi) \left\langle\sin\phi\cos\theta,\sin\phi\sin\theta,2\cos\phi\right\rangle,\\
-{\bf r}_{\phi}\times {\bf r}_{\theta}=\Big\langle\left(\cos\phi+1\right)\left(\sin2\phi+\sin\phi\right)\cos\theta\sin \phi,\\
-\left( \cos \phi +1\right) \left( \sin 2\phi +\sin \phi \right) \sin \theta \sin \phi ,\left( \cos \phi +1\right)
+\begin{align*}
+{\bf F}({\bf r}(\theta,\phi)) & = (1+\cos\phi) \left\langle\sin\phi\cos\theta,\sin\phi\sin\theta,2\cos\phi\right\rangle,\\
+{\bf r}_{\phi}\times {\bf r}_{\theta} & = \Big\langle\left(\cos\phi+1\right)\left(\sin2\phi+\sin\phi\right)\cos\theta\sin \phi,\\
+& \quad \left( \cos \phi +1\right) \left( \sin 2\phi +\sin \phi \right) \sin \theta \sin \phi ,\left( \cos \phi +1\right)
 ^{2}\left( 2\cos \phi -1\right) \sin \phi \Big\rangle .
-\end{multline*}
+\end{align*}
 Por lo tanto,
 \[
 \mathbf{F}(\mathbf{r}(\phi,\theta)) \cdot (\mathbf{r}_{u} \times \mathbf{r}_{\phi}) =
@@ -2512,7 +2512,7 @@ Es claro que \[{\bf F}({\bf r}(u,v))=\left\langle 1-\frac{1}{4}u^{2},u\sin v, -\
 {\bf r}_{v}&=\left\langle 0,-\sin v,u\cos v\right\rangle \\
 {\bf r}_{u}\times {\bf r}_{v}&= \left\langle \sin ^{2}v,-u\cos v,-\sin v\right\rangle.
 \end{align*}
-\textls[-10]{Entonces, ${\bf F}({\bf r}(u,v)) \cdot ({\bf r}_{u}\times {\bf r}_{v}) = u(2-u)$. Con lo cual, el flujo está dado por}
+Entonces, ${\bf F}({\bf r}(u,v)) \cdot ({\bf r}_{u}\times {\bf r}_{v}) = u(2-u)$. Con lo cual, el flujo está dado por:
 \begin{equation}\label{flujo15}
 \int_0^2\int_0^{2\pi} u(2-u) du dv = \frac{8\pi}{3}
 \end{equation}
@@ -2565,11 +2565,12 @@ Show[a,b]
 El paraboloide y el paraboloide hiperbólico se intersecan en una curva cuya proyección en el plano $yz$, está dada por
 $4y^{2}+5z^{2}=15$, esta ecuación representa una elipse.
 Haciendo $y=\frac{\sqrt{15}}{2}u\cos v$, $z=\sqrt{3}u\sin v$ se des\-cribe esta región. También se cumplen las siguientes relaciones para el paraboloide.
+
 \begin{gather*}
 x=\left( \frac{\sqrt{15}}{2}u\cos v\right)^{2}+\left(\sqrt{3}u\sin v\right)^{2}-3 =\frac{3}{8}u^{2}\cos 2v
 +\frac{27}{8}u^{2}-3.
 \end{gather*}
-Asimismo el paraboloide hiperbólico
+Asimismo, el paraboloide hiperbólico
 \begin{gather*}
 x=\frac{1}{9}\left( \left( \frac{\sqrt{15}}{2}u\cos v\right) ^{2}-\left( \sqrt{3}u\sin v\right) ^{2}+3\right)
 = \frac{3}{8}u^{2}\cos 2v+\frac{1}{24}u^{2}+\frac{1}{3}.
@@ -2583,7 +2584,7 @@ con $u \in [0,1]$, $v \in [0,2\pi]$. De esta función se obtienen los siguientes
 \begin{align*}
 {\bf r}_{u}&=\left\langle \frac{27}{4}u+\frac{3}{4}u\cos 2v,\frac{1}{2}\sqrt{15}\cos v,\sqrt{3}\sin v\right\rangle \\
 {\bf r}_{v}&=\left\langle -\frac{3}{4}u^{2}\sin 2v,-\frac{1}{2}\sqrt{15}u\sin v,\sqrt{3}u\cos v\right\rangle \\
-{\bf r}_{u}\times {\bf r}_{v}&=\left\langle -\frac{3}{2}\sqrt{5}u,\frac{15}{2}\sqrt{3}u^{2}\cos v, 3\sqrt{3}\sqrt{5}u^{2}\sin v\right\rangle
+{\bf r}_{u}\times {\bf r}_{v}&=\left\langle -\frac{3}{2}\sqrt{5}u,\frac{15}{2}\sqrt{3}u^{2}\cos v, 3\sqrt{3}\sqrt{5}u^{2}\sin v\right\rangle.
 \end{align*}
 
 \clearpage
@@ -2693,13 +2694,17 @@ $z=x^2-2x+y^2$, interior al cilindro cardióidico $r=1+\cos t$.
 \includegraphics[height=3.5cm]{Img/T_36d.pdf}
 \end{figure}
 
-Evalúe $\int_S\rot{\bf F}\cdot d{\bf S}$ y $\int_C{\bf F}\cdot d{\bf r}$; en donde $S$ es la superficie en mención y $C$ es su frontera.
+Evalúe 
+\begin{gather*}
+\int_S\rot{\bf F}\cdot d{\bf S}\quad \text{y}\quad \int_C{\bf F}\cdot d{\bf r};
+\end{gather*}
+en donde $S$ es la superficie en mención y $C$ es su frontera.
 
 \item Calcule el flujo del campo vectorial ${\bf F}(x,y,z)= \la z-y,y,z^2 \ra $ sobre la superficie del paraboloide hiperbólico $9z=x^2-y^2$, interior al cilindro $x^2+y^2 \leq 16$ y exterior al cilindro cardióidico $r=1+\cos t$.
 
 \begin{figure}[H]
 \centering
-\caption{Campo vectorial ${\bf F}(x,y,z)= \la z-y,y,z^2\ra $ sobre una silla de montar}
+\caption[Campo vectorial ${\bf F}(x,y,z)= \la z-y,y,z^2\ra$ sobre una silla de montar]{Campo vectorial ${\bf F}(x,y,z)= \la z-y,y,z^2\ra$\\ sobre una silla de montar}
 \includegraphics[height=3.5cm]{Img/T_37a.pdf} \hspace{5mm}
 \includegraphics[height=3.5cm]{Img/T_37b.pdf}
 \end{figure}

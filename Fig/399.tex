@@ -1,0 +1,32 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-3.5,-0.7)(2,3) % \psgrid
+\psset{algebraic,unit=1.2,Alpha=25,Beta=15}
+\pstThreeDCoor[linecolor=gray,deltaz=2,IIIDzticksep=0.5,Dz=1,xMin=-0.8,xMax=3,%
+yMin=-0.4,yMax=2,zMin=0,zMax=2.5,spotZ=180,IIIDticks,IIIDlabels]
+\parametricplotThreeD[linestyle=dashed,linewidth=0.2pt](0,1){0|t|4*t-2*t^2}
+\pscustom[fillstyle=solid,fillcolor=gray!75]{
+\psset{linestyle=dashed,linewidth=0.7pt}
+\parametricplotThreeD(1,2){t|0|4*t-2*t^2}
+\parametricplotThreeD(2,1){t|2-t|4*t-2*t^2}
+\pstThreeDLine[linestyle=none](1,1,2)(1,0,2) }
+\pscustom[fillstyle=solid,fillcolor=lightgray!40]{
+\parametricplotThreeD(2,1){t|2-t|4*t-2*t^2}
+\pstThreeDLine[linestyle=none](1,1,2)(1,1,0)(2,0,0)  }
+\psset{linestyle=dashed,linewidth=0.7pt}
+\parametricplotThreeD(0,1){t|0|4*t-2*t^2}
+\pstThreeDLine(2,0,0)(1,0,0)(1,0,2)
+\pstThreeDLine(1,0,0)(1,1,0)
+\pstThreeDLine[linewidth=0.2pt](1,0,2)(0,0,2)(0,1,2)(0,1,0)(1,1,0)
+\pstThreeDLine[linestyle=dashed,linewidth=0.2pt](1,1,2)(0,1,2)
+\pstThreeDCoor[linecolor=black,deltaz=2,IIIDzticksep=0.5,Dz=1,xMin=-0.8,xMax=3,%
+yMin=-0.4,yMax=2,zMin=0,zMax=2.5,spotZ=180,IIIDticks,IIIDlabels]
+\uput[0](-0.3,2){$1$}
+\end{pspicture}
+
+\end{document}

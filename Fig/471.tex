@@ -1,0 +1,21 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2.5,-0.4)(2.5,2.2) %\psgrid
+\psset{algebraic,plotstyle=curve,xunit=1,yunit=0.65}
+\psaxes[Dy=2,linecolor=black]{->}(0,0)(-2.5,-0.9)(3,3.5)[$x$,-90][$z$,0]
+\pscustom[fillstyle=vlines,hatchcolor=black!60,hatchsep=1pt,linestyle=none]{
+\psparametricplot{-1}{1}{t|t^2}
+\psparametricplot{1}{-1}{t|Euler^(1-t^2)}
+}
+\psparametricplot[linecolor=black!40]{-3}{3}{t|Euler^(1-t^2)}
+\psparametricplot[linecolor=black!40,arrows=->]{-1.5}{1.6}{t|t^2}
+\rput(2,1){$z=e^{1-x^2}$}
+\rput(1.5,3){$z=x^2$}
+\end{pspicture}
+
+\end{document}

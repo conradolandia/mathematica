@@ -4,7 +4,7 @@
 \usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
 \usepackage{bm,calculus}
 \newcommand{\cn}[3]{\pscircle(#1,#2){5pt}\rput(#1,#2){$#3$}}
-
+\psset{showorigin=false}
 \begin{document}
 \begin{pspicture}(-1.8,-1.5)(3.5,2.2) % \psgrid
   \psset{algebraic,xunit=1.5,yunit=1.1,plotstyle=curve}
@@ -14,27 +14,27 @@
     \psline(0,1)(1,1)
     \psparametricplot{1}{0}{2-t^2,t}
   }
-  \pscustom[fillstyle=hlines,hatchcolor=gray!40!cyan,linestyle=none,,hatchsep=1.2pt]{
+  \pscustom[fillstyle=hlines,hatchcolor=gray!40,linestyle=none,,hatchsep=1.2pt]{
     \psparametricplot{1}{1.4142}{2-t^2,t}
     \psline(0,1.4142)(0,1)(1,1)
   }
-  \pscustom[fillstyle=solid,fillcolor=gray!60!blue,linestyle=none,opacity=0.6]{
+  \pscustom[fillstyle=solid,fillcolor=gray!60,linestyle=none,opacity=0.6]{
     \psparametricplot{1}{1.22}{(t^2-2)*(t^2-1),t}
     \psline(-0.25,1.22)(-0.25,1)(0,1)
   }
-  \pscustom[fillstyle=hlines,hatchcolor=gray!50!cyan,hatchwidth=1pt,linestyle=none,hatchsep=1.5pt]{
+  \pscustom[fillstyle=hlines,hatchcolor=gray!50,hatchwidth=1pt,linestyle=none,hatchsep=1.5pt]{
     \psparametricplot{0}{1}{(t^2-2)*(t^2-1),t}
     \psline(0,1)(0,0)
   }
   \pscustom[fillstyle=hlines,hatchcolor=gray!60,hatchwidth=1pt,hatchsep=1pt,linestyle=none,opacity=0.6]{
     \psline(-0.25,0)(0,0)(0,1)(-0.25,1)(-0.25,0)
   }
-  \pscustom[fillstyle=vlines,hatchangle=0,hatchcolor=gray!60!cyan,hatchwidth=1pt,hatchsep=1pt,linestyle=none,opacity=0.6]{
+  \pscustom[fillstyle=vlines,hatchangle=0,hatchcolor=gray!60,hatchwidth=1pt,hatchsep=1pt,linestyle=none,opacity=0.6]{
     \psparametricplot{1}{1.414}{(t^2-2)*(t^2-1),t}
     \psline(0,1.4142)(0,1)
   }
-  \psparametricplot[arrows=->,linecolor=blue!60!black]{-1.5}{1.6}{(t^2-2)*(t^2-1),t}
-  \psparametricplot[arrows=->,linecolor=red]{-1.5}{1.6}{2-t^2,t}
+  \psparametricplot[arrows=->,linecolor=black!60]{-1.5}{1.6}{(t^2-2)*(t^2-1),t}
+  \psparametricplot[arrows=->,linecolor=gray]{-1.5}{1.6}{2-t^2,t}
   \psline[linecolor=black](-0.25,-1.22)(-0.25,1.22)
   %\rput(2.1,1.6){$x=(z^2-1)(z^2-2)$}
   %\rput(-1.2,1.6){$x=2-z^2$}

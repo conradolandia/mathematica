@@ -29,7 +29,7 @@ Se ilustrará la manera de plantear sumas de Riemann, el intercambio en el orden
   En resumen $x_{i}=-1+\frac{3i}{n}$, $y_{j}=\frac{2j}{m}$.
   Si $( x_{i}^{\ast },y_{j}^{\ast}) $ es un punto cualquiera en el rectángulo
   $\left[ x_{i},x_{i+1}\right] \times \left[ y_{j},y_{j+1}\right]$,
-  en particular consideraremos $\left( x_{i},y_{j}\right) $, entonces el volumen aproximado de paralelepípedo está dado por
+  en particular consideraremos $\left( x_{i},y_{j}\right) $, entonces el volumen aproximado de paralelepípedo está dado por:
   \begin{align*}
     f\left( x_{i},y_{j}\right) \Delta x\Delta y &= \left( 6-\frac{1}{4}\left( -1+ \frac{3i}{n}\right) ^{3}-\left( \frac{2j}{m}\right) ^{2}\right) \frac{3}{n} \frac{2}{m} \\
     &= \frac{75}{2mn}-\frac{24j^{2}}{m^{3}n}+\frac{81i^{2}}{2mn^{3}}-\frac{81i^{3}}{2mn^{4}}-\frac{27i}{2mn^{2}}.
@@ -98,7 +98,7 @@ Aplicando la suma de Riemann, el resultado es:
 \end{equation*}
 Al tomar el límite de la suma de Riemann, se obtiene:
 \[
-  \lim_{n,m\rightarrow \infty }\left( \sum_{i=1}^{n}\sum_{j=1}^{m}f(x_{i},y_{j}) \Delta x\Delta y\right) = \frac{1215}{128}
+  \lim_{n,m\rightarrow \infty }\left( \sum_{i=1}^{n}\sum_{j=1}^{m}f(x_{i},y_{j}) \Delta x\Delta y\right) = \frac{1215}{128}.
 \]
 Por otro lado, al evaluar la integral doble se obtiene el mismo valor:
 \[
@@ -106,7 +106,7 @@ Por otro lado, al evaluar la integral doble se obtiene el mismo valor:
 \]
 \end{ejemplo}
 
-Esta suma de Riemann, su correspondiente límite y la integral doble, se evalúan en \verb"Mathematica" con ayuda de las siguientes instrucciones:
+Esta suma de Riemann, su correspondiente límite y la integral doble se evalúan en \verb"Mathematica" con ayuda de las siguientes instrucciones:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 f[x_,y_]:=3-x^2*y
@@ -157,7 +157,7 @@ $}
 \end{equation*}
 \end{ejemplo}
 
-Las figuras y cálculos anteriores se hicieron en \verb"Mathematica" ejecutando las siguientes instrucciones:
+Las figuras y los cálculos anteriores se hicieron en \verb"Mathematica" ejecutando las siguientes instrucciones:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 f[x_,y_]:=y^2*Cos[x]+x^2*Sin[2*y]
@@ -297,7 +297,7 @@ De lo cual se sigue que $\left\Vert{\bf r}_{u}\times{\bf r}_{t}\right\Vert=\left
 Con la definición de la función se observa que $xy=(\left(u-1\right) \left( t-2\right) +\sqrt{t}u) t$, entonces:
 
 \resizebox{\linewidth}{!}{$
-\iint_{R}xydA=\int_{0}^{1}\int_{0}^{1}\left((u-1)(t-2)+u\sqrt{t}\right)t\left|t+\sqrt{t}-2\right|\,du\,dt=\frac{7}{24}
+\iint_{R}xydA=\int_{0}^{1}\int_{0}^{1}\left((u-1)(t-2)+u\sqrt{t}\right)t\left|t+\sqrt{t}-2\right|\,du\,dt=\frac{7}{24}.
 $}
 \end{tcolorbox}
 
@@ -330,22 +330,22 @@ es decir, la región de interés se describe con $2\cos \theta \leq r \leq 2$ y 
 \fuentepropia
 \end{figure}
 
-Estas figuras ayudan a establecer que la masa $M$ de la lámina en el orden $dxdy$ está dada por
+Estas figuras ayudan a establecer que la masa $M$ de la lámina en el orden $dxdy$ está dada por:
 \[
-M=\int_{0}^{1}\int_{0}^{1-\sqrt{1-y^{2}}}xdxdy+\int_{0}^{1}\int_{1+\sqrt{1-y^{2}}}^{\sqrt{4-y^{2}}}xdxdy+\int_{1}^{2}\int_{0}^{\sqrt{4-y^{2}}}xdxdy
+M=\int_{0}^{1}\int_{0}^{1-\sqrt{1-y^{2}}}xdxdy+\int_{0}^{1}\int_{1+\sqrt{1-y^{2}}}^{\sqrt{4-y^{2}}}xdxdy+\int_{1}^{2}\int_{0}^{\sqrt{4-y^{2}}}xdxdy.
 \]
 
-En el orden $dydx$, la integral correspondiente es
+En el orden $dydx$, la integral correspondiente es:
 \[
 M=\int_{0}^{2}\int_{\sqrt{2x-x^{2}}}^{\sqrt{4-x^{2}}}xdydx=\frac{8}{3}-\frac{\pi}{2},\]
-y en coordenadas polares la masa está dada por
+y en coordenadas polares la masa está dada por:
 \[M=\ds\int_{0}^{\pi/2}\int_{2\cos\theta}^2\left(r\cos\theta\right)rdrd\theta=\frac{8}{3}-\frac{\pi}{2}.\]
-Mientras que los momentos con respecto al eje  $y$ y al eje $x$ están dados por
+Mientras que los momentos con respecto al eje  $y$ y al eje $x$ están dados por:
 \begin{eqnarray*}
 \mu {y} &=& \int_{0}^{2}\int_{\sqrt{2x-x^{2}}}^{\sqrt{4-x^{2}}}x^2dydx=\int_{0}^{\pi /2}\int_{2\cos \theta }^{2}r^{3}\cos ^{2}\theta drd\theta = \frac{3}{8}\pi \\
 \mu {x} &=& \int_{0}^{2}\int_{\sqrt{2x-x^{2}}}^{\sqrt{4-x^{2}}}xydydx=\int_{0}^{\pi /2}\int_{2\cos \theta }^{2}r^{3}\cos \theta \sin \theta drd\theta = \frac{4}{3}.
 \end{eqnarray*}
-Por lo tanto, el centro de masa de la lámina es
+Por lo tanto, el centro de masa de la lámina es:
 \[\left( \overline{x},\overline{y}\right) = \left( \frac{\mu _{y}}{M},\frac{\mu _{x}}{M}\right) = \left( \frac{\frac{3}{8}\pi }{\frac{8}{3}-\frac{1}{2}\pi },\frac{\frac{4}{3}}{\frac{8}{3}-\frac{1}{2}\pi }\right) = \left( \frac{9\pi }{64-12\pi },\frac{8}{16-3\pi}\right). \]
 
 Los cálculos para obtener los momentos y la masa se hacen usando las siguientes instrucciones:
@@ -389,25 +389,24 @@ En el orden $dxdy$, $x$ recorre los puntos desde la circunferencia menor hasta l
 
 En coordenadas polares se satisface que $2\sin \theta \leq r \leq 2$ para $0 \leq \theta \leq \pi/2$. Por lo tanto, la masa $M$ de la lámina se puede hallar evaluando cualquiera de las siguientes integrales.
 %
-\[
-\resizebox{\textwidth}{!}{$
+\begin{gather*}
 \begin{aligned}
 M &= \int_{0}^{1} \int_{0}^{1-\sqrt{1-x^{2}}}xy^{2} \,dy\,dx
 + \int_{0}^{1} \int_{1+\sqrt{1-x^{2}}}^{\sqrt{4-x^{2}}} xy^{2} \,dy\,dx
 + \int_{1}^{2} \int_{0}^{\sqrt{4-x^{2}}} xy^{2} \,dy\,dx \\
 &= \int_{0}^{2} \int_{\sqrt{2y - y^{2}}}^{\sqrt{4 - y^{2}}} xy^{2} \,dx\,dy
 = \int_{0}^{\frac{\pi}{2}} \int_{2\sin\theta}^{2} r^{4} \sin^{2}\theta \cos\theta \,dr\,d\theta
-= \frac{4}{3}
+= \frac{4}{3}.
 \end{aligned}
-$}
-\]
+\end{gather*}
 
-%
 Los momentos con respecto al eje $x$, $\mu_{x}$ y, con respecto al eje $y$, $\mu_{y}$,
 se pueden determinar de la siguiente manera:
 \begin{gather*}
-\mu_{x}=\int_{0}^{2}\int_{\sqrt{2y-y^{2}}}^{\sqrt{4-y^{2}}}xy^{3}dxdy=\int_{0}^{\frac{\pi }{2}}\int_{2\sin \theta }^2r^{5}\cos \theta \sin^{3}\theta drd\theta=\frac{8}{5}\\
-\mu_{y}= \int_{0}^{2}\int_{\sqrt{2y-y^{2}}}^{\sqrt{4-y^{2}}}x^{2}y^{2}dxdy=\int_{0}^{\pi /2}\int_{2\sin \theta }^{2} r^5 \cos^2 \theta\sin^2 \theta drd\theta =\frac{25}{48}\pi.
+  \begin{aligned}
+\mu_{x}&=\int_{0}^{2}\int_{\sqrt{2y-y^{2}}}^{\sqrt{4-y^{2}}}xy^{3}dxdy=\int_{0}^{\frac{\pi }{2}}\int_{2\sin \theta }^2r^{5}\cos \theta \sin^{3}\theta drd\theta=\frac{8}{5}\\
+\mu_{y}&= \int_{0}^{2}\int_{\sqrt{2y-y^{2}}}^{\sqrt{4-y^{2}}}x^{2}y^{2}dxdy=\int_{0}^{\pi /2}\int_{2\sin \theta }^{2} r^5 \cos^2 \theta\sin^2 \theta drd\theta =\frac{25}{48}\pi.
+  \end{aligned}
 \end{gather*}
 
 Con lo anterior, se concluye que el centro de masa está dado por
@@ -456,7 +455,7 @@ De acuerdo con lo anterior, se pueden plantear las integrales, como se muestra a
 
 \begin{parrafonumerado}[resume=ordenint]
 \item
-Escribe en coordenadas rectangulares la siguiente integral: \[\ds\int_{0}^{\pi/4}\int_{0}^{2\sqrt{2}}r^2drd\theta.\]
+Escribir en coordenadas rectangulares la siguiente integral: \[\ds\int_{0}^{\pi/4}\int_{0}^{2\sqrt{2}}r^2drd\theta.\]
 \end{parrafonumerado}
 
 Los límites de integración son $r=0$, $r=2\sqrt{2}$, $\theta=0$, $\theta= \pi/4$,
@@ -531,15 +530,15 @@ El planteamiento de la integral doble en coordenadas rectangulares requiere hace
 
 En el orden $dydx$ la región $R$ se divide en dos partes, en una de ellas $y$ recorre los puntos desde la recta $y=x$ hasta la curva $y=2-x^2$, para $x\in [-2,1]$.
 En la otra región $y$ recorre los puntos desde la curva
-$y=x^2+2x-1$ hasta la recta $y=x$, con $x\in [-2,1]$. En este caso, la integral es
+$y=x^2+2x-1$ hasta la recta $y=x$, con $x\in [-2,1]$. En este caso, la integral es:
 \[\ds \int_{-2}^{1}\int_{x}^{2-x^{2}}\left( y-x\right)
-dydx+\int_{-2}^{1}\int_{x^{2}+2x-2}^{x}\left( x-y\right) dyd = \frac{81}{10}\]
+dydx+\int_{-2}^{1}\int_{x^{2}+2x-2}^{x}\left( x-y\right) dyd = \frac{81}{10}.\]
 
 Con las siguientes instrucciones se evalúa esta integral.
 
 \begin{tcolorbox}[title=\bf Instrucción en \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
-Integrate[y-x,{x,-2,1},{y,x,2-x^2}]+Integrate[x-y,
-{x,-2,1},{y,x^2+2*x-2,x}]
+Integrate[y-x,{x,-2,1},{y,x,2-x^2}]+Integrate[x-y,{x,-2,1},
+{y,x^2+2*x-2,x}]
 \end{Verbatim}
 \end{tcolorbox}
 
@@ -659,7 +658,7 @@ luego, ${\bf r}_{t}\times {\bf r}_{u}= \left\langle 0,0,-ub\left( 2a+2\sin \left
 entonces
 $\left\| {\bf r}_{t}\times {\bf r}_{u}\right\| =\left| bu\left( 2a+2\sin \left( t\right)
 \cos (2t) -\cos \left( t\right) \sin (2t) \right)\right| $,
-cuya integral nos provee el área de la región en mención
+cuya integral nos provee el área de la región en mención:
 \[\int_{0}^{2\pi }\int_{0}^{1}\left| bu\left( 2a+2\sin \left( t\right) \cos
 (2t) -\cos \left( t\right) \sin (2t) \right) \right|
 dudt= 2ab\pi.\]
@@ -695,7 +694,7 @@ por lo tanto $u=0$ o $v=\pm 1$. De lo anterior se obtienen los límites para la 
 \fuentepropia
 \end{figure}
 
-El jacobiano de la transformación es
+El jacobiano de la transformación es:
 \[\left|
 \begin{array}{cc}
 \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\[0.2cm]
@@ -745,14 +744,14 @@ Esta integral también puede evaluarse en la forma
 Estas integrales se evalúan ejecutando las siguientes instrucciones:
 
 \begin{tcolorbox}[title=\bf Instrucción en \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
-Integrate[x*y,{y,1,Sqrt[3]},{x,1/y,y}]+Integrate[x*y,
-{y,Sqrt[3],3},{x,y/3,3/y}]
+Integrate[x*y,{y,1,Sqrt[3]},{x,1/y,y}]+Integrate[x*y,{y,Sqrt[3],3},
+{x,y/3,3/y}]
 Integrate[x*y,{x,1/Sqrt[3],1},{y,1/x,3*x}]+
 Integrate[x*y,{x,1,Sqrt[3]},{y,x,3/x}]
 \end{Verbatim}
 \end{tcolorbox}
 
-\item Evaluar $\ds \iint_R xy dA$, en donde $R$ es la región en el primer cuadrante acotada por las graficas de las expresiones
+\item Evaluar $\ds \iint_R xy dA$, en donde $R$ es la región en el primer cuadrante acotada por las gráficas de las expresiones
 $x^{2}y=1$, $x^{2}y=4$, $y=x^{2}$ y $y=4x^{2}$.
 
 \begin{figure}[H]
@@ -763,7 +762,7 @@ $x^{2}y=1$, $x^{2}y=4$, $y=x^{2}$ y $y=4x^{2}$.
 \end{figure}
 
 Los puntos de intersección de estas curvas son $\left( 1,1\right) $, $\left( \sqrt{2},2\right) $,
-$\left( \frac{1}{\sqrt{2}},2\right) $ y $\left( 1,4\right)$; con esta información, se puede evaluar esta integral en coordenadas rectangulares, es decir
+$\left( \frac{1}{\sqrt{2}},2\right) $ y $\left( 1,4\right)$; con esta información, se puede evaluar esta integral en coordenadas rectangulares, es decir:
 \begin{gather*}
 \begin{aligned}
 \ds \iint_R xy dA &= \int_{\frac{1}{\sqrt{2}}}^{1}\int_{1/x^{2}}^{4x^{2}}xydydx+\int_{1}^{\sqrt{2}}\int_{x^{2}}^{4/x^{2}}xydydx \\
@@ -782,12 +781,11 @@ Integrate[x*y,{x,1,Sqrt[2]},{y,x^2,4/x^2}]
 \end{Verbatim}
 \end{tcolorbox}
 
-También se puede utilizar el teorema de cambio de variable, definiendo $u=x^{2}y$ y $v=y/x^{2}$, de donde $x=\sqrt[4]{\frac{u}{v}},\,\, y=\sqrt{u}\sqrt{v}$,
-por lo tanto, el jacobiano de la transformación es
-{\small \[\left|
+También se puede utilizar el teorema de cambio de variable, definiendo $u=x^{2}y$ y $v=y/x^{2}$, de donde $x=\sqrt[4]{\frac{u}{v}}$, $y=\sqrt{u}\sqrt{v}$; por lo tanto, el jacobiano de la transformación es:
+\[\left|
 \begin{array}{cc} \frac{\partial }{\partial u}\left( \sqrt[4]{\frac{u}{v}}\right) & \frac{\partial }{\partial v}\left( \sqrt[4]{\frac{u}{v}}\right) \\[0.1cm]
 \frac{\partial }{\partial u}\left( \sqrt{uv}\right) & \frac{\partial }{\partial v}\left( \sqrt{uv}\right)
-\end{array} \right| = \frac{1}{4\sqrt[4]{uv^{3}}}.\]}
+\end{array} \right| = \frac{1}{4\sqrt[4]{uv^{3}}}.\]
 
 A partir de la definición, es posible establecer que $1\leq u \leq 4$ y $1\leq v \leq 4$, respectivamente.
 \begin{align*}
@@ -802,6 +800,7 @@ $\, x^2-3y^2=1$, con $x\geq 0$.
 
 Puede probarse que
 \[ \int_{0}^{1}\int_{2y}^{\sqrt{1+3y^{2}}}xy^{2}dxdy+\int_{-1}^{0}\int_{-2y}^{\sqrt{1+3y^{2}}}xy^{2}dxdy= \frac{2}{15}.\]
+
 El siguiente proceso permite evaluar las anteriores integrales de una manera distinta.
 
 \begin{figure}[H]
@@ -820,7 +819,7 @@ Para la recta $y=x/2$, se sigue que}
 es decir $v=\ln \left(2+\sqrt{3}\right)$,
 mientras que para la recta $y=-x/2$, se concluye que
 \[v=-\ln \left(2+\sqrt{3}\right).\]
-Con el cambio propuesto, el jacobiano de la transformación es
+Con el cambio propuesto, el jacobiano de la transformación es:
 \begin{eqnarray*}
 \left|
 \begin{array}{ll}
@@ -878,13 +877,10 @@ Para determinar las ecuaciones de las curvas que acotan la región, lo haremos p
 
 \begin{itemize}
 \item Si $u=1$ y $0\leq v\leq 2$,
-entonces, $x=e^{-v/2}$ y $y=e^{v/2}$, por lo tanto $xy=1$.
-\item Si $u=2$ y $0\leq v\leq 2$, entonces \
-$x=2e^{-v/2}$ y $y=2e^{v/2}$ es decir $xy=4$.
-\item Si $v=0$ y $1\leq u\leq 2$,
-se sigue que $x=u$ y $y=u$ entonces $x=y$.
-\item Si $v=2$ y $1\leq u\leq 2$
-Entonces, $x=ue^{-1}$ y $y=ue$; por lo tanto, $y=e^{2}x$.
+entonces, $x=e^{-v/2}$ y $y=e^{v/2}$, por lo tanto, $xy=1$.
+\item Si $u=2$ y $0\leq v\leq 2$, entonces $x=2e^{-v/2}$ y $y=2e^{v/2}$, es decir, $xy=4$.
+\item Si $v=0$ y $1\leq u\leq 2$, se sigue que $x=u$ y $y=u$, entonces $x=y$.
+\item Si $v=2$ y $1\leq u\leq 2$ Entonces, $x=ue^{-1}$ y $y=ue$; por lo tanto, $y=e^{2}x$.
 \end{itemize}
 
 La figura~\ref{regionintegracion} muestra la región de integración. Los puntos de corte de las expresiones que determinan dicho conjunto en el plano $xy$
@@ -938,7 +934,7 @@ Con lo cual, la integral se reduce a
 \[\int_{1}^{4} \int_{1/y}^{y}\sqrt{\frac{y}{x}}e^{\sqrt{xy}}dxdy.\]
 Del cambio se sigue que
 \[uv=\sqrt{xy}\sqrt{\frac{y}{x}}= y;\] además, \[x=\frac{u^{2}}{uv}= \frac{u}{v}.\]
-El jacobiano en este caso es
+El jacobiano en este caso es:
 \[\left|
 \begin{array}{cc}
 \frac{1}{v} & v \\[0.1cm]
@@ -958,7 +954,7 @@ se muestran en la figura~\ref{fig:121x}.
 
 Por ello, la integral se transforma en
 \[\int_{1}^{4}\int_{1/y}^{y}\sqrt{\frac{y}{x}}e^{\sqrt{xy}}dxdy
-=\int_{1}^{4}\int_{1}^{4/u}2ue^{u}dvdu = 2e^4-8e\]
+=\int_{1}^{4}\int_{1}^{4/u}2ue^{u}dvdu = 2e^4-8e.\]
 Estas integrales se pueden evaluar con ayuda de las siguientes sentencias.
 
 \begin{tcolorbox}[title=\bf Instrucción en \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
@@ -969,7 +965,7 @@ Integrate[2*u*Exp[u],{u,1,4},{v,1,4/u}]
 \end{parrafonumerado}
 
 \begin{ejer}
-Use el teorema de cambio de variable para resolver los siguientes problemas
+Use el teorema de cambio de variable para resolver los siguientes problemas.
 
 \begin{enumerate}
 \item   Evaluar
@@ -1030,7 +1026,7 @@ además,
 $ {\bf r}_{t}\times {\bf r}_{u}= \langle -2( 1+2u) \cos t,-2( \sin t) (1+2u) ,( \cos t-2) ( 1+2u) \rangle $.
 El elemento diferencial de área es
 $\| {\bf r}_{t}\times {\bf r}_{u}\| = (1+2u) \sqrt{\cos ^{2}t-4\cos t+8}$.
-Por último, el área superficial está dada por
+Por último, el área superficial está dada por:
 {\small
 \[\int_{0}^{1}\int_{0}^{2\pi }( 1+2u) \sqrt{\cos ^{2}t-4\cos t+8}\, dtdu\approx 36.117.\]}
 Este valor se consiguió utilizando las siguientes instrucciones:
@@ -1061,7 +1057,7 @@ se intersecan. Se determinará la superficie sobre la esfera acotada por los cil
 La porción sobre la esfera interior de los cilindros se parametriza en dos casos:
 
 \begin{parrafoitemize}
-\item El cilindro $x^2+y^2=2r$ se reescribe como $(x-1)^2+y^2=1$. Para la superficie sobre la esfera se puede hacer $x=1+u\cos(t)$, $y=u\sin(t)$, donde $t\in[0,2\pi]$, lo cual parametriza la región sobre la esfera interior al cilindro proyectada el plano $xy$. Reemplazando en la ecuación de la esfera se obtiene {\small $-3+2u\cos(t)+u^2+z^2=0$}, cuya solución es {\small $z=\pm\sqrt{3-2u\cos(t)-u^2}$}. Por lo tanto la función
+\item El cilindro $x^2+y^2=2r$ se reescribe como $(x-1)^2+y^2=1$. Para la superficie sobre la esfera se puede hacer $x=1+u\cos(t)$, $y=u\sin(t)$, donde $t\in[0,2\pi]$, lo cual parametriza la región sobre la esfera interior al cilindro proyectada el plano $xy$. Reemplazando en la ecuación de la esfera se obtiene {\small $-3+2u\cos(t)+u^2+z^2=0$}, cuya solución es {\small $z=\pm\sqrt{3-2u\cos(t)-u^2}$}. Por lo tanto, la función
 \[{\bf r}( u,t) =\left\langle 1+u\cos (t) ,u\sin \left(
 t\right) ,\sqrt{3-2u\cos (t) -u^{2}}\right\rangle,\]
 con $t\in \lbrack 0,2\pi ],\,\, u\in \lbrack 0,1]$,
@@ -1145,7 +1141,7 @@ Este cálculo se hace con \verb"Mathematica" ejecutando las siguientes instrucci
 \end{tcolorbox}
 \end{parrafonumerado}
 
-\subsection{Un cilindro cardiogénico bajo un paraboloide}
+\subsection{Un cilindro cardióidico bajo un paraboloide}
 
 Las ecuaciones $3z=9-(x+2)^2-(y+1)^2$ y $r=1-\cos(t)$ representan un paraboloide y un cilindro cardiodónico, respectivamente.
 Estas superficies, junto con el plano $z=0$, acotan un sólido.
@@ -1159,7 +1155,7 @@ z &= \frac{1}{3}\left(9 - \left((1 - \cos(t))\cos(t) + 2\right)^2 - \left((1 - \
 
 \begin{figure}[H]
 \centering
-\caption{Cilindro cardiogénico y paraboloide}
+\caption{Cilindro cardióidico y paraboloide}
 \includegraphics[height=3cm]{Img/40a.pdf} \hspace{5mm}
 \includegraphics[height=3cm]{Img/40b.pdf}
 \fuentepropia
@@ -1173,7 +1169,7 @@ Por lo tanto, la curva de intersección se parametriza por medio de la función
 
 \begin{figure}[H]
 \centering
-\caption{Superficie sobre el cilindro cardiogénico acotada por el paraboloide}
+\caption[Superficie sobre el cilindro cardióidico acotada por el paraboloid]{Superficie sobre el cilindro cardióidico\\ acotada por el paraboloide}
 \includegraphics[height=3cm]{Fig/128.pdf} \hspace{5mm}
 \includegraphics[height=3cm]{Img/39c.pdf}
 \fuentepropia
@@ -1196,7 +1192,7 @@ Con estos vectores obtenemos el siguiente término:
 \frac{1}{6}\bigg |4\cos\left(\frac{t}{2}\right)-6\cos\left(\frac{3t}{2}\right)+2\cos\left(\frac{5t}{2}\right)-22\sin\left(\frac{t}{2}\right)\\
 +7\sin\left(\frac{3t}{2}\right)-3\sin\left(\frac{5t}{2}\right)\bigg |
 \end{multline*}
-Al integrarlo con los límites descritos antes, proporciona el valor del área del cilindro cardiogénico que se encuentra entre el plano $xy$ y el paraboloide, esto es
+Al integrarlo con los límites descritos antes, proporciona el valor del área del cilindro cardióidico que se encuentra entre el plano $xy$ y el paraboloide, esto es
 \[\int_{0}^{2\pi}\int_{0}^{1}\|\overrightarrow{p}_{t}(t,u)\times \overrightarrow{p}_{u}(t,u)\|dudt=\frac{608}{45}.\]
 Los cálculos se hacen en \verb"Mathematica", para este fin se define $x$ e $y$, que corresponden a la parametrización de la cardioide en el plano. Sustituyendo esto en la ecuación del paraboloide, se define
 $z$, que al unir los puntos permite parametrizar el sólido mediante la expresión $r$.
@@ -1212,7 +1208,7 @@ Integrate[Abs[A],{t,0,2*Pi},{u,0,1}]
 \end{Verbatim}
 \end{tcolorbox}
 
-\subsection{Un paraboloide fuera de un cilindro cardiogénico}
+\subsection{Un paraboloide fuera de un cilindro cardióidico}
 Consideremos el paraboloide con ecuación\ $3z=9-x^{2}-y^{2}$ y el cilindro cardiodónico $r=1-\cos(t)$.
 La proyección del paraboloide en el plano $xy$ es la circunferencia centrada en el origen del radio $3$,
 que puede parametrizarse como $\la 3\cos(t),3\sin(t)\ra $.
@@ -1230,14 +1226,14 @@ Para $t\in[0,2\pi],\, u\in[0,1]$, la región que se encuentra entre la cardioide
 \fuentepropia
 \end{figure}
 
-La coordenada $z$ se obtiene reemplazando $x$ y $z$ en la ecuación del paraboloide, esto es
+La coordenada $z$ se obtiene reemplazando $x$ y $z$ en la ecuación del paraboloide, esto es:
 \begin{align*}
 z &= \frac{1}{3}(9-x^2-y^2) \\
 &= \frac{1}{3}\left(9 - \left((1+2u + (u-1)\cos(t))\cos(t)\right)^2 \right. \\
 &\quad \left. - \left((1+2u + (u-1)\cos(t))\sin(t)\right)^2\right) \\
 &= \frac{1}{3}\left( (u-1)\cos(t)+2 \right) \left( (1-u)\cos(t) - 2u - 4 \right).
 \end{align*}
-Entonces la superficie sobre el paraboloide que se encuentra fuera del cilindro cardiogénico, y sobre el plano $xy$ se parametriza como:
+Entonces la superficie sobre el paraboloide que se encuentra fuera del cilindro cardióidico, y sobre el plano $xy$ se parametriza como:
 \begin{gather*}
 {\bf r}(t,u)=\bigg \langle(1+2u+(u-1)\cos(t))\cos(t),(1+2u+(u-1)\cos(t))\sin(t) \\
 \frac{1}{3}(u-1)(\cos(t)+2)((1-u)\cos(t)-2u-4) \bigg \rangle, u\in\lbrack0,1],t\in [0,2\pi].
@@ -1267,7 +1263,7 @@ en donde
 \begin{gather*}
 f(u,t) = \sqrt{4\cos(t)(u - 1)((u - 1)\cos(t) + 4u + 2) + 13 + 16u(1 + u)}
 \end{gather*}
-con lo cual, el área de la superficie es
+con lo cual, el área de la superficie es:
 \[\int_{0}^{1}\int_{0}^{2\pi} \|{\bf r}_{t}\times {\bf r}_{u}\|\,\, dtdu\approx 41.9822.\]
 Para hacer los cálculos en \verb"Mathematica" definimos $x$ e $y$, que corresponden a las expresiones para la cardioide. La región entre las curvas se parametriza como \verb"r", mientras que
 \verb"p" es la porción sobre el paraboloide cuya base está dada por \verb"r" y \verb"q", que definen la curva de intersección.
@@ -1407,7 +1403,7 @@ hallamos los mismos vectores que en el caso anterior
 El elemento diferencial de área en este caso está dado por
 \[\| \overrightarrow{\beta}_{t} \times \overrightarrow{\beta}_{u} \|= \frac{2}{3}\sqrt{11}u\]
 % $\left \| \la -u\sin (t),-\frac{1}{3}u( 2\cos (t)-\sin (t))  ,2u\cos (t)\ra  \times \la \cos (t),-\frac{2}{3}\sin (t)-\frac{1}{3}\cos (t),2\sin (t)\ra \right \| =  \frac{2}{3}\sqrt{11}u$
-y el área de la superficie señalada es
+y el área de la superficie señalada es:
 \[\int_{0}^{2\pi }\int_{0}^{1}\| r_{t}\times r_{u}\|
 dudt=\int_{0}^{2\pi }\int_{0}^{1}\frac{2}{3}\sqrt{11}ududt= \frac{2}{3}\pi \sqrt{11}.\]
 
@@ -1468,12 +1464,12 @@ NIntegrate[A,{t,0,2Pi},{u,0,1}]
 \end{tcolorbox}
 
 \subsection{Un cilindro cardióidico y un plano}
-La superficie del cilindro cardiogénico con ecuación
-$r=2(1+\cos(t))$, acotada por los planos $z=0$ y $z=2-x/2$, se presenta a continuación. También se muestra la porción sobre el plano $z=2-x/2$ acotada por el cilindro cardiogénico. Hallaremos el área de estas dos superficies.
+La superficie del cilindro cardióidico con ecuación
+$r=2(1+\cos(t))$, acotada por los planos $z=0$ y $z=2-x/2$, se presenta a continuación. También se muestra la porción sobre el plano $z=2-x/2$ acotada por el cilindro cardióidico. Hallaremos el área de estas dos superficies.
 
 \begin{figure}[H]
 \centering
-\caption{Superficies sobre el cilindro cardiogénico y sobre el plano \( z = 2 - \frac{x}{2} \)}
+\caption{Superficies sobre el cilindro cardióidico y sobre el plano \( z = 2 - \frac{x}{2} \)}
 \includegraphics[height=3cm]{Fig/134.pdf} \hspace{5mm}
 \includegraphics[height=3cm]{Fig/135.pdf}
 \fuentepropia
@@ -1483,10 +1479,10 @@ Sobre el plano $xy$, la cardioide $r=2(1+\cos(t))$ se parametriza como
 \[\la 2\left( 1+\cos (t) \right) \cos (t) ,2\left(1+\cos (t) \right) \sin (t),0 \ra.\]
 En el plano con ecuación $z=2-x/2$, se satisface que
 \[z=2-2\left( 1+\cos (t) \right) \cos(t) /2= 2-\left( 1+\cos t\right) \cos t,\]
-por lo tanto, la curva de intersección entre el plano y el cilindro cardiogénico se parametriza como
+por lo tanto, la curva de intersección entre el plano y el cilindro cardióidico se parametriza como
 \[\la 2\left(1+\cos(t)\right)\cos(t),2\left(1+\cos(t)\right)\sin(t),2-(1+\cos (t))\cos(t) \ra,\]
 con lo que forma una combinación convexa entre dos puntos cuyos primer y segundo componente son iguales, uno sobre el plano $z=0$ y el otro sobre el plano
-$z=2-x/2$. Se parametriza la superficie lateral, esto es
+$z=2-x/2$. Se parametriza la superficie lateral, esto es:
 \begin{align*}
 {\bf r}(u,t)&=(1-u) \la 2\left( 1+\cos (t) \right) \cos (t) ,2\left( 1+\cos (t) \right) \sin (t) ,0\ra \\
 &\quad +u\big \langle 2\left( 1+\cos (t) \right) \cos(t) , 2\left( 1+\cos (t) \right) \sin (t),\\
@@ -1504,7 +1500,7 @@ Con esta función obtenemos los siguientes vectores:
 \end{eqnarray*}
 Con lo cual,
 \[\left\| {\bf r}_{t}\times {\bf r}_{u}\right\| = 2\sin (t) \left( \cos (t) +2\right) \sqrt{2-2\cos(t);}\]
-entonces el área lateral del cilindro acotada por los dos planos está dada por
+entonces el área lateral del cilindro acotada por los dos planos está dada por:
 \[\int_{0}^{1}\int_{0}^{2\pi}\left|2\sin(t)\left(\cos(t)+2\right)\sqrt{2-2\cos(t)}\right|dtdu= \frac{96}{5}.\]
 El valor anterior se obtiene en \verb"Mathematica" con ayuda de las siguientes instrucciones:
 
@@ -1519,28 +1515,29 @@ Integrate[A,{u,0,1},{t,0,2Pi}]
 \end{Verbatim}
 \end{tcolorbox}
 
-Hallaremos ahora el área de la región sobre el plano $z=2-x/2$, acotada por el cilindro cardiogénico.
+Hallaremos ahora el área de la región sobre el plano $z=2-x/2$, acotada por el cilindro cardióidico.
 El interior de la cardioide en el plano $xy$ se parametriza como
 \[\la 2u\left( 1+\cos(t)\right) \cos(t) ,2u\left( 1+\cos(t)\right) \sin(t),0\ra,\]
 con $t\in \lbrack 0,2\pi ]$, $u\in \lbrack 0,1]$.
 Sobre el plano $z=2-x/2$, se cumple que
 \[z=2-2u\left( 1+\cos(t)\right)\cos(t)/2=2-u\left(\cos t+1\right)\cos(t).\]
-Entonces, la parte del plano acotada por el cilindro cardiogénico se parametriza por medio de la siguiente función:
+Entonces, la parte del plano acotada por el cilindro cardióidico se parametriza por medio de la siguiente función:
 \begin{gather*}
 {\bf r}(u,t)=\big\langle 2u\left( 1+\cos(t)\right) \cos(t),2u\left(1+\cos(t)\right)\sin(t),2-u(\cos(t)+1)\cos(t) \big\rangle,
 \end{gather*}
 con $t\in \lbrack 0,2\pi ]$, $u\in \lbrack 0,1]$. De aquí se obtienen los siguientes vectores:
-\begin{small}
-\begin{align*}
+\begin{gather*}
+\begin{aligned}
 \mathbf{r}_t &= \left\langle -2u\sin(t)(2\cos(t) + 1), 2u\left(\cos(t) - \sin^2(t) + \cos^2(t)\right), \right. \\
 &\quad \left. u\sin(t)(2\cos(t) + 1) \right\rangle \\
 \mathbf{r}_u &= \left\langle 2(1 + \cos(t))\cos(t), 2(1 + \cos(t))\sin(t), -(1 + \cos(t))\cos(t) \right\rangle \\
 \mathbf{r}_t \times \mathbf{r}_u &= \left\langle -2u(1 + \cos(t))^2, 0, -4u(1 + \cos(t))^2 \right\rangle \\
 &= -2u(1 + \cos(t))^2 \langle 1, 0, 2 \rangle.
-\end{align*}
-\end{small}
+\end{aligned}
+\end{gather*}
+
 Estos vectores, a su vez, nos permiten obtener el elemento diferencial de área:
-$\left\|  {\bf r}_{t}\times {\bf r}_{u}\right\|= 2\sqrt{5}\left|u\left( 1+\cos(t)\right)^{2}\right| $. Por lo tanto, el área de la superficie en mención está dada por
+$\left\|  {\bf r}_{t}\times {\bf r}_{u}\right\|= 2\sqrt{5}\left|u\left( 1+\cos(t)\right)^{2}\right| $. Por lo tanto, el área de la superficie en mención está dada por:
 \[\int_{0}^{1}\int_{0}^{2\pi }2\sqrt{5}\left| u\left( 1+\cos (t) \right) ^{2}\right|
 dtdu= 3\pi \sqrt{5}.\]
 
@@ -1702,7 +1699,7 @@ con $t\in \lbrack 0,2\pi ]$, $u\in \lbrack 0,1]$. Esta función parametriza el c
 \fuentepropia
 \end{figure}
 
-Con la función ${\bf r}\left( t,u\right) $ hallamos ${\bf r}_{t}=\left\langle -\sin (t) \left( 1+u\right) ,\cos \left(
+con la función ${\bf r}\left( t,u\right) $ hallamos ${\bf r}_{t}=\left\langle -\sin (t) \left( 1+u\right) ,\cos \left(
 t\right) \left( 1+u\right) ,0\right\rangle $\, \break
 y $\,{\bf r}_{u}=\left\langle 1+\cos (t) ,\sin (t),3\right\rangle$,
 que determinan el elemento diferencial de área
@@ -1945,7 +1942,7 @@ y su figura se hará girar dicha figura alrededor de la recta $\theta = \pi/2$.
 \fuentepropia
 \end{figure}
 
-El área de una superficie de revolución está dada por
+El área de una superficie de revolución está dada por:
 \begin{equation}\label{toros1}
 A=\int_{a}^{b}x(t)\sqrt{\left( \frac{dx}{dt}\right) ^{2}+\left( \frac{dy}{dt}\right) ^{2}}dt
 \end{equation}
@@ -1972,7 +1969,7 @@ se satisface que si un punto sobre esta curva gira alrededor del eje $z$, entonc
 
 \begin{figure}[H]
 \centering
-\caption{Toro cardiogénico construido a partir de $r=1-\sin(t)$}
+\caption{Toro cardióidico construido a partir de $r=1-\sin(t)$}
 \includegraphics[height=3cm]{Fig/147.pdf} \hspace{5mm}
 \includegraphics[height=3cm]{Img/63a.pdf}
 \fuentepropia
@@ -1989,7 +1986,7 @@ con $t \in [0,2\pi]$, $u \in [0,2\pi]$.
 
 \begin{figure}[H]
 \centering
-\caption{Toro cardiogénico construido a partir de $r=1-\sin(t)$}
+\caption{Toro cardióidico construido a partir de $r=1-\sin(t)$}
 \includegraphics[height=3cm]{Img/63b.pdf} \hspace{5mm}
 \includegraphics[height=3cm]{Img/63c.pdf}
 \fuentepropia
@@ -2050,17 +2047,17 @@ Integrate[A,{t,0,2*Pi},{u,0,2*Pi}]
 
 \subsubsection{Toro cardióidico generado por \texorpdfstring{$r=1-\cos(t)$}{r=1-cos(t)}}
 
-El área de la figura de la ecuación $r=1-\cos(t)$ está dada por
+El área de la figura de la ecuación $r=1-\cos(t)$ está dada por:
 \[\int_{0}^{2\pi }\int_{0}^{1-\cos \theta }rdrd\theta = \frac{3}{2}\pi\]
 
-y su longitud de curva es
+y su longitud de curva es:
 \[\int_{0}^{2\pi }\sqrt{\left( 1-\cos (t) \right) ^{2}+\left( \sin (t)\right)^{2}}dt=\int_{0}^{2\pi }\sqrt{2-2\cos (t) }dt= 8.\]
 
-De acuerdo con la expresión \ref{toros1}, el área superficial está determinada por
+De acuerdo con la expresión \ref{toros1}, el área superficial está determinada por:
 \[2\pi \int_{0}^{2\pi }\left( 3+\left( 1-\cos (t) \right) \cos
 (t) \right) \sqrt{2-2\cos (t) }dt= \frac{176}{5}\pi.\]
 
-El centro de masa de esta curva está dado por
+El centro de masa de esta curva está dado por:
 \begin{eqnarray*}
 \overline{x} &=& \frac{1}{8}\int_{0}^{2\pi }\left( 3+\left( 1-\cos (t) \right) \cos \left( t\right) \right) \sqrt{2-2\cos \left( t\right)}dt= \frac{11}{5}\\
 \overline{y} &=& \frac{1}{8}\int_{0}^{2\pi }\left( 1-\cos \left( t\right)
@@ -2082,7 +2079,7 @@ La figura obtenida es la siguiente.
 
 \begin{figure}[H]
 \centering
-\caption{Toro cardiogénico construido a partir de $r=1-\cos(t)$}
+\caption{Toro cardióidico construido a partir de $r=1-\cos(t)$}
 \includegraphics[height=3cm]{Img/59a.pdf} \hspace{5mm}
 \includegraphics[height=3cm]{Img/59b.pdf} \hspace{5mm}
 \includegraphics[height=3cm]{Img/59c.pdf}
@@ -2116,16 +2113,16 @@ La integración nos proporciona el área de la superficie en mención:
 
 \subsubsection{Toro cardióidico generado por \texorpdfstring{$r=1+\cos(t)$}{r=1+cos(t)}}
 Al igual que en los casos anteriores, para la cardioide con ecuación
-$r=1+\cos (t) $, el área está dada por
+$r=1+\cos (t) $, el área está dada por:
 \[\int_{0}^{2\pi }\int_{0}^{1+\cos t}rdrdt= \frac{3}{2}\pi\]
-y la longitud del arco es
+y la longitud del arco es:
 \[\int_{0}^{2\pi }\sqrt{\left( 1+\cos t\right) ^{2}+\left( -\sin t\right) ^{2}}dt= 8\]
 Si esta curva gira alrededor de la recta $\theta= \pi/2$, usando la expresión \ref{toros1},
-el área superficial está dada por
+el área superficial está dada por:
 \[2\pi \int_{0}^{2\pi }\left( 3+\left( 1+\cos \left( t\right) \right) \cos
 \left( t\right) \right) \sqrt{2+2\cos \left( t\right) }dt= \frac{304}{5}\pi.\]
 
-El centro de masa de la curva está dado por
+El centro de masa de la curva está dado por:
 \begin{eqnarray*}
 \overline{x} &=& \frac{1}{8}\int_{0}^{2\pi }\left( 3+\left( 1+\cos \left(
 t\right) \right) \cos \left( t\right) \right) \sqrt{2+2\cos \left( t\right) }%
@@ -2144,11 +2141,11 @@ Para la superficie que se obtiene al hacer girar la figura de la curva $r=1+\cos
 
 \afterpage{\FloatBarrier}
 
-La visualización obtenida se puede observar en la figura~\ref{torocardio2x}.
+La superficie obtenida se puede observar en la figura~\ref{torocardio2x}.
 
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
-\caption{Toro cardiogénico construido a partir de $r=1+\cos(t)$}
+\caption{Toro cardióidico construido a partir de $r=1+\cos(t)$}
 \label{torocardio2x}
 \includegraphics[height=2.2cm]{Img/64a.pdf} \hspace{2mm}
 \includegraphics[height=2.2cm]{Img/64b.pdf} \hspace{2mm}
@@ -2178,7 +2175,7 @@ con ellos se obtiene el elemento diferencial de área
 \[\left\| {\bf r}_{t}\times {\bf r}_{u}\right\| =\frac{1}{2}\left| 16\cos \left( \frac{t}{2}\right) +3\cos \left( \frac{3t}{2}\right) +\cos \left( \frac{5t}{2}\right) \right| \]
 que, al integrarse, proporciona el área superficial de la región en mención.
 \[\bigintss_{0}^{2\pi}\bigintss_{0}^{2\pi }\frac{1}{2}\left| 16\cos \left( \frac{t}{2}\right) +3\cos \left( \frac{3t}{2}\right) +\cos \left( \frac{5t}{2}\right) \right| dudt= \frac{304}{5}\pi.\]
-Los cálculos anteriores se pueden evaluar en \verb"Mathematica" mediante la ejecución de las siguientes instrucciones:
+Los cálculos anteriores se pueden evaluar en \verb"Mathematica" mediante la ejecución de las siguientes instrucciones.
 
 \begin{tcolorbox}[title=\bf Instrucción en \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 x=3+(1+Cos[t])*Cos[t];
@@ -2197,18 +2194,18 @@ Determine una expresión que defina la superficie indicada y calcule su área.
 Además, determine una función que represente la curva de intersección de la superficie y halle su longitud.
 
 \begin{enumerate}
-\item La superficie sobre el paraboloide $2z=x^2+y^2$ acotada por el cilindro cardiogénico $r=1+\cos(t)$.
+\item La superficie sobre el paraboloide $2z=x^2+y^2$ acotada por el cilindro cardióidico $r=1+\cos(t)$.
 
 \begin{figure}[H]
 \centering
-\caption{Paraboloide acotada por el cilindro cardiogénico}
+\caption{Paraboloide acotada por el cilindro cardióidico}
 \includegraphics[height=3cm]{Img/T_30a.pdf} \hspace{3mm}
 \includegraphics[height=3cm]{Img/T_30b.pdf} \hspace{3mm}
 \includegraphics[height=3cm]{Img/T_30c.pdf}
 \fuentepropia
 \end{figure}
 
-\item La superficie sobre el paraboloide hiperbólico $2z=y^2-x^2$ acotada por el cilindro cardiogénico $r=1+\cos(t)$.
+\item La superficie sobre el paraboloide hiperbólico $2z=y^2-x^2$ acotada por el cilindro cardióidico $r=1+\cos(t)$.
 
 \begin{figure}[H]
 \centering
@@ -2220,11 +2217,11 @@ Además, determine una función que represente la curva de intersección de la s
 
 \enlargethispage*{\baselineskip}
 
-\item La superficie sobre la esfera con ecuación $x^2+y^2+z^2=4$ acotada por el cilindro cardiogénico $1+\cos(t)$.
+\item La superficie sobre la esfera con ecuación $x^2+y^2+z^2=4$ acotada por el cilindro cardióidico $1+\cos(t)$.
 
 \begin{figure}[H]
 \centering
-\caption{Esfera y cilindro cardiológico}
+\caption{Esfera y cilindro cardióidico}
 \includegraphics[height=2.5cm]{Img/T_32a.pdf} \hspace{3mm}
 \includegraphics[height=2.5cm]{Img/T_32b.pdf} \hspace{3mm}
 \includegraphics[height=2.5cm]{Img/T_32c.pdf}
@@ -2235,7 +2232,7 @@ Además, determine una función que represente la curva de intersección de la s
 
 \begin{figure}[H]
 \centering
-\caption{Superficie obtenida de girar $r=\sin(3\theta)$.}
+\caption{Superficie obtenida de girar $r=\sin(3\theta)$}
 \includegraphics[height=2.5cm]{Img/99a.pdf} \hspace{5mm}
 \includegraphics[height=2.5cm]{Img/99b.pdf} \hspace{5mm}
 \includegraphics[height=2.5cm]{Img/99c.pdf}

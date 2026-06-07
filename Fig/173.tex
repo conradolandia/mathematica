@@ -1,0 +1,43 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\newcommand{\vi}{\boldsymbol{\hat{\imath}}}
+\newcommand{\vj}{\boldsymbol{\hat{\jmath}}}
+\newcommand{\vk}{\boldsymbol{\hat{k}}}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1.5,-0.9)(6.5,2.9) % \psgrid
+\psset{linewidth=0.8pt,xunit=1.75,yunit=1.2}
+\psline(0,0)(3,0)(3,2)(0,2)(0,0)
+\rput(0,0){$\bullet$}
+\rput(3,0){$\bullet$}
+\rput(3,2){$\bullet$}
+\rput(0,2){$\bullet$}
+\psline[arrows=<->,linewidth=0.2pt](0,-0.6)(3,-0.6)
+\psline[arrows=<->,linewidth=0.2pt](3.7,0)(3.7,2)
+\psline[arrows=->,linewidth=1.1pt](0,0)(1.2,1)
+\psset{arrows=->,linewidth=0.75pt,linecolor=gray!75}
+\psline(-0.3,1.1)(0.6,2.2)
+\psline(1.5,0.8)(2.2,1.6)
+\psline(2.5,1.2)(3.4,2.1)
+\psline(2.2,-0.4)(2.8,0.8)
+\psset{arrows=->,linewidth=3pt,linecolor=gray!60}
+\psline(1.7,0.03)(1.7,-0.4)
+\psline(3,1.2)(3.4,1.2)
+\psline(1.5,1.96)(1.5,2.4)
+\psline(0,1)(-0.4,1)
+\small
+\rput*(1.5,-0.6){$\Delta x$}
+\rput*(3.7,0.9){$\Delta y$}
+\rput*(-0.4,0){$(x,y)$}
+\rput*(3.65,-0.25){$(x+\Delta x,y)$}
+\rput*(3.25,2.3){$(x+\Delta x,y+\Delta y)$}
+\rput*(-0.5,2.3){$(x,y+\Delta y)$}
+\rput*(0.9,-0.3){${\bf F} \cdot (-\vj)<0$}
+\rput*(2.45,1){${\bf F} \cdot \vi>0$}
+\rput*(1.6,1.75){${\bf F} \cdot \vj>0$}
+\rput*(-0.75,0.7){${\bf F} \cdot (-\vi)<0$}
+\end{pspicture}
+\end{document}

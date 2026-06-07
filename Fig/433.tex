@@ -1,0 +1,21 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1.75,-1.4)(3,3.5) % \psgrid
+\psset{algebraic,yunit=0.75,xunit=0.8}
+\psaxes[Dx=2,deltax=2,Dy=2,deltax=2,linecolor=gray]{->}(0,0)(-0.5,-0.6)(3,5)[$x$,90][$z$,0]
+\pscustom[fillstyle=hlines,hatchcolor=black!60,hatchwidth=0.6pt,hatchsep=1.2pt,linestyle=none]{
+\psparametricplot{-0.25}{2}{t,4-t^2}
+\psline(2,0)(-0.25,0)(-0.25,3.94)
+}
+%\psparametricplot[arrows=->,linecolor=black!60]{-0.3}{2.3}{t|4-t^2}
+\psparametricplot[arrows=->,linecolor=black]{-0.5}{2.2}{t,4-t^2}
+\psline(2,0)(-0.25,0)(-0.25,3.94)
+\rput(2.7,2.7){$z=4-x^2$}
+\end{pspicture}
+
+\end{document}

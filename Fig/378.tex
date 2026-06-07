@@ -1,0 +1,23 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2,-0.75)(3,2.9) % \psgrid
+\psset{algebraic,Alpha=30,Beta=10,xunit=0.85,yunit=1}
+\pstThreeDCoor[xMax=2.6,zMax=3,IIIDticks,IIIDlabels,linecolor=black,xMin=-2,xMax=3,spotZ=180]
+\psset{linecolor=black,linewidth=0.6pt}
+\parametricplotThreeD(-1.414,1.414){t|t^2|0}
+\parametricplotThreeD[linecolor=gray,linewidth=0.3pt](-1.41,1.41)(0,1){t|t^2*u|2-t^2}
+\parametricplotThreeD[linecolor=gray,linewidth=0.3pt](0,1)(-1.41,1.41){u|u^2*t|2-u^2}
+\parametricplotThreeD(-1.414,1.414){t|0|2-t^2}
+\parametricplotThreeD[linecolor=black,linewidth=0.3pt](-1.41,1.41)(0,1){t|t^2-t^2*u+2*u|(2-t^2)*(1-u)}
+\parametricplotThreeD[linecolor=black,linewidth=0.3pt](0,1)(-1.41,1.41){u|u^2-u^2*t+2*t|(2-u^2)*(1-t)}
+\parametricplotThreeD(-1.414,1.414){t|t^2|2-t^2}
+\pstThreeDLine(1.41,0,0)(1.41,2,0)(-1.41,2,0)(-1.41,0,0)
+\pstThreeDPut(2,0,1.5){$z=2-x^2$} 
+\end{pspicture}
+
+\end{document}

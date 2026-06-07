@@ -1,0 +1,21 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-0.7,-0.6)(3.4,3.35) % \psgrid 
+\psset{algebraic,yunit=1.1,xunit=0.7}
+\psaxes[dy=2,Dy=2,dx=2,Dx=2,linecolor=black]{->}(0,0)(-0.6,-0.5)(5,3)[$x$,-90][$y$,180]
+\pscustom[fillstyle=solid,fillcolor=gray!30,linestyle=none,opacity=0.8]{
+\parametricplot{0}{2}{t^4/4|t}
+\psline(4,2)(0,2)(0,0)
+}
+\psset{linecolor=gray}
+\parametricplot{0}{2}{t^4/4|t}
+\psline(4,2)(0,2)(0,0)
+\rput(2,0.75){$x=y^4/4$}
+\end{pspicture}
+
+\end{document}

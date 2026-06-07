@@ -1,0 +1,20 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-0.5,-1.5)(3.7,1.5)% \psgrid
+\psset{algebraic,xunit=0.4,yunit=1}
+\pscustom[fillstyle=solid,fillcolor=gray!60,opacity=0.8]{
+\psplot{0}{\psPiTwo}{cos(x)}
+\psline(\psPiTwo,1)(0,1)
+}
+\psaxes[arrows=->,showorigin=false,xunit=\psPi,trigLabels,trigLabelBase=1,labelFontSize=\scriptstyle](0,0)(-0.5,-1.5)(2.5,1.6)[$y$,-90][$z$,180]
+\psplot[arrows=->,linewidth=1.2pt]{-0.5}{7.2}{cos(x)}
+\psplot[arrows=->,linewidth=1.2pt]{-0.5}{7.4}{1}
+\rput{0}(3.2,-1.3){\small $z=\cos(y)$}
+\end{pspicture} 
+
+\end{document}

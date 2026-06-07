@@ -1,0 +1,26 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2,-1.8)(2.5,1.4) % \psgrid
+\psset{algebraic,unit=0.75}
+\pscustom[fillstyle=solid,fillcolor=gray!60,linestyle=none]{
+\parametricplot{\psPi}{\psPiTwo}{2*cos(t) | 2*sin(t)}
+\psplot{2}{-2}{1-sqrt(5-x^2)}
+}
+\pscustom[fillstyle=vlines,hatchcolor=black!60,hatchsep=0.8pt]{
+\psplot{-2}{2}{1-sqrt(5-x^2)}
+\psline(2,0)(-2,0)
+}
+\psplot[linewidth=0.6pt,linestyle=dashed]{-2.235}{2.235}{1-sqrt(5-x^2)}
+\psaxes[Dx=2]{->}(0,0)(-2.5,-2.6)(3,2)[$x$,-90][$z$,180]
+\parametricplot[linewidth=1.2pt]{\psPi}{\psPiTwo}{2*cos(t) | 2*sin(t)}
+\psplot[linewidth=1.2pt]{-2}{2}{1-sqrt(5-x^2)}
+\rput{0}(2.5,1.5){$z=1-\sqrt{5-x^2}$}
+\rput{0}(3.2,-1.2){$z=-\sqrt{4-x^2}$}
+\end{pspicture}
+
+\end{document}

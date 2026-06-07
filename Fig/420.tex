@@ -1,0 +1,23 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1.25,-1.4)(4,2) %\psgrid 
+\psset{algebraic,xunit=1.3,yunit=1.2}
+\pscustom[fillstyle=solid,fillcolor=gray!40]{
+\parametricplot[linestyle=none]{-1}{1}{1-t^2|t}
+\psline(0,1)(0,-1)
+}
+\psaxes[linecolor=black]{->}(0,0)(-0.75,-1.2)(2.5,1.7)[$x$,90][$z$,0]
+\parametricplot[linecolor=black!70,arrows=<->]{-1.2}{1.2}{1-t^2|t}
+\psline(0.5,0.7)(0.5,-0.7)
+\rput(0.5,0.7){$\bullet$}
+\rput(0.5,-0.7){$\bullet$}
+\rput(1.6,0.9){$P(u,\sqrt{1-u})$}
+\rput(1.6,-0.9){$Q(u,-\sqrt{1-u})$}
+\end{pspicture}
+
+\end{document}

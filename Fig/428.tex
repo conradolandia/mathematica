@@ -1,0 +1,25 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2.25,-0.75)(2.2,2.4) % \psgrid
+\psset{algebraic,xunit=1.2,yunit=2,Alpha=130,Beta=18}
+\parametricplotThreeD[fillstyle=solid,fillcolor=gray!30,linestyle=none](0,\psPiTwo)(0,1){u*cos(t)|u*sin(t)|0}
+\pstThreeDCoor[linecolor=black,IIIDticks,IIIDlabels,xMin=-1.5,xMax=2.1,yMin=-1.4,yMax=1.5,zMin=-0.4,zMax=1.5,spotZ=180,spotX=90]
+\psset{linewidth=0.5pt,linecolor=black!80,xPlotpoints=25,yPlotpoints=15,plotstyle=curve}
+\parametricplotThreeD(-0.99,0.99)(0,1){t|sqrt(1-t^2)|u*(1-t^2)} 
+\parametricplotThreeD(0,1)(-1,1){u|sqrt(1-u^2)|t*(1-u^2)} 
+\parametricplotThreeD(-0.99,0.99)(0,1){t|-sqrt(1-t^2)|u*(1-t^2)}  
+\parametricplotThreeD(0,1)(-1,1){u|-sqrt(1-u^2)|t*(1-u^2)}  
+\psset{linecolor=gray,linewidth=1.2pt}
+\parametricplotThreeD(-\psPi,\psPi){cos(t)|sin(t)|0}
+\parametricplotThreeD(-\psPi,\psPi){cos(t)|sin(t)|(sin(t))^2}
+\psset{linewidth=0.3pt,linecolor=gray,xPlotpoints=30,yPlotpoints=40}
+\parametricplotThreeD(-0.99,0.99)(0,1){t|(1-2*u)*sqrt(1-t^2)|1-t^2}
+\parametricplotThreeD(0,1)(-0.99,0.99){u|(1-2*t)*sqrt(1-u^2)|1-u^2}
+\end{pspicture}
+
+\end{document}

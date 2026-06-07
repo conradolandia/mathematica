@@ -1,0 +1,20 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-0.6,-0.2)(2.7,2.6) % \psgrid
+\psset{algebraic,xunit=1,yunit=0.22,plotstyle=curve,labelFontSize=\scriptstyle}
+\psaxes[Dy=5,deltay=4,Dx=2,deltax=2,linecolor=black,linewidth=0.8pt]{->}(0,0)(-0.5,-1)(2.5,12)[$x$,90][$z$,0]
+\pscustom[fillstyle=vlines,hatchsep=1.2pt,hatchcolor=gray!50,opacity=0.7,linestyle=none]{
+\psparametricplot{0}{2}{t|10-t-t^6/8}
+\psline(2,0)(0,0)(0,10)
+}
+\psparametricplot[arrows=->,linecolor=black!70,linewidth=0.6pt]{-0.15}{2.05}{t|10-t-t^6/8}
+\psline[linecolor=black!70](2,0)(0,0)(0,10)
+\rput(1.5,10.2){\small $z=10-x-\frac{x^6}{8}$ }
+\end{pspicture}
+
+\end{document}

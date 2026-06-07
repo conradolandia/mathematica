@@ -1,0 +1,31 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-3,-1.4)(6,2) %\psgrid
+\psset{algebraic,plotstyle=curve,yunit=0.45,xunit=0.9}
+\psaxes[Dy=2,linecolor=black]{->}(0,0)(-3.2,-3)(3.5,3.5)[$y$,-90][$z$,0]
+\pscustom[fillstyle=vlines,hatchwidth=0.8pt,hatchcolor=black!70,hatchsep=1.2pt,linestyle=none]{
+\psparametricplot{0.9225}{2.41}{t|-12/5*t+4+2*sqrt(5-9*(t-5/3)^2)/5}
+\psparametricplot{2.41}{0.9225}{t|-12/5*t+4-2*sqrt(5-9*(t-5/3)^2)/5}
+}
+\pscustom[fillstyle=hlines,hatchwidth=0.8pt,hatchcolor=black!60,hatchsep=1pt,linestyle=none]{
+\psparametricplot{2}{-2}{5/3-t/3-sqrt(4-t^2)/6|t}
+\psline(2.33,-2)(-2.5,-2)(-0.5,2)(1,2)
+}
+\psparametricplot[linecolor=black!60!blue]{0.92132}{2.412}{t|-12/5*t+4+2*sqrt(5-9*(t-5/3)^2)/5}
+\psparametricplot[linecolor=black!60!blue]{0.92132}{2.412}{t|-12/5*t+4-2*sqrt(5-9*(t-5/3)^2)/5}
+\psparametricplot[linecolor=black!60!blue,arrows=->]{-2.6}{-0.1}{t|3+2*t}
+\psparametricplot[linecolor=black!60!blue,arrows=->]{0.7}{2.7}{t|5-3*t}
+\psparametricplot[linecolor=black!60!blue,arrows=->]{-1}{2.4}{t|2}
+\psparametricplot[linecolor=black!60!blue,arrows=->]{-3}{2.8}{t|-2.01}
+\psline[linewidth=0.6pt,arrows=->](1.85,0.5)(2.5,1)
+\rput(5.4,1){$z= -\frac{12}{5}y+4-\sqrt{5-9(y-\frac{5}{3})^2}$}
+\rput(3.7,-2.5){$z=5-3y$}
+\rput(-3.5,-2.5){$z=3+2y$}
+\end{pspicture}
+
+\end{document}

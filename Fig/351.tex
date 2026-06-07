@@ -3,7 +3,7 @@
 \usepackage{amsmath,pst-coil,bigints}
 \usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
 \usepackage{bm,calculus}
-
+\psset{showorigin=false}
 \begin{document}
 \begin{pspicture}(-2.5,-1)(2,2.6) % \psgrid
   \psset{algebraic,xunit=0.37,yunit=0.24}
@@ -12,8 +12,8 @@
     \parametricplot{0}{-4}{t|3/4*(t+2)^2-2}
   }
   \psaxes[Dx=2,Dy=3,labelFontSize=\scriptstyle]{->}(0,0)(-4.5,-2.5)(3,11.5)[$x$,90][$y$,180]
-  \parametricplot[linecolor=red,arrows=<->]{-4.4}{0.5}{t|8-(7/4)*(t+2)^2}
-  \parametricplot[linecolor=red,arrows=<->]{-4.4}{0.5}{t|3/4*(t+2)^2-2}
+  \parametricplot[linecolor=gray,arrows=<->]{-4.4}{0.5}{t|8-(7/4)*(t+2)^2}
+  \parametricplot[linecolor=gray,arrows=<->]{-4.4}{0.5}{t|3/4*(t+2)^2-2}
   \rput(0.5,-4){\small $\frac{(x+2)^2}{4}=\frac{8-y}{7}$}
   \rput(4,3.5){\fontsize{8}{10}\selectfont $y+2=\frac{3}{4}(x+2)^2$}
 \end{pspicture}

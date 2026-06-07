@@ -1,0 +1,21 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1,-0.5)(3.5,2.6)% \psgrid
+\psset{algebraic,unit=0.8}
+\psaxes[Dx=2,deltax=2,linecolor=black]{->}(0,0)(-0.5,-0.6)(4,3)[$x$,90][$y$,0]
+\pscustom[fillstyle=vlines,hatchcolor=black!60,hatchwidth=0.6pt,hatchsep=1.2pt,linestyle=none]{
+\psparametricplot{0}{2}{t^2/2,t}
+\psparametricplot{2}{0}{(t^4-2*t^2)/4,t}
+}
+\psparametricplot[arrows=->,linecolor=black]{-0.75}{2.4}{t^2/2,t}
+\psparametricplot[arrows=->,linecolor=black!40]{-0.75}{2.2}{(t^4-2*t^2)/4,t}
+\rput(2.7,2.7){$2x=y^2$}
+\rput(3,1.5){$4x=y^4-2y^2$}
+\end{pspicture}
+
+\end{document}

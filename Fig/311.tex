@@ -1,0 +1,16 @@
+\DocumentMetadata{lang=es,xmp=false}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1.5,-1.5)(4,2.1) % \psgrid 
+\psset{algebraic,yunit=1.15,xunit=1.3}
+\pscustom[fillstyle=vlines,hatchcolor=black!70,hatchsep=1.4pt,hatchwidth=0.7pt,linestyle=none]{\parametricplot{-1.57}{1.57}{cos(t)|sin(t)}}
+\parametricplot[linecolor=gray!80,arrows=-]{-1.57}{1.57}{cos(t)|sin(t)}
+\psaxes[linecolor=black]{->}(0,0)(-0.6,-1.4)(2,1.75)[$y$,90][$z$,0]
+\rput(2.2,-0.7){$y^2+z^2=1$}
+\end{pspicture}
+\end{document}

@@ -1,0 +1,35 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2,-0.8)(3.5,3.1) % \psgrid
+\psset{algebraic,Alpha=40,Beta=20,plotstyle=curve,xunit=0.7,yunit=0.8}
+\pstThreeDCoor[linecolor=black,Dy=2,deltay=2,xMin=-4.3,xMax=3,yMin=-3,yMax=4.1,zMin=-1,zMax=4.2,spotZ=180,IIIDticks,IIIDlabels]
+\pscustom[fillstyle=solid,fillcolor=gray!60,opacity=0.75,linestyle=none]{
+\parametricplotThreeD(0,\psPiTwo){(2-2*cos(t))*cos(t)|(2-2*cos(t))*sin(t)|0}
+} % sombra en la base
+\parametricplotThreeD[linecolor=black!60,linewidth=0.8pt](0,\psPiTwo){2*(1-cos(t))*cos(t)|2*(1-cos(t))*sin(t),0} % curva base
+\pscustom[fillstyle=vlines,hatchcolor=gray!60,hatchwidth=0.6pt,hatchsep=1pt,linestyle=none]{
+\parametricplotThreeD(0,\psPiTwo){(2-2*cos(t))*cos(t)|(2-2*cos(t))*sin(t)|1-((2-2*cos(t))*sin(t))/3}
+} % sombra en la base
+
+%\parametricplotThreeD[linecolor=black!60,linewidth=0.8pt](0,\psPiTwo){2*(1-cos(t))*cos(t)|2*(1-cos(t))*sin(t),1-(2*(1-cos(t))*sin(t))/3} % curva base
+
+\parametricplotThreeD[linecolor=black,linewidth=0.2pt](0,\psPiTwo)(0,1){2*(1-cos(t))*cos(t)|2*(1-cos(t))*sin(t),u*(3-2*sin(t)+2*cos(t)*sin(t))/3} % cilindro
+\parametricplotThreeD[linecolor=black,linewidth=0.2pt](0,1)(0,\psPiTwo){2*(1-cos(u))*cos(u)|2*(1-cos(u))*sin(u),t*(3-2*sin(u)+2*cos(u)*sin(u))/3} % cilindro
+\pstThreeDPut(-2,1.5,0.2){$Q$}
+\pstThreeDPut(-2,1,0){$\bullet$}
+\pstThreeDLine[linecolor=black!50,linewidth=1.2pt](-2,1,0)(-2,1,0.5)
+\pscustom[fillstyle=hlines,hatchcolor=gray!30,hatchwidth=0.8pt,hatchsep=0.8pt,linestyle=none]{
+\parametricplotThreeD(0,\psPiTwo){(2-2*cos(t))*cos(t)|(2-2*cos(t))*sin(t)|1-((2-2*cos(t))*sin(t))/3}
+} 
+\parametricplotThreeD[linecolor=black!60,linewidth=1pt](0,\psPiTwo){2*(1-cos(t))*cos(t)|2*(1-cos(t))*sin(t),1-(2*(1-cos(t))*sin(t))/3} 
+\pstThreeDLine[linecolor=black!50,linewidth=0.3pt](0,0,0)(0,0,4)
+\pstThreeDPut(-2,1,0.5){$\bullet$}
+\pstThreeDPut(-2,1.5,0.7){$P$}
+\end{pspicture}
+
+\end{document}

@@ -1,0 +1,25 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2,-0.5)(3,3.8) % \psgrid
+\psset{algebraic,yunit=0.8,xunit=0.75}
+\psaxes[Dx=2,Dy=2,dx=2,linecolor=black]{->}(0,0)(-3,-0.5)(4,4.75)[$x$,-90][$z$,180]
+\pscustom[fillstyle=solid,fillcolor=gray!70,linestyle=none]{
+\psparametricplot{-2}{2}{t|4*t^2-t^4}
+\psline(2,0)(-2,0)
+}
+\pscustom[fillstyle=vlines,hatchcolor=black!70,hatchwidth=0.8pt,linestyle=none]{
+\psparametricplot{-1.4142}{1.4142}{t|4*t^2-t^4}
+\psline(1.41,4)(-1.41,4)
+}
+\psparametricplot[arrows=<->,linecolor=gray!85]{-2.02}{2.02}{t|4*t^2-t^4}
+\psparametricplot[linecolor=gray!85]{-1.414}{1.414}{t|4}
+\rput(3.4,2){\small $z=4x^2-x^4$}
+%\rput(4.5,-2){$y=-2$}
+\end{pspicture}
+
+\end{document}

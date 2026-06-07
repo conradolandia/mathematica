@@ -1,0 +1,20 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1,-0.3)(4,2.7) %\psgrid
+\psset{algebraic,xunit=1.4,yunit=1.1}
+\psaxes[linecolor=black]{->}(0,0)(-0.5,-0.6)(2.5,2.5)[$y$,90][$z$,0]
+\pscustom[fillstyle=hlines,hatchcolor=black!60,hatchwidth=0.6pt,hatchsep=1.2pt,linestyle=none]{
+\psparametricplot{0}{1.57}{2*cos(t),sqrt(2)*sin(t)}
+\psline(0,1.7071)(0,0)(2,0)
+}
+\psparametricplot[arrows=->,linecolor=black]{-0.1}{1.7}{2*cos(t),sqrt(2)*sin(t)}
+\psline[linecolor=black](0,0.7071)(0,0)(2,0)
+\rput(1.5,1.5){$y^2+2z^2=4$}
+\end{pspicture}
+
+\end{document}

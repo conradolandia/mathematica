@@ -1,0 +1,23 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2,-0.3)(3.5,2.2) % \psgrid
+\psset{algebraic,xunit=0.5,yunit=0.24}
+\psaxes[linecolor=black,Dx=2,Dy=4]{->}(0,0)(-2.8,-0.4)(3.5,10)[$x$,-90][$y$,0]
+\psset{linewidth=0.4pt,linecolor=black!70,plotstyle=curve}
+\pscustom[fillstyle=vlines,hatchcolor=black!60,hatchwidth=0.2pt,hatchsep=1.5pt,linestyle=none]{
+\parametricplot{-2}{2}{t|8-t^2}
+\parametricplot{2}{-2}{t|t^2}
+}
+%\psline[linecolor=black!70](0,4)(0,0)(2,0)
+\parametricplot[linecolor=black!60,linewidth=0.8pt,arrows=<->]{-2.3}{2.3}{t|8-t^2}
+\parametricplot[linecolor=black!80,linewidth=0.7pt,arrows=<->]{-2.3}{2.3}{t|t^2}
+\rput[l](2.5,3){\small $y=8-x^2$}
+\rput[l](2.5,5){\small $y=x^2$}
+\end{pspicture} 
+
+\end{document}

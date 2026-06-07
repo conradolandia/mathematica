@@ -1,0 +1,25 @@
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+
+\begin{document}
+\begin{pspicture}(-2.2,-0.6)(3,2.6) % \psgrid
+\psset{algebraic,yunit=0.6,xunit=0.9}
+\psaxes[Dx=2,linewidth=0.2pt,showorigin=false]{->}(0,0)(-1.9,-1.8)(3,4)[$x$,-90][$y$,0]
+\psset{linewidth=0.3pt,linecolor=black!40}
+\multido{\rx=0+ 0.1}{11}{
+\psplot{-1}{2}{(1-\rx)*(x^2-1)+\rx*(x+1)}
+}
+\multido{\rx=-0.9+ 0.2}{14}{
+\SQUARE{\rx}{\a}
+\SUBTRACT{\a}{1}{\a}
+\ADD{\rx}{1}{\b}
+\psline(\rx,\a)(\rx,\b)
+}
+\psset{linewidth=0.8pt,linecolor=black,arrows=->}
+\psplot{-1.5}{2.4}{x+1}
+\psplot{-2}{2.2}{x^2-1}
+\end{pspicture}
+\end{document}

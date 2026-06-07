@@ -1,0 +1,17 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2.5,-1.2)(3,1.6)% \psgrid
+\psset{algebraic,unit=0.8}
+\pscustom[fillstyle=hlines,hatchcolor=gray!90,hatchsep=1.7pt]{
+\psparametricplot{0}{\psPiTwo}{2*cos(t)|sqrt(2)*sin(t)}
+}
+\psaxes[Dx=2,deltax=2,linecolor=black]{->}(0,0)(-2.5,-1.75)(3,2.2)[$x$,90][$y$,0]
+\psparametricplot[linecolor=black!60]{0}{\psPiTwo}{2*cos(t)|sqrt(2)*sin(t)}
+%\psline[arrows=->,linewidth=0.6pt](0.8,3)(1.5,3.6)
+\end{pspicture}
+\end{document}

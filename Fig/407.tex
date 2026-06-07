@@ -1,0 +1,26 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1,-0.6)(4,3.75) % \psgrid
+\psset{algebraic,Alpha=150,Beta=15,xunit=0.8,yunit=0.7}
+\pstThreeDCoor[linecolor=gray,xMin=-0.8,xMax=5,yMin=-0.9,yMax=4,zMin=-0.5,zMax=5.5,spotZ=180,spotX=90,IIIDticks,IIIDlabels]
+\pstThreeDLine[linecolor=black,linewidth=0.2pt](0,2,0)(0,2,4)(4,2,4)
+\parametricplotThreeD[linecolor=black,linewidth=0.2pt](0,2){0|t|t^2}
+\parametricplotThreeD[linecolor=black,linewidth=0.2pt](0,4){t^2/4|2|t}
+\pscustom[fillstyle=solid,fillcolor=gray!50,opacity=0.6]{
+\parametricplotThreeD[linecolor=black,linewidth=0.5pt](0,2){t^4/4|t|t^2}
+\pstThreeDLine[linecolor=black,linewidth=0.2pt](4,2,4)(0,2,4)
+\parametricplotThreeD[linecolor=black,linewidth=0.2pt](2,0){0|t|t^2}  }
+\pscustom[fillstyle=solid,fillcolor=black!20!gray,opacity=0.6]{
+\parametricplotThreeD[linecolor=gray,linewidth=0.5pt](0,2){t^4/4|t|t^2}
+\parametricplotThreeD[linecolor=black,linewidth=0.2pt](4,0){t^2/4|2|t}
+\pstThreeDLine[linecolor=black,linewidth=0.2pt](0,2,0)(0,0,0)  }
+\pstThreeDPut(0,2,4.4){$z=y^2$}
+\pstThreeDPut(3.5,2,3){$x=z^2/4$}
+\end{pspicture} 
+
+\end{document}

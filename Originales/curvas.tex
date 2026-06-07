@@ -13,10 +13,9 @@ Para la función  vectorial $\ve{r}(t)$ usaremos la notación
 $\overrightarrow{r}(t)$ o ${\bf r}(t)$, indistintamente para referirnos a
 este tipo de funciones.
 
-\textls[-20]{De acuerdo con \cite{marsden_calculo_2013}, la longitud de arco $L$ de la curva $C$ en $\mathbb{R}^3$, determinada por la función vectorial
-$\overrightarrow{r}(t)=\left\langle x(t) ,y(t),z(t) \right\rangle$ para $t\in \lbrack a,b]$, está dada por}
+\textls[-20]{De acuerdo con \cite{marsden_calculo_2013}, la longitud de arco $L$ de la curva $C$ en $\mathbb{R}^3$, determinada por la función vectorial $\overrightarrow{r}(t)=\left\langle x(t) ,y(t),z(t) \right\rangle$ para $t\in \lbrack a,b]$, está dada por:}
 \begin{equation} \label{curvas}
-L=\int_{a}^{b} \left\| \overrightarrow{r}^{\prime }(t)\right\| \, dt.
+L=\int_{a}^{b} \left\| \overrightarrow{r}^{\prime }(t)\right\| \, dt
 \end{equation}
 La expresión anterior es un caso particular de la fórmula~\ref{intdelinea}, considerando $f(x,y,z)=1$.
 Al término $\left\| \overrightarrow{r}^{\prime }(t)\right\|dt$ lo denominaremos elemento diferencial de longitud.
@@ -36,13 +35,13 @@ representa un paraboloide. \label{curvas1}
 \begin{figure}[H]
 \begin{center}
   \caption{Gráfico de $2z=x^{2}+y^{2}$ y $-x+y+z=1$}
-  \includegraphics[height=6cm]{Img/72a.pdf} \hskip0.5cm
-  \includegraphics[height=6cm]{Img/72b.pdf}
+  \includegraphics[height=4cm]{Img/72a.pdf} \hskip0.5cm
+  \includegraphics[height=4cm]{Img/72b.pdf}
   \fuentepropia
 \end{center}
 \end{figure}
 
-Con las siguientes instrucciones, se obtienen las figuras anteriores:
+Con las siguientes instrucciones se obtienen las figuras anteriores:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]
 \begin{Verbatim}[formatcom=\letraverbatim]
@@ -69,7 +68,7 @@ t\right) ,3+2\cos (t) -2\sin (t) \right\rangle ,\,\,
 t\in \lbrack 0,2\pi ]$$
 describe la curva de intersección entre el paraboloide y el plano.
 Además $\left\| \overrightarrow{r}^{\prime }(t)\right\| = 2\sqrt{2\sin (t) \cos (t) +2}$,
-la longitud de la curva está dada por
+la longitud de la curva está dada por:
 \[\int_{0}^{2\pi }2\sqrt{2\sin (t) \cos (t) +2}dt\approx 17.475.\]
 El cálculo anterior se puede evaluar numéricamente como sigue:
 
@@ -119,7 +118,7 @@ Entonces, la función vectorial
 {\bf r}(t) = \langle 2+4\sin(t), 2+2\cos(t),2+2\sin(t)\rangle,
 \]
 con $t \in [0,2\pi], $ parametriza la curva de intersección del paraboloide y el cilindro.
-A partir de esta función, se sigue que la magnitud del vector tangente es
+A partir de esta función, se sigue que la magnitud del vector tangente es:
 \[
 \left\| {\bf r}^{\prime }(t)\right\| = 2\sqrt{4\cos ^{2}(t) +1}= 2\sqrt{3+2\cos(2t);}
 \]
@@ -145,8 +144,8 @@ $z=x^{2}-y^{2}$ se intersecan en una curva como lo muestra la figura~\ref{fig:67
 \centering
 \caption{Gráfico de $x^{2}+y^{2}=4$ y $z=x^{2}-y^{2}$}
 \label{fig:67}
-\includegraphics[height=5cm]{Img/67a.pdf} \hspace{5mm}
-\includegraphics[height=5cm]{Fig/301.pdf}
+\includegraphics[height=4.5cm]{Img/67a.pdf} \hspace{5mm}
+\includegraphics[height=4.5cm]{Fig/301.pdf}
 \fuentepropia
 \end{figure}
 
@@ -165,7 +164,7 @@ t\right) ,2\cos (t) ,-8\sin \left( 2t\right) \right\rangle $  y
 \begin{gather*}
 \left\| \overrightarrow{r}^{\prime }(t) \right\| = 2\sqrt{64\cos ^{2}(t) +1-64\cos ^{4}(t)}= 2\sqrt{9-8\cos \left( 4t\right)}.
 \end{gather*}
-Con lo cual, la longitud de esta curva está dada por
+Con lo cual, la longitud de esta curva está dada por:
 \begin{gather*}
 \int_{0}^{2\pi }2\sqrt{9-8\cos \left( 4t\right) }dt \approx 35.2571.
 \end{gather*}
@@ -175,8 +174,9 @@ Con lo cual, la longitud de esta curva está dada por
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]
 \begin{Verbatim}[formatcom=\letraverbatim]
 r={2*Cos[t],2*Sin[t],4*Cos[2*t];
-Show[ContourPlot3D[{x^2+y^2==4,z==x^2-y^2},{x,-4,4},{y,-4,4},{z,-5,5},
-Mesh->False,PlotPoints->50,ContourStyle->{Orange,RGBColor[0.1,0.6,0.2]}],
+Show[ContourPlot3D[{x^2+y^2==4,z==x^2-y^2},{x,-4,4},{y,-4,4},
+{z,-5,5},Mesh->False,PlotPoints->50,
+ContourStyle->{Orange,RGBColor[0.1,0.6,0.2]}],
 ParametricPlot3D[{2*Cos[t],2*Sin[t],4*Cos[2*t]},
 {t,0,2*Pi},PlotStyle->{Black,Thickness[0.016]}]]
 A=Assuming[t>=0,Simplify[Norm[D[r,t]]]]
@@ -192,8 +192,8 @@ Las ecuaciones $z=x^2+y^2$ y $z=5-y^2$, que representan un paraboloide y un cili
 \begin{figure}[H]
 \centering
 \caption{Gráfico de $z=x^2+y^2$ y $z=5-y^2$}
-\includegraphics[width=0.4\textwidth]{Img/50a.pdf} \hspace{5mm}
-\includegraphics[width=0.4\textwidth]{Img/50b.pdf}
+\includegraphics[height=4.5cm]{Img/50a.pdf} \hspace{5mm}
+\includegraphics[height=4.5cm]{Img/50b.pdf}
 \fuentepropia
 \end{figure}
 
@@ -223,7 +223,7 @@ $$\overrightarrow{r}(t)=\left\langle \sqrt{5}\cos t,\sqrt{\frac{5}{2}}\sin t,%
 \frac{5}{2}\cos ^{2}t+\frac{5}{2}\right\rangle ,\,\,t\in \lbrack 0,2\pi ].$$
 Además,
 $\left\| \overrightarrow{r}^{\prime}(t)\right\| =\frac{\sqrt{10}}{4}\sqrt{11-2\cos(2t)-5\cos(4t)}$,
-entonces la longitud de la curva está dada por
+entonces la longitud de la curva está dada por:
 \[L=\int_{0}^{2\pi}\frac{\sqrt{10}}{4}\sqrt{11-2\cos(2t)-5\cos(4t)} \,dt \approx 16.192.\]
 La integral anterior se evaluó numéricamente mediante las siguientes tres instrucciones:
 %\vspace*{-1.2\baselineskip}
@@ -272,9 +272,9 @@ Es decir, $x=4(2+2\cos t) -( 2+2\cos t) ^{2}= 4-4\cos^{2}(t) =4\sin ^{2}(t) $ o 
 $x=( 2\sin t) ^{2}= 4\sin ^{2}(t) $.
 Por lo tanto, la curva de intersección está dada por la siguiente función vectorial
 \[{\bf r}(t)=\langle4\sin^{2}(t),2+2\cos(t),2\sin(t)\rangle, \, t \in [0,2\pi].\]
-La longitud de esta curva se calcula integrando la norma de la derivada de la función vectorial, es decir
+La longitud de esta curva se calcula integrando la norma de la derivada de la función vectorial, es decir:
 \[{\bf r}'(t)= \langle 8\sin(t)\cos(t),-2\sin (t),2\cos(t)\rangle .\]
-Su norma está dada por
+Su norma está dada por:
 \[\|{\bf r}^{\prime}(t)\| = 2\sqrt{16\cos^{2}(t)+1-16\cos^{4}(t)}= 2\sqrt{3-2\cos(4t)};\]
 este término se integra numéricamente
 \[ \int_{0}^{2\pi}2\sqrt{3-2\cos(4t)}dt \approx 21.081.\]
@@ -397,7 +397,7 @@ siguiente procedimiento:
 \left\| \overrightarrow{\alpha }^{\prime }(t)\right\|
 &=&  3\sqrt{5+\cos (t) \left( 323\cos(t) -324\cos ^{3}(t) +72\sin ^{2}(t)\right),}
 \end{eqnarray*}
-con lo cual, la longitud de la curva mayor está dada por
+con lo cual, la longitud de la curva mayor está dada por:
 \[\int_{0}^{2\pi}3\sqrt{5+\cos (t) \left( 323\cos(t) -324\cos ^{3}(t) +72\sin ^{2}(t)\right) }  \,  dt\approx 115. 268;\]
 por otro lado,
 \begin{eqnarray*}
@@ -406,7 +406,7 @@ t\right) ,\cos (t) ,6\cos (t) \sin (t)-4\sin (t) \right\rangle \\
 \left\| \overrightarrow{\beta }^{\prime }(t)\right\|
 &=& \sqrt{20+\cos (t) \left( 17\cos (t)-36\cos ^{3}(t) -48\sin ^{2}(t) \right).}
 \end{eqnarray*}
-Entonces, la longitud de la segunda curva está dada por
+Entonces, la longitud de la segunda curva está dada por:
 \[\int_{0}^{2\pi}\sqrt{20+\cos (t) \left( 17\cos (t)-36\cos ^{3}(t) -48\sin ^{2}(t) \right)} \, dt\approx 21.161.\]
 En los dos casos, estas integrales se evaluaron en \verb"Mathematica"
 usando las siguientes instrucciones:
@@ -476,7 +476,7 @@ Por lo descrito anteriormente, la curva de intersección se parametriza por
 $$\overrightarrow{r}\left( t\right) =\left\langle 3\sqrt{2}\sinh \left(
 t\right) ,\sqrt{48-34\cosh ^{2}t},\sqrt{2}\cosh \left( t\right)
 \right\rangle ,$$
-con $t \in[-a,a]$, con lo cual, la longitud de la curva está dada por
+con $t \in[-a,a]$, con lo cual, la longitud de la curva está dada por:
 \[\bigint_{-a}^{a}\sqrt{\frac{2\left(32\cosh ^{2}t-119\cosh^{4}t+24\right)}{17\cosh ^{2}t-24}}dt\approx 30.5672.\]
 Los cálculos que permiten obtener la longitud de la curva
 se obtienen ejecutando en \verb"Mathematica" las siguientes instrucciones:
@@ -524,13 +524,13 @@ es decir, $2+2\cos(t) +z^{2}=4$,
 de donde $z=\pm \sqrt{2-2\cos (t)}$,
 entonces la función
 
-\[{\bf r}_1(t) =\left\langle 1+\cos (t) ,\sin (t),\sqrt{2-2\cos (t) }\right\rangle ,\,\, t\in \lbrack 0,2\pi ],\]
+\[{\bf r}_1(t) =\left\langle 1+\cos (t) ,\sin (t),\sqrt{2-2\cos (t) }\right\rangle ,\,\, t\in [ 0,2\pi ],\]
 
-parametriza la curva de intersección. Es de anotar que son dos porciones que se obtienen por la raiz positiva y la raiz negativa.
+parametriza la curva de intersección. Es de anotar que son dos porciones que se obtienen por la raíz positiva y la raíz negativa.
 
-Para la expresión  $x^{2}+z^{2}=2x$ (que representa el otro cilindro), el tratamiento es similar, obtiendose la función
+Para la expresión  $x^{2}+z^{2}=2x$ (que representa el otro cilindro), el tratamiento es similar, obteniéndose la función
 \[{\bf r}_2(t) =\left\langle 1+\cos (t),\sqrt{2-2\cos (t)},\sin (t)\right\rangle ,\]
-donde $t\in \lbrack 0,2\pi ]$.
+donde $t\in [ 0,2\pi ]$.
 Por la simetría de la curva y las ecuaciones que la definen
 consideraremos solamente ${\bf r}_1(t)$, entonces la longitud ($L$) de la curva es cuatro veces la integral del
 término
@@ -638,7 +638,7 @@ Show[b,a]
 
 A partir de la relación
 $\left\| \frac{d}{dt}\la 3t^{3}+t,3t^{2},3t^{3}-t\ra\right\| = \sqrt{2}\left( 9t^{2}+1\right) $, es posible establecer que
-la longitud de la arco está dada por
+la longitud de la arco está dada por:
 \[L=\int_{-2}^{2}\sqrt{2}\left( 9t^{2}+1\right) dt= 52\sqrt{2}.\]
 
 \begin{funciones}[resume=ejercicios]
@@ -672,7 +672,7 @@ Show[b,a]
 \end{tcolorbox}
 
 Además, $\left\| \frac{d}{dt}\la \sqrt{t^{3}},\frac{9}{16}t,t^{2}\ra\right\| = \frac{9}{16}+2t$,
-entonces la longitud de la curva está dada por
+entonces la longitud de la curva está dada por:
 \[L=\int_0^2 \left ( \frac{9}{16}+2t \right )dt = \frac{41}{8}. \]
 
 \begin{funciones}[resume=ejercicios]
@@ -714,7 +714,7 @@ Show[b,a]
 Es sencillo ver que
 $ \left\| \frac{d}{dt}\la 4t^{3}+2t^{2},\frac{4t}{3\sqrt{2}},4t^{3}-2t^{2}\ra \right\| = \frac{2}{3}\sqrt{2}\left(
 18t^{2}+1\right), $
-por lo tanto, la longitud de la curva está dada por
+por lo tanto, la longitud de la curva está dada por:
 \[L=\int_{-1}^{1}\frac{2}{3}\sqrt{2}\left( 18t^{2}+1\right) dt= \frac{28}{3}\sqrt{2}\]
 
 \begin{funciones}[resume=ejercicios]
@@ -787,7 +787,7 @@ Es claro que
 \[
 \left\| \overrightarrow{r}^{\prime }(t)\right\| =\left\| \frac{d}{dt}\left\langle \sec (t) ,\ln \left( \sec (t) +\tan (t) \right) ,\tan (t) \right\rangle \right\| =\sqrt{2}\sec ^{2}t\text{,}
 \]
-entonces, la longitud de la curva está dada por
+entonces, la longitud de la curva está dada por:
 \[L=\int_{-\pi /3}^{\pi /3}\sqrt{2}\sec ^{2}tdt= 2\sqrt{6}.\]
 %\end{enumerate}
 

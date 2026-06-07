@@ -1,0 +1,19 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1.5,-1.2)(3.2,2) %\psgrid 
+\psset{algebraic,xunit=1.5,yunit=0.9}
+\pscustom[fillstyle=vlines,hatchsep=1pt,hatchwidth=0.4pt,hatchcolor=black!60]{
+\parametricplot[linestyle=none]{-1}{1}{1-t^2|t}
+\psline(0,1)(0,-1)
+}
+\psaxes[linecolor=gray]{->}(0,0)(-0.7,-1.5)(2.1,2.2)[$x$,90][$z$,0]
+\parametricplot[linecolor=black!70,arrows=<->]{-1.2}{1.2}{1-t^2|t}
+\rput(1.2,0.8){$x=1-z^2$}
+\end{pspicture}
+
+\end{document}

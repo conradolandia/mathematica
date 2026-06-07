@@ -1,0 +1,20 @@
+\DocumentMetadata{lang=es,xmp=false}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-0.6,-0.2)(3.5,2.4) % \psgrid
+\psset{algebraic,yunit=0.95}
+\psaxes[Dx=1,Dy=1]{->}(0,0)(-0.4,-0.4)(2.54,2.5)[$x$,90][$z$,180]
+\pscustom[,linestyle=none,fillstyle=solid,fillcolor=gray!50]{
+\psplot[plotpoints=200,linecolor=gray!30]{0}{1}{0}
+\psplot[plotpoints=200,linecolor=gray!30]{1}{0}{1-sqrt(x)}}  
+\rput(1.4,1.4){$x=(1-z)^2$}
+\psset{linewidth=1.2pt}
+\psplot[plotpoints=200,linecolor=gray!30,arrows=->]{0}{1.4}{1-sqrt(x)}
+\psplot[plotpoints=200,linecolor=gray!30,arrows=->,linestyle=dashed]{0}{1.5}{1+sqrt(x)}
+\end{pspicture}
+\end{document}

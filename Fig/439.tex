@@ -1,0 +1,23 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-0.5,-1.4)(3.5,2) % \psgrid
+\psset{algebraic,unit=0.58,plotstyle=curve}
+\pscustom[fillstyle=vlines,hatchsep=1.3pt,hatchwidth=0.4pt,hatchcolor=gray,linestyle=none]{
+\parametricplot{0}{\psPiTwo}{2*cos(t)*cos(t)|2*cos(t)*sin(t)}
+\parametricplot{\psPiTwo}{0}{4*cos(t)*cos(t)|4*cos(t)*sin(t)}
+}
+\psaxes[Dx=2,Dy=2]{->}(0,0)(-1.2,-2.5)(5,3)[$x$,0][$y$,180]
+\parametricplot[linecolor=black!60]{0}{\psPiTwo}{2*cos(t)*cos(t)|2*cos(t)*sin(t)}
+\parametricplot[linecolor=black!60]{0}{\psPiTwo}{4*cos(t)*cos(t)|4*cos(t)*sin(t)}
+\rput(1.5,0.866){$\bullet$}
+\rput(3,1.73){$\bullet$}
+\rput(3,2.1){$Q$} \rput(1.2,0.5){$P$}
+\psline[linewidth=0.4pt](1.5,0.866)(3,1.73)
+\end{pspicture}
+
+\end{document}

@@ -1,0 +1,20 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2.5,-1.7)(2.5,2.5) % \psgrid
+\psset{algebraic,plotstyle=curve,unit=0.6}
+\psaxes[linecolor=black,Dy=3,Dx=2]{->}(0,0)(-4.2,-3.5)(4.2,4)[$x$,-90][$y$,0]
+\multido{\rA=0+0.07}{15}{
+\psparametricplot[linecolor=gray!70,linewidth=0.3pt]{0}{\psPi}{\rA+(3-2*\rA)*cos(2*t),(3-2*\rA)*sin(2*t)}
+}
+\multido{\rA=0+0.2}{16}{
+\psparametricplot[linecolor=gray!70,linewidth=0.3pt]{0}{1}{t+(3-2*t)*cos(2*\rA),(3-2*t)*sin(2*\rA)}
+}
+\psparametricplot[linecolor=black!60]{0}{\psPi}{1+cos(2*t)|sin(2*t)}
+\psparametricplot[linecolor=black!60]{0}{\psPi}{3*cos(2*t)|3*sin(2*t)}
+\end{pspicture}
+\end{document}

@@ -1,0 +1,18 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2.5,-1)(2,1.5) %\psgrid
+\psset{algebraic,plotstyle=curve,unit=0.9}
+\psaxes[Dy=2,linecolor=black]{->}(0,0)(-1.5,-1.5)(2,1.8)[$x$,-90][$y$,0]
+\pscustom[fillstyle=vlines,hatchcolor=black!60,hatchsep=1pt,linestyle=none]{
+\psparametricplot{0}{\psPiTwo}{cos(t)|sin(t)}
+}
+\psparametricplot[linecolor=black!60]{0}{\psPiTwo}{cos(t)|sin(t)}
+\rput(1.75,1){$x^2+y^2=1$}
+\end{pspicture}
+
+\end{document}

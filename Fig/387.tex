@@ -1,0 +1,23 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2.5,-0.4)(2.5,2.5) % \psgrid
+\psset{algebraic,Alpha=30,Beta=10,xunit=0.45,yunit=0.55}
+\pstThreeDCoor[linecolor=black,IIIDzticksep=-0.4,deltaz=2,Dz=2,deltay=2,Dy=2,deltax=2,Dx=2,xMin=-0.8,%
+xMax=5,yMin=-0.4,yMax=6,zMin=0,zMax=5,spotZ=180,IIIDticks,IIIDlabels]
+\parametricplotThreeD[linecolor=black!40,linewidth=0.3pt](0,4)(0,4){t|4*t-t^2,u}
+\parametricplotThreeD[linecolor=black!40,linewidth=0.3pt](0,4)(0,4){u|4*u-u^2,t}
+\parametricplotThreeD[linecolor=black,linewidth=1.5pt](0,4){t|0|4*t-t^2}
+\parametricplotThreeD[linecolor=black,linewidth=1.5pt](0,4){t|4*t-t^2,0}
+\parametricplotThreeD[linecolor=gray,linewidth=0.3pt](0,4)(0,4){u|t|4*u-u^2}
+\parametricplotThreeD[linecolor=gray,linewidth=0.3pt](0,4)(0,4){t|u|4*t-t^2}
+\parametricplotThreeD[linecolor=black!70,linewidth=1.5pt](0,4){t,4*t-t^2,4*t-t^2}
+\pstThreeDPut(0,5.5,3){$z=4x-x^2$} \pstThreeDPut(0,-0.5,4){$4$} 
+\pstThreeDPut(4,0,4.5){$y=4x-x^2$} 
+\end{pspicture}
+
+\end{document}

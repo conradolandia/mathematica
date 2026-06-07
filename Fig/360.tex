@@ -1,0 +1,39 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-3,-1.35)(3,1.8) % \psgrid 
+\psset{algebraic,xunit=0.5,yunit=0.32}
+\psaxes[Dx=2,Dy=2,linecolor=gray!85]{->}(0,0)(-5,-5)(6,5.4)[$x$,90][$y$,0]
+\pscustom[fillstyle=solid,fillcolor=gray,opacity=0.7,linestyle=none]{
+\parametricplot{-1.17}{1.17}{2*SINH(t)|sqrt(12/5)*COSH(t)}
+\parametricplot{-1.731}{1.731}{-COSH(t)|SINH(t)}
+\parametricplot{1.17}{-1.17}{2*SINH(t)|-sqrt(12/5)*COSH(t)}
+\parametricplot{1.731}{-1.731}{COSH(t)|SINH(t)}
+}
+\pscustom[fillstyle=hlines,hatchcolor=gray!80,hatchsep=1.4pt,opacity=0.7,linewidth=0.3pt,linestyle=none]{
+\parametricplot{1.731}{-1.731}{COSH(t)|SINH(t)}
+\parametricplot{-0.75}{0.75}{4*cos(t)|4*sin(t)}
+}
+\pscustom[fillstyle=hlines,hatchcolor=gray!80,hatchsep=1.4pt,opacity=0.7,linewidth=0.3pt,linestyle=none]{
+\parametricplot{1.731}{-1.731}{-COSH(t)|SINH(t)}
+\parametricplot{-0.75}{0.75}{-4*cos(t)|4*sin(t)}
+}
+\parametricplot[linecolor=gray!70,arrows=->]{-1.4}{1.5}{2*SINH(t)|sqrt(12/5)*COSH(t)}
+\parametricplot[linecolor=gray!70,arrows=->]{-1.4}{1.4}{2*SINH(t)|-sqrt(12/5)*COSH(t)}
+\parametricplot[linecolor=black]{0}{\psPiTwo}{4*cos(t)|4*sin(t)}
+\parametricplot[linecolor=black!75,arrows=->]{-2}{2}{COSH(t)|SINH(t)}
+\parametricplot[linecolor=black!75,arrows=->]{-2}{2}{-COSH(t)|SINH(t)}
+\psline[linestyle=dashed,linewidth=0.4pt](2.92,-4.5)(2.92,3.2)
+\psline[linestyle=dashed,linewidth=0.4pt](-4,2.74)(3.2,2.74)
+\rput(-6,2.8){\small $y=\sqrt{\frac{12}{5}}$}
+\rput(6,-4.5){\small $x=\sqrt{17/5}$}
+\rput(6,2){\small $x^2+y^2=16$}
+\rput(5.4,4.4){\small $5y^2-3x^2=12$}
+
+\end{pspicture}
+
+\end{document}

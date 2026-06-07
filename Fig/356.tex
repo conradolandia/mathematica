@@ -1,0 +1,24 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2,-1.1)(2.5,1.7) %\psgrid
+\psset{algebraic,unit=0.9}
+\psaxes[labelFontSize=\scriptstyle,Dx=1,Dy=1]{->}(0,0)(-1.5,-1.3)(1.7,2)[$y$,90][$z$,180]
+\parametricplot[linecolor=gray]{-\psPi}{0}{cos(t)|sin(t)}
+\parametricplot[linecolor=gray]{0}{1}{t|1-t}
+\parametricplot[linecolor=gray]{-1}{0}{t|1+t}
+\pscustom[fillstyle=crosshatch,hatchcolor=black!80,hatchwidth=0.3pt,linestyle=none,opacity=0.6]{
+\parametricplot{-\psPi}{0}{cos(t)|sin(t)}
+\parametricplot{1}{0}{t|1-t}
+\parametricplot{0}{-1}{t|1+t}
+}
+\rput(1.3,-1.2){\small $y^2+z^2=1$}
+\rput(1.6,1){\small $z=1-y$}
+\rput(-1.6,1){\small $z=1+y$}
+\end{pspicture}
+
+\end{document}

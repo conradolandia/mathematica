@@ -1,0 +1,19 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-0.5,-0.4)(3.25,2.6)% \psgrid
+\psset{algebraic,xunit=0.45,yunit=0.5}
+\psaxes[Dx=2,Dy=2]{->}(0,0)(-1.5,-1.5)(6,5.2)[$x$,90][$y$,180]
+\pscustom[fillstyle=solid,fillcolor=gray!60,hatchwidth=0.3pt,linestyle=none,opacity=0.6]{
+\parametricplot{0}{4}{t|4*t-t^2}
+\psline(4,0)(0,0)
+}
+\parametricplot[linecolor=black!70]{-0.25}{4.25}{t|4*t-t^2}
+\rput(3,4.5){$y=4x-x^2$}
+\end{pspicture}
+
+\end{document}

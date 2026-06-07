@@ -1,0 +1,20 @@
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2,-0.4)(2,2.4) %\psgrid
+\psset{yunit=0.2cm,xunit=0.4,algebraic,linecolor=black,linewidth=1.2pt}
+\pscustom[fillstyle=hlines,hatchcolor=gray!60,hatchwidth=0.5pt,hatchsep=1pt]{
+\psplot{-3}{2}{x^2}
+\psplot{2}{-3}{6-x}
+}
+\psaxes[Dy=3,Dx=3]{->}(0,0)(-3.2,-1)(4,12)[$y$,-90][$z$,180]
+\psplot[arrows=->]{-3.3}{2.7}{x^2}
+\psplot[arrows=->]{-3.5}{3}{6-x}
+\rput[l](1.4,8){$z=y^2$}
+\rput[l](1.7,2){$z=6-y$}
+\end{pspicture}
+\end{document}

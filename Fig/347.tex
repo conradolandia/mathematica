@@ -1,0 +1,27 @@
+\documentclass[pstricks,border=14pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2,-0.1)(3.5,3.2) %\psgrid
+\psset{algebraic,yunit=0.32,xunit=0.8}
+\pscustom[fillstyle=vlines,hatchcolor=black!60,hatchsep=1.2pt,linestyle=none]{
+\psparametricplot{-1.4142}{1.4142}{t|8-t^2}
+\psparametricplot{1.4142}{-1.4142}{t|4+t^2}
+}
+\pscustom[fillstyle=hlines,hatchcolor=black!60,hatchsep=1.2pt,linestyle=none]{
+\psparametricplot{-1.4142}{1.4142}{t|4+t^2}
+\psparametricplot{1.4142}{-1.4142}{t|3*t^2}
+}
+\psaxes[Dx=2,deltax=2,Dy=2,linecolor=black]{->}(0,0)(-2.25,-0.8)(3,10)[$y$,-90][$z$,0]
+\psparametricplot[linecolor=black!60,arrows=->]{-1.75}{1.75}{t|3*t^2}
+\psparametricplot[linecolor=black!60,arrows=->]{-1.75}{1.75}{t|4+t^2}
+\psparametricplot[linecolor=black!60,arrows=->]{-1.75}{1.75}{t|8-t^2}
+%\psline[arrows=->,linewidth=0.6pt](0.8,3)(1.5,3.6)
+\rput(2.6,9){\small $z=3y^2$}
+\rput(2.8,7){\small $z=4+y^2$}
+\rput(2.7,4.5){\small $z=8-y^2$}
+\end{pspicture}
+\end{document}

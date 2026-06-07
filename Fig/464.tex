@@ -1,0 +1,35 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-3,-0.5)(3.2,3.4) %\psgrid
+\psset{algebraic,Alpha=60,Beta=15,plotstyle=curve,unit=0.7}
+\pstThreeDCoor[linecolor=black,Dy=2,deltay=2,xMin=-4.5,xMax=3,yMin=-1,yMax=4.1,zMin=-1,zMax=5,spotZ=180,IIIDticks,IIIDlabels]
+\pscustom[fillstyle=solid,fillcolor=gray!60,opacity=0.6,linestyle=none]{
+\parametricplotThreeD(0,\psPiTwo){(1-cos(t))*cos(t)|(1-cos(t))*sin(t)|0}
+\parametricplotThreeD(\psPiTwo,0){(2-2*cos(t))*cos(t)|(2-2*cos(t))*sin(t)|0}
+}  % sombra en la base
+\parametricplotThreeD[linecolor=black!40,linewidth=0.6pt](0,\psPiTwo){(1-cos(t))*cos(t)|(1-cos(t))*sin(t),0} % curva base
+\pstThreeDPut(-2,1.5,0.2){$Q$}
+\pstThreeDPut(-2,1,0){$\bullet$}
+\pstThreeDLine[linecolor=black!60,linewidth=0.9pt,linestyle=dashed](-2,1,0)(-2,1,1.5)
+\parametricplotThreeD[linecolor=black!60,linewidth=0.6pt](0,\psPiTwo){(2-2*cos(t))*cos(t)|(2-2*cos(t))*sin(t),0} % curva base
+\parametricplotThreeD[linecolor=black!50,linewidth=0.3pt](0,\psPiTwo)(0,1){(1-cos(t))*cos(t)|(1-cos(t))*sin(t)|u*(4-sin(t)+cos(t)*sin(t))/2} % cilindro chico
+\parametricplotThreeD[linecolor=black!50,linewidth=0.3pt](0,1)(0,\psPiTwo){(1-cos(u))*cos(u)|(1-cos(u))*sin(u)|t*(4-sin(u)+cos(u)*sin(u))/2} % cilindro chico
+\parametricplotThreeD[linecolor=gray,linewidth=0.1pt](0,\psPiTwo)(0,1){(2-2*cos(t))*cos(t)|(2-2*cos(t))*sin(t)|u*(2-sin(t)+cos(t)*sin(t))} % cilindro grande
+\parametricplotThreeD[linecolor=gray,linewidth=0.1pt](0,1)(0,\psPiTwo){(2-2*cos(u))*cos(u)|(2-2*cos(u))*sin(u)|t*(2-sin(u)+cos(u)*sin(u))} % cilindro grande
+\pscustom[fillstyle=hlines,hatchcolor=black!70,hatchsep=1.2pt,hatchwidth=0.7pt,linestyle=none]{
+\parametricplotThreeD(0,\psPiTwo){(1-cos(t))*cos(t)|(1-cos(t))*sin(t)|2-((1-cos(t))*sin(t))/2}
+\parametricplotThreeD(\psPiTwo,0){(2-2*cos(t))*cos(t)|(2-2*cos(t))*sin(t)|2-((2-2*cos(t))*sin(t))/2}
+} % sombra superior
+\parametricplotThreeD[linecolor=black!60,linewidth=0.8pt](0,\psPiTwo){(1-cos(t))*cos(t)|(1-cos(t))*sin(t),2-((1-cos(t))*sin(t))/2} % curva superior
+\parametricplotThreeD[linecolor=black!60,linewidth=0.8pt](0,\psPiTwo){(2-2*cos(t))*cos(t)|(2-2*cos(t))*sin(t),2-((2-2*cos(t))*sin(t))/2} % curva superior
+\pstThreeDLine[linecolor=black!70,linewidth=0.6pt](0,0,2)(0,0,4)
+\pstThreeDPut(-2,1,1.5){$\bullet$}
+\pstThreeDPut(-2,1.5,1.7){$P$}
+\end{pspicture}
+
+\end{document}

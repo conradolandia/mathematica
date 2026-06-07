@@ -1,0 +1,45 @@
+\DocumentMetadata{lang=es,xmp=false}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2.4,-0.4)(3,3.6) % \psgrid
+\psset{algebraic,unit=0.75}
+\psaxes[Dx=2,Dy=2,linecolor=gray]{->}(0,0)(-2.5,-0.4)(3,5)[$x$,-90][$z$,0]
+\pscustom[fillstyle=solid,linestyle=none,fillcolor=gray!60,opacity=0.5]{
+\psparametricplot[linecolor=gray!60]{0}{\psPiTwo}{2*cos(t)|2+2*sin(t)}
+\psparametricplot[linecolor=gray!60]{\psPiTwo}{0}{cos(t)|1+sin(t)} }
+\pscustom[fillstyle=solid,linestyle=none,fillcolor=gray!40]{
+\psparametricplot{-\psPi}{0}{2*cos(t)|2+2*sin(t)}
+\psline(2,2)(2,0)(-2,0)(-2,2) 
+}
+\pscustom[fillstyle=solid,linestyle=none,fillcolor=black!60]{
+\psparametricplot{0}{0.27}{sqrt(4*t-t^2)|t}
+\psline(1,0.27)(1,1)
+\psparametricplot{0}{-1.57}{cos(t)|1+sin(t)}
+}
+\pscustom[fillstyle=solid,linestyle=none,fillcolor=black!60]{
+\psparametricplot{0}{0.27}{-sqrt(4*t-t^2)|t}
+\psline(-1,0.27)(-1,1)
+\psparametricplot{0}{-1.57}{-cos(t)|1+sin(t)}
+}
+\psline[linecolor=white](-0.68,0.27)(-1,0.27)
+\psline[linecolor=white](0.68,0.27)(1,0.27)
+\psline[linecolor=black](1,0.27)(2,0.27)
+\psline[linecolor=black](-1,0.27)(-2,0.27)
+\pscustom[fillstyle=crosshatch,linestyle=none,hatchcolor=gray!60]{
+\psparametricplot[linecolor=gray!60]{0}{\psPiTwo}{cos(t)|1+sin(t)} }
+\psline[linestyle=dashed,linecolor=gray!60](2,2)(-2,2) 
+\psparametricplot[linecolor=gray!60]{0}{\psPiTwo}{2*cos(t)|2+2*sin(t)}
+\psparametricplot[linecolor=gray!60]{0}{\psPiTwo}{cos(t)|1+sin(t)}
+\psline[linecolor=gray!60](-2,2)(-2,0)(2,0)(2,2)
+\rput(2.3,4){$x^2+z^2=4z $}
+\rput(2,3){$x^2+z^2=2z $}
+\psline[linecolor=gray!80,arrows=->](0.7,1.8)(1.2,2.8)
+\psline[linecolor=gray!60,linewidth=0.4pt,linestyle=dashed](-1,2)(-1,0.27) 
+\psline[linecolor=gray!60,linewidth=0.4pt,linestyle=dashed](1,2)(1,0.27)
+\end{pspicture}
+\end{document}

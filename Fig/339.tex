@@ -1,0 +1,27 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2.5,-1.1)(2.6,1.7) % \psgrid
+\psset{algebraic,unit=0.65}
+\pscustom[fillstyle=vlines,hatchcolor=gray!80,hatchsep=1.2pt]{
+\parametricplot{0}{1.57}{2*cos(t)|2*sin(t)}
+\psline(0,2)(0,0)
+\parametricplot{\psPi}{0}{1+cos(t)|sin(t)}
+}
+\pscustom[fillstyle=hlines,hatchcolor=gray!80,hatchsep=1.2pt]{
+\psline(0,-2)(0,0)
+\parametricplot{\psPi}{\psPiTwo}{1+cos(t)|sin(t)}
+\parametricplot{\psPiTwo}{4.71}{2*cos(t)|2*sin(t)}
+}
+\pscustom[fillstyle=solid,fillcolor=gray!50]{
+\parametricplot{1.57}{4.71}{2*cos(t)|2*sin(t)}
+}
+\psaxes[Dx=2,Dy=2]{->}(0,0)(-3.2,-2.5)(3,3)[$x$,0][$y$,180]
+\parametricplot[linecolor=black!80]{0}{\psPiTwo}{2*cos(t)|2*sin(t)}
+\parametricplot[linecolor=black!80]{0}{\psPiTwo}{1+cos(t)|sin(t)}
+\end{pspicture}
+\end{document}

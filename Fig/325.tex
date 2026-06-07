@@ -1,0 +1,43 @@
+\DocumentMetadata{lang=es,xmp=false}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2.2,-0.3)(2.5,3.7) %\psgrid
+\psset{algebraic,xunit=0.8,yunit=0.8}
+\psaxes[Dx=2,Dy=2,linecolor=gray,labelFontSize=\scriptstyle]{->}(0,0)(-2.5,-0.4)(3,4.6)[$x$,-90][$z$,0]
+\pscustom[fillstyle=vlines,linestyle=none,hatchcolor=gray!90,hatchwidth=0.75pt,hatchsep=0.6 pt]{
+\psparametricplot{0}{\psPi}{2*cos(t)|2+2*sin(t)}
+\psline(-2,2)(2,2)
+}
+\pscustom[fillstyle=vlines,linestyle=none,hatchcolor=gray!90,hatchwidth=0.75pt,hatchsep=0.6 pt]{
+\psparametricplot{0}{2}{sqrt(2*t-t^2)|t}
+\psline(0,2)(2,2)
+\psparametricplot{2}{0}{sqrt(4*t-t^2)|t}
+}
+\psparametricplot[fillstyle=hlines,hatchcolor=gray!40,hatchwidth=0.6pt,hatchsep=1.5 pt,hatchangle=0]{0}{\psPiTwo}{cos(t)|1+sin(t)}
+\pscustom[fillstyle=vlines,linestyle=none,hatchcolor=gray!90,hatchwidth=0.75pt,hatchsep=0.6 pt]{
+\psparametricplot{0}{2}{-sqrt(2*t-t^2)|t}
+\psline(0,2)(-2,2)
+\psparametricplot{2}{0}{-sqrt(4*t-t^2)|t}
+}
+\pscustom[fillstyle=hlines,linestyle=none,hatchcolor=gray!70,hatchwidth=0.5pt,hatchsep=1.2 pt,hatchangle=90]{
+\psparametricplot{0}{2}{-sqrt(4*t-t^2)|t}
+\psline(-2,2)(-2,0)(0,0)
+}
+\pscustom[fillstyle=hlines,linestyle=none,hatchcolor=gray!70,hatchwidth=0.5pt,hatchsep=1.5 pt,hatchangle=90]{
+\psparametricplot{0}{2}{sqrt(4*t-t^2)|t}
+\psline(2,2)(2,0)(0,0)
+}
+\psline[linestyle=dashed,linecolor=gray!80,linewidth=0.7pt](-2,2)(2,2)
+\psparametricplot[linecolor=gray!80]{0}{\psPiTwo}{2*cos(t)|2+2*sin(t)}
+\psparametricplot[linecolor=gray!80]{0}{\psPiTwo}{cos(t)|1+sin(t)}
+\psline[linecolor=gray!80](-2,2)(-2,0)(2,0)(2,2)
+\rput(2.2,4){$x^2+z^2=4z $}
+\rput(2,3){$x^2+z^2=2z $}
+\psline[linecolor=gray!70,arrows=->](0.7,1.8)(1.2,2.8)
+\end{pspicture}
+\end{document}

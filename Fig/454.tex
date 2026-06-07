@@ -1,0 +1,15 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2,-1.2)(2.5,1.8)% \psgrid 
+\psset{algebraic}
+\parametricplot[linecolor=black!70!blue,fillstyle=solid,fillcolor=gray!40]{0}{\psPiTwo}{cos(t)|sin(t)}
+\psaxes[linecolor=black,labels=none]{->}(0,0)(-1.5,-1.5)(1.8,1.8)[$x$,-90][$y$,0]
+\rput(1.4,1.15){$x^2+y^2=r^2$}
+\end{pspicture}
+
+\end{document}

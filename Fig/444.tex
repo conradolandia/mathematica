@@ -1,0 +1,41 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-3.5,-2)(3.5,2.1) % \psgrid
+\psset{algebraic,plotstyle=curve,xunit=1.1,yunit=0.7}
+\psaxes[Dy=2,linecolor=black]{->}(0,0)(-2,-3)(2.5,3)[$x$,90][$y$,0]
+\pscustom[fillstyle=vlines,hatchcolor=black!60,hatchsep=0.8pt,linestyle=none]{
+\psparametricplot{-1}{1}{t|(5-t-sqrt(1-t^2))/3}
+\psparametricplot{1}{-1}{t|(5-t+sqrt(1-t^2))/3}
+}
+\pscustom[fillstyle=vlines,hatchcolor=black!60,linestyle=none]{
+\psparametricplot{-1}{1}{t|(-3+2*sqrt(1-t^2))/2}
+\psparametricplot{1}{-1}{t|(-3-2*sqrt(1-t^2))/2}
+}
+\pscustom[fillstyle=hlines,hatchcolor=black!50,hatchsep=1.5pt,hatchwidth=0.8pt,opacity=0.6,linestyle=none]{
+\psparametricplot{-1}{1}{t|(5-t-sqrt(1-t^2))/3}
+\psline(1,1.33)(1,-1.5)
+\psparametricplot{1}{-1}{t|(-3-2*sqrt(1-t^2))/2}
+\psline(-1,-1.5)(-1,2)
+}
+\psparametricplot[linecolor=black!60]{-1}{1}{t|(5-t-sqrt(1-t^2))/3}
+\psparametricplot[linecolor=black!60]{-1}{1}{t|(5-t+sqrt(1-t^2))/3}
+\psparametricplot[linecolor=black!60]{-1}{1}{t|(-3-2*sqrt(1-t^2))/2}
+\psparametricplot[linecolor=black!60]{-1}{1}{t|(-3+2*sqrt(1-t^2))/2}
+\psline[linecolor=black!60](1,1.33)(1,-1.5)
+\psline[linecolor=black!60](-1,-1.5)(-1,2)
+\rput(-2.5,2.3){$y= \frac{5-x+\sqrt{1-x^2}}{3}$}
+\rput(-2.5,1.5){$y= \frac{5-x-\sqrt{1-x^2}}{3}$}
+\rput(-2.5,-1.2){$y= \frac{-3 + 2 \sqrt{1-x^2}}{2}$}
+\rput(-2.5,-2){$y= \frac{-3 - 2 \sqrt{1-x^2}}{2}$}
+\psline[linewidth=0.6pt,arrows=->](-0.7,2.2)(-1.3,2.4)
+\psline[linewidth=0.6pt,arrows=->](-0.7,1.6)(-1.3,1.5)
+\psline[linewidth=0.6pt,arrows=->](-0.8,-0.85)(-1.3,-1.2)
+\psline[linewidth=0.6pt,arrows=->](-0.9,-2)(-1.3,-2.1)
+\end{pspicture}
+
+\end{document}

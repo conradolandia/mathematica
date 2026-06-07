@@ -1,0 +1,19 @@
+\DocumentMetadata{lang=es,xmp=false}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-3,-1.3)(3,2) % \psgrid
+\psset{algebraic,unit=0.65}
+\psaxes[linecolor=gray!50,Dx=2,dx=2,labelFontSize=\scriptstyle]{->}(0,0)(-2.5,-2.4)(3,3)[$x$,-90][$y$,0]
+\pscustom[linestyle=none,fillstyle=vlines,fillcolor=gray!40,opacity=0.6,hatchsep=1pt,hatchwidth=0.21pt,hatchcolor=gray]{
+\psparametricplot{0}{\psPiTwo}{2*cos(t)|2*sin(t)}
+\psparametricplot{0}{\psPiTwo}{sin(t)|1+cos(t)}
+}
+\psparametricplot[linecolor=black!60]{0}{\psPiTwo}{2*cos(t)|2*sin(t)}
+\psparametricplot[linecolor=black!60]{0}{\psPiTwo}{sin(t)|1+cos(t)}
+\end{pspicture}
+\end{document}

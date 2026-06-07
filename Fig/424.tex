@@ -1,0 +1,20 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-0.25,-0.35)(3,2.5)  % \psgrid
+\psset{algebraic,xunit=0.4,yunit=0.5}
+\psaxes[Dx=2,Dy=2]{->}(0,0)(-1.2,-0.6)(5.5,5.5)[$x$,90][$z$,180]
+\pscustom[fillstyle=vlines,hatchcolor=gray!80,hatchsep=1.5pt,hatchwidth=0.5pt,linestyle=none]{
+\parametricplot{0}{1.57}{4*cos(t)|4*sin(t)}
+\psline(0,4)(0,0)(4,0)
+}
+\parametricplot[linecolor=black!70,arrows=->]{-0.1}{1.7}{4*cos(t)|4*sin(t)}
+\psline[linecolor=black!70](4,0)(0,0)(0,4)
+\rput(3,4.5){\small{$x^2+z^2=16$}}
+\end{pspicture}
+
+\end{document}

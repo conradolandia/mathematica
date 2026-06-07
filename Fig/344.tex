@@ -1,0 +1,20 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1.2,-0.3)(2.5,2.8) %\psgrid 
+\psset{algebraic,yunit=0.45,xunit=0.5}
+\pscustom[fillstyle=vlines,hatchcolor=black!60,hatchsep=1.4pt,hatchwidth=0.7pt,linestyle=none]{
+\parametricplot{1.58}{-1.58}{t|t^2}
+\parametricplot{-1.58}{1.58}{t|5-t^2}
+}
+\psaxes[linecolor=black,Dy=5,Dx=2]{->}(0,0)(-3,-0.5)(4,6.2)[$y$,-90][$z$,0]
+\parametricplot[linecolor=gray!60,arrows=<->]{-2}{2}{t|t^2}
+\parametricplot[linecolor=gray!60,arrows=<->]{-2.1}{1.9}{t|5-t^2}
+\rput(2.1,4.6){$z=y^2$}
+\rput(3,1.2){$z=5-y^2$}
+\end{pspicture}
+\end{document}

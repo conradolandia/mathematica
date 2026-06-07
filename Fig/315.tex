@@ -1,0 +1,28 @@
+\DocumentMetadata{lang=es,xmp=false}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1,-0.5)(5,3.6) %\psgrid
+\psset{algebraic,yunit=0.7,xunit=1.5}
+\psaxes[Dx=2,deltax=2,linecolor=black]{->}(0,0)(-0.5,-0.8)(3,5)[$x$,90][$z$,0]
+\pscustom[fillstyle=solid,fillcolor=gray!30,linestyle=none,opacity=0.6]{
+\psparametricplot{0}{2}{t,4-t^2}
+\psparametricplot{2}{0}{t,3+t-5*t^2/4}
+\psline(0,3)(0,4)
+}
+\pscustom[fillstyle=hlines,hatchcolor=gray!30,hatchwidth=0.6pt,hatchsep=1pt,linestyle=none,opacity=0.6]{
+\psparametricplot{0}{2}{t,3+t-5*t^2/4}
+\psline(2,0)(0,0)(0,3)
+}
+\psparametricplot[arrows=->,linecolor=black!60]{-0.15}{2.2}{t,4-t^2}
+\psparametricplot[arrows=->,linecolor=black]{-0.1}{2.2}{t,3+t-5*t^2/4}
+\psline[arrows=->,linewidth=0.6pt](1,3)(1.5,3)
+\psline[arrows=->,linewidth=0.6pt](0.8,3)(1.5,3.6)
+\rput(2.2,3){$z=4-x^2$}
+\rput(2.4,3.6){$z=3+x- \frac{5}{4}x^2$}
+\end{pspicture}
+\end{document}

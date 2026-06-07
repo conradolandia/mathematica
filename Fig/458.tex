@@ -1,0 +1,21 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-3,-1.25)(2,1.4) % \psgrid
+\psset{algebraic,plotstyle=curve,unit=0.5}
+\psaxes[linecolor=black!60]{->}(0,0)(-4.5,-2.6)(2,3.1)[$x$,-90][$y$,0]
+\multido{\rA=0+0.1}{10}{
+\psparametricplot[linecolor=gray,linewidth=0.6pt]{0}{\psPiTwo}{cos(t)*(1-cos(t))*(1+\rA),sin(t)*(1-cos(t))*(1+\rA)}
+}
+\multido{\rA=0+0.2}{32}{
+\psparametricplot[linecolor=gray,linewidth=0.6pt]{0}{1}{cos(\rA)*(1-cos(\rA))*(1+t),sin(\rA)*(1-cos(\rA))*(1+t)}
+}
+\psparametricplot[linecolor=black]{0}{\psPiTwo}{(1-cos(t))*cos(t)|(1-cos(t))*sin(t)}
+\psparametricplot[linecolor=black]{0}{\psPiTwo}{(2-2*cos(t))*cos(t)|(2-2*cos(t))*sin(t)}
+\end{pspicture}
+
+\end{document}

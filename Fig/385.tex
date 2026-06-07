@@ -1,0 +1,23 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-0.25,-0.3)(4,2.2) %\psgrid
+\psset{algebraic,yunit=0.4,xunit=0.45}
+\psaxes[linecolor=black,Dx=4,Dy=2]{->}(0,0)(-1.2,-0.4)(10,5.3)[$y$,-90][$z$,0]
+\psset{linewidth=0.4pt,linecolor=black!70,plotstyle=curve}
+\psline[fillstyle=hlines,hatchcolor=black!60,hatchangle=20,hatchwidth=0.2pt,hatchsep=1.5pt,linestyle=none](0,0)(4,0)(0,4)(0,0)
+\psline[fillstyle=hlines,hatchcolor=black!60,hatchangle=-20,hatchwidth=0.2pt,hatchsep=1.5pt,linestyle=none](4,0)(8,0)(8,4)(4,0)
+\psline[fillstyle=hlines,hatchcolor=black!50,hatchangle=30,hatchwidth=0.2pt,hatchsep=1.5pt,linestyle=none](4,0)(4,4)(0,4)(4,0)
+\psline[fillstyle=hlines,hatchcolor=black!80,hatchangle=-30,hatchwidth=0.2pt,hatchsep=1.5pt,linestyle=none](4,0)(4,4)(8,4)(4,0)
+\psline[linecolor=black!70](0,0)(8,0)(8,4)(0,4)(0,0)
+\parametricplot[linecolor=black!70,linewidth=0.8pt,arrows=-]{0}{4}{t|4-t}
+\parametricplot[linecolor=black!70,linewidth=0.8pt,arrows=->]{4}{8.5}{t|t-4}
+\rput[l](1.3,3){\small $z=4-y$}
+\rput[l](8.7,4.2){\small $z=y-4$}
+\end{pspicture} 
+
+\end{document}

@@ -1,0 +1,21 @@
+\DocumentMetadata{lang=es,xmp=false}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2.8,-2.4)(2.3,2.8) %\psgrid
+\psset{Alpha=35,Beta=20,algebraic,plotstyle=curve,unit=0.7}
+\pstThreeDCoor[IIIDticks,IIIDlabels,linewidth=0.6pt,zMax=4,yMax=6,xMin=-2,zMin=-1.5,%
+yMin=-2,xMax=4,spotZ=180,linecolor=black]
+\psset{xPlotpoints=200,linecolor=gray,linewidth=0.3pt} 
+\parametricplotThreeD(-\psPi,\psPi)(0,2.5){u*cos(t)|u*sin(t)|u^2*cos(2*t)/4} 
+\parametricplotThreeD(0,2.5)(-\psPi,\psPi){t*cos(u)|t*sin(u)|t^2*cos(2*u)/4} 
+\psset{xPlotpoints=200,linecolor=gray!60,linewidth=0.3pt}
+\parametricplotThreeD(0,\psPiTwo)(-2,2){2*cos(t)|2*sin(t)|u} 
+\parametricplotThreeD(-2,2)(0,\psPiTwo){2*cos(u)|2*sin(u)|t} 
+\parametricplotThreeD[xPlotpoints=200,linecolor=black,linewidth=1.5pt](-\psPi,\psPi){2*cos(t) | 2*sin(t) | cos(2*t)}
+\end{pspicture}
+\end{document}

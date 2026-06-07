@@ -1,0 +1,26 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-4,-0.6)(4,2.25) % \psgrid
+\psset{algebraic,yunit=0.5,xunit=0.8}
+\psaxes[Dx=2,Dy=2,dx=2,linecolor=black,labelFontSize=\scriptstyle]{->}(0,0)(-3,-1.2)(4,4.7)[$x$,-90][$z$,0]
+\psparametricplot[arrows=<-,linecolor=gray!85]{-2.1}{-1.41}{t|4*t^2-t^4}
+\psparametricplot[linecolor=black]{-1.41}{0}{t|4*t^2-t^4}
+\psparametricplot[linecolor=gray!85]{0}{1.41}{t|4*t^2-t^4}
+\psparametricplot[linecolor=black,arrows=->]{1.41}{2.1}{t|4*t^2-t^4}
+\psline[linewidth=0.6pt,linecolor=gray,linestyle=dashed](-1.41,0)(-1.41,4)(1.41,4)(1.41,0)
+\rput(4.2,2){\small{$x = \sqrt{2 + \sqrt{4-z}}$}}
+\rput(4.2,1){\small{$x = \sqrt{2 - \sqrt{4-z}}$}}
+\rput(-4.4,2){\small{$x = -\sqrt{2 + \sqrt{4-z}}$}}
+\rput(-4.4,1){\small{$x = -\sqrt{2 - \sqrt{4-z}}$}}
+\rput(-1.41,-0.4){\tiny {$-\sqrt{2}$}}
+\rput(1.41,-0.4){\tiny{$\sqrt{2}$}}
+\psline[linewidth=0.4pt,arrows=->](0.6,1)(2.5,1)
+\psline[linewidth=0.4pt,arrows=->](-0.6,1)(-2.5,1.2)
+\end{pspicture}
+
+\end{document}

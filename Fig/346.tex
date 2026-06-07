@@ -1,0 +1,14 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1.9,-1.4)(1.8,1.6) % \psgrid 
+\psset{algebraic,unit=0.52}
+\psaxes[Dx=2,Dy=2,linecolor=black]{->}(0,0)(-3,-2.2)(3,3)[$x$,90][$y$,0]
+\parametricplot[linecolor=gray!70,fillstyle=vlines,hatchwidth=0.7pt,hatchcolor=black!60,hatchsep=1.4pt]{0}{\psPiTwo}{sqrt(5)*cos(t)|sqrt(5/2)*sin(t)}
+\rput(2.7,-2){$x^2+2y^2=5$}
+\end{pspicture}
+\end{document}

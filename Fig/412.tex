@@ -1,0 +1,19 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1,-0.4)(2.5,3) % \psgrid
+\psset{algebraic,yunit=1.05,xunit=0.6,hatchsep=2pt}
+\pscustom[linestyle=none,fillstyle=hlines,hatchcolor=gray!60]{
+\psline(-1,0)(3,0)(-1,2)(-1,0) }  
+\psline[linewidth=0.8pt,linecolor=black!70](-1,2)(-1,0)(3,0)
+\psaxes[Dy=2]{->}(0,0)(-1.4,-0.4)(4,2.8)[$x$,90][$z$,180]
+\rput(1.8,1.8){\small $3z+x=1$}
+\psset{linewidth=0.8pt,linecolor=black!70}
+\psplot[arrows=->]{-1.4}{3.5}{(3-x)/2}
+\end{pspicture} 
+
+\end{document}

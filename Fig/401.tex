@@ -1,0 +1,25 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1,-0.4)(3,2.4) %\psgrid 
+\psset{algebraic,yunit=1.7,xunit=1.25}
+\psaxes[linecolor=black]{->}(0,0)(-0.6,-0.3)(2,1.6)[$y$,-90][$z$,180]
+\pscustom[fillstyle=hlines,hatchwidth=0.4pt,hatchsep=1.5pt,hatchcolor=gray!70]{
+\parametricplot{0}{1}{t|2*t-t^2}
+\psline(1,1)(0,1)(0,0)
+}
+\pscustom[fillstyle=vlines,hatchwidth=0.4pt,hatchsep=1.5pt,hatchcolor=gray!70]{
+\parametricplot{0}{1}{t|2*t-t^2}
+\psline(1,1)(1,0)(0,0)
+}
+\psset{linecolor=black}
+\parametricplot[arrows=->]{0}{1.4}{t|2*t-t^2}
+\psline(1,1)(0,1)(0,0)(1,0)(1,1)
+\rput(1.2,1.2){$z=2y-y^2$}
+\end{pspicture}
+
+\end{document}

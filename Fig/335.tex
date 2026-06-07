@@ -1,0 +1,24 @@
+\documentclass[pstricks,border=20pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1,-0.3)(3,2.4) % \psgrid
+\psset{xunit=0.4cm,yunit=0.25cm,algebraic,linecolor=black}
+\parametricplot[linecolor=black]{0}{\psPiTwo}{5/2*cos(t)|13/2+5/2*sin(t)}
+\pscustom[fillstyle=vlines,hatchcolor=black!40,hatchwidth=0.5pt,hatchsep=1pt]{
+\parametricplot{0}{\psPiTwo}{5/2*cos(t)|13/2+5/2*sin(t)}
+}
+\pscustom[fillstyle=solid,fillcolor=gray!40]{
+\parametricplot{-\psPi}{0}{5/2*cos(t)|13/2+5/2*sin(t)}
+\psplot{2.45}{-2.45}{x^2}
+}
+\psaxes[Dy=3,Dx=3]{->}(0,0)(-3.5,0)(4.5,11)[$x$,-90][$z$,180]
+\psplot{0}{2.47}{13/2-0.5*sqrt(25-4*x^2)}
+\psplot{-2.4}{2.47}{x^2}
+\rput[l](1.4,1.4){$z=x^2$}
+\rput[l](0.5,10){\small $x^2+z^2-13z=-36$}
+\end{pspicture}
+\end{document}

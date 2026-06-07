@@ -1,0 +1,20 @@
+\documentclass[pstricks,border=12pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2,-0.4)(3.5,2.9) % \psgrid
+\psset{algebraic,Alpha=60,Beta=10,plotstyle=curve,unit=0.6}
+\pstThreeDCoor[linecolor=black,Dy=2,deltay=2,Dx=2,deltax=2,Dz=2,deltaz=2,xMin=-4.5,xMax=3,yMin=-2.1,yMax=6.1,zMin=-1,zMax=5,spotZ=180,IIIDticks,IIIDlabels]
+\pscustom[fillstyle=solid,fillcolor=gray!40,opacity=0.75,linestyle=none]{
+\parametricplotThreeD(0,\psPiTwo){(1-cos(t))*cos(t)|(1-cos(t))*sin(t)|2-((1-cos(t))*sin(t))/2}
+\parametricplotThreeD(\psPiTwo,0){(2-2*cos(t))*cos(t)|(2-2*cos(t))*sin(t)|2-((2-2*cos(t))*sin(t))/2}
+} % sombra superior
+\parametricplotThreeD[linecolor=black!60,linewidth=0.8pt](0,\psPiTwo){(1-cos(t))*cos(t)|(1-cos(t))*sin(t),2-((1-cos(t))*sin(t))/2} % curva superior
+\parametricplotThreeD[linecolor=black!60,linewidth=0.8pt](0,\psPiTwo){(2-2*cos(t))*cos(t)|(2-2*cos(t))*sin(t),2-((2-2*cos(t))*sin(t))/2} % curva superior
+\pstThreeDLine[linecolor=black!50,linewidth=0.6pt](0,0,2)(0,0,4)
+\end{pspicture}
+
+\end{document}

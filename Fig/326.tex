@@ -1,0 +1,54 @@
+\DocumentMetadata{lang=es,xmp=false}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-2.6,-0.3)(3,3.8) % \psgrid
+  \psset{algebraic,unit=0.8}
+  \psaxes[Dx=2,Dy=2,linecolor=gray,labelFontSize=\scriptstyle]{->}(0,0)(-2.5,-0.4)(3,4.5)[$x$,-90][$z$,0]
+  \pscustom[fillstyle=solid,linestyle=none,fillcolor=gray!60,opacity=0.5]{
+    \psparametricplot{0.27}{3.73}{-sqrt(4*t-t^2)|t}
+    \psline(-1,3.73)(-1,0.27)
+  }
+  \pscustom[fillstyle=solid,linestyle=none,fillcolor=gray!60,opacity=0.5]{
+    \psparametricplot{-1}{1}{t|1+sqrt(1-t^2)}
+    \psline(1,1)(1,3.73)
+    \psparametricplot{1}{-1}{t|2+sqrt(4-t^2)}
+    \psline(-1,3.73)(-1,1)
+  }
+  \pscustom[fillstyle=solid,linestyle=none,fillcolor=gray!60,opacity=0.5]{
+    \psparametricplot{0.27}{3.73}{sqrt(4*t-t^2)|t}
+    \psline(1,3.73)(1,0.27)
+  }
+  \pscustom[fillstyle=solid,linestyle=none,fillcolor=gray!70]{
+    \psparametricplot{-1}{1}{t|1-sqrt(1-t^2)}
+    \psline(1,1)(1,0.27)
+    \psparametricplot{1}{-1}{t|2-sqrt(4-t^2)}
+    \psline(-1,0.27)(-1,1)
+  }
+  \pscustom[fillstyle=hlines,linestyle=none,hatchcolor=gray!50,hatchsep=0.75 pt]{
+    \psparametricplot{-2}{-1}{t|2-sqrt(4-t^2)}
+    \psline(-1,0.27)(-1,0)(-2,0)(-2,2)
+  }
+  \pscustom[fillstyle=hlines,linestyle=none,hatchcolor=gray!50,hatchsep=0.75 pt]{
+    \psparametricplot{1}{2}{t|2-sqrt(4-t^2)}
+    \psline(2,2)(2,0)(1,0)(1,0.27)
+  }
+  \pscustom[fillstyle=solid,linestyle=none,fillcolor=gray!40]{
+    \psparametricplot{-1}{1}{t|2-sqrt(4-t^2)}
+    \psline(1,0.27)(1,0)(-1,0)(-1,0.27)
+  }
+  \psparametricplot[fillstyle=crosshatch,linestyle=none,hatchcolor=gray!60]{0}{\psPiTwo}{cos(t)|1+sin(t)}
+  \psparametricplot[linecolor=gray!80]{0}{\psPiTwo}{2*cos(t)|2+2*sin(t)}
+  \psparametricplot[linecolor=gray!80]{0}{\psPiTwo}{cos(t)|1+sin(t)}
+  \psline[linecolor=gray!80](-2,2)(-2,0)(2,0)(2,2)
+  \psline[linecolor=gray!70,arrows=->](0.7,1.8)(1.4,2.8)
+  \psline[linestyle=dashed,linecolor=gray!70,linewidth=0.7 pt](-1,3.73)(-1,0)
+  \psline[linestyle=dashed,linecolor=gray!70,linewidth=0.6 pt](1,3.73)(1,0)
+  \rput(2.2,4){$x^2+z^2=4z $}
+  \rput(2.5,3){$x^2+z^2=2z $}
+\end{pspicture}
+\end{document}

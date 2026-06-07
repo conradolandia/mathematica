@@ -57,7 +57,7 @@ Se muestran las figuras de algunas de ellas.
         \item $\cosh (x-y)= \cosh x\cosh y-\sinh x\sinh y$
         \item $\tanh (x+h)=\dfrac{\tanh x+\tanh y}{1+\tanh x\tanh y}$
       \end{itemize}
-    \item Pruebe que
+    \item Probar que
 
       \begin{itemize}
         \item $\lim\limits_{x\rightarrow 0}\frac{\sinh x}{x}=1$,
@@ -68,7 +68,7 @@ Se muestran las figuras de algunas de ellas.
         \item $\lim\limits_{x\rightarrow -\infty }\coth x= -1$.
       \end{itemize}
 
-    \item Obtenga la figura de las funciones $y=\coth x$, $y=\sech x$, $y=\csch x$ y de las funciones
+    \item Obtener la figura de las funciones $y=\coth x$, $y=\sech x$, $y=\csch x$ y de las funciones
       hiperbólicas inversas.
 
     \item Hallar las derivadas de las funciones hiperbólicas.
@@ -92,7 +92,7 @@ Se muestran las figuras de algunas de ellas.
 
 \begin{ejer} Resolver los siguientes problemas:
   \begin{enumerate}
-    \item \textit{Expresar en función de $x$, de manera semejante a la ecuación \ref{hiper4}
+    \item \textit{Expresar en función de $x$, de manera semejante a la ecuación \ref{hiper4},
       las siguientes funciones:}
       \begin{enumerate}
         \item $y=\arccosh x$,
@@ -129,9 +129,10 @@ Al sumar estas dos expresiones haciendo pares de sumandos se obtiene:
 \begin{eqnarray*}
   2S &=& ( n+1) +(n+1)+(n+1) +\cdots +(n+1)\\
   S&=&\frac{n(n+1)}{2}.
-\end{eqnarray*} En resumen,
+\end{eqnarray*} 
+En resumen,
 \begin{equation} \label{sumas1}
-  \ds\sum_{k=1}^{n}k= \frac{1}{2}n(n+1) .
+  \ds\sum_{k=1}^{n}k= \frac{1}{2}n(n+1)
 \end{equation}
 La siguiente suma corresponde a un tipo llamado \emph{sumas telescópicas}. \index{Sumas telescópicas}
 \[\sum_{k=1}^{n}\left( \left( k+1\right) ^{3}-k^{3}\right) =\sum_{k=1}^{n}\left( 3k^{2}+3k+1\right),\]
@@ -181,10 +182,8 @@ con densidad constante $\rho$ que gira alrededor un una recta.
   \fuentepropia
 \end{figure}
 
-\begin{teorema}[\bfseries teorema de Pappus para volúmenes] \index{Teorema de Pappus!volumen}
-  Si una región plana girar alrededor de una recta en el plano, tal que la recta no corta el interior de la región, entonces el volumen $V$ del sólido generado es el área $A$ de la región por la distancia
-  $2\pi r$ recorrida por su centroide durante la rotación. Si $r$ es la distancia entre el eje de rotación y
-  el centroide, es decir $V=2\pi rA$.
+\begin{teorema}[\bfseries Teorema de Pappus para volúmenes] \index{Teorema de Pappus!volumen}
+  \textls[-5]{Si una región plana girar alrededor de una recta en el plano, tal que la recta no corta el interior de la~región, entonces el volumen $V$ del sólido generado es el área $A$ de la región por~la distancia $2\pi r$ recorrida por su centroide durante la rotación. Si $r$ es la distancia entre el eje de rotación y el centroide, es decir $V=2\pi rA$.}
 \end{teorema}
 \begin{proof}
   Verificaremos el resultado dos casos particulares.
@@ -206,21 +205,21 @@ con densidad constante $\rho$ que gira alrededor un una recta.
     Si $\mu_x$ denota el momento con respecto al eje $x$ es conocido que
     \[\mu_x= \frac{1}{2}\rho \int_{a}^{b}\left( [f(x)]^2 -[g(x)]^2\right)dx;\]
     por lo tanto, $\mu_x= \rho\overline{y} A$. El momento con respecto a la recta $L$ con ecuación $y=c$ está dado por:
-    \begin{eqnarray*}
-      \mu _{L}&=&\rho \int_{a}^{b}\left( f(x) -g(x) \right)\left( \frac{f(x) +g(x) }{2}-c\right) dx \\
-      & =& \frac{1}{2}\rho \int_{a}^{b}\left( f(x) -g(x)\right) \left( f(x) +g(x) -2c\right) dx \\
-      &=& \frac{1}{2}\rho \int_{a}^{b}\left[ \left( f(x) -c\right) ^{2}-\left(g(x) -c\right) ^{2}\right] dx
-    \end{eqnarray*}
+    \begin{align*}
+      \mu _{L}&=\rho \int_{a}^{b}\left( f(x) -g(x) \right)\left( \frac{f(x) +g(x) }{2}-c\right) dx \\
+      & = \frac{1}{2}\rho \int_{a}^{b}\left( f(x) -g(x)\right) \left( f(x) +g(x) -2c\right) dx \\
+      &= \frac{1}{2}\rho \int_{a}^{b}\left[ \left( f(x) -c\right) ^{2}-\left(g(x) -c\right) ^{2}\right] dx.
+    \end{align*}
     Entonces, $\rho V = 2\pi \mu_L$; además,
-    % $\mu_{L}=\frac{1}{2}\rho\int_{a}^{b} \left([f(x)]^2-[g(x)]^2\right)dx- c\rho\int_{a}^{b}\left(f(x) -g(x)\right)dx= \mu_x-c\rho A$.
-    \begin{eqnarray*}\mu_{L} &=& \frac{1}{2}\rho\int_{a}^{b}\left([f(x)]^2-[g(x)]^2\right)dx-c\rho\int_{a}^{b}\left(f(x) -g(x)\right)dx. \\&=& \mu_x-c\rho A.
-    \end{eqnarray*}
+    \begin{align*}\mu_{L} &= \frac{1}{2}\rho\int_{a}^{b}\left([f(x)]^2-[g(x)]^2\right)dx-c\rho\int_{a}^{b}\left(f(x) -g(x)\right)dx. \\
+    &= \mu_x-c\rho A.
+    \end{align*}
     Con las igualdades anteriores se sigue que
     \[\mu_{L}=\mu_x-c\rho A=\rho A \overline{y}-c\rho A= \rho A (\overline{y}-c).\]
     Si $r=\overline{y}-c$ es la distancia que recorre el centroide del eje de giro, entonces:
     \[V=2\pi A (\overline{y}-c)=2\pi r A.\]
   \end{parrafoitemize}
-  \vspace*{-\baselineskip}
+  \vspace*{-2\baselineskip}
 \end{proof}
 
 \subsubsection{Longitud de una curva en coordenadas paramétricas}
@@ -235,7 +234,7 @@ así, es posible establecer una aproximación a la longitud de arco.
   &=& \sqrt{\left( \frac{f\left( t_{i}+\Delta t\right) -f\left(t_{i}\right) }{\Delta t}\right) ^{2}+\left( \frac{g\left( t_{i}+\Delta t\right) -g\left( t_{i}\right) }{\Delta t}\right) ^{2}}\Delta t.
 \end{eqnarray*}
 La aproximación mejora si $\Delta t\to 0$ que equivale a que el número de rectángulos satisface $n \to \infty$.
-Por lo tanto la longitud de la curva se calcula como:
+Por lo tanto, la longitud de la curva se calcula como:
 \begin{eqnarray*}
   L&=&\lim_{n\rightarrow \infty } \sum_{i=1}^{n}\sqrt{\left( \frac{%
     f\left( t_{i}+\Delta t\right) -f\left( t_{i}\right) }{\Delta t}\right)
@@ -402,8 +401,7 @@ Si ${\bf r}(u,v,w)=\la x(u,v,w),y(u,v,w),z(u,v,w)  \ra$
 denota el vector posición,
 una \emph{superficie coordenada} consta de todos los puntos en los cuales las funciones  $u$, $v$ o $w$ toman valores constantes. La intersección de dos superficies coordenadas se denomina \emph{curva coordenada}.
 
-El sistema se denomina \emph{ortogonal} si las tangentes a las curvas coordenadas en todo punto de intersección,
-son ortogonales. Es decir, las coordenadas $u,v,w$ forman un sistema de \emph{coordenadas curvilíneas ortogonales} si el conjunto
+El sistema se denomina \emph{ortogonal} si las tangentes a las curvas coordenadas en todo punto de intersección son ortogonales. Es decir, las coordenadas $u,v,w$ forman un sistema de \emph{coordenadas curvilíneas ortogonales} si el conjunto
 
 \[\left \{\frac{\partial{\bf r}}{\partial u},\frac{\partial{\bf r}}{\partial v},\frac{\partial{\bf r}}{\partial w}\right \}\]
 
@@ -479,10 +477,14 @@ x =\frac{a\sinh v}{\cosh v-\cos u} ,\hskip0.5cm y=\frac{a\sin u}{\cosh v-\cos u}
 \end{equation}
 Con $u\in \lbrack 0,2\pi )$, $v\in (-\infty ,\infty )$.
 
+\clearpage
+
 Presentamos algunas curvas en coordenadas bipolares, en este caso las curvas coordenadas poseen dos polos ubicados en $(-a,0)$ y $(a,0)$.
 Esta afirmación es consecuencia de los siguientes resultados:
-\[\lim_{v\rightarrow \infty }x=a,\, \lim_{v\rightarrow -\infty }x= -a\]
-\[\lim_{v\rightarrow\infty}y=\lim_{v\rightarrow -\infty }y=0.\]
+\begin{align*}
+\lim_{v\rightarrow \infty }x&=a,\ \lim_{v\rightarrow -\infty }x= -a\\
+\lim_{v\rightarrow\infty}y&=\lim_{v\rightarrow -\infty }y=0.
+\end{align*}
 
 \begin{figure}[H]
 \centering
@@ -513,7 +515,6 @@ La otra igualdad se trabaja de manera similar:
 = a^2\csch^2v
 \end{multline}
 \end{proof}
-% = a^2\left( \left( \frac{\sinh ^2v-\left( \cosh v-\cos u\right) \cosh v}{ \left( \cosh v-\cos u\right) \sinh v}\right) ^2+\left( \frac{\sin u}{\cosh v-\cos u}\right) ^2\right) = \frac{a^2\left( \left( \sinh ^2v-\left( \cosh v-\cos u\right) \cosh v\right) ^2+\sin ^2u\sinh^2v\right) }{\left( \cosh v-\cos u\right) ^2\sinh ^2v} = \frac{a^2\left( \left( \cos u\cosh v-1\right) ^2+\sin ^2u\sinh ^2v\right)}{\left( \cosh v-\cos u\right) ^2\sinh ^2v}
 
 \subsubsection{Coordenadas elípticas} \index{Coordenadas!elípticas}
 La relación entre coordenadas cartesianas y coordenadas elípticas es:
@@ -524,10 +525,12 @@ En donde $u \in \mathbb{R}$ y $v \in [0, 2\pi]$.
 
 Las líneas coordenadas son elípses e hipérbolas confocales (con los mismos focos). La distancia focal es $a$. \index{Confocales}
 
+\enlargethispage*{\baselineskip}
+
 \begin{figure}[H]
 \centering
 \caption{Curvas confocales}
-\includegraphics[height=4cm]{Fig/202.pdf}
+\includegraphics[height=3.8cm]{Fig/202.pdf}
 \fuentepropia
 \end{figure}
 
@@ -536,6 +539,7 @@ las siguientes igualdades:
 \begin{equation}
 \frac{x^2}{a^2\cosh ^2u}+\frac{y^2}{a^2\sinh ^2u} =  1 \label{elipticas1}
 \end{equation}
+
 \begin{equation}
 \frac{x^2}{a^2\cos ^2v}-\frac{y^2}{a^2\sin ^2v} = 1  \label{elipticas2}
 \end{equation}
@@ -607,8 +611,8 @@ u^2-v^2\right) \right) \right) = u^2v^2=y^2.
 \begin{figure}[H]
 \captionof{figure}{\footnotesize Superficies constantes en coordenadas cilíndricas parabólicas.}
 \centering
-\includegraphics[height=3.5cm]{Img/T_66a.pdf} \hspace{5mm}
-\includegraphics[height=3.5cm]{Img/T_66b.pdf}
+\includegraphics[height=3cm]{Img/T_66a.pdf} \hspace{5mm}
+\includegraphics[height=3cm]{Img/T_66b.pdf}
 \fuentepropia
 \end{figure}
 
@@ -627,6 +631,7 @@ Show[A1,A2,A3,PlotRange->{{-4,4},{-5,5},{-2,2}}]
 \subsubsection{Coordenadas parabólicas} \index{Coordenadas!parabólicas}
 Según \cite{hernandez_nolasco_familias_2012}, este sistema de coordenadas se genera por la rotación alrededor del $z$ de dos parábolas bidimensionales;
 la relación con las coordenadas cartesianas es la siguiente:
+
 \begin{equation}
 x = uv\cos \theta,\hskip0.5cm y = uv\sin \theta, \hskip0.5cm z = \frac{1}{2}\left( u^2-v^2\right)
 \end{equation}
@@ -727,7 +732,7 @@ con $\theta \in [0,2\pi]$.
 
 \begin{figure}[H]
 \centering
-\caption{[FALTA TÍTULO]}
+\caption{Construcción de un toro}
 \includegraphics[height=3cm]{Fig/204.pdf} \hspace{2mm}
 \includegraphics[height=3cm]{Fig/205.pdf}
 \fuentepropia
@@ -852,11 +857,14 @@ Su visualización gráfica es la siguiente.
 \subsubsection{Coordenadas esferoidales oblatas} \index{Coordenadas!esferoidales oblatas}
 
 Un esferoide oblato es el sólido que se obtiene al hacer una elipse sobre su eje menor.
-Las coordenadas esferoides oblatas (achatadas) se originan cuando una elipse rota alrededor de su eje menor,
-la relación con las coordenadas cartesianas es la siguiente.
+Las coordenadas esferoides oblatas (achatadas) se originan cuando una elipse rota alrededor de su eje menor, la relación con las coordenadas cartesianas es la siguiente.
+
+{\setlength{\abovedisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
 \begin{gather}
 x = a \cosh\eta\cos\theta\cos\phi, y = a \cosh\eta\cos\theta\sin\phi, z= a\sinh\eta\sin\theta
-\end{gather}
+\end{gather}}
+
 Con $\eta \in \mathbb{R}$, $0\leq \theta <2\pi$ y $0\leq \phi <\pi$.
 Con la definición se pueden demostrar las siguientes identidades:
 \begin{align*}
@@ -871,8 +879,8 @@ las superficies obtenidas son semiplanos. Presentamos algunas de estas superfici
 \begin{figure}[H]
 \centering
 \caption{Superficies constantes en coordenadas esferoidales oblatas}
-\includegraphics[height=3.5cm]{Img/T_58a.pdf} \hspace{5mm}
-\includegraphics[height=3.5cm]{Img/T_58b.pdf}
+\includegraphics[height=4cm]{Img/T_58a.pdf} \hspace{5mm}
+\includegraphics[height=4cm]{Img/T_58b.pdf}
 \fuentepropia
 \end{figure}
 
@@ -953,7 +961,7 @@ w^2-a^2\right) }{a^2-b^2}}, \hskip0.1cm z=\frac{u}{b}\sqrt{\frac{\left( v^2-b^2\
 \left(w^2-b^2\right) }{b^2-a^2}}.
 \end{equation*}
 
-Se debe considerar la siguiente condición $b^2>v^2>a^2>w^2$.
+Se debe considerar la siguiente condición: $b^2>v^2>a^2>w^2$.
 En este sistema de coordenadas, valores constante de $u$ generan esferas;
 esto es consecuencia de la siguiente igualdad:
 \begin{gather*}
@@ -1054,7 +1062,7 @@ x^2+y^2+z^2-2a\sqrt{x^2+y^2}\cot \theta &= a^2\frac{\left(\cosh \eta +\cos \thet
 \end{proof}
 A partir de relación \ref{biesfericas3} se observa que para $\theta <\pi/2$,
 la superficie generada tiene forma de \emph{manzana} y
-para $\theta >\pi/2$ se genera una superficie posee forma de \emph{limón.}
+para $\theta >\pi/2$ se produce una superficie en forma de \emph{limón}.
 
 \begin{figure}[H]
 \centering
@@ -1081,7 +1089,7 @@ Show[A3,A1,A2,PlotRange->{-2,4}]
 \end{Verbatim}
 \end{tcolorbox}
 
-\subsubsection{Coordenadas cardioidicas} \index{Coordenadas!cardioidicas}
+\subsubsection{Coordenadas cardióidicas} \index{Coordenadas!cardióidicas}
 
 En este sistema de coordenadas se generan, en algunos, casos cardioides de revolución.
 
@@ -1127,7 +1135,7 @@ $r=1+\cos\theta \to r^2=r+r\cos\theta \to x^2+y^2=\sqrt{x^2+y^2}+x;$ %$
 usaremos esta misma relación con tres variables.
 
 \begin{prop}
-En coordenadas cardioidicas, para valores constantes de $u$ y $v$
+En coordenadas cardióidicas, para valores constantes de $u$ y $v$
 se generan cardioides de revolución alrededor del eje $z$ y para valores constantes de
 $\theta$, las superficies generadas son semiplanos.
 \end{prop}
@@ -1182,7 +1190,7 @@ Hallar algunas superficies constantes en coordenadas elipsoidales.
 \subsubsection{Coordenadas esféricas y cilíndricas}\index{Coordenadas!esféricas} \index{Coordenadas!cilíndricas}
 Estas coordenadas son quizás las más estudiadas en un curso de cálculo vectorial. En la página \pageref{esfericas} las consideramos, recordemos su definición:
 \[x=\rho \cos \theta \sin \phi, \, y=\rho \sin \theta \sin \phi,\,z=\rho \cos \phi,\]
-con $\rho \geq 0$, $\theta \in \lbrack 0,2\pi ]$, $\phi \in \lbrack 0,\pi ]$,
+con $\rho \geq 0$, $\theta \in \lbrack 0,2\pi ]$, $\phi \in \lbrack 0,\pi ]$.
 De la relación
 \[x^{2}+y^{2}+z^{2}=(\rho \cos \theta \sin \phi)^{2}+(\rho \sin \theta \sin \phi)^{2}+(\rho \cos \phi) ^{2}=\rho ^{2}\]
 se infiere que para valores constantes de $\rho $ las superficies obtenidas son esferas.
@@ -1227,7 +1235,7 @@ En coordenadas cilíndricas se establece que
 $ x=r\cos \theta, \, y=r\sin \theta,\, z=z$,
 con $r\geq 0$, $\theta \in \lbrack 0,2\pi ]$ y $z \in \mathbb{R}$.
 De las relaciones $x^{2}+y^{2}=r^{2}$ se infiere que para valores constantes
-de $r$ las superficies obtenidas son cilindros; Si
+de $r$ las superficies obtenidas son cilindros. Si
 $ x\sin \theta =r\cos \theta \sin \theta =( r\sin \theta ) \cos \theta =y\cos \theta $, se obtiene ecuaciones
 que representan semiplanos paralelos al eje $z$. Las ecuaciones
 $z=k$ representan planos paralelos al plano polar.

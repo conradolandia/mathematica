@@ -1,0 +1,16 @@
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1.5,-1.6)(2,1.1) % \psgrid
+\psset{unit=0.35cm,algebraic,linecolor=black,linewidth=1.2pt}
+\pscustom[fillstyle=solid,fillcolor=gray!30]{
+\parametricplot{0}{6.28}{2.5*cos(t)|-0.5+2.5*sin(t)}
+}
+\psaxes[Dy=2,Dx=3]{->}(0,0)(-3.2,-4.2)(4,3.5)[$x$,90][$y$,180]
+\rput[l](0.8,-3.2){\small $x^2+y^2=6-y$}
+\end{pspicture}
+\end{document}

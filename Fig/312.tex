@@ -1,0 +1,20 @@
+\DocumentMetadata{lang=es,xmp=false}
+\documentclass[pstricks,border=10pt]{standalone}
+\usepackage{amsmath,amsthm,array,ifthen,amsfonts}
+\usepackage{amsmath,pst-coil,bigints}
+\usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
+\usepackage{bm,calculus}
+\psset{showorigin=false}
+\begin{document}
+\begin{pspicture}(-1.2,-0.5)(4,3) %\psgrid
+\psset{algebraic,xunit=1.2,yunit=1.2}
+\pscustom[fillstyle=solid,fillcolor=gray!40,linestyle=none,opacity=0.6]{
+\psline(0,0)(2,0)(0,1)(0,0)
+}
+\psaxes[Dx=2,deltax=2,linecolor=black]{->}(0,0)(-0.75,-0.4)(3,2.6)[$x$,90][$y$,0]
+\psparametricplot[arrows=<->,linecolor=black]{-0.2}{1.3}{2-2*t,t}
+\psparametricplot[linecolor=black,linestyle=dashed]{-0.1}{1.6}{2*cos(t),2*sin(t)}
+\rput(-1,0.7){\small $x=2-2y$}
+\rput(1.4,2.2){\small $x^2+y^2=4$}
+\end{pspicture}
+\end{document}
