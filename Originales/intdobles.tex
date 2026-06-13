@@ -196,7 +196,7 @@ desde la circunferencia hasta la recta $y=x$, con $x\in[\sqrt{2},2]$.
 
 \begin{figure}[H]
 \centering
-\caption{$x\leq y \leq \sqrt{4-x^{2}}$}
+\caption{$\sqrt{4-x^2} \leq y \leq x$}
 \label{fig:141}
 \includegraphics[height=3.5cm]{Fig/84.pdf} \hspace{2mm}
 \includegraphics[height=3.5cm]{Fig/85.pdf}
@@ -1192,7 +1192,7 @@ Con estos vectores obtenemos el siguiente término:
 \frac{1}{6}\bigg |4\cos\left(\frac{t}{2}\right)-6\cos\left(\frac{3t}{2}\right)+2\cos\left(\frac{5t}{2}\right)-22\sin\left(\frac{t}{2}\right)\\
 +7\sin\left(\frac{3t}{2}\right)-3\sin\left(\frac{5t}{2}\right)\bigg |
 \end{multline*}
-Al integrarlo con los límites descritos antes, proporciona el valor del área del cilindro cardióidico que se encuentra entre el plano $xy$ y el paraboloide, esto es
+Al integrarlo con los límites descritos antes, proporciona el valor del área del cilindro cardióidico que se encuentra entre el plano $xy$ y el paraboloide, esto es:
 \[\int_{0}^{2\pi}\int_{0}^{1}\|\overrightarrow{p}_{t}(t,u)\times \overrightarrow{p}_{u}(t,u)\|dudt=\frac{608}{45}.\]
 Los cálculos se hacen en \verb"Mathematica", para este fin se define $x$ e $y$, que corresponden a la parametrización de la cardioide en el plano. Sustituyendo esto en la ecuación del paraboloide, se define
 $z$, que al unir los puntos permite parametrizar el sólido mediante la expresión $r$.
@@ -1338,16 +1338,16 @@ $\overrightarrow{a}(t)$ y $\overrightarrow{b}(t)$ parametriza la superficie del 
 \end{align*}
 con $t\in [0,2\pi],\,u\in [0,1]$.
 De aquí se obtienen las siguientes funciones.
-\begin{eqnarray*}
-{\bf r}_{t}&=& \la -\sin(t),\frac{1}{3}(3-5u)\cos(t)+\frac{1}{3}u\sin(t),2\cos(t)\ra \\
-{\bf r}_{u}&=& \la 0,-\frac{5}{3}\sin(t)+\frac{19}{6}-\frac{1}{3}\cos(t),0\ra.
-\end{eqnarray*}
+\begin{align*}
+{\bf r}_{t}&= \la -\sin(t),\frac{1}{3}(3-5u)\cos(t)+\frac{1}{3}u\sin(t),2\cos(t)\ra \\
+{\bf r}_{u}&= \la 0,-\frac{5}{3}\sin(t)+\frac{19}{6}-\frac{1}{3}\cos(t),0\ra.
+\end{align*}
 
 También se calcula
 \begin{gather*}
 \mathbf{r}_{t}\times\mathbf{r}_{u}= \left \langle2\cos(t)\left (\frac{5}{3}\sin(t)-\frac{19}{6}+\frac{1}{3}\cos(t)\right),0,\sin(t)\left (\frac{5}{3}\sin(t)-\frac{19}{6}+\frac{1}{3}\cos(t)\right) \right \rangle,
 \end{gather*}
-cuya magnitud es
+cuya magnitud es:
 \[\|{\bf r}_{t}\times{\bf r}_{u}\|=\frac{\sqrt{5+3\cos(2t)}(8+\cos(t)-4\sin (t))}{3\sqrt{2}};\]
 y con esta expresión se obtiene el área, la superficie en mención.
 \[\bigintss_{0}^{1}\bigintss_{0}^{2\pi}\frac{\sqrt{5+3\cos(2t)}(8+\cos(t)-4\sin(t))}{3\sqrt{2}} \, dtdu \approx 25.836.\]
@@ -1383,24 +1383,24 @@ El área sobre el plano $z=3+2y$ dentro del cilindro puede determinarse con el s
 \overrightarrow{\alpha }{u}&= \la \cos (t),\sin (t),2\sin (t)\ra.
 \end{align*}
 
-Luego se calcula el elemento diferencial de área
+Luego se calcula el elemento diferencial de área:
 \begin{align*}
 \|\mathbf{r}_t \times \mathbf{r}_u\| &= \| \langle -u\sin(t), u\cos(t), 2u\cos(t) \rangle \times \langle \cos(t), \sin(t), 2\sin(t) \rangle \| \\
-&= \sqrt{5}u
+&= \sqrt{5}u.
 \end{align*}
 
-Y, por último, este término se integra con los límites establecidos
+Y, por último, este término se integra con los límites establecidos:
 \[\int_{0}^{2\pi }\int_{0}^{1}\| r_{t}\times r_{u}\|
 dudt=\int_{0}^{2\pi }\int_{0}^{1}\sqrt{5}ududt= \sqrt{5}\pi.\]
 
 Para la región sobre el plano con ecuación $z=5-x-3y$,
-hallamos los mismos vectores que en el caso anterior
+hallamos los mismos vectores que en el caso anterior:
 \begin{align*}
 \overrightarrow{\beta}_{t}&=  \la -u\sin (t),-\frac{1}{3}u( 2\cos (t)-\sin (t))  ,2u\cos (t) \ra  \\
 \overrightarrow{\beta}_{u}&= \la \cos (t),-\frac{2}{3}\sin (t)-\frac{1}{3}\cos (t),2\sin (t)\ra.
 \end{align*}
 
-El elemento diferencial de área en este caso está dado por
+El elemento diferencial de área en este caso está dado por:
 \[\| \overrightarrow{\beta}_{t} \times \overrightarrow{\beta}_{u} \|= \frac{2}{3}\sqrt{11}u\]
 % $\left \| \la -u\sin (t),-\frac{1}{3}u( 2\cos (t)-\sin (t))  ,2u\cos (t)\ra  \times \la \cos (t),-\frac{2}{3}\sin (t)-\frac{1}{3}\cos (t),2\sin (t)\ra \right \| =  \frac{2}{3}\sqrt{11}u$
 y el área de la superficie señalada es:
@@ -1634,11 +1634,11 @@ Con el fin de hallar el área superficial, se requieren los siguientes elementos
 {\bf r}_{u}= \la 0,0,2-\frac{1}{2}\cos (t) +\frac{1}{2}\cos ^{2}(t) \ra \\
 {\bf r}_{t}= \big\langle \sin (t) \left( 2\cos (t) -1\right) ,\left( 2\cos (t) +1\right) \left( 1-\cos (t) \right) , \hskip1.5cm \\ \frac{1}{2}u\sin (t) \left( 1-2\cos (t) \right) \big\rangle.
 \end{multline*}
-El elemento diferencial de área es
+El elemento diferencial de área es:
 \begin{equation}
 \left\| \mathbf{r}_{t}\times \mathbf{r}_{u}\right\| = \frac{1}{2}\left( \cos ^{2}(t) -\cos (t) +4\right) \sqrt{2-2\cos (t)}
 \end{equation}
-Entonces, el área superficial sobre el cilindro menor es
+Entonces, el área superficial sobre el cilindro menor es:
 \begin{equation}
 \int_{0}^{1}\int_{0}^{2\pi }\frac{1}{2}\left(\cos ^{2}(t)
 -\cos (t) +4\right) \sqrt{2-2\cos (t)}dtdu= \frac{96}{5}
@@ -1659,7 +1659,7 @@ Para $\overrightarrow{q}(t)$ y $\overrightarrow{\beta}(t)$, es necesario simplif
 \[
 (1 - u)\overrightarrow{\beta}(t) + u\overrightarrow{q}(t),
 \]
-lo que nos provee de la función que parametriza la región entre los planos sobre el cilindro mayor, esto es
+lo que nos provee de la función que parametriza la región entre los planos sobre el cilindro mayor, esto es:
 \begin{gather*}
 \hspace{-0.6em}\mathbf{r}(u,t) = (1 - u)(2(1 - \cos(t))\cos(t),\; 2(1 - \cos(t))\sin(t),\; 0) \\
 \quad + u((2 - 2\cos(t))\cos(t),\; (2 - 2\cos(t))\sin(t),\; 2 - (2(1 - \cos(t))\cos(t))/2) \\
@@ -1700,15 +1700,12 @@ con $t\in \lbrack 0,2\pi ]$, $u\in \lbrack 0,1]$. Esta función parametriza el c
 \end{figure}
 
 con la función ${\bf r}\left( t,u\right) $ hallamos ${\bf r}_{t}=\left\langle -\sin (t) \left( 1+u\right) ,\cos \left(
-t\right) \left( 1+u\right) ,0\right\rangle $\, \break
-y $\,{\bf r}_{u}=\left\langle 1+\cos (t) ,\sin (t),3\right\rangle$,
-que determinan el elemento diferencial de área
-{\small
+t\right) \left( 1+u\right) ,0\right\rangle$\; y\; ${\bf r}_{u}=\left\langle 1+\cos (t) ,\sin (t),3\right\rangle$, que determinan el elemento diferencial de área
+
 \begin{align*}
 \|\mathbf{r}_t \times \mathbf{r}_u\| &= \left\| \left\langle 3\cos(t)(1+u), 3\sin(t)(1+u), -(1+\cos(t))(1+u) \right\rangle \right\| \\
 &= (1+u)\sqrt{\cos^2(t) + 10 + 2\cos(t)},
 \end{align*}
-}
 
 cuya integral proporciona el área de esta región
 \[\int_{0}^{2\pi }\int_{0}^{1}\left( 1+u\right) \sqrt{\cos ^{2}(t) +10+2\cos (t) }dudt \approx 30.4679.\]
@@ -1730,13 +1727,11 @@ Las funciones vectoriales
 $\overrightarrow{a}(t)= \la 2\cos(t),\sin(t),0\ra$ y $\overrightarrow{b}(t)= \big \langle \cos(t), \linebreak 3\sin(t),3\big\rangle$,
 con $t \in [0,2\pi]$ representan dos elipses en el espacio.
 Con la función
-\begin{eqnarray*}
-{\bf r}\left( t,u\right) &=&\left( 1-u\right) \left\langle 2\cos (t),\sin (t) ,0\right\rangle +u\left\langle \cos (t),3\sin (t) ,3 \right\rangle \\
-&=&  \left\langle \cos (t)(2-u),\sin (t)(1+2u),3u\right\rangle,
-\end{eqnarray*}
-Con $u \in [0,1]$ y $t \in [0,2\pi]$, se parametriza la superficie que se muestra en la siguiente figura.
-
-%
+\begin{align*}
+{\bf r}\left( t,u\right) &=\left( 1-u\right) \left\langle 2\cos (t),\sin (t) ,0\right\rangle +u\left\langle \cos (t),3\sin (t) ,3 \right\rangle \\
+&=  \left\langle \cos (t)(2-u),\sin (t)(1+2u),3u\right\rangle,
+\end{align*}
+con $u \in [0,1]$ y $t \in [0,2\pi]$, se parametriza la superficie que se muestra en la siguiente figura.
 
 \begin{figure}[H]
 \centering
@@ -1843,7 +1838,7 @@ La ecuación $r=\sin(3\theta) $ representa, en coordenadas polares, una rosa de 
 \begin{figure}[H]
 \centering
 \caption{La flor $r=3\sin(3\theta)$ sobre una esfera}
-\includegraphics[height=25mm, valign=m]{Fig/141.pdf} \hspace{5mm}
+\includegraphics[height=30mm, valign=m]{Fig/141.pdf} \hspace{5mm}
 \includegraphics[height=30mm, valign=m]{Img/48a.pdf}
 \fuentepropia
 \end{figure}

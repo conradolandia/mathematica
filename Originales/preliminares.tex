@@ -136,11 +136,7 @@ De manera general abordaremos funciones de la forma
 \begin{equation}
   f: A\subseteq \mathbb{R}^n \to B\subseteq \mathbb{R}^m
 \end{equation}
-El conjunto de puntos para los cuales la función $f$ está definida se denomina \emph{dominio} de $f$
-y el conjunto de puntos de $\mathbb{R}^m$ que son imagen de algún punto del dominio se denomina \emph{rango}
-de $f$. De acuerdo con \cite{apostol_calculus_1999}, a las funciones definidas cuando $n=m=1$, se denominan \emph{funciones reales,} las cuales se estudian en los cursos de \emph{cálculo diferencial} y \emph{cálculo integral.}
-Si $n>1$ y $m=1$ obtendremos \emph{campos escalares};  \index{Campos escalares} \index{Campos vectoriales}
-llamaremos \emph{funciones vectoriales} a las obtenidas cuando $n=1$ y $m>1$; mientras que los \emph{campos vectoriales} son funciones obtenidas cuando $n>1$ y $m>1$. \index{Funciones vectoriales}
+\textls[-10]{El conjunto de puntos para los cuales la función $f$ está definida se denomina \emph{dominio} de $f$ y el conjunto de puntos de $\mathbb{R}^m$ que son imagen de algún punto~del dominio se denomina \emph{rango} de $f$. De acuerdo con \cite{apostol_calculus_1999}, a las funciones definidas cuando $n=m=1$, se denominan \emph{funciones reales}, las cuales se estudian en los cursos de \emph{cálculo diferencial} y \emph{cálculo integral}. Si $n>1$ y $m=1$ obtendremos \emph{campos escalares}; \index{Campos escalares} \index{Campos vectoriales} llamaremos \emph{funciones vectoriales} a las obtenidas cuando $n=1$ y $m>1$; mientras que los \emph{campos vectoriales} son funciones obtenidas cuando $n>1$ y $m>1$. \index{Funciones vectoriales}}
 
 Para presentar funciones vectoriales, campos vectoriales y en general para vectores, usaremos la notación $\ve{r}(t)$, ${\bf r}(t)$ o ${\bf F}(x,y,z)$ indistintamente y según el caso.
 Por ejemplo:
@@ -484,7 +480,7 @@ La matriz jacobiana de ${\bf F}$, $D{\bf F}(a)$ es
   Un campo vectorial ${\bf F}(x,y,z)$ con dominio $D \subseteq \mathbb{R}^3$
   se denomina \emph{conservativo} si existe un campo escalar
   $\phi(x,y,z)$ que se denomina \emph{función potencial} con dominio $D$ y satisface que $\nabla \phi ={\bf F}$. \index{Campo vectorial!conservativo} \index{Función!potencial}
-  En \cite{thomas_calculo_2015} se presenta el siguiente criterio, el cual es útil para determinar si un campo vectorial cumple esta condición.
+  En \cite{thomas_calculo_2015} se presenta el siguiente~criterio, el cual es útil para determinar si un campo vectorial cumple esta condición.
   \begin{prop}
     Sea ${\bf F} = P(x, y,z)\vi +Q(x,y,z)\vj +P(x,y,z)\vk$ un campo en un dominio abierto simplemente
     conexo, cuyas funciones componentes tienen sus primeras derivadas parciales continuas.
@@ -878,7 +874,7 @@ es posible obtener diversos valores de $S_{nml}$.
 De manera similar a como se definió la integral doble, si el límite de
 las sumas $S_{nml}$ existe para toda elección que se haga de
 $\left(x_{i}^{\ast },y_{j}^{\ast },z_{k}^{\ast }\right)$, entonces se dice que la
-función $f(x,y,z) $ es integrable sobre la caja rectangular $E$, y este valor se denota por $\iiint\limits_{E}f(x,y,z) dV$, o también
+función $f(x,y,z) $ es integrable sobre la caja rectangular $E$, y este valor se denota por $\iiint\limits_{E}f(x,y,z) dV$, o también:
 \[\iiint\limits_{E}f(x,y,z) dzdydx.\]
 Lo anterior nos motiva a precisar este concepto.
 
@@ -1081,6 +1077,7 @@ Por simplicidad $x=x(u,v)$ y $y=y(u,v)$, entonces:
 
 En algunos libros como \cite{stewart_calculo_2018}, el término $\left\vert \frac{\partial\left(x,y\right)}{\partial(u,v)}\right\vert$
 se denomina el jacobiano de la transformación ${\bf r}$. \index{Jacobiano}
+
 Con los elementos anteriores se establece la siguiente igualdad.
 \begin{equation}
 \iint\limits_{R}f(x,y) dA=\iint\limits_{R^{\ast }}f\left({\bf r}(u,v) \right) \left\vert \frac{\partial (x,y) }{\partial (u,v)}\right\vert dudv
@@ -1096,20 +1093,20 @@ Asumiendo que ${\bf r}$ es diferenciable,
 si $(u,v,w) $ son las coordenadas de un vértice del cubo, entonces los vértices
 adyacentes son $\left( u+\Delta u,v,w\right) $, $\left( u,v+\Delta v,w\right)$ y $\left( u,v,w+\Delta w\right) ;$ mediante la aplicación ${\bf r}$, el cubo se transforma en una región cuyo volumen se puede aproximar mediante un \mbox{paralelepípedo}.
 Aplicando el teorema del valor medio, se sigue que
-\begin{eqnarray*}
-{\bf r}\left( u+\Delta u,v,w\right) -{\bf r}(u,v,w) &=& \frac{{\bf r}\left( u+\Delta u,v,w\right) -{\bf r}(u,v,w) }{\Delta u}\Delta u \\
-&\approx &   \frac{\partial {\bf r}}{\partial u}\left( u^{\ast},v,w\right) \Delta u
-\end{eqnarray*}
-\begin{eqnarray*}
-{\bf r}\left( u,v+\Delta v,w\right) -{\bf r}(u,v,w) &=& \frac{{\bf r}(u,v+\Delta v,w)-{\bf r}(u,v,w)}{\Delta v}\Delta v \\
-&\approx& \frac{\partial{\bf r}}{\partial v}\left( u,v^{\ast},w\right)\Delta v
-\end{eqnarray*}
-\begin{eqnarray*}
-{\bf r}\left( u,v,w+\Delta w\right) -{\bf r}(u,v,w) &=& \frac{{\bf r}\left(
+\begin{align*}
+{\bf r}\left( u+\Delta u,v,w\right) -{\bf r}(u,v,w) &= \frac{{\bf r}\left( u+\Delta u,v,w\right) -{\bf r}(u,v,w) }{\Delta u}\Delta u \\
+&\approx\frac{\partial {\bf r}}{\partial u}\left( u^{\ast},v,w\right) \Delta u
+\end{align*}
+\begin{align*}
+{\bf r}\left( u,v+\Delta v,w\right) -{\bf r}(u,v,w) &= \frac{{\bf r}(u,v+\Delta v,w)-{\bf r}(u,v,w)}{\Delta v}\Delta v \\
+&\approx\frac{\partial{\bf r}}{\partial v}\left( u,v^{\ast},w\right)\Delta v
+\end{align*}
+\begin{align*}
+{\bf r}\left( u,v,w+\Delta w\right) -{\bf r}(u,v,w) &= \frac{{\bf r}\left(
 u,v,w+\Delta w\right) -{\bf r}(u,v,w)}{\Delta w}\Delta w \\
-&\approx & \frac{\partial {\bf r}}{\partial w}\left( u,v,w^{\ast}\right) \Delta w.
-\end{eqnarray*}
-El volumen de esta región, $\Delta V$, está dada por:
+&\approx\frac{\partial {\bf r}}{\partial w}\left( u,v,w^{\ast}\right) \Delta w.
+\end{align*}
+El volumen de esta región, $\Delta V$, está dado por:
 \begin{equation}
 \left\vert \left( \frac{\partial {\bf r}}{\partial u}\Delta u\times
 \frac{\partial {\bf r}}{\partial v}\Delta v\right) \cdot \frac{\partial {\bf r}}{\partial w}\Delta w\right\vert =\left\vert \left( \frac{\partial {\bf r}}{\partial u}\times \frac{\partial {\bf r}}{\partial v}\right) \cdot \frac{\partial {\bf r}}{\partial w}\right\vert \Delta u\Delta v\Delta w

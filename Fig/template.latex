@@ -1,8 +1,10 @@
+\DocumentMetadata{lang=es,xmp=false}
 \documentclass[pstricks,border=12pt]{standalone}
 \usepackage{amsmath,amsthm,array,ifthen,amsfonts}
 \usepackage{amsmath,pst-coil,bigints}
 \usepackage{pstricks-add,pst-plot,pst-node,pst-3dplot}
 \usepackage{bm,calculus}
+\usepackage{auto-pst-pdf}
 \psset{showorigin=false}
 \begin{document}
 $rawcontent$

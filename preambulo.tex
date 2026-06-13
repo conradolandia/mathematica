@@ -3,26 +3,28 @@
 \input{esConfigDir/esEstilo}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% BIBLIOGRAFÍA (biblatex + biber, como Analisis-2-pautado: babel antes, opciones mínimas)
+%%% BIBLIOGRAFÍA (biblatex + biber)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[backend=biber,style=ieee,sorting=none,isbn=false,doi=true]{biblatex}
 \addbibresource{Referencias/references.bib}
 \setlength{\bibitemsep}{1.5ex}
 
+% Eliminar punto final de la entrada de 
+% bibliografía si tenemos una URL o DOI
+\renewcommand*{\finentrypunct}{%
+  \iffieldundef{url}{%
+    \iffieldundef{doi}{%
+      \adddot%
+    }{}%
+  }{}%
+}
+
 \usepackage{csquotes} % Carga el paquete csquotes aquí para cambiar el estilo de las comillas
 \DeclareQuoteStyle{spanish}{``}{''}{`}{'} % Reemplaza las comillas angulares por comillas dobles normales
 
-\DefineBibliographyStrings{spanish}{
-  url = {[En línea]. Disponible en},
-  translator = {trad\adddot},
-  bytranslator = {trad\adddot},
-  version = {versión},
-}
+\usepackage[cam,width=190truemm,height=260truemm,lualatex,center]{crop}
 
-%\usepackage{showframe}% Similar al calderon, apagar al terminar de maquetar.
-\usepackage[cam, width=215truemm, height=275truemm, lualatex, center]{crop} % Descomentar solo en producción final
-
-% 5. AJUSTES FINALES DE FORMATO DEL PÁRRAFO
+% 5. AJUSTES DE FORMATO DEL PÁRRAFO
 \usepackage[nopatch=footnote]{microtype} % Microtipografía avanzada
 \usepackage{ragged2e} % Para control de alineación
 \decimalpoint % Punto como separador decimal.
@@ -111,7 +113,7 @@
   title={\bf #1}
 }
 
-% FLOATS Y CAPTIONS
+% Paquetes varios
 \usepackage{float}
 \usepackage{caption}
 \usepackage{array}

@@ -1209,7 +1209,7 @@ y también ${\bf F}\left({\bf r}\left( u,v\right) \right) \cdot \left({\bf r}_{u
 por lo tanto, el flujo de ${\bf F}$ sobre la superficie en mención es:
 \[\int_{0}^{2\pi }\int_{1/3}^{3}-u^{3}\cos v\sin vdudv= 0.\]
 
-\subsection{Flujo sobre la superficie \texorpdfstring{$z=xe^{1-x^2-y^2}$}{z=xe a la potencia de 1-x2-y2}}
+\subsection{Flujo sobre la superficie de tipo exponencial}
 
 Calcular el flujo del campo ${\bf F}(x,y,z) =\la x^{2},-y,1+z\ra $ sobre la superficie $S$ determinada por la expresión $z=xe^{1-x^2-y^2}$, $|x|\leq 2$, $|y|\leq 2$.
 
@@ -1810,7 +1810,7 @@ Al ser dos regiones iguales (sobre la esfera) multiplicamos por 2 y haremos un s
 2\int_{0}^{1}\int_{0}^{2\pi }4u\sqrt{9-4u^{2}}dvdu= \frac{4}{3}\pi \left( 27-5\sqrt{5}\right)
 \end{equation}
 
-El cálculo anterior se obtiene en \verb"Mathematica" con las siguientes instrucciones:
+\textls[-25]{El cálculo anterior se obtiene en \verb"Mathematica" con las siguientes instrucciones:}
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
 r={x,y,z}={2*u*Cos[v],2*u*Sin[v],Sqrt[9-x^2-y^2]};
@@ -1819,16 +1819,20 @@ Integrate[Dot[Cross[D[r,u],D[r,v]],{y,-x,z}],
 \end{Verbatim}
 \end{tcolorbox}
 
+\clearpage
+
 \subsubsection{Flujo sobre la superficie del cilindro}
 
 En este caso la parametrización escogida es
 ${\bf w}\left( u,v\right) =\left\langle 2\cos u,2\sin u,v\right\rangle $, para $ u\in \lbrack 0,2\pi ]$, $v\in \lbrack -\sqrt{5},\sqrt{5}]$.
 Con esta función hallamos los siguientes vectores:
-\begin{align*}
+\[
+\begin{aligned}
 {\bf w}_{u}&=\left\langle -2\sin u,2\cos u,0\right\rangle \\
 {\bf w}_{v}&=\left\langle 0,0,1\right\rangle \\
 {\bf w}_{u}\times {\bf w}_{v}&=\left\langle 2\cos u,2\sin u,0\right\rangle.
-\end{align*}
+\end{aligned}
+\]
 Además, ${\bf F}\left( {\bf w}\left( u,v\right) \right) =\left\langle 2\sin u,-2\cos u,v\right\rangle $ y ${\bf F}\left({\bf w}\left( u,v\right) \right) \cdot \left({\bf w}_{u}\times {\bf w}_{v}\right)= 0$, con lo cual el flujo sobre la superficie del cilindro está dado por:
 \begin{equation}\label{flujo4}
 \int_S {\bf F}\cdot d{\bf S}=0
@@ -2173,7 +2177,7 @@ Con la parametrización elegida hallamos los siguientes vectores:
 {\bf r}_{u} = \left \langle (\cos \theta +1) \cos \theta ,\left(\cos \theta +1\right) \sin \theta ,\frac{-4u\cos^2\left( \frac{\theta}{2} \right)}{\sqrt{9-u^2(1+\cos(\theta))^2}}\right\rangle \\
 {\bf r}_{\theta}=\left\langle -u( 1+2\cos \theta)\sin \theta ,u(\cos \theta +\cos (2\theta)),\frac{u^{2}(\sin 2\theta+2\sin \theta)}{\sqrt{2}\sqrt{9-u^2(1+\cos(\theta))^2}} \right\rangle,
 \end{gather*}
-cuyo producto cruz es
+cuyo producto cruz es:
 \begin{gather*}
 {\bf r}_{u}\times {\bf r}_{\theta}= \bigg \langle \frac{8u^2\cos^6(\frac{\theta}{2})\cos(\theta)}{\sqrt{9-u^2(1+\cos(\theta))^2}}, \frac{6u^2\cos^7(\frac{\theta}{2})\sin(\frac{\theta}{2})}{\sqrt{9-u^2(1+\cos(\theta))^2}},4u\cos^4\left(\frac{\theta}{2}\right )\bigg \rangle.
 \end{gather*}
@@ -2202,12 +2206,12 @@ Sobre la esfera, la coordenada $z$ puede ser de dos formas:
 \[y = \pm \frac{\sqrt{15-4\cos(\theta)-\cos(2\theta)}}{\sqrt{2}}.\]
 Con dos puntos de la forma
 \begin{gather*}
-P=\left(\left( 1+\cos \theta \right) \cos \theta, \left( 1+\cos \theta \right) \sin \theta,\frac{1}{\sqrt{2}}\sqrt{15-4\cos(\theta)-\cos(2\theta)} \right )\\
+P=\left(\left( 1+\cos \theta \right) \cos \theta, \left( 1+\cos \theta \right) \sin \theta,\frac{1}{\sqrt{2}}\sqrt{15-4\cos(\theta)-\cos(2\theta)} \right)\\
 Q=\left(\left( 1+\cos \theta \right)\cos\theta,\left(1+\cos\theta\right)\sin\theta,-\frac{1}{\sqrt{2}}\sqrt{15-4\cos(\theta)-\cos(2\theta)} \right)
 \end{gather*}
 se puede hacer una combinación convexa que determine una función ${\bf r}$ que parametrice la región en mención. Esto es:
 \begin{gather*}
-{\bf r}(u,\theta ) =\bigg \langle \left( \cos \theta +1\right ) \cos \theta,\linebreak
+{\bf r}(u,\theta ) =\bigg \langle \left( \cos \theta +1\right) \cos \theta,\linebreak
 (1+\cos\theta) \sin \theta, \frac{(1-2u)\sqrt{15-4\cos(\theta) -\cos(2\theta)}}{\sqrt{2}}\bigg\rangle,
 \end{gather*}
 entonces,

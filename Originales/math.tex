@@ -342,11 +342,8 @@ Manipulate[Integrate[(Sin[x])^k,x],{k,-2,10,1}]
         \begin{itemize}
           \item \verb"Plot[f[x],{x,a,b}]" dibuja la función $y=f(x)$ con $x \in[a,b]$. \index{Plot}
           \item \verb"PolarPlot[r[t],{t,a,b}]" grafica la función $r(t)$ escrita en coordenadas polares, con $t \in[a,b]$.
-          \item \verb"ContourPlot[f[x,y]==0,{x,a,b},{y,c,d}]",\index{ContourPlot}
-            dibuja la ecuación de dos variables $f(x,y)=0$, con $x \in[a,b]$ y $y \in[c,d]$,
-            se debe incluir el símbolo de igualdad y no olvidar $"=="$.
-          \item \verb"ParametricPlot[{x[t],y[t]},{t,a,b}]", dibuja la curva parametrizada
-          $\ve{r}(t)=\left\langle x(t),y(t)\right\rangle ,\,\, t\in \lbrack a,b]$.
+          \item \verb"ContourPlot[f[x,y]==0,{x,a,b},{y,c,d}]" dibuja la ecuación de dos variables $f(x,y)=0$, con $x \in[a,b]$ y $y \in[c,d]$, se debe incluir el símbolo de igualdad y no olvidar $"=="$.\index{ContourPlot}
+          \item \verb"ParametricPlot[{x[t],y[t]},{t,a,b}]" dibuja la curva parametrizada $\ve{r}(t)=\left\langle x(t),y(t)\right\rangle ,\,\, t\in \lbrack a,b]$.
           \index{ParametricPlot}
       \end{itemize}
       % \end{tcolorbox}
@@ -389,8 +386,8 @@ ParametricPlot[{{2*Cos[t],2*Sin[t]},{Cos[t],Sin[t]},
           se utiliza para graficar superficies parametrizadas por medio de una función
           $\ve{r}(u,v)=\langle x(u,v),y(u,v),z(u,v) \rangle $, con
           $u\in[a,b]$, $v\in[c,d]$.
-        \item \verb"ContourPlot3D[f[x,y,z]==0,{x,a,b},{y,c,d},{z,p,q}]" se usa
-          para graficar conjuntos de nivel (contornos).
+        \item \verb"ContourPlot3D[f[x,y,z]==0,{x,a,b},{y,c,d},{z,p,q}]" se \linebreak 
+          usa para graficar conjuntos de nivel (contornos).
           Este comando presenta el gráfico de una ecuación de tres variables, con $x\in[a,b]$,
           $y\in[c,d]$ y $z\in[p,q]$.  \index{ContourPlot3D}
       \end{itemize}

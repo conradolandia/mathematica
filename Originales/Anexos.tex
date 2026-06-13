@@ -229,19 +229,19 @@ consideremos dos puntos sobre la curva
 $P_{i}=\left( x_{i},y_{i}\right) =\left( f\left( t_{i}\right) ,g\left(t_{i}\right) \right) $
 y $P_{i+1}=\left( x_{i+1},y_{i+1}\right) =\left( f\left( t_{i}+\Delta t\right),g\left( t_{i}+\Delta t\right) \right) $;
 así, es posible establecer una aproximación a la longitud de arco.
-\begin{eqnarray*}
-  \overline{P_{i}P_{i+1}}&=& \sqrt{\left( f\left( t_{i}+\Delta t\right) -f\left( t_{i}\right) \right) ^{2}+\left( g\left( t_{i}+\Delta t\right) -g\left( t_{i}\right) \right) ^{2}} \\
-  &=& \sqrt{\left( \frac{f\left( t_{i}+\Delta t\right) -f\left(t_{i}\right) }{\Delta t}\right) ^{2}+\left( \frac{g\left( t_{i}+\Delta t\right) -g\left( t_{i}\right) }{\Delta t}\right) ^{2}}\Delta t.
-\end{eqnarray*}
+\begin{align*}
+  \overline{P_{i}P_{i+1}}&=\sqrt{\left( f\left( t_{i}+\Delta t\right) -f\left( t_{i}\right) \right) ^{2}+\left( g\left( t_{i}+\Delta t\right) -g\left( t_{i}\right) \right) ^{2}} \\
+  &=\sqrt{\left( \frac{f\left( t_{i}+\Delta t\right) -f\left(t_{i}\right) }{\Delta t}\right) ^{2}+\left( \frac{g\left( t_{i}+\Delta t\right) -g\left( t_{i}\right) }{\Delta t}\right) ^{2}}\Delta t.
+\end{align*}
 La aproximación mejora si $\Delta t\to 0$ que equivale a que el número de rectángulos satisface $n \to \infty$.
-Por lo tanto, la longitud de la curva se calcula como:
-\begin{eqnarray*}
-  L&=&\lim_{n\rightarrow \infty } \sum_{i=1}^{n}\sqrt{\left( \frac{%
+Por lo tanto, la longitud de la curva se calcula como
+\begin{align*}
+  L&=\lim_{n\rightarrow \infty } \sum_{i=1}^{n}\sqrt{\left( \frac{%
     f\left( t_{i}+\Delta t\right) -f\left( t_{i}\right) }{\Delta t}\right)
     ^{2}+ \left( \frac{g\left( t_{i}+\Delta t\right) -g\left( t_{i}\right) }{%
   \Delta t}\right) ^{2}}\Delta t\\
-  &=& \int_{a}^{b}\sqrt{\left(f^{\prime}(t)\right)^{2}+\left(g^{\prime}(t)\right)^{2}}dt=\int_{a}^{b}\Vert{\bf r}^\prime(t)\Vert dt.
-\end{eqnarray*}
+  &=\int_{a}^{b}\sqrt{\left(f^{\prime}(t)\right)^{2}+\left(g^{\prime}(t)\right)^{2}}dt=\int_{a}^{b}\Vert{\bf r}^\prime(t)\Vert dt.
+\end{align*}
 Esta expresión es la misma ecuación \ref{curvas}.
 \subsubsection{Volumen de sólidos de revolución en coordenadas \\ paramétricas}
 
