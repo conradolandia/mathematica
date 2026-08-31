@@ -9,7 +9,7 @@
 \addbibresource{Referencias/references.bib}
 \setlength{\bibitemsep}{1.5ex}
 
-% Eliminar punto final de la entrada de 
+% Eliminar punto final de la entrada de
 % bibliografía si tenemos una URL o DOI
 \renewcommand*{\finentrypunct}{%
   \iffieldundef{url}{%
@@ -22,7 +22,7 @@
 \usepackage{csquotes} % Carga el paquete csquotes aquí para cambiar el estilo de las comillas
 \DeclareQuoteStyle{spanish}{``}{''}{`}{'} % Reemplaza las comillas angulares por comillas dobles normales
 
-\usepackage[cam,width=190truemm,height=260truemm,lualatex,center]{crop}
+%\usepackage[cam,width=190truemm,height=260truemm,lualatex,center]{crop}
 
 % 5. AJUSTES DE FORMATO DEL PÁRRAFO
 \usepackage[nopatch=footnote]{microtype} % Microtipografía avanzada
@@ -33,7 +33,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% HYPERREF (después de biblatex para que los enlaces de citas funcionen)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[draft,hidelinks,unicode,naturalnames,bookmarksopen,bookmarksdepth=2,breaklinks=true,hyperfootnotes=false]{hyperref}
+\usepackage[hidelinks,unicode,naturalnames,bookmarksopen,bookmarksdepth=2,breaklinks=true,hyperfootnotes=false]{hyperref}
 \usepackage{bookmark}
 \urlstyle{same}
 \newcommand{\secref}[1]{``\nameref{#1}''}
@@ -122,7 +122,6 @@
 \usepackage{listings}
 \usepackage{afterpage}
 \usepackage{placeins}
-\usepackage{resizegather}
 \usepackage{mleftright}
 \mleftright
 \usepackage[hyphenation]{impnattypo}
@@ -186,6 +185,32 @@
 \renewcommand*\contentsname{Contenido}
 \renewcommand{\cfttoctitlefont}{\hfill\Huge}
 \renewcommand{\cftdot}{}
+
+% Resumen y autores
+% Abstract y resumen
+\newcommand{\abstract}[4]{
+{\medseries\fontsize{14pt}{16pt}\selectfont #1}\par
+\vspace{2\parskip}\par
+\begingroup
+\fontsize{9pt}{11pt}\selectfont
+#2\par
+\vspace{\parskip}\par
+{\medseries #3:}\enspace #4\par
+\endgroup
+}
+
+% Cite this book
+\newcommand{\comocitar}[2]{
+\begingroup
+\fontsize{9pt}{11pt}\selectfont
+\begin{tabular}{|r}
+\begin{minipage}{0.6\textwidth}\flushleft
+{\medseries ¿Cómo citar este libro? / How to cite this book?}\par
+#1 \href{https://doi.org/#2}{\mbox{https://}\nolinkurl{doi.org/#2}}
+\end{minipage}
+\end{tabular}
+\endgroup
+}
 
 % SOLUCIÓN DE CONFLICTOS
 \AtBeginDocument{\RenewCommandCopy\qty\SI} % Solución de conflicto physics

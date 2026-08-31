@@ -265,12 +265,12 @@ Show[A,B]
 \end{Verbatim}
 \end{tcolorbox}
 
-Con estas expresiones se puede reemplazar el valor de $x$ para determinar su proyección en el plano $yz$.
+\textls[-15]{Con estas expresiones se puede reemplazar el valor de $x$ para determinar su proyección en el plano $yz$.
 De este procedimiento se obtiene la ecuación  $(y-2)^2+z^2=4$, que corresponde a una circunferencia de radio $2$ centrada en el punto $(2,0)$.  En este caso puede hacerse $y=2+2\cos(t)$ y $z=2\sin(t)$.
 La expresión para $x$ se obtiene sustituyendo $y$ y $z$ en cualquiera de las expresiones que determinan los cilindros.
 Es decir, $x=4(2+2\cos t) -( 2+2\cos t) ^{2}= 4-4\cos^{2}(t) =4\sin ^{2}(t) $ o también
 $x=( 2\sin t) ^{2}= 4\sin ^{2}(t) $.
-Por lo tanto, la curva de intersección está dada por la siguiente función vectorial
+Por lo tanto, la curva de intersección está dada por la siguiente función vectorial}
 \[{\bf r}(t)=\langle4\sin^{2}(t),2+2\cos(t),2\sin(t)\rangle, \, t \in [0,2\pi].\]
 La longitud de esta curva se calcula integrando la norma de la derivada de la función vectorial, es decir:
 \[{\bf r}'(t)= \langle 8\sin(t)\cos(t),-2\sin (t),2\cos(t)\rangle .\]
@@ -354,7 +354,7 @@ con  $t\in\lbrack 0,2\pi ]$.
 
 Si estos cilindros los intersecan con el paraboloide determinado por la ecuación
 $z=6-\left(x-1\right)^2-y^2$,
-se obtienen dos curvas, cuya coordenada $z$ está dada respectivamente por
+se obtienen dos curvas, cuya coordenada $z$ está dada respectivamente por:
 \begin{gather*}
 \begin{aligned}
 z&=6-\left( 3\cos (t) -1\right) ^{2}-\left( 6\sin (t) \right) ^{2}= -31+27\cos ^{2}(t) +6\cos (t) \\
@@ -375,8 +375,8 @@ Con las siguientes instrucciones se consigue graficar estas superficies:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]
 \begin{Verbatim}[formatcom=\letraverbatim]
-ContourPlot3D[{z==6-(x-1)^2-y^2,4*x^2+y^2==36,
-x^2+4*y^2==4},{x,-6,10},{y,-7,7},{z,-35,6},
+ContourPlot3D[{z==6-(x-1)^2-y^2,4*x^2+y^2==36,x^2+4*y^2==4},
+{x,-6,10},{y,-7,7},{z,-35,6},
 ContourStyle->{Red,Yellow,Green},PlotPoints->80]
 \end{Verbatim}
 \end{tcolorbox}
@@ -564,7 +564,7 @@ donde $t\in [0,2\pi]$.
 
 Sobre el paraboloide se cumple que
 $z=\frac{9}{2}-2 \sin (t)+\sin (2 t)-2 \cos (t)+\frac{3}{2} \cos (2 t)$.
-Por lo tanto, para $t\in [0,2\pi]$, la curva de intersección del paraboloide y el cilindro cardióidico se parametriza por medio de la sigui\-ente función:
+Por lo tanto, para $t\in [0,2\pi]$, la curva de intersección del paraboloide y el cilindro cardióidico se parametriza por medio de la siguiente función:
 \begin{multline*}
 \overrightarrow{r}(t)=\big\langle(1-\cos t)\cos t,(1-\cos t)\sin t,\frac{9}{2}-2\sin t+\sin(2t) \\
 -2\cos t+\frac{3}{2}\cos(2t)\big\rangle.
@@ -613,7 +613,19 @@ Entonces, $x-z=2t;$ por lo tanto, $\left( x-z\right) ^{2}=4t^{2}=\frac{4}{3}\lef
 x-z\right) y$.
 
 Por tal razón, utilizaremos las expresiones $x-z=\frac{4}{3}y$ y $x+z=y\left( x-z\right) $,
-cuya figura se presenta a continuación y con ésta también se muestra la curva de intersección.\enlargethispage*{\baselineskip}
+cuya figura se presenta a continuación y con esta también se muestra la curva de intersección.
+
+Las indicaciones para conseguirlos son las siguientes:
+
+\begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
+a=ParametricPlot3D[{3*t^3+t,3*t^2,3*t^3-t},{t,-1,1},
+PlotStyle->{Black,Thickness->0.012},PlotPoints->90];
+b=ContourPlot3D[{(x-z)^2==4*y/3,x+z==y*(x-z)},{x,-1,1},{y,-0.5,1},
+{z,-1,1},Mesh->False,ContourStyle->{Directive[RGBColor[0.3,0.6,0.3],
+Opacity[0.95]],Directive[Orange,Opacity[0.8]]}];
+Show[b,a]
+\end{Verbatim}
+\end{tcolorbox}
 
 \begin{figure}[t]
 \centering
@@ -622,19 +634,6 @@ cuya figura se presenta a continuación y con ésta también se muestra la curva
 \includegraphics[height=4cm]{Img/94b.pdf}
 \fuentepropia
 \end{figure}
-
-Las indicaciones para conseguirlos son las siguientes:
-
-\begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]
-a=ParametricPlot3D[{3*t^3+t,3*t^2,3*t^3-t},{t,-1,1},
-PlotStyle->{Black,Thickness->0.012},PlotPoints->90];
-b=ContourPlot3D[{(x-z)^2==4*y/3,x+z==y*(x-z)},
-{x,-1,1},{y,-0.5,1},{z,-1,1},Mesh->False,
-ContourStyle->{Directive[RGBColor[0.3,0.6,0.3],
-Opacity[0.95]],Directive[Orange,Opacity[0.8]]}];
-Show[b,a]
-\end{Verbatim}
-\end{tcolorbox}
 
 A partir de la relación
 $\left\| \frac{d}{dt}\la 3t^{3}+t,3t^{2},3t^{3}-t\ra\right\| = \sqrt{2}\left( 9t^{2}+1\right) $, es posible establecer que

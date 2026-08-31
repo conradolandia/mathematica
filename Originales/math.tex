@@ -191,9 +191,15 @@ Sum[2^r/r!,{r,0,Infinity}]
     Utilizando la sentencia \verb"Limit[F[x],x->a]" se evalúa en \verb"Mathematica" el $\lim_{x\to a} F(x)$.
     También es posible calcular límites en varias variables como se ilustra enseguida.
 
-    {\small $$\lim_{x\to0}\frac{\sin(3x)}{\sin(2x)}\hskip1.5cm
+    \begingroup
+    \setlength{\abovedisplayskip}{0pt}
+    \setlength{\abovedisplayshortskip}{0pt}
+    \begin{equation*}
+    \lim_{x\to0}\frac{\sin(3x)}{\sin(2x)}\hskip1.5cm
       \lim_{(x,y)\to (0,0)}\frac{x^2y}{x^2+y^2} \hskip1.5cm
-    \lim_{(x,y)\to(0,0)}\frac{\sin(x^2+y^2)}{x^2+y^2}.$$}
+    \lim_{(x,y)\to(0,0)}\frac{\sin(x^2+y^2)}{x^2+y^2}.
+    \end{equation*}
+    \endgroup
 
     Los límites anteriores se evalúan con las siguientes instrucciones:
     \begin{tcolorbox}
@@ -227,7 +233,7 @@ Limit[Sin[x^2+y^2]/(x^2+y^2),{x,y}->{0,0}]
         \verb"D[f[x],{x,n}]".
       \item La derivada parcial de $f(x,y,z)$ con respecto a $x$, se consigue ejecutando \verb"D[f[x,y,z],x]", mientras que
         la diferencial total de $x^y$, (suponiendo que $y$ depende de $x$) se obtiene mediante la expresión
-        \verb"Dt[x^y,x]". \index{Diferencial total}
+        \verb"D[x^y,x]". \index{Diferencial total}
       \item \textls[-15]{La integral indefinida de la función $f(t)$ con respecto a $t$,
           se evalúa mediante la instrucción: \hskip0.1cm \verb"Integrate[f(t),t]".
         Con la instrucción \verb"Integrate[f(t),{t,a,b}]" se evalúa la integral definida $\ds \int_a^bf(t)dt$.}
@@ -342,7 +348,7 @@ Manipulate[Integrate[(Sin[x])^k,x],{k,-2,10,1}]
         \begin{itemize}
           \item \verb"Plot[f[x],{x,a,b}]" dibuja la función $y=f(x)$ con $x \in[a,b]$. \index{Plot}
           \item \verb"PolarPlot[r[t],{t,a,b}]" grafica la función $r(t)$ escrita en coordenadas polares, con $t \in[a,b]$.
-          \item \verb"ContourPlot[f[x,y]==0,{x,a,b},{y,c,d}]" dibuja la ecuación de dos variables $f(x,y)=0$, con $x \in[a,b]$ y $y \in[c,d]$, se debe incluir el símbolo de igualdad y no olvidar $"=="$.\index{ContourPlot}
+          \item \verb"ContourPlot[f[x,y]==0,{x,a,b},{y,c,d}]" dibuja la ecuación de dos variables $f(x,y)=0$, con $x \in[a,b]$ y $y \in[c,d]$, se debe incluir el símbolo de igualdad y no olvidar “$==$”.\index{ContourPlot}
           \item \verb"ParametricPlot[{x[t],y[t]},{t,a,b}]" dibuja la curva parametrizada $\ve{r}(t)=\left\langle x(t),y(t)\right\rangle ,\,\, t\in \lbrack a,b]$.
           \index{ParametricPlot}
       \end{itemize}
@@ -386,7 +392,7 @@ ParametricPlot[{{2*Cos[t],2*Sin[t]},{Cos[t],Sin[t]},
           se utiliza para graficar superficies parametrizadas por medio de una función
           $\ve{r}(u,v)=\langle x(u,v),y(u,v),z(u,v) \rangle $, con
           $u\in[a,b]$, $v\in[c,d]$.
-        \item \verb"ContourPlot3D[f[x,y,z]==0,{x,a,b},{y,c,d},{z,p,q}]" se \linebreak 
+        \item \verb"ContourPlot3D[f[x,y,z]==0,{x,a,b},{y,c,d},{z,p,q}]" se \linebreak
           usa para graficar conjuntos de nivel (contornos).
           Este comando presenta el gráfico de una ecuación de tres variables, con $x\in[a,b]$,
           $y\in[c,d]$ y $z\in[p,q]$.  \index{ContourPlot3D}
@@ -522,58 +528,57 @@ Graphics3D[Arrow[{{a,b,c},{p,q,r}}]]
 Graphics3D[{Black,Arrowheads[0.1],
 Arrow[Tube[{{1,1,-1},{2,2,0}},0.01]]}]
 \end{Verbatim}
-      \end{tcolorbox}
+\end{tcolorbox}
 
-      \begin{figure}[t]
-        \begin{center}
-          \caption{El vector $\langle 1,1,1\rangle$ se dibuja en el punto $(1,1,-1)$}
-          \includegraphics[height=4.5cm]{Img/T_67a.pdf} \hskip5mm
-          \includegraphics[height=4.5cm]{Img/T_67b.pdf}
-          \fuentepropia
-        \end{center}
-      \end{figure}
+\begin{figure}[t]
+  \begin{center}
+    \caption{El vector $\langle 1,1,1\rangle$ se dibuja en el punto $(1,1,-1)$}
+    \includegraphics[height=4.5cm]{Img/T_67a.pdf} \hskip5mm
+    \includegraphics[height=4.5cm]{Img/T_67b.pdf}
+    \fuentepropia
+  \end{center}
+\end{figure}
 
-      \subsection{Regiones en el plano y el espacio}
-      La función \verb"RegionPlot" muestra el gráfico de una región dimensional, la sintaxis puede incluir desigualdades
-      y los operadores lógicos: \emph{y} (\verb"&&"), \emph{o} (\verb"||"). En los siguientes ejemplos se incorpora el uso
-      de las opciones \verb"BoundaryStyle" y \verb"Thickness" que controla el grosor y color de la frontera.
-      \index{Operadores lógicos} \index{BoundaryStyle} \index{Thickness}
+\subsection{Regiones en el plano y el espacio}
+La función \verb"RegionPlot" muestra el gráfico de una región dimensional, la sintaxis puede incluir desigualdades
+y los operadores lógicos: \emph{y} (\verb"&&"), \emph{o} (\verb"||"). En los siguientes ejemplos se incorpora el uso
+de las opciones \verb"BoundaryStyle" y \verb"Thickness" que controla el grosor y color de la frontera.
+\index{Operadores lógicos} \index{BoundaryStyle} \index{Thickness}
 
-      \begin{figure}[H]
-        \centering
-        \caption{Uso de la función {\tt RegionPlot}}
-        \includegraphics[height=2.3cm]{Img/T_49a.pdf} \hspace{3mm}
-        \includegraphics[height=2.3cm]{Img/T_49b.pdf} \hspace{3mm}
-        \includegraphics[height=2.3cm]{Img/T_49c.pdf} \hspace{3mm}
-        \includegraphics[height=2.3cm]{Img/T_49d.pdf}
-        \fuentepropia
-      \end{figure}
+\begin{figure}[H]
+  \centering
+  \caption{Uso de la función {\tt RegionPlot}}
+  \includegraphics[height=2.4cm]{Img/T_49a.pdf} \hspace{3mm}
+  \includegraphics[height=2.4cm]{Img/T_49b.pdf} \hspace{3mm}
+  \includegraphics[height=2.4cm]{Img/T_49c.pdf} \hspace{3mm}
+  \includegraphics[height=2.4cm]{Img/T_49d.pdf}
+  \fuentepropia
+\end{figure}
 
-      La versión tridimensional es \verb"RegionPlot3D".
+La versión tridimensional es \verb"RegionPlot3D".
 
-      \begin{tcolorbox}
-\begin{Verbatim}[formatcom=\letraverbatim]
-RegionPlot[1<=x^2+2*y^2<=9&&y>=-x^2,{x,-3,3},
-{y,-2,5/2},PlotPoints->50,BoundaryStyle->{Black,
-Thickness->0.01},PlotStyle->Gray,Frame->False]
-RegionPlot[(x+1)^2+2*y^2<3||(x-1)^2+y^2<3,{x,-3,3},
-{y,-2,2},BoundaryStyle->{Black,Thickness->0.01},
-PlotStyle->Gray,Frame->False]
-RegionPlot[{(x+1)^2+2*y^2<3,(x-1)^2+y^2<3},{x,-3,3},
-{y,2,2},PlotStyle->Gray,BoundaryStyle->{Black,
-Thickness->0.01},Frame->False]
-RegionPlot[x^2+y^2<9&&Abs[x]+Abs[y]>2,{x,-3,3},
-{y,-3,3},Frame->False,PlotStyle->Gray,
-BoundaryStyle->{Black,Thickness->0.01}]
-\end{Verbatim}
-      \end{tcolorbox}
+\begin{tcolorbox}
+  \begin{Verbatim}[formatcom=\letraverbatim]
+  RegionPlot[1<=x^2+2*y^2<=9&&y>=-x^2,{x,-3,3},{y,-2,5/2},
+  PlotPoints->50,BoundaryStyle->{Black,Thickness->0.01},
+  PlotStyle->Gray,Frame->False]
+  RegionPlot[(x+1)^2+2*y^2<3||(x-1)^2+y^2<3,{x,-3,3},{y,-2,2},
+  BoundaryStyle->{Black,Thickness->0.01},PlotStyle->Gray,Frame->False]
+  RegionPlot[{(x+1)^2+2*y^2<3,(x-1)^2+y^2<3},{x,-3,3},{y,2,2},
+  PlotStyle->Gray,BoundaryStyle->{Black,Thickness->0.01},Frame->False]
+  RegionPlot[x^2+y^2<9&&Abs[x]+Abs[y]>2,{x,-3,3},{y,-3,3},
+  Frame->False,PlotStyle->Gray,BoundaryStyle->{Black,Thickness->0.01}]
+  \end{Verbatim}
+\end{tcolorbox}
 
-      Para representar un sólido se utiliza la función \verb"RegionPlot3D". \index{RegionPlot3D}
-      Este comando dibuja la región a partir de ciertas \verb"DESIGUALDADES", con $x\in[a,b]$, $y\in[c,d]$, $z\in[u,v]$.
-      Las inecuaciones se concatenan con los símbolos \verb"&&".
-      La sintaxis básica es:
+\clearpage
 
-      \begin{tcolorbox}[title=Gráfico de una región sólida]
+Para representar un sólido se utiliza la función \verb"RegionPlot3D". \index{RegionPlot3D}
+Este comando dibuja la región a partir de ciertas \verb"DESIGUALDADES", con $x\in[a,b]$, $y\in[c,d]$, $z\in[u,v]$.
+Las inecuaciones se concatenan con los símbolos \verb"&&".
+La sintaxis básica es:
+
+\begin{tcolorbox}[title=Gráfico de una región sólida]
 \begin{Verbatim}[formatcom=\letraverbatim]
 RegionPlot3D[DESIGUALDADES,{x,a,b},{y,c,d},{z,u,v}]
 \end{Verbatim}
@@ -1024,11 +1029,10 @@ variables independientes:
 \begin{tcolorbox}[title=Instrucciones en Mathematica]
 \begin{Verbatim}[formatcom=\letraverbatim]
 Fit[{{-1,1,2},{2,2,0},{-1,3,3}},{x^2*y,x*y^2},{x,y}]
-Fit[{{0,Pi/2,2},{Pi/3,Pi/2,-1},{2*Pi/3,Pi,-2},
-{-Pi,2*Pi,1}},{Sin[x],Cos[y],Cos[x*y]},{x,y}]
-Fit[{{1,1,2,2},{1,2,2,0},{-1,-2,3,4},{-3,1,2,-1},
-{-2,4,0,1}},{x^2*y*z,x*y^2,y*z^2,Sin[x+y],Cos[y+z]},
-{x,y,z}]
+Fit[{{0,Pi/2,2},{Pi/3,Pi/2,-1},{2*Pi/3,Pi,-2},{-Pi,2*Pi,1}},
+{Sin[x],Cos[y],Cos[x*y]},{x,y}]
+Fit[{{1,1,2,2},{1,2,2,0},{-1,-2,3,4},{-3,1,2,-1},{-2,4,0,1}},
+{x^2*y*z,x*y^2,y*z^2,Sin[x+y],Cos[y+z]},{x,y,z}]
 \end{Verbatim}
 \end{tcolorbox}
 
@@ -1037,9 +1041,8 @@ de grado $n-1$, tal que $p(x_i)=y_i$ para $i=1,2,\cdots,n$.
 Este polinomio se denomina \emph{polinomio de interpolación} y se determina
 de la siguiente manera:
 \begin{tcolorbox}[title=Polinomio de interpolación]
-\begin{Verbatim}
-InterpolatingPolynomial[{{x1,y1},{x2,y2},...
-,{xn,yn}},x]
+\begin{Verbatim}[formatcom=\letraverbatim]
+InterpolatingPolynomial[{{x1,y1},{x2,y2},...,{xn,yn}},x]
 \end{Verbatim}
 \end{tcolorbox}
 \index{InterpolatingPolynomial}
@@ -1056,7 +1059,10 @@ Show[Graphics[{Red,Point[puntos]}],Plot[y,{x,-1,4}]]
 
 \section{Integración múltiple}
 Para evaluar integrales dobles o triples en \verb"Wolfram Mathematica",
-se puede proceder como sigue.\\[0.2cm]
+se puede proceder como sigue.
+
+\clearpage
+
 Para una integral doble de la forma
 $\ds \int_a^b \int_c^d f(x,y)dydx$, la instrucción es
 \begin{tcolorbox}[title=Integrales dobles]
@@ -1075,7 +1081,7 @@ agregar la sentencia \verb"//HoldForm" y si se desea evaluar numéricamente una 
 \item %La integral
 \[\ds\int_0^2 \int_{-x}^{x^2} xy^2 dxdy,\] %se evalúa con la siguiente orden
 \begin{tcolorbox}
-\begin{Verbatim}
+\begin{Verbatim}[formatcom=\letraverbatim]
 Integrate[x*y^2,{x,0,2},{y,-x,x^2}]
 \end{Verbatim}
 \end{tcolorbox}

@@ -34,11 +34,11 @@ $\ve{v}=\langle b_{1},b_{2},b_{3}\ra$ en $\mathbb{R}^3$ es el vector
 que es ortogonal tanto a $\ve{u}$ como a $\ve{v}$.
 Además $\left\Vert \ve{u}\times \ve{v}\right\Vert =\left\Vert \ve{u}\right\Vert\left\Vert \ve{v}\right\Vert\sin\theta;$ estos resultados se pueden consultar en detalle en \textcite{apostol_calculus_1999}.
 
-La siguiente es una conocida forma de evaluar este producto,
+La siguiente es una conocida forma de evaluar este producto:
 $$\ve{u}\times \ve{v}=\left|
 \begin{array}{ccc} \vi & \vj & \vk \\ a_1 &a_2&a_3 \\b_1 &b_2&b_3 \\
 \end{array} \right|  $$
-El producto cruz es útil en el desarrollo de algunos de los siguientes resultados.
+\textls[-20]{El producto cruz es útil en el desarrollo de algunos de los siguientes resultados.}
 \subsection{Proyección ortogonal}
 %
 La proyección ortogonal del vector $\ve{v}$ sobre el vector
@@ -136,7 +136,7 @@ De manera general abordaremos funciones de la forma
 \begin{equation}
   f: A\subseteq \mathbb{R}^n \to B\subseteq \mathbb{R}^m
 \end{equation}
-\textls[-10]{El conjunto de puntos para los cuales la función $f$ está definida se denomina \emph{dominio} de $f$ y el conjunto de puntos de $\mathbb{R}^m$ que son imagen de algún punto~del dominio se denomina \emph{rango} de $f$. De acuerdo con \cite{apostol_calculus_1999}, a las funciones definidas cuando $n=m=1$, se denominan \emph{funciones reales}, las cuales se estudian en los cursos de \emph{cálculo diferencial} y \emph{cálculo integral}. Si $n>1$ y $m=1$ obtendremos \emph{campos escalares}; \index{Campos escalares} \index{Campos vectoriales} llamaremos \emph{funciones vectoriales} a las obtenidas cuando $n=1$ y $m>1$; mientras que los \emph{campos vectoriales} son funciones obtenidas cuando $n>1$ y $m>1$. \index{Funciones vectoriales}}
+\textls[-10]{El conjunto de puntos para los cuales la función $f$ está definida se denomina \emph{dominio} de $f$ y el conjunto de puntos de $\mathbb{R}^m$ que son imagen de algún punto~del dominio se denomina \emph{rango} de $f$. De acuerdo con \cite{apostol_calculus_1999}, a las funciones definidas cuando $n=m=1$ se denominan \emph{funciones reales}, las cuales se estudian en los cursos de \emph{cálculo diferencial} y \emph{cálculo integral}. Si $n>1$ y $m=1$ obtendremos \emph{campos escalares}; \index{Campos escalares} \index{Campos vectoriales} llamaremos \emph{funciones vectoriales} a las obtenidas cuando $n=1$ y $m>1$; mientras que los \emph{campos vectoriales} son funciones obtenidas cuando $n>1$ y $m>1$. \index{Funciones vectoriales}}
 
 Para presentar funciones vectoriales, campos vectoriales y en general para vectores, usaremos la notación $\ve{r}(t)$, ${\bf r}(t)$ o ${\bf F}(x,y,z)$ indistintamente y según el caso.
 Por ejemplo:
@@ -304,7 +304,7 @@ Al considerar esta notación se presenta el siguiente resultado.
   $\lim_{\mathbf{x\to x}_{0}}\ve{F}\left( \mathbf{x}%
   \right) =\mathbf{a,}$ $\lim_{\mathbf{x\to x}_{0}}\ve{G}%
   (\mathbf{x}) =\mathbf{b,}$ y $\lim_{\mathbf{x\to x}%
-  _{0}}h(\mathbf{x}) =k;$ entonces
+  _{0}}h(\mathbf{x}) =k;$ entonces:
 
   \begin{parrafonumerado}
 
@@ -444,17 +444,9 @@ Al considerar la transformación lineal $A(h)=f^{\prime}(a)\cdot h$.
 Entonces, la expresión anterior se reescribe como
 \[\lim_{h\rightarrow 0}\frac{f\left( a+h\right) -f\left( a\right) -A\left( h\right) }{h}=0.\]
 
-En el caso general una función ${\bf F}:\mathbb{R}^{n}\rightarrow \mathbb{R}^{m}$ se dice
-diferenciable en $a\in \mathbb{R}^{n}$
-si existe una transformación lineal $\lambda :\mathbb{R}^{n}\rightarrow \mathbb{R}^{m}$, tal que
+En el caso general una función ${\bf F}:\mathbb{R}^{n}\rightarrow \mathbb{R}^{m}$ se dice diferenciable en $a\in \mathbb{R}^{n}$ si existe una transformación lineal $\lambda :\mathbb{R}^{n}\rightarrow \mathbb{R}^{m}$, tal que
 \[\lim_{h\rightarrow 0}\frac{\left\Vert {\bf F}(a+h)-{\bf F}(a)-\lambda(h)\right\Vert }{\left\Vert h\right\Vert }=0.\]
-Es de anotar que $\left\Vert {\bf F}\left( a+h\right) -{\bf F}(a) -\lambda(h) \right\Vert$ representan la norma en
-$\mathbb{R}^{m}$ y $\left\Vert h\right\Vert $ es la norma en $\mathbb{R}^{n}$. \index{Función!diferenciable}
-Se dice que ${\bf F}$ es diferenciable en $A$, si es diferenciable para todo $a\in A$.
-La mencionada transformación lineal es la denominada \emph{matriz jacobiana} de ${\bf F}$ en $a$,
-que se denota por $D({\bf F})(a)$. Para ${\bf F}:\mathbb{R}^n\to {\mathbb R}^m$ y $a=(a_1,a_2,\cdots, a_n)$, es claro que
-${\bf F}(a)=\langle f_1(a),f_2(a), \cdots, f_m(a) \rangle.$
-La entrada $ij$ de la matriz jacobiana está dada por:
+\textls[-5]{Es de anotar que $\left\Vert {\bf F}\left( a+h\right) -{\bf F}(a) -\lambda(h) \right\Vert$ representan la norma en $\mathbb{R}^{m}$ y $\left\Vert h\right\Vert $ es la norma en $\mathbb{R}^{n}$. \index{Función!diferenciable} Se dice que ${\bf F}$ es diferenciable en $A$, si es diferenciable para todo $a\in A$. La mencionada transformación lineal es la denominada \emph{matriz jacobiana} de ${\bf F}$ en $a$, que se denota por $D({\bf F})(a)$. Para ${\bf F}:\mathbb{R}^n\to {\mathbb R}^m$ y $a=(a_1,a_2,\cdots, a_n)$, es claro que ${\bf F}(a)=\langle f_1(a),f_2(a), \cdots, f_m(a) \rangle$. La entrada $ij$ de la matriz jacobiana está dada por:}
 \begin{gather*}
   \frac{\partial f_i}{\partial x_j}(a)=\lim_{h\rightarrow 0}\frac{f_i(a_1,a_2,\cdots,a_j+h,\cdots,a_n)-f_i(a_1,a_2,\cdots,a_j,\cdots, a_n)}{h},
 \end{gather*}
@@ -469,7 +461,7 @@ La matriz jacobiana de ${\bf F}$, $D{\bf F}(a)$ es
 \end{array} \right)\]
 \begin{teorema}
   Si ${\bf F}:\mathbb{R}^n \to \mathbb{R}^m$ es diferenciable en $a$ y
-  ${\bf G}:\mathbb{R}^m \to \mathbb{R}^p$ es diferenciable en ${\bf F}(a)$ entonces la función compuesta
+  ${\bf G}:\mathbb{R}^m \to \mathbb{R}^p$ es diferenciable en ${\bf F}(a)$, entonces la función compuesta
   ${\bf G}\circ {\bf F}:\mathbb{R}^n \to \mathbb{R}^p$ es diferenciable en $a$. Además
   $D({\bf G}\circ {\bf F})(a)=D({\bf G}( {\bf F}(a))\cdot D{\bf F}(a). $
   \end{teorema}
@@ -542,7 +534,7 @@ La matriz jacobiana de ${\bf F}$, $D{\bf F}(a)$ es
     \left( \mathbf{u}(t) \cdot \mathbf{v}(t) \right)^{\prime }=\mathbf{u}^{\prime }(t) \cdot \mathbf{v}\left(
     t\right) +\mathbf{u}(t) \cdot \mathbf{v}^{\prime }\left(t\right)
   \end{equation}
-  Otras fórmulas útiles, son las siguientes
+  Otras fórmulas útiles son las siguientes:
   \begin{align*}
     (\left\Vert \mathbf{u}(t) \right\Vert)^{\prime } &= \frac{d}{dt}\left( \left( \mathbf{u}(t) \cdot \mathbf{u}(t)
     \right) ^{1/2}\right) \\
@@ -674,12 +666,12 @@ Los momentos con respecto a los planos coordenados se definen como
 \mu_{xz}&=&\int_a^b y(t)\,\delta({\bf r}(t))\Vert{\bf r}^\prime(t)\Vert dt.
 \end{eqnarray*}
 Las coordenadas del centro de masa de la varilla son:\index{Centro de masa}
-\[(\overline{x},\overline{y},\overline{z})= (\frac{\mu_{yz}}{M},\frac{\mu_{xz}}{M},\frac{\mu_{xy}}{M}).\]
+\[(\overline{x},\overline{y},\overline{z})= \left(\frac{\mu_{yz}}{M},\frac{\mu_{xz}}{M},\frac{\mu_{xy}}{M}\right).\]
 
 \subsection{Integración de funciones vectoriales} \index{Función!integrable}
 Para funciones vectoriales ${\bf f}(t)=\langle f_1(t),f_2(t),\cdots,f_n(t)\ra$, se dice que $f$ es integrable en $[a,b]$
 si y solo si cada una de las funciones componentes $f_i(t)$ es integrable en $[a,b]$, para toda $i=1,2,\cdots ,n$.
-Además, \[\int_a^b{\bf f}(t)dt= \langle \int_a^b f_1(t)dt,\int_a^b f_2(t)dt,\cdots, \int_a^b f_n(t)dt\ra.\]
+Además, \[\int_a^b{\bf f}(t)dt= \left\langle \int_a^b f_1(t)dt,\int_a^b f_2(t)dt,\cdots, \int_a^b f_n(t)dt\right\rangle.\]
 
 \subsection{Integrales dobles} \label{integralesdobles}  \index{Integrales!dobles}
 Presentaremos ahora la integral doble de una función de
@@ -734,8 +726,8 @@ Lo anterior nos motiva a precisar este concepto.
 
 \begin{defi}
 La integral doble de una función continua $f(x,y)$ sobre el rectángulo $R$ se define como
-\begin{align} 
-\lim _{\left\Vert P\right\Vert \to 0} S_{nm} &= \lim _{n,m \to \infty}\left(\sum_{i=1}^{n}\sum_{k=1}^{m}f\left( x_{i}^{\ast },y_{k}^{\ast}\right) \Delta x_{i}\Delta y_{k}\right) \nonumber \\ 
+\begin{align}
+\lim _{\left\Vert P\right\Vert \to 0} S_{nm} &= \lim _{n,m \to \infty}\left(\sum_{i=1}^{n}\sum_{k=1}^{m}f\left( x_{i}^{\ast },y_{k}^{\ast}\right) \Delta x_{i}\Delta y_{k}\right) \nonumber \\
 &= \ds \iint\limits_{R}f(x,y) dA \label{integralesdobles1}
 \end{align}
 cuando este límite existe.
@@ -759,7 +751,7 @@ $\mu_{x}= \iint_R y f(x,y)dA$ y $\mu_{y}= \iint_R x f(x,y)dA$, los cuales determ
 centro de masa de la región $R$, esto es:\index{Centro de masa}
 \[(\overline{x},\overline{y})= \left(\frac{\mu_y}{M},\frac{\mu_x}{M}\right).\]
 
-Si la región de integración en la fórmula \ref{integralesdobles1} es un rectángulo está se evalúa
+Si la región de integración en la fórmula \ref{integralesdobles1} es un rectángulo, esta se evalúa como
 \[
 \ds \iint\limits_{R}f(x,y) dA= \int_c^d \left (\int_a^b f(x,y) dx \right )dy.
 \]
@@ -827,7 +819,7 @@ que representa el volumen del sólido en mención:
 
 Consideraremos una caja rectangular cerrada y acotada $E$ en el espacio con
 caras paralelas a los planos coordenados $E=[a,b]\times \lbrack c,d]\times
-\lbrack r,s];$ es decir,
+\lbrack r,s];$ es~decir,
 \begin{equation*}
 E=\{(x,y,z) \in \mathbb{R}^{3}\,|\,a\leq x\leq b,c\leq y\leq
 d,r\leq z\leq s\}.
@@ -882,7 +874,7 @@ Lo anterior nos motiva a precisar este concepto.
 La integral triple de una función continua $f(x,y,z)$
 sobre la caja rectangular $E$ se define como
 \begin{align}
-\lim_{\left\Vert P\right\Vert \rightarrow 0}S_{nml} &= \lim_{l,m,n \to\infty}\left(\sum_{i=1}^{n}\sum_{j=1}^{m}\sum_{k=1}^{l}f\left( x_{i}^{\ast },y_{j}^{\ast },z_{k}^{\ast}\right) \Delta x_{i}\Delta y_{j}\Delta z_{k} \right)\nonumber \\ 
+\lim_{\left\Vert P\right\Vert \rightarrow 0}S_{nml} &= \lim_{l,m,n \to\infty}\left(\sum_{i=1}^{n}\sum_{j=1}^{m}\sum_{k=1}^{l}f\left( x_{i}^{\ast },y_{j}^{\ast },z_{k}^{\ast}\right) \Delta x_{i}\Delta y_{j}\Delta z_{k} \right)\nonumber \\
 &=\iiint\limits_{E}f\left(x,y,z\right) dV
 \end{align}
 cuando este límite existe.
@@ -895,10 +887,14 @@ Al hacer una partición de la región de integración en $nml$ cajas rectangular
 $\Delta x= \frac{2}{n}$ $\Delta y= \frac{1}{m}$ y $\Delta z= \frac{1}{l}$. Además
 $x_i= -1+\frac{2i}{n}$, $y_j=\frac{j}{m}$ y $z_k=\frac{k}{l}$.
 Por lo tanto,
+
+\begingroup
+\setlength{\abovedisplayskip}{0pt}
 \[f(x_i,y_j,z_k)\Delta x \Delta y\Delta z=\frac{2 j k^2 e^{\frac{2 i}{n}-1}}{l^3 m^2 n}.\]
+\endgroup
 Con lo cual
 \[\sum_{i=1}^n\sum_{j=1}^m\sum_{k=1}^l f(x_i,y_j,z_k)\Delta x \Delta y\Delta z=\frac{\left(e^2-1\right) (l+1)(2l+1)(m+1)}{6nml^2 \left(1-e^{-2/n}\right)e},\] entonces,
-\begin{align*} \int_{-1}^1\int_0^1\int_0^1  yz^2 e^{x} dzdydx &= \lim_{n,m,l \to \infty}\sum_{i=1}^n\sum_{j=1}^m\sum_{k=1}^l f(x_i,y_j,z_k)\Delta x \Delta y\Delta z \\ 
+\begin{align*} \int_{-1}^1\int_0^1\int_0^1  yz^2 e^{x} dzdydx &= \lim_{n,m,l \to \infty}\sum_{i=1}^n\sum_{j=1}^m\sum_{k=1}^l f(x_i,y_j,z_k)\Delta x \Delta y\Delta z \\
   &=\frac{1}{6} \left(e-\frac{1}{e}\right)
 \end{align*}
 \end{ejemplo}
@@ -908,10 +904,11 @@ Para $f(x,y,z)= \cos (x) \sin (y)+z^2 \cos^2 (2 y)$ y $E$ el paralelepípedo det
 $[-\frac{\pi}{2},\frac{\pi}{2}]\times [0,\frac{\pi}{4}]\times[0,1]$; evaluar
 \[\ds \iiint_Ef(x,y,z) dzdydx.\]
 Al hacer una partición de $E$ en $nml$ cajas rectangulares es posible establecer que
-\begin{equation*}
-\Delta x= \frac{\frac{\pi}{2}-\left(\frac{-\pi}{2}\right)}{n}=\frac{\pi}{2n}\quad
-\Delta y= \frac{\frac{\pi}{4}-0}{m}=\frac{\pi}{4m}\quad \text{y}\quad \Delta z= \frac{1}{l}.
-\end{equation*}
+\begin{align*}
+\Delta x&= \frac{\frac{\pi}{2}-\left(\frac{-\pi}{2}\right)}{n}=\frac{\pi}{2n}\\
+\Delta y&= \frac{\frac{\pi}{4}-0}{m}=\frac{\pi}{4m}\\
+\text{y}\quad \Delta z&= \frac{1}{l}.
+\end{align*}
 Además,
 $x_i= -\frac{\pi}{2}+\frac{\pi i}{2n}$, $y_j=\frac{\pi j}{4m}$ y $z_k=\frac{k}{l}$.
 Por lo tanto:
@@ -953,7 +950,6 @@ En estos apuntes se consideran otras posibilidades e intercambios en el orden de
 En \cite{acosta_gempeler_doce_2020} se considera una función continua $f(x,y,z)$ y una superficie $\sigma$
 parametrizada en la forma ${\bf r}(u,v)= \langle x(u,v), y(u,v), z(u,v) \ra$,
 con $u \in [a,b]$ y $v \in [c,d]$, cuyas funciones componentes poseen derivadas parciales continuas en $[a,b] \times [c,d]$. Al realizar una partición de $\sigma$ en la forma
-
 \[\sigma_{ij}= \{ (x(u_i^\ast,v_j^\ast),y(u_i^\ast,v_j^\ast),z(u_i^\ast,v_j^\ast) )\,|\, u_{i-1} \leq u_i^\ast \leq u_{i}, v_{j-1} \leq v_{j}^\ast \leq v_{j}\} ;\]
 considerando el punto $P_{ij}(x(u_i^\ast,v_j^\ast),y(u_i^\ast,v_j^\ast),z(u_i^\ast,v_j^\ast) )$ en cada trozo $\sigma_{ij}$
 de la superficie, se obtiene la suma de Riemann de $f$ sobre la superficie $\sigma$ parametrizada por ${\bf r}(u,v)$ y con la partición de $\sigma$,
@@ -974,9 +970,9 @@ $[a,b] \times [c,d] \times [p,q]$.
 \centering
 \caption{Transformación de una región en el espacio}
 \label{fig:transform-region}
-\includegraphics[height=3cm]{Fig/10.pdf}\hspace{5mm}
-\includegraphics[height=3cm]{Fig/11.pdf}\\[5mm]
-\includegraphics[height=3cm]{Fig/12.pdf}
+\includegraphics[height=3.5cm]{Fig/10.pdf}\hspace{5mm}
+\includegraphics[height=3.5cm]{Fig/11.pdf}\\[5mm]
+\includegraphics[height=3.5cm]{Fig/12.pdf}
 \fuentepropia
 \end{figure}
 
@@ -1233,7 +1229,7 @@ cuyos valores son iguales, como se había establecido teóricamente.
 Para un campo vectorial
 ${\bf F}(x,y,z)= \langle P(x,y,z),Q(x,y,z),R(x,y,z) \ra$, definido en $\mathbb{R}^3$, cuyas funciones componentes poseen derivadas parciales continuas,
 se define el rotacional y la divergencia de ${\bf F}$ que se denotan por $\rot{\bf F}$ y $\dive{\bf F}$, y
-están dados, respectivamente, por\index{Divergencia} \index{Rotacional}
+están dados, respectivamente, por\index{Divergencia}\index{Rotacional}:
 
 \[\rot{\bf F}(x,y,z)= \left\langle  \frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}, \frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}, \frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} \right\rangle \]
 y \[\dive{\bf F}(x,y,z)= \frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.\]

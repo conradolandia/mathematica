@@ -85,7 +85,7 @@ que parametriza a una curva suave $C$ y {\footnotesize ${\bf F}(x,y,z)= \langle 
   \begin{itemize}
     \item ${\bf r}(t) =\left\langle t^{2},t,2-t\right\rangle $, con $t\in[-1,1]$. En este caso,\\ ${\bf F}\left({\bf r}(t) \right) \cdot {\bf r}^{\prime }(t)= \left\langle t^{3},t\left( 2-t\right) ,-t^{4}\right\rangle \cdot \left\langle 2t,1,-1\right\rangle = 3t^{4}-t^{2}+2t$.
       \begin{gather*}
-        \int_{C}{\bf F}\cdot d{\bf r} =\int_{-1}^{1}{\bf F}\left({\bf r}(t) \right) \cdot {\bf r}^{\prime }(t)
+        \int_{C}{\bf F}\cdot d{\bf r} =\int_{-1}^{1}{\bf F}\left({\bf r}(t) \right) \cdot {\bf r}^{\prime }(t) dt
         = \int_{-1}^{1}(3t^{4}-t^{2}+2t) dt= \frac{8}{15}.
       \end{gather*}
 
@@ -237,7 +237,7 @@ ${\bf T}(x,y)= \frac{1}{\sqrt{(x^\prime(t))^2+y^\prime(t))^2}}\la x^\prime(t), y
 ${\bf n}(x,y)= \frac{1}{\sqrt{(x^\prime(t))^2+y^\prime(t))^2}}\la -y^\prime(t), x^\prime(t)\ra$.
 
 \subsection{Densidad rotacional y densidad de expansión}
-En \cite{acosta_gempeler_doce_2020} se define la densidad rotacional como la circulación por unidad de área, y la densidad de expansión es el flujo por unidad de área. \mbox{Analizaremos} estos conceptos en campos vectoriales bidimensionales. Posteriormente, se extienden a campos tridimensionales.
+En\cite{acosta_gempeler_doce_2020} se define la densidad rotacional como la circulación por unidad de área, y la densidad de expansión es el flujo por unidad de área. \mbox{Analizaremos} estos conceptos en campos vectoriales bidimensionales. Posteriormente, se extienden a campos tridimensionales.
 
 Consideremos ${\bf F} (x,y)=P(x,y)\vi+Q(x,y)\vj$ un campo de velocidad del flujo de un fluido en el plano tal que las primeras derivadas parciales de $P(x,y) $ y $Q(x,y) $ son continuas en cada punto del rectángulo $R$.
 
@@ -283,9 +283,18 @@ Lo anterior motiva la siguiente definición.
 \textls[-15]{Sea ${\bf F} (x,y)=P(x,y) \vi+Q(x,y) \vj$ un campo vectorial cuyas funciones componentes poseen primeras derivadas parciales continuas.
 La densidad rotacional del campo vectorial ${\bf F} (x,y)$ en el punto $(x,y)$ está dada por:}
 
+\clearpage
+
+\vspace*{-1.8\baselineskip}
+
+\begingroup
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
 \begin{equation} \label{integraldelinea5}
 \frac{\partial Q}{\partial x}(x,y) -\frac{\partial P}{\partial y}(x,y)
 \end{equation}
+\endgroup
+
 Este término se denomina la componente $\vk$ del rotacional y se denota
 $({\rm rot}{\bf F} )\cdot \vk$.
 \index{Densidad!rotacional}
@@ -337,7 +346,7 @@ Estos elementos se presentaron en la sección \secref{divergenciayrotacional}.
 \section{Teorema de Green} \label{teoremadegreen}
 En \cite{thomas_calculo_2015} se presentan los siguientes resultados en dos formas; recordemos que ${\bf T}$ y ${\bf n}$
 denotan los vectores tangente unitario y normal unitario a la curva $C$.
-Una exposición completa se puede consultar en \cite{acosta_gempeler_doce_2020}.
+Una exposición completa se puede consultar en\cite{acosta_gempeler_doce_2020}.
 
 \begin{teorema}[\bfseries Teorema de Green, circulación rotacional o forma tangencial]
 \textls[-5]{Sea $C$ una curva suave por tramos, cerrada y simple que encierra una región $R$ en el plano. Sea ${\bf F} (x,y)=P(x,y)\vi+Q(x,y)\vj$ un campo vectorial donde $P(x,y)$ y $Q(x,y)$ tienen primeras derivadas parciales continuas en una región abierta que contiene a $R$. Entonces, la circulación en contra de las manecillas del reloj de ${\bf F}$ alrededor de $C$ es la doble integral de $({\rm rot}{\bf F})\cdot \vk$ sobre la región $R$.}\index{Región abierta} \index{Teorema!de Green}
@@ -583,7 +592,15 @@ Show[b,a,c]
 
 \textls[-20]{Con el campo vectorial ${\bf F}$ se verifica que ${\rm rot\,}{\bf F}(x,y,z)=\la -3z^2,-3 x^2,-3 y^2\ra$. La proyección de la superficie en el plano $yz$ se parametriza mediante las expresiones $y = 2+2u \cos (v)$, $z = 2+2u \sin (v)$. Reemplazando en la expresión que define el paraboloide se sigue que $x = -3+ (y-2)^2+(z-1)^2=-2+4u^2+4u\sin(v)$. En resumen, para $u\in [0,1],\, v\in [0,2\pi]$, la siguiente función parametriza la superficie sobre el paraboloide con la restricción mencionada.}
 
+\clearpage
+
+\vspace*{-2\baselineskip}
+
+\begingroup
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
 \[{\bf r}(u,v)=\la -2+4u^2+4u\sin(v),2+2u\cos(v),2+2u\sin(v)\ra.\]
+\endgroup
 
 De esta función se obtiene:
 \begin{gather*}
@@ -653,6 +670,8 @@ Evaluar $\ds \iint {\rm rot\,}{\bf F}\cdot d{\bf S}$, si ${\bf F\,}(x,y,z)= \la 
 \includegraphics[height=3.4cm]{Img/T_26b.pdf}
 \fuentepropia
 \end{figure}
+
+\clearpage
 
 Con las siguientes instrucciones se obtiene la figura en \verb"Mathematica":
 
@@ -1373,11 +1392,11 @@ ${\bf F}\left({\bf r}\left(u,v\right)\right)=\left\langle 0,u\left(u\sin v+1\rig
 con la función ${\bf r}$ se obtienen los vectores:
 \begin{gather*}
   {\bf r}_{u} = \left\langle \cos v, \sin v, 0 \right\rangle
-\end{gather*} 
+\end{gather*}
 y
 \begin{gather*}
 {\bf r}_{v} = \left\langle -u\sin v, u\cos v, 0 \right\rangle.
-\end{gather*} 
+\end{gather*}
 Para conseguir que la orientación sea hacia afuera se evalúa:
 \[
 {\bf r}_{v} \times {\bf r}_{u} =
@@ -1910,7 +1929,7 @@ NIntegrate[2*Dot[{z,y,x},Cross[D[r,u],D[r,v]]],{v,0,2*Pi},{u,0,1}]
 \end{tcolorbox}
 
 Antes de presentar el siguiente procedimiento, nótese que la función $f(u)= (b-a)u+a$ satisface que $f(0)=a$ y $f(1)=b$.
-De esta manera $f$ aplica el intervalo $[0,1]$ en el intervalo $[a,b]$. A su vez la función inversa
+De esta manera, $f$ aplica el intervalo $[0,1]$ en el intervalo $[a,b]$. A su vez la función inversa
 $g(v)= \frac{v-a}{b-a}$ aplica el intervalo $[a,b]$ en el intervalo $[0,1]$.
 Usaremos estas ideas para parametrizar la región acotada por la porción de la circunferencia y la hipérbola que se des\-cribe a continuación.
 
@@ -1923,7 +1942,7 @@ El hiperboloide proyectado en el plano $xz$ corresponde a un una hipérbola con 
 Esta región se puede describir definiendo $x=\sqrt{\frac{7}{2}}\cosh (t),\,\, z=\sqrt{7}\sinh (t)$.
 Las anteriores dos curvas se intersecan en los puntos $(\pm 2, \pm 1)$.
 
-Entonces la región sobre la circunferencia para $x\in [-2,2]$ se describe por medio de la función
+Entonces, la región sobre la circunferencia para $x\in [-2,2]$ se describe por medio de la función
 \[\overrightarrow{\alpha}(t)=\langle \sqrt{5}\cos t, \sqrt{5}\sin t \rangle, \,\,
 t \in \left[ \arccos \left( \frac{2}{\sqrt{5}}\right),\pi -\arccos \left( \frac{2}{\sqrt{5}}\right) \right].\]
 
@@ -2081,7 +2100,7 @@ Integrate[Dot[Cross[D[r,u],D[r,v]],{3x,y,3z}],{u,0,1},{v,0,2*Pi}]
 Con las mismas ecuaciones que describen el conjunto de puntos que satisfacen la condición $4x^{2}+2y^{2} \leq 15$,
 la coordenada $z$ sobre esta superficie satisface que
 \[z=\frac{x^2-y^2-6}{6}=\frac{15}{8}u^{2}\cos 2v-\frac{5}{8}u^{2}-2,\]
-por lo tanto, utilizaremos la siguiente parametrización, para describir la porción del paraboloide hiperbólico:
+por lo tanto, utilizaremos la siguiente parametrización para describir la porción del paraboloide hiperbólico:
 \[{\bf r}\left( u,v\right) =\left\langle \frac{\sqrt{15}}{2}u\cos v,\sqrt{\frac{15}{2}}u\sin v,\frac{15}{8}u^{2}\cos 2v-\frac{5}{8}u^{2}-2\right\rangle,\]
 en donde $u\in \lbrack 0,1]$, $v\in \lbrack 0,2\pi ]$.
 
@@ -2261,8 +2280,8 @@ La siguiente figura ilustra esta situación.
 \begin{figure}[H]
 \centering
 \caption{Campo vectorial ${\bf F}(x,y,z) = \la x,1,y+z \ra $ }
-\includegraphics[height=3.5cm]{Img/T_14c.pdf} \hspace{5mm}
-\includegraphics[height=3.5cm]{Img/T_14d.pdf}
+\includegraphics[height=4cm]{Img/T_14c.pdf} \hspace{5mm}
+\includegraphics[height=4cm]{Img/T_14d.pdf}
 \fuentepropia
 \end{figure}
 
@@ -2280,13 +2299,9 @@ Show[a,b]
 \end{Verbatim}
 \end{tcolorbox}
 
-Las superficies mencionadas se trataron en la página \pageref{ejercicio7a}.
-Su intersección se caracteriza por la ecuación
-$x^{2}+z^{2}=\frac{9}{2}$. Por lo tanto, la porción del cono se parametriza como
-${\bf r}\left( u,v\right) =\left\langle u\cos v,u,u\sin v\right\rangle $
-y la porción de la esfera se parametriza en la forma
-${\bf r}\left(u,v\right) =\left\langle u\cos v,\sqrt{9-u^{2}},u\sin v\right\rangle $, en donde $u\in \lbrack 0,\frac{3}{\sqrt{2}}]$, $v\in \lbrack 0,2\pi ]$.
-Calcularemos el flujo en cada región por separado.
+\textls[-15]{Las superficies mencionadas se trataron en la página \pageref{ejercicio7a}. Su intersección se caracteriza por la ecuación $x^{2}+z^{2}=\frac{9}{2}$. Por lo tanto, la porción del cono se parametriza como ${\bf r}\left( u,v\right) =\left\langle u\cos v,u,u\sin v\right\rangle$ y la porción de la esfera se parametriza en la forma ${\bf r}\left(u,v\right) =\left\langle u\cos v,\sqrt{9-u^{2}},u\sin v\right\rangle $, en donde $u\in \lbrack 0,\frac{3}{\sqrt{2}}]$, $v\in \lbrack 0,2\pi ]$. Calcularemos el flujo en cada región por separado.}
+
+\clearpage
 
 \subsubsection{Flujo sobre la superficie del cono}
 
@@ -2331,8 +2346,8 @@ sobre la superficie del sólido determinado por la expresión $\rho =1+\cos \phi
 \begin{figure}[H]
 \centering
 \caption{Campo vectorial ${\bf F}(x,y,z)=\la x,y,2z \ra$}
-\includegraphics[height=3.5cm]{Img/T_13b.pdf} \hspace{5mm}
-\includegraphics[height=3.5cm]{Img/T_13c.pdf}
+\includegraphics[height=4cm]{Img/T_13b.pdf} \hspace{5mm}
+\includegraphics[height=4cm]{Img/T_13c.pdf}
 \fuentepropia
 \end{figure}
 
@@ -2359,6 +2374,7 @@ Con la ecuación \(\rho = 1 + \cos \phi\) y las expresiones que definen las coor
 (1 + \cos \phi)\cos \phi
 \right\rangle,
 \end{gather*}
+
 la cual parametriza la superficie del sólido con $\phi \in[0,\pi], \theta\in[0,2\pi]$.
 De esta función se obtiene:
 \begin{align*}
@@ -2370,8 +2386,8 @@ Además,
 \begin{align*}
 {\bf F}({\bf r}(\theta,\phi)) & = (1+\cos\phi) \left\langle\sin\phi\cos\theta,\sin\phi\sin\theta,2\cos\phi\right\rangle,\\
 {\bf r}_{\phi}\times {\bf r}_{\theta} & = \Big\langle\left(\cos\phi+1\right)\left(\sin2\phi+\sin\phi\right)\cos\theta\sin \phi,\\
-& \quad \left( \cos \phi +1\right) \left( \sin 2\phi +\sin \phi \right) \sin \theta \sin \phi ,\left( \cos \phi +1\right)
-^{2}\left( 2\cos \phi -1\right) \sin \phi \Big\rangle .
+& \qquad \left( \cos \phi +1\right) \left( \sin 2\phi +\sin \phi \right) \sin \theta \sin \phi ,\\
+& \qquad \left( \cos \phi +1\right)^{2}\left( 2\cos \phi -1\right) \sin \phi \Big\rangle .
 \end{align*}
 Por lo tanto,
 \[
@@ -2408,8 +2424,8 @@ Show[a,b]
 \begin{figure}[H]
 \centering
 \caption{Campo vectorial ${\bf F}(x,y,z)=\la x,y,z\ra$ sobre $4y=x^2+z^2$ \& $x^2+y^2+z^2=12$}
-\includegraphics[height=3.5cm]{Img/T_15c.pdf} \hspace{5mm}
-\includegraphics[height=3.5cm]{Img/T_15d.pdf}
+\includegraphics[height=4cm]{Img/T_15c.pdf} \hspace{5mm}
+\includegraphics[height=4cm]{Img/T_15d.pdf}
 \fuentepropia
 \end{figure}
 
@@ -2597,7 +2613,7 @@ Asimismo,
 \begin{multline*}
 {\bf F}({\bf r}(u,v))=\bigg \langle \frac{3}{4}\sqrt{5}u^2\sin(2v),
 \frac{1}{16}\sqrt{3}u(8\sqrt{5}\cos(v)+(48-51u^2)\sin(v) \\
-3u^2\sin(3v)), \frac{3}{16}\sqrt{15}u\cos(v)(u^2(9+\cos(2v))-8)\bigg \rangle,
+-3u^2\sin(3v)), \frac{3}{16}\sqrt{15}u\cos(v)(u^2(9+\cos(2v))-8)\bigg \rangle,
 \end{multline*}
 con lo cual
 ${\bf F}({\bf r}(u,v)) \cdot \left({\bf r}_{u}\times {\bf r}_{v}\right)=\frac{45}{4} u^3\cos(v)(\sqrt{5}\cos(v)-\sin(v))$.
@@ -2693,12 +2709,13 @@ $z=x^2-2x+y^2$, interior al cilindro cardióidico $r=1+\cos t$.
 
 \begin{figure}[H]
 \centering
-\caption{Campo vectorial ${\bf F}(x,y,z)= \la x-2,y,2z\ra $ sobre un paraboloide}
+\caption[Campo vectorial ${\bf F}(x,y,z)= \la x-2,y,2z\ra $ sobre un paraboloide]{Campo vectorial ${\bf F}(x,y,z)= \la x-2,y,2z\ra $\\
+sobre un paraboloide}
 \includegraphics[height=3.5cm]{Img/T_36c.pdf} \hspace{5mm}
 \includegraphics[height=3.5cm]{Img/T_36d.pdf}
 \end{figure}
 
-Evalúe 
+Evalúe
 \begin{gather*}
 \int_S\rot{\bf F}\cdot d{\bf S}\quad \text{y}\quad \int_C{\bf F}\cdot d{\bf r};
 \end{gather*}

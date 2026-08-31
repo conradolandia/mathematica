@@ -6,8 +6,8 @@
 
 \section{Funciones hiperbólicas}
 
-Las funciones hiperbólicas son un tipo particular de funciones, que poseen varias similitudes con las funciones trigonométricas.
-Es posible que su nombre corresponda con esa semejanza o al siguiente hecho,
+Las funciones hiperbólicas son un tipo particular de funciones que poseen varias similitudes con las funciones trigonométricas.
+Es posible que su nombre corresponda con esa semejanza o al siguiente hecho:
 si $y$ corresponde al \emph{seno hiperbólico} y $x$ al \emph{coseno hiperbólico},
 entonces se satisface la ecuación de la hipérbola $x^{2}-y^{2}=1$.
 
@@ -129,7 +129,7 @@ Al sumar estas dos expresiones haciendo pares de sumandos se obtiene:
 \begin{eqnarray*}
   2S &=& ( n+1) +(n+1)+(n+1) +\cdots +(n+1)\\
   S&=&\frac{n(n+1)}{2}.
-\end{eqnarray*} 
+\end{eqnarray*}
 En resumen,
 \begin{equation} \label{sumas1}
   \ds\sum_{k=1}^{n}k= \frac{1}{2}n(n+1)
@@ -267,9 +267,18 @@ El volumen del sólido generado por la rotación del $i-$ésimo rectángulo est�
 \end{eqnarray*}
 entonces,
 
-\begin{eqnarray*}
-  V &=& \lim_{n\rightarrow \infty }\left( \sum_{i=1}^{n}\pi \left(g\left( t_{i}^{\ast }\right) \right) ^{2}\left( \frac{f\left( t_{i}+\Delta t\right) -f\left( t_{i}\right) }{\Delta t}\right) \Delta t\right)\\ &=& \int_{a}^{b}\pi \left[ g\left( t\right) \right] ^{2}f^{\prime }(t) dt.
-\end{eqnarray*}
+\clearpage
+
+\vspace*{-1.8\baselineskip}
+
+\begingroup
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\begin{align*}
+  V &= \lim_{n\rightarrow \infty }\left( \sum_{i=1}^{n}\pi \left(g\left( t_{i}^{\ast }\right) \right) ^{2}\left( \frac{f\left( t_{i}+\Delta t\right) -f\left( t_{i}\right) }{\Delta t}\right) \Delta t\right)\\
+  &= \int_{a}^{b}\pi \left[ g\left( t\right) \right] ^{2}f^{\prime }(t) dt.
+\end{align*}
+\endgroup
 
 \begin{figure}[H]
   \centering
@@ -382,20 +391,21 @@ con $u\in \lbrack 0,2\pi ]$, $v\in \lbrack 0,2\pi]$, pues
 el área y el volumen requeridos pueden hallarse con los métodos expuestos antes.
 \end{ejer}
 
-\section[Coordenadas curvilíneas ortogonales]{Coordenadas curvilíneas \texorpdfstring{\\ }{ } ortogonales}
+\section[Coordenadas curvilíneas ortogonales]{Coordenadas curvilíneas ortogonales}
 
 Un cambio de coordenadas cartesianas $(x,y,z)$ a otras diferentes $(u,v,w)$ es una transformación
 \emph{uno a uno} que consta de tres funciones con derivadas parciales continuas
 $x = x(u,v,w)$, $y=y(u,v,w)$, $z=z(u,v,w)$,
 cuya transformación inversa existe: $u=u(x,y,z)$, $v=v(x,y,z)$, $w = w(x,y,z)$.
 Esto es posible siempre que \index{Coordenadas curvilíneas!ortogonales}
-
-\[\frac{\partial (x,y,z)}{\partial (u,v,w)}= \left|
-\begin{array}{ccc}
-\frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} & \frac{\partial x}{\partial w}\\[0.1cm]
-\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} & \frac{\partial y}{\partial w}\\[0.1cm]
-\frac{\partial z}{\partial u} & \frac{\partial z}{\partial v} & \frac{\partial z}{\partial w}
-\end{array} \right| \neq 0 \]
+\begin{equation*}
+  \frac{\partial (x,y,z)}{\partial (u,v,w)}= \left|
+  \begin{array}{ccc}
+  \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} & \frac{\partial x}{\partial w}\\[0.1cm]
+  \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} & \frac{\partial y}{\partial w}\\[0.1cm]
+  \frac{\partial z}{\partial u} & \frac{\partial z}{\partial v} & \frac{\partial z}{\partial w}
+  \end{array} \right| \neq 0
+\end{equation*}
 
 Si ${\bf r}(u,v,w)=\la x(u,v,w),y(u,v,w),z(u,v,w)  \ra$
 denota el vector posición,
@@ -540,9 +550,17 @@ las siguientes igualdades:
 \frac{x^2}{a^2\cosh ^2u}+\frac{y^2}{a^2\sinh ^2u} =  1 \label{elipticas1}
 \end{equation}
 
+\clearpage
+
+\vspace*{-1.8\baselineskip}
+
+\begingroup
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
 \begin{equation}
 \frac{x^2}{a^2\cos ^2v}-\frac{y^2}{a^2\sin ^2v} = 1  \label{elipticas2}
 \end{equation}
+\endgroup
 
 \subsubsection{Coordenadas curvilíneas en el espacio} \index{Coordenadas!curvilíneas en el espacio}
 Algunos ejemplos de los presentados en esta sección son una extensión de
@@ -594,7 +612,7 @@ $y^2=v^2\left( v^2+2x\right)$ caracteriza una parábola abre hacia la parte posi
 
 \begin{figure}[H]
 \centering
-\caption{Coordenadas bipolares}
+\caption{Coordenadas cilíndricas parabólicas}
 \includegraphics[height=4cm]{Fig/203.pdf}
 \fuentepropia
 \end{figure}
@@ -632,9 +650,17 @@ Show[A1,A2,A3,PlotRange->{{-4,4},{-5,5},{-2,2}}]
 Según \cite{hernandez_nolasco_familias_2012}, este sistema de coordenadas se genera por la rotación alrededor del $z$ de dos parábolas bidimensionales;
 la relación con las coordenadas cartesianas es la siguiente:
 
+\clearpage
+
+\vspace*{-2\baselineskip}
+
+\begingroup
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
 \begin{equation}
 x = uv\cos \theta,\hskip0.5cm y = uv\sin \theta, \hskip0.5cm z = \frac{1}{2}\left( u^2-v^2\right)
 \end{equation}
+\endgroup
 
 Con $u\in [ 0,\infty )$, $v\in [ 0,\infty )$, $\theta \in [0,2\pi )$.
 
@@ -762,10 +788,7 @@ x^{2}+y^{2}+z^{2}+(a^{2}-r^{2})= 2a\sqrt{x^{2}+y^{2}}
 Este sistema de coordenadas se obtiene cuando se hace girar alrededor del eje $z$
 las coordenadas bipolares en dos dimensiones.
 
-Las superficies relacionadas con valores constantes de $v$ corresponden a \emph{toros con su
-corazón circular de radio $a$ en el plano ecuatorial}, cuando $u$ es constante se generan esferas ortogonales
-a los toros cuyo centro está en el eje polar, y con $\phi$ constante se obtienen semiplanos.
-Las siguientes ecuaciones determinan la relación entre coordenadas cartesianas y coordenadas toroidales.
+\textls[-10]{Las superficies relacionadas con valores constantes de $v$ corresponden a \emph{toros con su corazón circular de radio $a$ en el plano ecuatorial}, cuando $u$ es constante se generan esferas ortogonales a los toros cuyo centro está en el eje polar, y con $\phi$ constante se obtienen semiplanos. Las siguientes ecuaciones determinan la relación entre coordenadas cartesianas y coordenadas toroidales.}
 \begin{equation}
 x = \frac{a\sinh v\cos \phi }{\cosh v-\cos u},\quad y =\frac{a\sinh v\sin \phi }{\cosh v-\cos u}, \quad z = \frac{a\sin u}{\cosh v-\cos u}
 \end{equation}
@@ -927,7 +950,7 @@ De la identidad $\tan \phi = y/x$ se sigue que para valores constantes de $\phi$
 
 \begin{figure}[H]
 \centering
-\caption{Superficies constantes en coordenadas esferoidales prolatas}
+\caption{Superficies constantes en coordenadas\\ esferoidales prolatas}
 \includegraphics[height=4cm]{Img/T_59a.pdf} \hspace{5mm}
 \includegraphics[height=4cm]{Img/T_59b.pdf}
 \fuentepropia
@@ -1011,7 +1034,7 @@ Obtener algunas superficies constantes en coordenadas cónicas.
 
 \subsubsection{Coordenadas biesféricas} \index{Coordenadas!biesféricas}
 
-Las expresiones que definen este sistema de coordenadas son
+Las expresiones que definen este sistema de coordenadas son:
 \begin{equation}
 x = \frac{a\sin \theta \cos \phi }{\cosh \eta -\cos \theta} ,\hskip0.25cm y = \frac{a\sin \theta \sin \phi }{\cosh \eta -\cos \theta }, \hskip0.25cm z=\frac{a\sinh \eta }{\cosh \eta -\cos \theta}
 \end{equation}
@@ -1066,7 +1089,7 @@ para $\theta >\pi/2$ se produce una superficie en forma de \emph{limón}.
 
 \begin{figure}[H]
 \centering
-\caption{Superficies constantes en coordenadas esferoidales prolatas}
+\caption{Superficies constantes en coordenadas\\ esferoidales prolatas}
 \includegraphics[height=4cm]{Img/T_60a.pdf} \hspace{5mm}
 \includegraphics[height=4cm]{Img/T_60b.pdf}
 \fuentepropia
@@ -1091,11 +1114,11 @@ Show[A3,A1,A2,PlotRange->{-2,4}]
 
 \subsubsection{Coordenadas cardióidicas} \index{Coordenadas!cardióidicas}
 
-En este sistema de coordenadas se generan, en algunos, casos cardioides de revolución.
+En este sistema de coordenadas se generan, en algunos casos, cardioides de revolución.
 
 \begin{figure}[H]
 \centering
-\caption{Superficies constantes en coordenadas esferoidales prolatas}
+\caption{Superficies constantes en coordenadas\\ esferoidales prolatas}
 \label{fig:superficies_constantes_esferoidales_prolatas}
 \includegraphics[height=3.5cm]{Img/T_61a.pdf}\hskip0.5cm
 \includegraphics[height=3.5cm]{Img/T_61b.pdf}
@@ -1201,7 +1224,7 @@ se evidencia que si $\theta $ toma valores constantes se obtienen semiplanos per
 la equivalencia
 \[(x^{2}+y^{2}) \cos ^{2}\phi = ( ( \rho \cos \theta\sin \phi ) ^{2}+( \rho \sin \theta \sin \phi ) ^{2})
 \cos^{2}\phi =z^{2}\sin^{2}\phi\]
-permite concluir que si $\phi $ es constante se expresiones que determinan semiconos.
+permite concluir que $\phi $ es constante de expresiones que determinan semiconos.
 Las figuras de algunas superficies se obtienen ejecutando las siguientes instrucciones:
 
 \begin{tcolorbox}[title=\bf Instrucción \verb"Mathematica"]\begin{Verbatim}[formatcom=\letraverbatim]

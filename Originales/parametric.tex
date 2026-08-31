@@ -24,7 +24,8 @@ parametriza la misma curva con sentido contrario para $t \in [a,b]$. \index{Camb
 \begin{figure}[H]
 \centering
 \caption{${\bf u}(t)=\langle t^3-3t, t \rangle$}
-\includegraphics[height=4cm]{Fig/20.pdf}
+\includegraphics[height=4.5cm]{Fig/20.pdf}
+\fuentepropia
 \end{figure}
 
 La curva determinada por la ecuación $x=y^3-3y$, con  $y\in[-1,2]$
@@ -40,13 +41,13 @@ con $t \in [-1,2]$, que representa la misma curva, recorrida en sentido contrari
 \begin{figure}[H]
 \centering
 \caption{${\bf u}(t)=\langle  t,t^4-3t^2 \rangle$}
-\includegraphics[height=4cm]{Fig/21.pdf}
+\includegraphics[height=4.5cm]{Fig/21.pdf}
+\fuentepropia
 \end{figure}
 
-La función $y= x^4-3x^2$, con $x\in[-2,2]$
-se parametriza mediante la expresión
-$\ve{r}(t)=\langle t,t^4-3t^2 \rangle$ con $t \in [-2,2]$; el punto inicial de la curva descrita
-es  $(-2,4)$ y el punto final es $(2,4)$.
+La función $y=x^4-3x^2$, con $x\in[-2,2]$ se parametriza mediante la expresión
+$\ve{r}(t)=\langle t,t^4-3t^2 \rangle$ con $t \in [-2,2]$; el punto inicial de
+la curva descrita es  $(-2,4)$ y el punto final es $(2,4)$.
 Esta representación no es única, pues $\ve{u}(t)=\langle 2t,16t^4-12t^2 \rangle$
 con $t \in [-1,1]$ representa la misma curva, con el mismo recorrido y los puntos terminales.
 
@@ -168,7 +169,7 @@ $\bullet$\quad Con $t \in [0,\pi]$ se describe la mitad de la elipse. Utilizando
 \end{figure}
 
 $\bullet$\quad En el espacio, la circunferencia de radio $2$ centrada
-en el punto $(0, 2, 0)$ 
+en el punto $(0, 2, 0)$
 \textls[-10]{y paralela al plano $xz$ se puede parametrizar como $\ve{r}(t) = \la 2\cos t, 2, 2\sin t\ra$, $t\in[0,2\pi]$.}
 Obsérvese que esta curva se halla en el plano $y=2$.
 
@@ -882,7 +883,7 @@ f(u)\vec{\alpha}(t)+g(u)\vec{\beta}(t)
 $\bullet$\quad Las funciones {\small $\vec{\alpha}(t) = \langle(2-2\cos(t)) \cos(t), (2-2\cos(t))\sin(t),2\rangle$} y {\small $\vec{\beta}(t) = \langle ( 1-\cos(t)) \cos(t),( 1-\cos(t)) \sin(t),0\rangle$}
 representan dos cardioides.
 
-Se forma la combinación 
+Se forma la combinación
 \[{\bf r}(u,t)= (1-u^{4})\vec{\alpha}(t) +u^{3}\vec{\beta}(t),\]
 con $u \in[0,1]$, $t \in[0,2\pi]$, que parametriza la superficie curva que las une y se muestra en la figura \ref{Dos_cardioides_conectadas}.
 
@@ -1141,6 +1142,7 @@ con $t \in [0,2\pi]$, $u \in [0,1]$; dicha superficie se muestra a continuación
 \caption{Superficie sobre el cilindro $z=\cos (2x)$}
 \includegraphics[height=4.5cm]{Img/46a.pdf} \hspace{5mm}
 \includegraphics[height=4.5cm]{Img/46b.pdf}
+\fuentepropia
 \end{figure}
 
 Las instrucciones para conseguirlo son las siguientes:
@@ -1287,7 +1289,7 @@ con $t\in \lbrack 0,2\pi ],\,\, u\in \lbrack 0,1]$.\enlargethispage*{\baselinesk
 \subsubsection{Superficie sobre un paraboloide} \index{Paraboloide}
 Con ayuda de la expresión \ref{1a}, se puede parametrizar la parte del
 parabo- \\ loide con ecuación $z=6-\left( x-1\right) ^2-y^2$, cuya proyección
-en el plano $xy$ es la región $R$, para este fin determinaremos $z$, esto es
+en el plano $xy$ es la región $R$, para este fin determinaremos $z$, esto es:
 \begin{eqnarray*} z&=&  6-\left( \left( 3-u\right)\cos(t)-1\right)^2-\left(
 \left( 6-5u\right) \sin (t) \right) ^2 \\
 &=& -31+\left( 27-54u+24u^{2}\right) \cos ^{2}(t) +\left( 6-2u\right) \cos (t) +60u-25u^{2}
@@ -1616,10 +1618,17 @@ P\left( 1+2u\cos (t)  ,2u\sin (t) ,\sqrt{1+4u\cos\left( t\right) +4u^{2}} \right
 \]
 Reemplazando $x$ e $y$ en la ecuación de la esfera {\footnotesize $z=\sqrt{6 - x^{2} + 4x - y^{2}}$,} se obtiene {\footnotesize $z=\sqrt{6 - (1{+}2u\cos t)^2 + 4(1{+}2u\cos t) - (2u\sin t)^2} = \sqrt{9{+}4u\cos t{-}4u^2}$,} entonces los puntos de la forma {\footnotesize $Q(1{+}2u\cos t,\, 2u\sin t,\, \sqrt{9{+}4u\cos t{-}4u^2})$} yacen sobre la esfera. Por lo tanto, el sólido se describe al simplificar la expresión $(1{-}w)P{+}wQ$, para $w\in[0,1]$, de modo que la siguiente función describe el sólido, para $t\in[0,2\pi]$, $u\in[0,1]$ y $w\in[0,1]$. La figura \ref{region_conos} muestra esta situación.
 
+\clearpage
+\vspace*{-2.5\baselineskip}
+
+\begingroup
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
 \begin{align*}
 \mathbf{r}(t,u,w) &= \left\langle 1{+}2u\cos t,\, 2u\sin t,\right. \\
 &\quad \left.(1{-}w)\sqrt{1{+}4u\cos t{+}4u^2} + w\sqrt{9{+}4u\cos t{-}4u^2} \right\rangle
 \end{align*}
+\endgroup
 
 \begin{figure}[H]
 \centering
@@ -1787,7 +1796,7 @@ $${\bf r}_2\left( t,u\right)  = \left\langle 0,\left(
 Con las funciones ${\bf r}_1$ y ${\bf r}_2$ se representará la región sobre el
 plano $z=4-x$, esto cambia solamente la primera función componente de estas funciones.
 \begin{multline*}
-{\bf r}_3(u,t)=\bigg\langle 4-\frac{16 (\pi-t) t u}{\pi ^2}+(u-1) (\sin (t)+2), (1-u)\cos (t) \\ 
+{\bf r}_3(u,t)=\bigg\langle 4-\frac{16 (\pi-t) t u}{\pi ^2}+(u-1) (\sin (t)+2), (1-u)\cos (t) \\
 +u\left(2-\frac{4t}{\pi}\right), \frac{16 (\pi -t) t u}{\pi ^2}-(u-1) (\sin (t)+2) \bigg\rangle, t\in[0,\pi],\, u\in[0,1].
 \end{multline*}
 \begin{multline*}
@@ -1988,7 +1997,7 @@ $6z=x^2-y^2$, exterior a los cilindros con ecuaciones $(x-\coth v)^2+y^2=\frac{2
 \includegraphics[height=4cm]{Img/T_71c.pdf}
 \fuentepropia
 \end{center}
-\end{figure} 
+\end{figure}
 
 {\bf Sugerencia:} Utilice coordenadas curvilíneas.
 
